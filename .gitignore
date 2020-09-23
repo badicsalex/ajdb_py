@@ -103,6 +103,6 @@ venv.bak/
 # mypy
 .mypy_cache/
 
-cache/
-html/
+cache
+html
 hun_law
