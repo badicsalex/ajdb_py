@@ -7,6 +7,8 @@ import json
 from hun_law.structure import Act, EnforcementDate, SubArticleElement
 from hun_law import dict2object
 
+from ajdb.fixups import apply_fixups
+
 
 class ActWithMetadata:
     act: Act
@@ -43,24 +45,20 @@ for file_path in Path(sys.argv[1]).iterdir():
         print("Loading {}".format(f))
         the_dict = json.load(f)
     the_act = act_converter.to_object(the_dict)
+    the_act = apply_fixups(the_act)
     acts.append(the_act)
 
 for act in acts:
-    print(act.identifier)
     had_enf_date = False
     for article in act.articles:
         for paragraph in article.paragraphs:
             for sd in get_semantic_recursive(paragraph):
                 if isinstance(sd, EnforcementDate):
                     if sd.position is None:
-                        ids = ' -> '
                         had_enf_date = True
-                    else:
-                        ids = sd.position.relative_id_string
-                    ids = ids + ' '*(20-len(ids))
-                    print('    ', ids, sd.date)
     if not had_enf_date:
+        print(act.identifier)
         for article in act.articles:
             for paragraph in article.paragraphs:
                 if paragraph.text and 'lép hatályba' in paragraph.text:
-                    print(' -- ', paragraph.text)
+                    print(' -- ', article.identifier, paragraph.identifier, paragraph.text)
