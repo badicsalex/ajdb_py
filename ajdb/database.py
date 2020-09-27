@@ -61,9 +61,7 @@ class ActualizedEnforcementDate:
 
     def is_applicable_to(self, reference: Reference) -> bool:
         assert self.position is not None
-        if self.position.is_range():
-            return self.position.is_in_range(reference)
-        return self.position == reference
+        return self.position.is_in_range(reference)
 
 
 class ActNotInForce(Exception):
@@ -222,7 +220,7 @@ class ActSet:
             if not isinstance(modification.position, Reference):
                 # TODO
                 continue
-            if modification.position != reference and (not modification.position.is_range() or not modification.position.is_in_range(reference)):
+            if not modification.position.is_in_range(reference):
                 continue
             if isinstance(modification, Repeal):
                 if modification.text is None:
