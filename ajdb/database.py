@@ -112,7 +112,10 @@ class EnforcementDateSet:
                 if aed.is_applicable_to(reference):
                     return sae.__class__(
                         identifier=sae.identifier,
-                        text=NOT_ENFORCED_TEXT
+                        text=NOT_ENFORCED_TEXT,
+                        semantic_data=(),
+                        outgoing_references=(),
+                        act_id_abbreviations=(),
                     )
             return sae
 
@@ -124,7 +127,10 @@ class EnforcementDateSet:
                         children=(
                             Paragraph(
                                 identifier=None,
-                                text=NOT_ENFORCED_TEXT
+                                text=NOT_ENFORCED_TEXT,
+                                semantic_data=(),
+                                outgoing_references=(),
+                                act_id_abbreviations=(),
                             ),
                         )
                     )
@@ -216,7 +222,15 @@ class ActSet:
             if sae.text == new_text and sae.intro == new_intro and sae.wrap_up == new_wrap_up:
                 return sae
             applied = True
-            return attr.evolve(sae, text=new_text, intro=new_intro, wrap_up=new_wrap_up)
+            return attr.evolve(
+                sae,
+                text=new_text,
+                intro=new_intro,
+                wrap_up=new_wrap_up,
+                semantic_data=None,
+                outgoing_references=None,
+                act_id_abbreviations=None,
+            )
         result = act.map_saes(text_replacer, replace_at)
         if not applied:
             print("WARN: Could not apply replacement '{}'=>'{}' at {}".format(old_str, new_str, replace_at))
@@ -235,7 +249,10 @@ class ActSet:
         def repealer(_reference: Reference, sae: SubArticleElement) -> SubArticleElement:
             return sae.__class__(
                 identifier=sae.identifier,
-                text=NOT_ENFORCED_TEXT
+                text=NOT_ENFORCED_TEXT,
+                semantic_data=(),
+                outgoing_references=(),
+                act_id_abbreviations=(),
             )
         return act.map_saes(repealer, repeal_at)
 
