@@ -1,16 +1,23 @@
 # Copyright 2020, Alex Badics, All Rights Reserved
-from typing import Tuple, Optional
-
+from typing import Tuple, Optional, Dict, Iterable, Set
+from pathlib import Path
+import gzip
+import json
 import attr
+
 from hun_law.structure import \
     Act, Article, Paragraph, SubArticleElement, Reference,\
     EnforcementDate, DaysAfterPublication, DayInMonthAfterPublication, EnforcementDateTypes
 
 from hun_law.utils import Date
+from hun_law import dict2object
 
 from ajdb.utils import iterate_all_saes_of_act
+from ajdb.fixups import apply_fixups
 
 NOT_ENFORCED_TEXT = ' '
+
+act_converter = dict2object.get_converter(Act)
 
 
 @attr.s(slots=True, frozen=True, auto_attribs=True, kw_only=True)
@@ -93,11 +100,14 @@ class EnforcementDateSet:
                 "Act is not in force at {}. (from: {}, to: {})"
                 .format(date, self.default.from_date, self.default.to_date)
             )
+        not_yet_in_force = tuple(aed for aed in self.specials if not aed.is_in_force_at_date(date))
+        if not not_yet_in_force:
+            return act
 
         def sae_modifier(reference: Reference, sae: SubArticleElement) -> SubArticleElement:
             reference = attr.evolve(reference, act=None)
-            for aed in self.specials:
-                if not aed.is_in_force_at_date(date) and aed.is_applicable_to(reference):
+            for aed in not_yet_in_force:
+                if aed.is_applicable_to(reference):
                     return sae.__class__(
                         identifier=sae.identifier,
                         text=NOT_ENFORCED_TEXT
@@ -105,9 +115,8 @@ class EnforcementDateSet:
             return sae
 
         def article_modifier(article: Article) -> Article:
-            for aed in self.specials:
-                if not aed.is_in_force_at_date(date) and aed.is_applicable_to(Reference(None, article.identifier)):
-                    print("Killing {} because of {}".format(article.identifier, aed))
+            for aed in not_yet_in_force:
+                if aed.is_applicable_to(Reference(None, article.identifier)):
                     return Article(
                         identifier=article.identifier,
                         children=(
@@ -121,3 +130,60 @@ class EnforcementDateSet:
 
         act = act.map_articles(article_modifier)
         return act.map_saes(sae_modifier)
+
+
+@attr.s(slots=True, frozen=True, auto_attribs=True)
+class ActWithCachedData:
+    act: Act
+    enforcement_dates: EnforcementDateSet = attr.ib(init=False)
+
+    @enforcement_dates.default
+    def _enforcement_dates_default(self) -> EnforcementDateSet:
+        return EnforcementDateSet.from_act(self.act)
+
+    def interesting_dates(self) -> Tuple[Date, ...]:
+        result = set()
+        result.add(self.enforcement_dates.default.from_date)
+        if self.enforcement_dates.default.to_date is not None:
+            result.add(self.enforcement_dates.default.to_date)
+
+        result.update(aed.from_date for aed in self.enforcement_dates.specials)
+
+        # Amendments are auto-repealed the next day
+        result.add(self.enforcement_dates.default.from_date.add_days(1))
+        result.update(aed.from_date.add_days(1) for aed in self.enforcement_dates.specials)
+        return tuple(sorted(result))
+
+    def state_at_date(self, date: Date) -> Act:
+        return self.enforcement_dates.filter_act(self.act, date)
+
+
+class ActSet:
+    acts: Dict[str, ActWithCachedData]
+
+    def __init__(self) -> None:
+        self.acts = {}
+
+    def load_from_file(self, path: Path) -> None:
+        if path.suffix == '.gz':
+            with gzip.open(path, 'rt') as f:
+                the_dict = json.load(f)
+        else:
+            with open(path, 'rt') as f:
+                the_dict = json.load(f)
+        act = act_converter.to_object(the_dict)
+        act = apply_fixups(act)
+        self.acts[act.identifier] = ActWithCachedData(act)
+
+    def interesting_dates(self) -> Tuple[Date, ...]:
+        result: Set[Date] = set()
+        for act in self.acts.values():
+            result.update(act.interesting_dates())
+        return tuple(sorted(result))
+
+    def acts_at_date(self, date: Date) -> Iterable[Act]:
+        for act in self.acts.values():
+            try:
+                yield act.state_at_date(date)
+            except ActNotInForce:
+                pass
