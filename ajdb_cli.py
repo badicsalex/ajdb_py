@@ -18,7 +18,7 @@ for date in act_set.interesting_dates():
     print("Processing date", date_str)
 
     for act in act_set.acts_at_date(date):
-        act_set.apply_modifications(act)
+        act_set.apply_all_modifications(act)
 
     date_dir = dest_path / date_str
     date_dir.mkdir(exist_ok=True)
