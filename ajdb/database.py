@@ -1,6 +1,7 @@
 # Copyright 2020, Alex Badics, All Rights Reserved
-from typing import Tuple, Optional, Dict, Iterable, Set, List, Type
+from typing import Tuple, Optional, Dict, Iterable, Set, List, Type, ClassVar
 from pathlib import Path
+from abc import ABC, abstractmethod
 import gzip
 import json
 from collections import defaultdict
@@ -140,6 +141,131 @@ class EnforcementDateSet:
         return act.map_saes(sae_modifier)
 
 
+@attr.s(slots=True, auto_attribs=True)
+class ModificationApplier(ABC):
+    modification: SemanticData = attr.ib()
+    applied: bool = attr.ib(init=False, default=False)
+
+    @classmethod
+    @abstractmethod
+    def can_apply(cls, modification: SemanticData) -> bool:
+        pass
+
+    @abstractmethod
+    def apply(self, act: Act) -> Act:
+        pass
+
+    @property
+    def priority(self) -> int:
+        # Mostly meaningful in TextReplacementApplier
+        # Higher means it has to be applied sooner
+        return 0
+
+
+@attr.s(slots=True, auto_attribs=True)
+class TextReplacementApplier(ModificationApplier):
+    original_text: str = attr.ib(init=False)
+    replacement_text: str = attr.ib(init=False)
+
+    @original_text.default
+    def _original_text_default(self) -> str:
+        if isinstance(self.modification, TextAmendment):
+            return self.modification.original_text
+        if isinstance(self.modification, Repeal):
+            assert self.modification.text is not None
+            return self.modification.text
+        raise TypeError("Unknown SemanticData type in TextReplacementApplier")
+
+    @replacement_text.default
+    def _replacement_text_default(self) -> str:
+        if isinstance(self.modification, TextAmendment):
+            return self.modification.replacement_text
+        if isinstance(self.modification, Repeal):
+            return NOT_ENFORCED_TEXT
+        raise TypeError("Unknown SemanticData type in TextReplacementApplier")
+
+    @classmethod
+    def can_apply(cls, modification: SemanticData) -> bool:
+        return isinstance(modification, TextAmendment) or (isinstance(modification, Repeal) and modification.text is not None)
+
+    def text_replacer(self, _reference: Reference, sae: SubArticleElement) -> SubArticleElement:
+        new_text = sae.text.replace(self.original_text, self.replacement_text) if sae.text is not None else None
+        new_intro = sae.intro.replace(self.original_text, self.replacement_text) if sae.intro is not None else None
+        new_wrap_up = sae.wrap_up.replace(self.original_text, self.replacement_text) if sae.wrap_up is not None else None
+        if sae.text == new_text and sae.intro == new_intro and sae.wrap_up == new_wrap_up:
+            return sae
+        self.applied = True
+        return attr.evolve(
+            sae,
+            text=new_text,
+            intro=new_intro,
+            wrap_up=new_wrap_up,
+            semantic_data=None,
+            outgoing_references=None,
+            act_id_abbreviations=None,
+        )
+
+    def apply(self, act: Act) -> Act:
+        assert isinstance(self.modification, (TextAmendment, Repeal))
+        return act.map_saes(self.text_replacer, self.modification.position)
+
+    @property
+    def priority(self) -> int:
+        # Sorting these modifications is needed because of cases like:
+        # Original text: "This is ABC, and also ABC is important for ABCD reasons"
+        # Replacement 1: ABC => DEF
+        # Replacement 2: ABCD => DEFG
+        # In the wrong order, this produces "This is DEF, and also DEF is important for DEFD reasons"
+
+        # Higher means it has to be applied sooner
+        return len(self.original_text)
+
+
+@attr.s(slots=True, auto_attribs=True)
+class RepealApplier(ModificationApplier):
+    @classmethod
+    def can_apply(cls, modification: SemanticData) -> bool:
+        return isinstance(modification, Repeal) and modification.text is None
+
+    def repealer(self, _reference: Reference, sae: SubArticleElement) -> SubArticleElement:
+        self.applied = True
+        return sae.__class__(
+            identifier=sae.identifier,
+            text=NOT_ENFORCED_TEXT,
+            semantic_data=(),
+            outgoing_references=(),
+            act_id_abbreviations=(),
+        )
+
+    def apply(self, act: Act) -> Act:
+        assert isinstance(self.modification, Repeal)
+        return act.map_saes(self.repealer, self.modification.position)
+
+
+
+@attr.s(slots=True, frozen=True, auto_attribs=True)
+class ModificationSet:
+    APPLIER_CLASSES: ClassVar[Tuple[Type[ModificationApplier], ...]] = (
+        TextReplacementApplier,
+        RepealApplier,
+    )
+
+    modifications: Tuple[SemanticData, ...]
+
+    def apply_all(self, act: Act) -> Act:
+        appliers: List[ModificationApplier] = []
+        for applier_class in self.APPLIER_CLASSES:
+            appliers.extend(applier_class(m) for m in self.modifications if applier_class.can_apply(m))
+
+        appliers.sort(key=lambda x: x.priority, reverse=True)
+
+        for applier in appliers:
+            act = applier.apply(act)
+            if not applier.applied:
+                print("WARN: Could not apply ", applier.modification)
+        return act
+
+
 @attr.s(slots=True, frozen=True, auto_attribs=True)
 class ActWithCachedData:
     act: Act
@@ -193,8 +319,8 @@ class ActSet:
                 pass
 
     @staticmethod
-    def _get_amendments_and_repeals(act: Act) -> Dict[str, Dict[Type, List[SemanticData]]]:
-        modifications_per_act: Dict[str, Dict[Type, List[SemanticData]]] = defaultdict(lambda: defaultdict(list))
+    def _get_amendments_and_repeals(act: Act) -> Dict[str, List[SemanticData]]:
+        modifications_per_act: Dict[str, List[SemanticData]] = defaultdict(list)
 
         def sae_walker(reference: Reference, sae: SubArticleElement) -> SubArticleElement:
             if sae.semantic_data is None:
@@ -204,57 +330,11 @@ class ActSet:
                     continue
                 modified_ref = semantic_data_element.position
                 assert modified_ref.act is not None
-                modifications_per_act[modified_ref.act][type(semantic_data_element)].append(semantic_data_element)
-                modifications_per_act[act.identifier][Repeal].append(Repeal(position=reference))
+                modifications_per_act[modified_ref.act].append(semantic_data_element)
+                modifications_per_act[act.identifier].append(Repeal(position=reference))
             return sae
         act.map_saes(sae_walker)
         return modifications_per_act
-
-    @classmethod
-    def apply_text_replacement_to_act(cls, act: Act, replace_at: Reference, old_str: str, new_str: str) -> Act:
-        applied = False
-
-        def text_replacer(_reference: Reference, sae: SubArticleElement) -> SubArticleElement:
-            nonlocal applied
-            new_text = sae.text.replace(old_str, new_str) if sae.text is not None else None
-            new_intro = sae.intro.replace(old_str, new_str) if sae.intro is not None else None
-            new_wrap_up = sae.wrap_up.replace(old_str, new_str) if sae.wrap_up is not None else None
-            if sae.text == new_text and sae.intro == new_intro and sae.wrap_up == new_wrap_up:
-                return sae
-            applied = True
-            return attr.evolve(
-                sae,
-                text=new_text,
-                intro=new_intro,
-                wrap_up=new_wrap_up,
-                semantic_data=None,
-                outgoing_references=None,
-                act_id_abbreviations=None,
-            )
-        result = act.map_saes(text_replacer, replace_at)
-        if not applied:
-            print("WARN: Could not apply replacement '{}'=>'{}' at {}".format(old_str, new_str, replace_at))
-        return result
-
-    @classmethod
-    def apply_text_amendment_to_act(cls, act: Act, text_amendment: TextAmendment) -> Act:
-        return cls.apply_text_replacement_to_act(act, text_amendment.position, text_amendment.original_text, text_amendment.replacement_text)
-
-    @classmethod
-    def apply_repeal_to_act(cls, act: Act, repeal: Repeal) -> Act:
-        if repeal.text is not None:
-            return cls.apply_text_replacement_to_act(act, repeal.position, repeal.text, '')
-        repeal_at = repeal.position
-
-        def repealer(_reference: Reference, sae: SubArticleElement) -> SubArticleElement:
-            return sae.__class__(
-                identifier=sae.identifier,
-                text=NOT_ENFORCED_TEXT,
-                semantic_data=(),
-                outgoing_references=(),
-                act_id_abbreviations=(),
-            )
-        return act.map_saes(repealer, repeal_at)
 
     def apply_all_modifications(self, amending_act: Act) -> None:
         for act_id, modifications in self._get_amendments_and_repeals(amending_act).items():
@@ -264,14 +344,8 @@ class ActSet:
             if act.identifier != amending_act.identifier:
                 print("AMENDING ", act.identifier, "WITH", amending_act.identifier)
 
-            modifications[TextAmendment].sort(key=lambda ta: -len(ta.original_text))  # type: ignore
-            for text_amendment in modifications[TextAmendment]:
-                assert isinstance(text_amendment, TextAmendment)
-                act = self.apply_text_amendment_to_act(act, text_amendment)
-
-            for repeal in modifications[Repeal]:
-                assert isinstance(repeal, Repeal)
-                act = self.apply_repeal_to_act(act, repeal)
+            modification_set = ModificationSet(tuple(modifications))
+            act = modification_set.apply_all(act)
 
             act = ActSemanticsParser.add_semantics_to_act(act)
             self.acts[act_id] = ActWithCachedData(act)
