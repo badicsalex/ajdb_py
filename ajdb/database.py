@@ -1,5 +1,5 @@
 # Copyright 2020, Alex Badics, All Rights Reserved
-from typing import Tuple, Optional, Dict, Iterable, Set, List, Type, ClassVar
+from typing import Tuple, Optional, Dict, Iterable, Set, List, Type, ClassVar, Union
 from pathlib import Path
 from abc import ABC, abstractmethod
 import gzip
@@ -9,11 +9,13 @@ from collections import defaultdict
 import attr
 
 from hun_law.structure import \
-    Act, Article, Paragraph, SubArticleElement, Reference, SemanticData,\
+    Act, Article, Paragraph, SubArticleElement, BlockAmendmentContainer, StructuralElement, \
+    Reference, StructuralReference, \
     EnforcementDate, DaysAfterPublication, DayInMonthAfterPublication, EnforcementDateTypes, \
-    Repeal, TextAmendment, BlockAmendment
+    SemanticData, Repeal, TextAmendment, BlockAmendment, \
+    BlockAmendmentExpectedType, SubArticleChildType
 
-from hun_law.utils import Date
+from hun_law.utils import Date, identifier_less
 from hun_law.parsers.semantic_parser import ActSemanticsParser
 from hun_law import dict2object
 
@@ -120,7 +122,7 @@ class EnforcementDateSet:
                     )
             return sae
 
-        def article_modifier(article: Article) -> Article:
+        def article_modifier(_reference: Reference, article: Article) -> Article:
             for aed in not_yet_in_force:
                 if aed.is_applicable_to(Reference(None, article.identifier)):
                     return Article(
@@ -144,6 +146,7 @@ class EnforcementDateSet:
 @attr.s(slots=True, auto_attribs=True)
 class ModificationApplier(ABC):
     modification: SemanticData = attr.ib()
+    source_sae: SubArticleElement = attr.ib()
     applied: bool = attr.ib(init=False, default=False)
 
     @classmethod
@@ -242,20 +245,154 @@ class RepealApplier(ModificationApplier):
         return act.map_saes(self.repealer, self.modification.position)
 
 
+@attr.s(slots=True, auto_attribs=True)
+class BlockAmendmentApplier(ModificationApplier):
+    new_children: Tuple[SubArticleChildType, ...] = attr.ib(init=False)
+    position: Union[Reference, StructuralReference] = attr.ib(init=False)
+    expected_type: BlockAmendmentExpectedType = attr.ib(init=False)
+    replaces: Tuple[Union[Reference, StructuralReference], ...] = attr.ib(init=False)
+
+    @new_children.default
+    def _new_children_default(self) -> Tuple[SubArticleChildType, ...]:
+        assert self.source_sae.children is not None
+        assert len(self.source_sae.children) == 1
+        block_amendment_container = self.source_sae.children[0]
+        assert isinstance(block_amendment_container, BlockAmendmentContainer)
+        assert block_amendment_container.children is not None
+        return block_amendment_container.children
+
+    @position.default
+    def _position_default(self) -> Union[Reference, StructuralReference]:
+        assert isinstance(self.modification, BlockAmendment)
+        return self.modification.position
+
+    @expected_type.default
+    def _expected_type_default(self) -> BlockAmendmentExpectedType:
+        assert isinstance(self.modification, BlockAmendment)
+        return self.modification.expected_type
+
+    @replaces.default
+    def _replaces_default(self) -> Tuple[Union[Reference, StructuralReference], ...]:
+        assert isinstance(self.modification, BlockAmendment)
+        return self.modification.replaces
+
+    @classmethod
+    def can_apply(cls, modification: SemanticData) -> bool:
+        return isinstance(modification, BlockAmendment)
+
+    def should_delete_at_ref(self, reference: Reference) -> bool:
+        for ref_to_delete in self.replaces:
+            if isinstance(ref_to_delete, Reference) and ref_to_delete.contains(reference):
+                return True
+        return False
+
+    def delete_children(self, parent_reference: Reference, children: Tuple[SubArticleChildType, ...]) -> Tuple[SubArticleChildType, ...]:
+        # TODO: Structural stuff
+        new_children = []
+        for child in children:
+            if isinstance(child, (Article, SubArticleElement)):
+                if self.should_delete_at_ref(child.relative_reference.relative_to(parent_reference)):
+                    continue
+            new_children.append(child)
+        return tuple(new_children)
+
+    def should_insert_before(self, child: SubArticleChildType) -> bool:
+        # TODO: Structural stuff
+        if not isinstance(child, (Article, SubArticleElement)):
+            return False
+        assert isinstance(self.position, Reference)
+        inserted_id, inserted_type = self.position.last_component_with_type()
+        assert isinstance(inserted_id, str)
+        assert inserted_type is self.expected_type
+        assert isinstance(child, inserted_type)
+        assert isinstance(child.identifier, str)
+        return identifier_less(inserted_id, child.identifier)
+
+    def insert_children(self, children: Tuple[SubArticleChildType, ...]) -> Tuple[SubArticleChildType, ...]:
+        for i, child in enumerate(children):
+            if self.should_insert_before(child):
+                return children[:i] + self.new_children + children[i:]
+        return children + self.new_children
+
+    def compute_new_children(self, parent_reference: Reference, children: Tuple[SubArticleChildType, ...]) -> Tuple[SubArticleChildType, ...]:
+        self.applied = True
+
+        if self.replaces:
+            filtered_children = self.delete_children(parent_reference, children)
+            if children == filtered_children:
+                self.applied = False  # Something went wrong, notify caller
+            children = filtered_children
+
+        with_new_children = self.insert_children(children)
+        if children == with_new_children:
+            self.applied = False  # Something went wrong, notify caller
+
+        return with_new_children
+
+    def apply_to_sae(self, reference: Reference, sae: SubArticleElement) -> SubArticleElement:
+        assert isinstance(self.position, Reference)
+        if reference != self.position.parent():
+            return sae
+        assert sae.children is not None
+        return attr.evolve(sae, children=self.compute_new_children(reference, sae.children))
+
+    def apply_to_article(self, reference: Reference, article: Article) -> Article:
+        new_children = []
+        for child in self.compute_new_children(reference, article.children):
+            assert isinstance(child, Paragraph)
+            new_children.append(child)
+        return attr.evolve(article, children=tuple(new_children))
+
+    def apply_to_act(self, act: Act) -> Act:
+        new_children = []
+        for child in self.compute_new_children(Reference(act.identifier), act.children):
+            assert isinstance(child, (Article, StructuralElement))
+            new_children.append(child)
+        return attr.evolve(act, children=tuple(new_children))
+
+    def apply(self, act: Act) -> Act:
+        if not isinstance(self.position, Reference):
+            # TODO
+            return act
+        if issubclass(self.expected_type, SubArticleElement):
+            assert isinstance(self.position, Reference)
+            if self.expected_type is Paragraph:
+                article_ref = Reference(act.identifier, self.position.article)
+                return act.map_articles(self.apply_to_article, article_ref)
+            return act.map_saes(self.apply_to_sae, self.position.parent())
+        return self.apply_to_act(act)
+
+
+@attr.s(slots=True, auto_attribs=True)
+class ArticleBlockAmendmentApplier(ModificationApplier):
+    @classmethod
+    def can_apply(cls, modification: SemanticData) -> bool:
+        return (
+            isinstance(modification, BlockAmendment) and
+            isinstance(modification.position, Reference) and
+            issubclass(modification.expected_type, Article)
+        )
+
+    def apply(self, act: Act) -> Act:
+        print("WARN: Not applying Article Mod", self.modification)
+        self.applied = True
+        return act
+
 
 @attr.s(slots=True, frozen=True, auto_attribs=True)
 class ModificationSet:
     APPLIER_CLASSES: ClassVar[Tuple[Type[ModificationApplier], ...]] = (
         TextReplacementApplier,
         RepealApplier,
+        BlockAmendmentApplier,
     )
 
-    modifications: Tuple[SemanticData, ...]
+    modifications: Tuple[Tuple[SubArticleElement, SemanticData], ...]
 
     def apply_all(self, act: Act) -> Act:
         appliers: List[ModificationApplier] = []
         for applier_class in self.APPLIER_CLASSES:
-            appliers.extend(applier_class(m) for m in self.modifications if applier_class.can_apply(m))
+            appliers.extend(applier_class(m, sae) for sae, m in self.modifications if applier_class.can_apply(m))
 
         appliers.sort(key=lambda x: x.priority, reverse=True)
 
@@ -319,8 +456,8 @@ class ActSet:
                 pass
 
     @staticmethod
-    def _get_amendments_and_repeals(act: Act) -> Dict[str, List[SemanticData]]:
-        modifications_per_act: Dict[str, List[SemanticData]] = defaultdict(list)
+    def _get_amendments_and_repeals(act: Act) -> Dict[str, List[Tuple[SubArticleElement, SemanticData]]]:
+        modifications_per_act: Dict[str, List[Tuple[SubArticleElement, SemanticData]]] = defaultdict(list)
 
         def sae_walker(reference: Reference, sae: SubArticleElement) -> SubArticleElement:
             if sae.semantic_data is None:
@@ -330,8 +467,8 @@ class ActSet:
                     continue
                 modified_ref = semantic_data_element.position
                 assert modified_ref.act is not None
-                modifications_per_act[modified_ref.act].append(semantic_data_element)
-                modifications_per_act[act.identifier].append(Repeal(position=reference))
+                modifications_per_act[modified_ref.act].append((sae, semantic_data_element))
+                modifications_per_act[act.identifier].append((sae, Repeal(position=reference)))
             return sae
         act.map_saes(sae_walker)
         return modifications_per_act
