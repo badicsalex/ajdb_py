@@ -13,13 +13,13 @@ from hun_law.structure import \
     Reference, StructuralReference, \
     EnforcementDate, DaysAfterPublication, DayInMonthAfterPublication, EnforcementDateTypes, \
     SemanticData, Repeal, TextAmendment, BlockAmendment, \
-    BlockAmendmentExpectedType, SubArticleChildType
+    SubArticleChildType
 
-from hun_law.utils import Date, identifier_less
+from hun_law.utils import Date
 from hun_law.parsers.semantic_parser import ActSemanticsParser
 from hun_law import dict2object
 
-from ajdb.utils import iterate_all_saes_of_act
+from ajdb.utils import iterate_all_saes_of_act, first_matching_index
 from ajdb.fixups import apply_fixups
 
 NOT_ENFORCED_TEXT = ' '
@@ -226,6 +226,7 @@ class TextReplacementApplier(ModificationApplier):
 
 @attr.s(slots=True, auto_attribs=True)
 class RepealApplier(ModificationApplier):
+    # TODO: Properly repeal articles. Current implementation leaves a bunch of empty paragraphs, and the title
     @classmethod
     def can_apply(cls, modification: SemanticData) -> bool:
         return isinstance(modification, Repeal) and modification.text is None
@@ -249,8 +250,6 @@ class RepealApplier(ModificationApplier):
 class BlockAmendmentApplier(ModificationApplier):
     new_children: Tuple[SubArticleChildType, ...] = attr.ib(init=False)
     position: Union[Reference, StructuralReference] = attr.ib(init=False)
-    expected_type: BlockAmendmentExpectedType = attr.ib(init=False)
-    replaces: Tuple[Union[Reference, StructuralReference], ...] = attr.ib(init=False)
 
     @new_children.default
     def _new_children_default(self) -> Tuple[SubArticleChildType, ...]:
@@ -266,68 +265,44 @@ class BlockAmendmentApplier(ModificationApplier):
         assert isinstance(self.modification, BlockAmendment)
         return self.modification.position
 
-    @expected_type.default
-    def _expected_type_default(self) -> BlockAmendmentExpectedType:
-        assert isinstance(self.modification, BlockAmendment)
-        return self.modification.expected_type
-
-    @replaces.default
-    def _replaces_default(self) -> Tuple[Union[Reference, StructuralReference], ...]:
-        assert isinstance(self.modification, BlockAmendment)
-        return self.modification.replaces
-
     @classmethod
     def can_apply(cls, modification: SemanticData) -> bool:
         return isinstance(modification, BlockAmendment)
 
-    def should_delete_at_ref(self, reference: Reference) -> bool:
-        for ref_to_delete in self.replaces:
-            if isinstance(ref_to_delete, Reference) and ref_to_delete.contains(reference):
-                return True
-        return False
+    def get_start_cut_point(self, parent_reference: Reference, children: Tuple[SubArticleChildType, ...]) -> int:
+        if isinstance(self.position, Reference):  # pylint: disable=no-else-return
+            p = self.position.first_in_range()
+            return first_matching_index(children, lambda c: bool(hasattr(c, 'relative_reference') and p <= c.relative_reference.relative_to(parent_reference)))
+        else:
+            # TODO:
+            #    if position.book:
+            #        book_index = first_matching(children, book.id == position.book)
+            #    add a "startfrom" parameter to first_matching, and use it.
+            #    Is not performance critical
+            # TODO Support: SubtitleArticleComboType.BEFORE_WITH_ARTICLE
+            # TODO Support: StructuralReference(book='3', part=None, title='VIII', chapter=None, subtitle=None)
+            # TODO SUpport: StructuralReference(book='6', part='5', title=None, chapter=None, subtitle=None)
 
-    def delete_children(self, parent_reference: Reference, children: Tuple[SubArticleChildType, ...]) -> Tuple[SubArticleChildType, ...]:
-        # TODO: Structural stuff
-        new_children = []
-        for child in children:
-            if isinstance(child, (Article, SubArticleElement)):
-                if self.should_delete_at_ref(child.relative_reference.relative_to(parent_reference)):
-                    continue
-            new_children.append(child)
-        return tuple(new_children)
+            raise ValueError("Structural not supported")
 
-    def should_insert_before(self, child: SubArticleChildType) -> bool:
-        # TODO: Structural stuff
-        if not isinstance(child, (Article, SubArticleElement)):
-            return False
-        assert isinstance(self.position, Reference)
-        inserted_id, inserted_type = self.position.last_component_with_type()
-        assert isinstance(inserted_id, str)
-        assert inserted_type is self.expected_type
-        assert isinstance(child, inserted_type)
-        assert isinstance(child.identifier, str)
-        return identifier_less(inserted_id, child.identifier)
-
-    def insert_children(self, children: Tuple[SubArticleChildType, ...]) -> Tuple[SubArticleChildType, ...]:
-        for i, child in enumerate(children):
-            if self.should_insert_before(child):
-                return children[:i] + self.new_children + children[i:]
-        return children + self.new_children
+    def get_end_cut_point(self, parent_reference: Reference, children: Tuple[SubArticleChildType, ...]) -> int:
+        if isinstance(self.position, Reference):  # pylint: disable=no-else-return
+            p = self.position.last_in_range()
+            return first_matching_index(children, lambda c: bool(hasattr(c, 'relative_reference') and p < c.relative_reference.relative_to(parent_reference)))
+        else:
+            # TODO
+            raise ValueError("Structural not supported")
 
     def compute_new_children(self, parent_reference: Reference, children: Tuple[SubArticleChildType, ...]) -> Tuple[SubArticleChildType, ...]:
+        if isinstance(self.position, StructuralReference):
+            # TODO
+            print("TODO: Support", self.position)
+            return children
         self.applied = True
+        start_cut_point = self.get_start_cut_point(parent_reference, children)
+        end_cut_point = start_cut_point + self.get_end_cut_point(parent_reference, children[start_cut_point:])
 
-        if self.replaces:
-            filtered_children = self.delete_children(parent_reference, children)
-            if children == filtered_children:
-                self.applied = False  # Something went wrong, notify caller
-            children = filtered_children
-
-        with_new_children = self.insert_children(children)
-        if children == with_new_children:
-            self.applied = False  # Something went wrong, notify caller
-
-        return with_new_children
+        return children[:start_cut_point] + self.new_children + children[end_cut_point:]
 
     def apply_to_sae(self, reference: Reference, sae: SubArticleElement) -> SubArticleElement:
         assert isinstance(self.position, Reference)
@@ -351,32 +326,18 @@ class BlockAmendmentApplier(ModificationApplier):
         return attr.evolve(act, children=tuple(new_children))
 
     def apply(self, act: Act) -> Act:
-        if not isinstance(self.position, Reference):
-            # TODO
-            return act
-        if issubclass(self.expected_type, SubArticleElement):
-            assert isinstance(self.position, Reference)
-            if self.expected_type is Paragraph:
+        if isinstance(self.position, Reference):
+            expected_type = self.position.last_component_with_type()[1]
+            assert expected_type is not None
+            if expected_type is Article:
+                return self.apply_to_act(act)
+            if expected_type is Paragraph:
                 article_ref = Reference(act.identifier, self.position.article)
                 return act.map_articles(self.apply_to_article, article_ref)
-            return act.map_saes(self.apply_to_sae, self.position.parent())
+            if issubclass(expected_type, SubArticleElement):
+                return act.map_saes(self.apply_to_sae, self.position.parent())
+            raise ValueError("Unknown reference type", self.position)
         return self.apply_to_act(act)
-
-
-@attr.s(slots=True, auto_attribs=True)
-class ArticleBlockAmendmentApplier(ModificationApplier):
-    @classmethod
-    def can_apply(cls, modification: SemanticData) -> bool:
-        return (
-            isinstance(modification, BlockAmendment) and
-            isinstance(modification.position, Reference) and
-            issubclass(modification.expected_type, Article)
-        )
-
-    def apply(self, act: Act) -> Act:
-        print("WARN: Not applying Article Mod", self.modification)
-        self.applied = True
-        return act
 
 
 @attr.s(slots=True, frozen=True, auto_attribs=True)
