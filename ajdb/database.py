@@ -227,12 +227,11 @@ class TextReplacementApplier(ModificationApplier):
 
 @attr.s(slots=True, auto_attribs=True)
 class RepealApplier(ModificationApplier):
-    # TODO: Properly repeal articles. Current implementation leaves a bunch of empty paragraphs, and the title
     @classmethod
     def can_apply(cls, modification: SemanticData) -> bool:
         return isinstance(modification, Repeal) and modification.text is None
 
-    def repealer(self, _reference: Reference, sae: SubArticleElement) -> SubArticleElement:
+    def sae_repealer(self, _reference: Reference, sae: SubArticleElement) -> SubArticleElement:
         self.applied = True
         return sae.__class__(
             identifier=sae.identifier,
@@ -242,9 +241,26 @@ class RepealApplier(ModificationApplier):
             act_id_abbreviations=(),
         )
 
+    def article_repealer(self, _reference: Reference, article: Article) -> Article:
+        self.applied = True
+        return Article(
+            identifier=article.identifier,
+            children=(
+                Paragraph(
+                    text=NOT_ENFORCED_TEXT,
+                    semantic_data=(),
+                    outgoing_references=(),
+                    act_id_abbreviations=(),
+                ),
+            ),
+        )
+
     def apply(self, act: Act) -> Act:
         assert isinstance(self.modification, Repeal)
-        return act.map_saes(self.repealer, self.modification.position)
+        _, reference_type = self.modification.position.last_component_with_type()
+        if reference_type is Article:
+            return act.map_articles(self.article_repealer, self.modification.position)
+        return act.map_saes(self.sae_repealer, self.modification.position)
 
 
 @attr.s(slots=True, auto_attribs=True)
