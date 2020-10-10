@@ -296,7 +296,7 @@ class BlockAmendmentApplier(ModificationApplier):
         )
         end_cut = first_matching_index(
             children,
-            lambda c: bool(hasattr(c, 'relative_reference') and end_ref < c.relative_reference.relative_to(parent_reference)),
+            lambda c: bool(not hasattr(c, 'relative_reference') or end_ref < c.relative_reference.relative_to(parent_reference)),
             start=start_cut
         )
         return start_cut, end_cut
