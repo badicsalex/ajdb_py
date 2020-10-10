@@ -1,5 +1,5 @@
 # Copyright 2020, Alex Badics, All Rights Reserved
-from typing import Iterable, Any, Callable
+from typing import Iterable, Sequence, Any, Callable
 
 from hun_law.structure import Act, SubArticleElement, BlockAmendmentContainer
 
@@ -18,10 +18,8 @@ def iterate_all_saes_of_act(act: Act) -> Iterable[SubArticleElement]:
             yield from iterate_all_saes_of_sae(paragraph)
 
 
-def first_matching_index(data: Iterable[Any], filter_fn: Callable[[Any], bool]) -> int:
-    index = 0
-    for d in data:
-        if filter_fn(d):
+def first_matching_index(data: Sequence[Any], filter_fn: Callable[[Any], bool], start: int = 0) -> int:
+    for index in range(start, len(data)):
+        if filter_fn(data[index]):
             return index
-        index += 1
-    return index
+    return len(data)

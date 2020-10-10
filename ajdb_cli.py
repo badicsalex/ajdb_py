@@ -4,6 +4,7 @@ from pathlib import Path
 
 from ajdb.database import ActSet
 from ajdb.output import generate_html_for_act
+from hun_law.output.txt import write_act_as_txt
 
 act_set = ActSet()
 for file_path in Path(sys.argv[1]).iterdir():
@@ -29,3 +30,6 @@ for date in act_set.interesting_dates():
         act_html_path = date_dir / (act.identifier + '.html')
         with act_html_path.open('w') as f:
             generate_html_for_act(act, f)
+    ptk_txt_path = date_dir / ('2013. évi V. törvény.txt')
+    with ptk_txt_path.open('w') as f:
+        write_act_as_txt(f, act_set.acts['2013. évi V. törvény'].act, '')

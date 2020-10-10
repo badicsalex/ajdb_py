@@ -9,13 +9,14 @@ from collections import defaultdict
 import attr
 
 from hun_law.structure import \
-    Act, Article, Paragraph, SubArticleElement, BlockAmendmentContainer, StructuralElement, \
-    Reference, StructuralReference, \
+    Act, Article, Paragraph, SubArticleElement, BlockAmendmentContainer, \
+    StructuralElement, Subtitle, Book,\
+    Reference, StructuralReference, SubtitleArticleComboType, \
     EnforcementDate, DaysAfterPublication, DayInMonthAfterPublication, EnforcementDateTypes, \
     SemanticData, Repeal, TextAmendment, BlockAmendment, \
     SubArticleChildType
 
-from hun_law.utils import Date
+from hun_law.utils import Date, identifier_less
 from hun_law.parsers.semantic_parser import ActSemanticsParser
 from hun_law import dict2object
 
@@ -269,39 +270,100 @@ class BlockAmendmentApplier(ModificationApplier):
     def can_apply(cls, modification: SemanticData) -> bool:
         return isinstance(modification, BlockAmendment)
 
-    def get_start_cut_point(self, parent_reference: Reference, children: Tuple[SubArticleChildType, ...]) -> int:
-        if isinstance(self.position, Reference):  # pylint: disable=no-else-return
-            p = self.position.first_in_range()
-            return first_matching_index(children, lambda c: bool(hasattr(c, 'relative_reference') and p <= c.relative_reference.relative_to(parent_reference)))
-        else:
-            # TODO:
-            #    if position.book:
-            #        book_index = first_matching(children, book.id == position.book)
-            #    add a "startfrom" parameter to first_matching, and use it.
-            #    Is not performance critical
-            # TODO Support: SubtitleArticleComboType.BEFORE_WITH_ARTICLE
-            # TODO Support: StructuralReference(book='3', part=None, title='VIII', chapter=None, subtitle=None)
-            # TODO SUpport: StructuralReference(book='6', part='5', title=None, chapter=None, subtitle=None)
+    def get_cut_points_for_reference(self, parent_reference: Reference, children: Tuple[SubArticleChildType, ...]) -> Tuple[int, int]:
+        assert isinstance(self.position, Reference)
+        start_ref = self.position.first_in_range()
+        end_ref = self.position.last_in_range()
+        start_cut = first_matching_index(
+            children,
+            lambda c: bool(hasattr(c, 'relative_reference') and start_ref <= c.relative_reference.relative_to(parent_reference))
+        )
+        end_cut = first_matching_index(
+            children,
+            lambda c: bool(hasattr(c, 'relative_reference') and end_ref < c.relative_reference.relative_to(parent_reference)),
+            start=start_cut
+        )
+        return start_cut, end_cut
 
-            raise ValueError("Structural not supported")
+    def get_cut_points_for_special_reference(self, children: Tuple[SubArticleChildType, ...]) -> Tuple[int, int]:
+        assert isinstance(self.position, StructuralReference)
+        assert self.position.special is not None
+        article_id = self.position.special.article_id
+        start_cut = first_matching_index(
+            children,
+            lambda c: isinstance(c, Article) and not identifier_less(c.identifier, article_id)
+        )
+        end_cut = first_matching_index(
+            children,
+            lambda c: bool(isinstance(c, Article) and identifier_less(article_id, c.identifier))
+        )
+        article_found = start_cut != end_cut
 
-    def get_end_cut_point(self, parent_reference: Reference, children: Tuple[SubArticleChildType, ...]) -> int:
-        if isinstance(self.position, Reference):  # pylint: disable=no-else-return
-            p = self.position.last_in_range()
-            return first_matching_index(children, lambda c: bool(hasattr(c, 'relative_reference') and p < c.relative_reference.relative_to(parent_reference)))
+        if self.position.special.position == SubtitleArticleComboType.BEFORE_WITH_ARTICLE:
+            if article_found:
+                start_cut -= 1
+                assert isinstance(children[start_cut], Subtitle)
+            # else it is just an insertion, no need to touch cut points
+        elif self.position.special.position == SubtitleArticleComboType.BEFORE_WITHOUT_ARTICLE:
+            assert article_found, "BEFORE_WITHOUT_ARTICLE should always be a replacement"
+            start_cut -= 1
+            end_cut -= 1
+            assert isinstance(children[start_cut], Subtitle)
+        elif self.position.special.position == SubtitleArticleComboType.AFTER_WITHOUT_ARTICLE:
+            assert article_found, "AFTER_WITHOUT_ARTICLE should always be a replacement"
+            start_cut += 1
+            end_cut += 1
+            assert isinstance(children[start_cut], Subtitle)
         else:
-            # TODO
-            raise ValueError("Structural not supported")
+            raise ValueError("Unhandled SubtitleArticleComboType", self.position.special.position)
+        return start_cut, end_cut
+
+    def get_cut_points_for_structural_reference(self, children: Tuple[SubArticleChildType, ...]) -> Tuple[int, int]:
+        assert isinstance(self.position, StructuralReference)
+        structural_id, structural_type_nc = self.position.last_component_with_type()
+        assert structural_id is not None
+        assert structural_type_nc is not None
+        assert issubclass(structural_type_nc, StructuralElement)
+        # Pypy does not properly infer the type of structural_type without this explicit assignment
+        structural_type: Type[StructuralElement] = structural_type_nc
+
+        start_cut = 0
+        if self.position.book is not None:
+            book_id = self.position.book
+            start_cut = first_matching_index(children, lambda c: bool(isinstance(c, Book) and book_id == c.identifier))
+            assert start_cut < len(children)
+
+        start_cut = first_matching_index(
+            children,
+            lambda c: isinstance(c, structural_type) and structural_id == c.identifier,
+            start=start_cut
+        )
+        # TODO: Insertions are should be legal though, but this is most likely a mistake, so
+        # keep an error until I find an actual insertion. It will need to be handled separately.
+        assert start_cut < len(children), ("Only replacements are supported for structural amendments", self.position)
+
+        end_cut = first_matching_index(
+            children,
+            lambda c: (
+                isinstance(c, structural_type.PARENT_TYPES) or
+                isinstance(c, structural_type) and structural_id != c.identifier
+            ),
+            start=start_cut + 1
+        )
+        return start_cut, end_cut
 
     def compute_new_children(self, parent_reference: Reference, children: Tuple[SubArticleChildType, ...]) -> Tuple[SubArticleChildType, ...]:
-        if isinstance(self.position, StructuralReference):
-            # TODO
-            print("TODO: Support", self.position)
-            return children
-        self.applied = True
-        start_cut_point = self.get_start_cut_point(parent_reference, children)
-        end_cut_point = start_cut_point + self.get_end_cut_point(parent_reference, children[start_cut_point:])
+        if isinstance(self.position, Reference):
+            start_cut_point, end_cut_point = self.get_cut_points_for_reference(parent_reference, children)
+        elif isinstance(self.position, StructuralReference) and self.position.special is not None:
+            start_cut_point, end_cut_point = self.get_cut_points_for_special_reference(children)
+        elif isinstance(self.position, StructuralReference):
+            start_cut_point, end_cut_point = self.get_cut_points_for_structural_reference(children)
+        else:
+            raise ValueError("Unknown amendment position type", self.position)
 
+        assert start_cut_point <= end_cut_point
+        self.applied = True
         return children[:start_cut_point] + self.new_children + children[end_cut_point:]
 
     def apply_to_sae(self, reference: Reference, sae: SubArticleElement) -> SubArticleElement:
@@ -340,7 +402,7 @@ class BlockAmendmentApplier(ModificationApplier):
         return self.apply_to_act(act)
 
 
-@attr.s(slots=True, frozen=True, auto_attribs=True)
+@ attr.s(slots=True, frozen=True, auto_attribs=True)
 class ModificationSet:
     APPLIER_CLASSES: ClassVar[Tuple[Type[ModificationApplier], ...]] = (
         TextReplacementApplier,
@@ -364,12 +426,12 @@ class ModificationSet:
         return act
 
 
-@attr.s(slots=True, frozen=True, auto_attribs=True)
+@ attr.s(slots=True, frozen=True, auto_attribs=True)
 class ActWithCachedData:
     act: Act
     enforcement_dates: EnforcementDateSet = attr.ib(init=False)
 
-    @enforcement_dates.default
+    @ enforcement_dates.default
     def _enforcement_dates_default(self) -> EnforcementDateSet:
         return EnforcementDateSet.from_act(self.act)
 
@@ -416,7 +478,7 @@ class ActSet:
             except ActNotInForce:
                 pass
 
-    @staticmethod
+    @ staticmethod
     def _get_amendments_and_repeals(act: Act) -> Dict[str, List[Tuple[SubArticleElement, SemanticData]]]:
         modifications_per_act: Dict[str, List[Tuple[SubArticleElement, SemanticData]]] = defaultdict(list)
 
