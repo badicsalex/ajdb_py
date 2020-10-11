@@ -511,6 +511,9 @@ class ActSet:
             result.update(act.interesting_dates())
         return tuple(sorted(result))
 
+    def is_interesting_date_for(self, act_id: str, date: Date) -> bool:
+        return date in self.acts[act_id].interesting_dates()
+
     def acts_at_date(self, date: Date) -> Iterable[Act]:
         for act in self.acts.values():
             try:
@@ -540,7 +543,8 @@ class ActSet:
         act.map_saes(sae_walker)
         return modifications_per_act
 
-    def apply_all_modifications(self, amending_act: Act) -> None:
+    def apply_all_modifications(self, amending_act: Act) -> Tuple[str, ...]:
+        modified_acts = []
         for act_id, modifications in self._get_amendments_and_repeals(amending_act).items():
             if act_id not in self.acts:
                 continue
@@ -553,3 +557,5 @@ class ActSet:
 
             act = ActSemanticsParser.add_semantics_to_act(act)
             self.acts[act_id] = ActWithCachedData(act)
+            modified_acts.append(act_id)
+        return tuple(modified_acts)

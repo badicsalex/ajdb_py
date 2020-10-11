@@ -1,35 +1,153 @@
 #!/usr/bin/env python3
-import sys
 from pathlib import Path
+from typing import Sequence
+import argparse
+import shutil
+import subprocess
+import textwrap
 
 from ajdb.database import ActSet
-from ajdb.output import generate_html_for_act
-from hun_law.output.txt import write_act_as_txt
+from hun_law.structure import Act
+from hun_law.utils import Date
+from hun_law.output.html import generate_html_for_act
+from hun_law.output.json import serialize_to_json_file
+from hun_law.output.txt import write_txt
 
-act_set = ActSet()
-for file_path in Path(sys.argv[1]).iterdir():
-    if not file_path.is_file():
-        continue
-    act_set.load_from_file(file_path)
+ACTS_DESCRIPTORS = (
+    ('Ptk.', '2013. évi V. törvény'),
+)
+ALLOWED_ACTS = set(a[1] for a in ACTS_DESCRIPTORS)
 
-dest_path = Path(sys.argv[2])
-dest_path.mkdir(exist_ok=True)
-for date in act_set.interesting_dates():
-    date_str = "{}.{:02}.{:02}".format(date.year, date.month, date.day)
-    print("Processing date", date_str)
+THIS_DIR = Path(__file__).parent
 
-    for act in act_set.acts_at_date(date):
-        act_set.apply_all_modifications(act)
 
-    date_dir = dest_path / date_str
-    date_dir.mkdir(exist_ok=True)
-    style_symlink = (date_dir / "style.css")
-    if not style_symlink.exists():
-        style_symlink.symlink_to('../style.css')
-    for act in act_set.acts_at_date(date):
-        act_html_path = date_dir / (act.identifier + '.html')
-        with act_html_path.open('w') as f:
+def load_parsed_acts(acts_dir: Path) -> ActSet:
+    act_set = ActSet()
+    for file_path in acts_dir.iterdir():
+        if not file_path.is_file():
+            continue
+        act_set.load_from_file(file_path)
+    return act_set
+
+
+def set_up_dir_structure(destination_dir: Path) -> None:
+    if destination_dir.exists():
+        shutil.rmtree(destination_dir)
+    destination_dir.mkdir()
+    (destination_dir / 'html').mkdir()
+    (destination_dir / 'json').mkdir()
+    (destination_dir / 'txt').mkdir()
+    shutil.copyfile(THIS_DIR / 'style.css', destination_dir / 'html' / 'style.css')
+    subprocess.run(
+        ['git', 'init'],
+        cwd=destination_dir,
+        check=True,
+    )
+    subprocess.run(
+        ['git', 'add', '.'],
+        cwd=destination_dir,
+        check=True,
+    )
+    commit_result = subprocess.run(
+        ['git', 'commit', '-m', "Initial commit"],
+        cwd=destination_dir,
+        check=True
+    )
+
+
+def save_in_all_formats(acts: Sequence[Act], destination_dir: Path) -> None:
+    # TODO: check for changes
+    for act in acts:
+        if not act.identifier in ALLOWED_ACTS:
+            continue
+        with (destination_dir / 'html' / (act.identifier + '.html')).open('w') as f:
             generate_html_for_act(act, f)
-    ptk_txt_path = date_dir / ('2013. évi V. törvény.txt')
-    with ptk_txt_path.open('w') as f:
-        write_act_as_txt(f, act_set.acts['2013. évi V. törvény'].act, '')
+        with (destination_dir / 'json' / (act.identifier + '.json')).open('w') as f:
+            serialize_to_json_file(act, f)
+        with (destination_dir / 'txt' / (act.identifier + '.txt')).open('w') as f:
+            write_txt(f, act)
+
+
+def create_named_act_symlinks(destination_dir: Path) -> None:
+    for inner_dir_name in ('html', 'json', 'txt'):
+        inner_dir = destination_dir / inner_dir_name
+        for name, identifier in ACTS_DESCRIPTORS:
+            act_file_name = '{}.{}'.format(identifier, inner_dir_name)
+            symlink_source = inner_dir / act_file_name
+            symlink_destination = inner_dir / '{}.{}'.format(name, inner_dir_name)
+            if symlink_source.exists() and not symlink_destination.exists():
+                symlink_destination.symlink_to(act_file_name)
+
+
+def git_commit(amending_act: Act, date: Date, destination_dir: Path) -> None:
+    commit_message = "{}\n\n{}".format(
+        amending_act.identifier,
+        textwrap.fill(amending_act.subject, width=80)
+    )
+    subprocess.run(
+        ['git', 'add', '.'],
+        cwd=destination_dir,
+        check=True,
+    )
+    date_str = '{}.{:02}.{:02}T08:00:00+00:00'.format(date.year, date.month, date.day)
+    commit_result = subprocess.run(  # pylint: disable=subprocess-run-check
+        [
+            'git', 'commit',
+            '-m', commit_message,
+        ],
+        env={
+            **os.environ,
+            'GIT_AUTHOR_DATE': date_str,
+            'GIT_COMMITTER_DATE': date_str,
+        },
+        cwd=destination_dir,
+    )
+    if commit_result.returncode != 0:
+        print("WARN: Commit not successful. Probably empty.")
+
+
+def generate_repository(act_set: ActSet, destination_dir: Path) -> None:
+    set_up_dir_structure(destination_dir)
+
+    for date in act_set.interesting_dates():
+        print("Processing date", date)
+
+        for act in act_set.acts_at_date(date):
+            modified_act_ids = set(act_set.apply_all_modifications(act))
+            modified_acts = tuple(
+                a for a in act_set.acts_at_date(date) if
+                a.identifier in modified_act_ids and
+                a.identifier in ALLOWED_ACTS
+            )
+            if act.identifier in ALLOWED_ACTS and act_set.is_interesting_date_for(act.identifier, date):
+                modified_acts = (act, ) + modified_acts
+            if not modified_acts:
+                continue
+            save_in_all_formats(modified_acts, destination_dir)
+            create_named_act_symlinks(destination_dir)
+            git_commit(act, date, destination_dir)
+
+
+def parse_args() -> argparse.Namespace:
+    argparser = argparse.ArgumentParser(description="Generate git repo from acts")
+    argparser.add_argument(
+        'source_dir',
+        type=Path,
+        help="The directory that contains the gzipped, json-parsed acts"
+    )
+    argparser.add_argument(
+        'destination_dir',
+        type=Path,
+        help="The directory that contains the gzipped, json-parsed acts"
+    )
+    return argparser.parse_args()
+
+
+def main() -> None:
+    args = parse_args()
+    act_set = load_parsed_acts(args.source_dir)
+    generate_repository(act_set, args.destination_dir)
+
+
+if __name__ == '__main__':
+    main()
