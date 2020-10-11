@@ -13,7 +13,7 @@ from hun_law.structure import \
     StructuralElement, Subtitle, Book,\
     Reference, StructuralReference, SubtitleArticleComboType, \
     EnforcementDate, DaysAfterPublication, DayInMonthAfterPublication, EnforcementDateTypes, \
-    SemanticData, Repeal, TextAmendment, BlockAmendment, \
+    SemanticData, Repeal, TextAmendment, ArticleTitleAmendment, BlockAmendment, \
     SubArticleChildType
 
 from hun_law.utils import Date, identifier_less
@@ -226,6 +226,29 @@ class TextReplacementApplier(ModificationApplier):
 
 
 @attr.s(slots=True, auto_attribs=True)
+class ArticleTitleAmendmentApplier(ModificationApplier):
+    @classmethod
+    def can_apply(cls, modification: SemanticData) -> bool:
+        return isinstance(modification, ArticleTitleAmendment)
+
+    def modifier(self, _reference: Reference, article: Article) -> Article:
+        assert isinstance(self.modification, ArticleTitleAmendment)
+        assert article.title is not None
+        self.applied = self.modification.original_text in article.title
+        new_title = article.title.replace(self.modification.original_text, self.modification.replacement_text)
+        return attr.evolve(
+            article,
+            title=new_title,
+        )
+
+    def apply(self, act: Act) -> Act:
+        assert isinstance(self.modification, ArticleTitleAmendment)
+        _, reference_type = self.modification.position.last_component_with_type()
+        assert reference_type is Article
+        return act.map_articles(self.modifier, self.modification.position)
+
+
+@attr.s(slots=True, auto_attribs=True)
 class RepealApplier(ModificationApplier):
     @classmethod
     def can_apply(cls, modification: SemanticData) -> bool:
@@ -422,6 +445,7 @@ class BlockAmendmentApplier(ModificationApplier):
 class ModificationSet:
     APPLIER_CLASSES: ClassVar[Tuple[Type[ModificationApplier], ...]] = (
         TextReplacementApplier,
+        ArticleTitleAmendmentApplier,
         RepealApplier,
         BlockAmendmentApplier,
     )
@@ -502,9 +526,13 @@ class ActSet:
             if sae.semantic_data is None:
                 return sae
             for semantic_data_element in sae.semantic_data:
-                if not isinstance(semantic_data_element, (Repeal, TextAmendment, BlockAmendment)):
+                if isinstance(semantic_data_element, EnforcementDate):
                     continue
-                modified_ref = semantic_data_element.position
+                # Type is ignored here, since all subclasses except for EnforcementDate
+                # have a position field. Maybe this should be solved by introducing a class
+                # in the middle with a position, but it isn't worth it TBH.
+                # This will fail very fast and very loudly if there is a problem.
+                modified_ref = semantic_data_element.position  # type: ignore
                 assert modified_ref.act is not None
                 modifications_per_act[modified_ref.act].append((sae, semantic_data_element))
                 modifications_per_act[act.identifier].append((sae, Repeal(position=reference)))
