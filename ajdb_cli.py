@@ -5,6 +5,7 @@ import argparse
 import shutil
 import subprocess
 import textwrap
+import os
 
 from ajdb.database import ActSet
 from hun_law.structure import Act
@@ -33,11 +34,10 @@ def load_parsed_acts(acts_dir: Path) -> ActSet:
 def set_up_dir_structure(destination_dir: Path) -> None:
     if destination_dir.exists():
         shutil.rmtree(destination_dir)
-    destination_dir.mkdir()
-    (destination_dir / 'html').mkdir()
-    (destination_dir / 'json').mkdir()
-    (destination_dir / 'txt').mkdir()
-    shutil.copyfile(THIS_DIR / 'style.css', destination_dir / 'html' / 'style.css')
+    shutil.copytree(THIS_DIR / 'generated_repo_skeleton', destination_dir)
+    (destination_dir / 'html').mkdir(exist_ok=True)
+    (destination_dir / 'json').mkdir(exist_ok=True)
+    (destination_dir / 'txt').mkdir(exist_ok=True)
     subprocess.run(
         ['git', 'init'],
         cwd=destination_dir,
