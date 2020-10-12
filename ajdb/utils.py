@@ -29,6 +29,6 @@ def last_matching_index(data: Sequence[Any], filter_fn: Callable[[Any], bool], s
     if start is None:
         start = len(data) - 1
     for index in range(start, -1, -1):
-        if not filter_fn(data[index]):
+        if filter_fn(data[index]):
             return index
     return -1
