@@ -322,6 +322,12 @@ class BlockAmendmentApplier(ModificationApplier):
             lambda c: bool(not hasattr(c, 'relative_reference') or end_ref < c.relative_reference.relative_to(parent_reference)),
             start=start_cut
         )
+        if start_cut == end_cut:
+            # This is a quick hack and should be handled way better
+            # Insertions should come before all structural elements.
+            while start_cut > 0 and isinstance(children[start_cut-1], StructuralElement):
+                start_cut -= 1
+                end_cut -= 1
         return start_cut, end_cut
 
     def get_cut_points_for_special_reference(self, children: Tuple[SubArticleChildType, ...]) -> Tuple[int, int]:
