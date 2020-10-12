@@ -15,7 +15,7 @@ from hun_law.output.json import serialize_to_json_file
 from hun_law.output.txt import write_txt
 
 ACTS_DESCRIPTORS = (
-    ('Ptk.', '2013. évi V. törvény'),
+    ('Btk.', '2012. évi C. törvény'),
 )
 ALLOWED_ACTS = set(a[1] for a in ACTS_DESCRIPTORS)
 
