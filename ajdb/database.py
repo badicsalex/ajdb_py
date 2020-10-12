@@ -20,7 +20,7 @@ from hun_law.utils import Date, identifier_less
 from hun_law.parsers.semantic_parser import ActSemanticsParser
 from hun_law import dict2object
 
-from ajdb.utils import iterate_all_saes_of_act, first_matching_index
+from ajdb.utils import iterate_all_saes_of_act, first_matching_index, last_matching_index
 from ajdb.fixups import apply_fixups
 
 NOT_ENFORCED_TEXT = ' '
@@ -92,7 +92,7 @@ class EnforcementDateSet:
                         default = aed
                     else:
                         specials.append(aed)
-        assert default is not None
+        assert default is not None, act.identifier
         assert all(default.from_date <= special.from_date for special in specials)
         assert all(special.to_date is None for special in specials)
         return cls(
@@ -332,27 +332,41 @@ class BlockAmendmentApplier(ModificationApplier):
             children,
             lambda c: isinstance(c, Article) and not identifier_less(c.identifier, article_id)
         )
-        end_cut = first_matching_index(
-            children,
-            lambda c: bool(isinstance(c, Article) and identifier_less(article_id, c.identifier))
-        )
-        article_found = start_cut != end_cut
+        if start_cut < len(children) and children[start_cut].identifier == article_id:
+            article_found = True
+            end_cut = start_cut + 1
+        else:
+            article_found = False
+            # This is a quick hack and should be handled way better
+            # Insertions should come before all structural elements.
+            while start_cut > 0 and isinstance(children[start_cut-1], StructuralElement):
+                start_cut -= 1
+            end_cut = start_cut
 
         if self.position.special.position == SubtitleArticleComboType.BEFORE_WITH_ARTICLE:
             if article_found:
                 start_cut -= 1
-                assert isinstance(children[start_cut], Subtitle)
-            # else it is just an insertion, no need to touch cut points
+                assert isinstance(children[start_cut], Subtitle), self.position
         elif self.position.special.position == SubtitleArticleComboType.BEFORE_WITHOUT_ARTICLE:
-            assert article_found, "BEFORE_WITHOUT_ARTICLE should always be a replacement"
-            start_cut -= 1
-            end_cut -= 1
-            assert isinstance(children[start_cut], Subtitle)
+            assert article_found, "BEFORE_WITHOUT_ARTICLE needs an existing article"
+            if isinstance(children[start_cut], Subtitle):
+                # Move the cutting frame to the Subtitle itself
+                start_cut -= 1
+                end_cut -= 1
+            else:
+                # There is no subtitle before the article: this is an isnertion.
+                # Move the end cut above the article
+                end_cut -= 1
         elif self.position.special.position == SubtitleArticleComboType.AFTER_WITHOUT_ARTICLE:
-            assert article_found, "AFTER_WITHOUT_ARTICLE should always be a replacement"
-            start_cut += 1
-            end_cut += 1
-            assert isinstance(children[start_cut], Subtitle)
+            assert article_found, "AFTER_WITHOUT_ARTICLE needs an existing article"
+            if isinstance(children[start_cut + 1], Subtitle):
+                # Move the cutting frame to the Subtitle itself
+                start_cut += 1
+                end_cut += 1
+            else:
+                # There is no subtitle after the article: this is an isnertion.
+                # Move the end cut below the article
+                start_cut += 1
         else:
             raise ValueError("Unhandled SubtitleArticleComboType", self.position.special.position)
         return start_cut, end_cut

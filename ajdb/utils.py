@@ -1,5 +1,5 @@
 # Copyright 2020, Alex Badics, All Rights Reserved
-from typing import Iterable, Sequence, Any, Callable
+from typing import Iterable, Sequence, Any, Callable, Optional
 
 from hun_law.structure import Act, SubArticleElement, BlockAmendmentContainer
 
@@ -23,3 +23,12 @@ def first_matching_index(data: Sequence[Any], filter_fn: Callable[[Any], bool], 
         if filter_fn(data[index]):
             return index
     return len(data)
+
+
+def last_matching_index(data: Sequence[Any], filter_fn: Callable[[Any], bool], start: Optional[int] = 0) -> int:
+    if start is None:
+        start = len(data) - 1
+    for index in range(start, -1, -1):
+        if not filter_fn(data[index]):
+            return index
+    return -1
