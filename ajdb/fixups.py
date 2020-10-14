@@ -2,7 +2,7 @@
 from typing import Dict, Any
 import attr
 
-from hun_law.structure import Act, SubArticleElement, Reference, EnforcementDate, DaysAfterPublication
+from hun_law.structure import Act, SubArticleElement, Reference, EnforcementDate, DaysAfterPublication, TextAmendment
 from hun_law.utils import Date
 
 
@@ -30,7 +30,28 @@ REPLACEMENT_FIXUPS: Dict[Reference, Dict[str, Any]] = {
         "semantic_data": (
             EnforcementDate(position=None, date=Date(2014, 1, 18)),
         )
-    }
+    },
+    Reference('2017. évi CXCVII. törvény', '342', None, '9'): {
+        # This is actually correctly parsed, but a space has to be added at 71 § (2), because there is an ügyészi word we do not want to change.
+        # "64. § (2) bekezdésében, 71. § (2) és (3) bekezdésében, 459. § (1) bekezdés 9. pontjában az „ügyész” szövegrészek helyébe az „ügyészség” szöveg,",
+        "semantic_data": (
+            TextAmendment(
+                position=Reference("2012. évi C. törvény", "64", "2"),
+                original_text="ügyész",
+                replacement_text="ügyészség",
+            ),
+            TextAmendment(
+                position=Reference("2012. évi C. törvény", "71", ("2", "3")),
+                original_text="ügyész ",
+                replacement_text="ügyészség ",
+            ),
+            TextAmendment(
+                position=Reference("2012. évi C. törvény", "459", "1", "9"),
+                original_text="ügyész",
+                replacement_text="ügyészség",
+            ),
+        )
+    },
 }
 
 
