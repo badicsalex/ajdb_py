@@ -290,6 +290,7 @@ class RepealApplier(ModificationApplier):
 class BlockAmendmentApplier(ModificationApplier):
     new_children: Tuple[SubArticleChildType, ...] = attr.ib(init=False)
     position: Union[Reference, StructuralReference] = attr.ib(init=False)
+    pure_insertion: bool = attr.ib(init=False)
 
     @new_children.default
     def _new_children_default(self) -> Tuple[SubArticleChildType, ...]:
@@ -304,6 +305,11 @@ class BlockAmendmentApplier(ModificationApplier):
     def _position_default(self) -> Union[Reference, StructuralReference]:
         assert isinstance(self.modification, BlockAmendment)
         return self.modification.position
+
+    @pure_insertion.default
+    def _pure_insertion_default(self) -> bool:
+        assert isinstance(self.modification, BlockAmendment)
+        return self.modification.pure_insertion
 
     @classmethod
     def can_apply(cls, modification: SemanticData) -> bool:
@@ -322,6 +328,9 @@ class BlockAmendmentApplier(ModificationApplier):
             lambda c: bool(not hasattr(c, 'relative_reference') or end_ref < c.relative_reference.relative_to(parent_reference)),
             start=start_cut
         )
+        # TODO: assert between start_cut == end_cut and pure_insertion
+        # However if there is an act that marked an amendment an insertion
+        # or vica-versa, that will need to be fixed.
         if start_cut == end_cut:
             # This is a quick hack and should be handled way better
             # Insertions should come before all structural elements.
@@ -350,29 +359,30 @@ class BlockAmendmentApplier(ModificationApplier):
             end_cut = start_cut
 
         if self.position.special.position == SubtitleArticleComboType.BEFORE_WITH_ARTICLE:
+            # TODO: assert between article_found and pure_insertion
             if article_found:
                 start_cut -= 1
                 assert isinstance(children[start_cut], Subtitle), self.position
         elif self.position.special.position == SubtitleArticleComboType.BEFORE_WITHOUT_ARTICLE:
             assert article_found, "BEFORE_WITHOUT_ARTICLE needs an existing article"
-            if isinstance(children[start_cut], Subtitle):
+            if self.pure_insertion:
+                # Move the end cut above the article
+                end_cut -= 1
+            else:
+                assert isinstance(children[start_cut-1], Subtitle), self.position
                 # Move the cutting frame to the Subtitle itself
                 start_cut -= 1
                 end_cut -= 1
+        elif self.position.special.position == SubtitleArticleComboType.AFTER:
+            assert article_found, "AFTER needs an existing article"
+            if self.pure_insertion:
+                # Move the end cut below the article
+                start_cut += 1
             else:
-                # There is no subtitle before the article: this is an isnertion.
-                # Move the end cut above the article
-                end_cut -= 1
-        elif self.position.special.position == SubtitleArticleComboType.AFTER_WITHOUT_ARTICLE:
-            assert article_found, "AFTER_WITHOUT_ARTICLE needs an existing article"
-            if isinstance(children[start_cut + 1], Subtitle):
+                assert isinstance(children[start_cut + 1], Subtitle)
                 # Move the cutting frame to the Subtitle itself
                 start_cut += 1
                 end_cut += 1
-            else:
-                # There is no subtitle after the article: this is an isnertion.
-                # Move the end cut below the article
-                start_cut += 1
         else:
             raise ValueError("Unhandled SubtitleArticleComboType", self.position.special.position)
         return start_cut, end_cut
@@ -394,7 +404,7 @@ class BlockAmendmentApplier(ModificationApplier):
 
         start_cut = first_matching_index(
             children,
-            lambda c: isinstance(c, structural_type) and structural_id == c.identifier,
+            lambda c: isinstance(c, structural_type) and structural_id in (c.identifier, c.title),
             start=start_cut
         )
         # TODO: Insertions are should be legal though, but this is most likely a mistake, so
@@ -403,10 +413,7 @@ class BlockAmendmentApplier(ModificationApplier):
 
         end_cut = first_matching_index(
             children,
-            lambda c: (
-                isinstance(c, structural_type.PARENT_TYPES) or
-                isinstance(c, structural_type) and structural_id != c.identifier
-            ),
+            lambda c: isinstance(c, (structural_type, * structural_type.PARENT_TYPES)),
             start=start_cut + 1
         )
         return start_cut, end_cut
