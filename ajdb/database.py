@@ -20,7 +20,7 @@ from hun_law.utils import Date, identifier_less
 from hun_law.parsers.semantic_parser import ActSemanticsParser
 from hun_law import dict2object
 
-from ajdb.utils import iterate_all_saes_of_act, first_matching_index, last_matching_index
+from ajdb.utils import iterate_all_saes_of_act, first_matching_index
 from ajdb.fixups import apply_fixups
 
 NOT_ENFORCED_TEXT = ' '
@@ -168,8 +168,16 @@ class ModificationApplier(ABC):
 
 @attr.s(slots=True, auto_attribs=True)
 class TextReplacementApplier(ModificationApplier):
+    position: Reference = attr.ib(init=False)
     original_text: str = attr.ib(init=False)
     replacement_text: str = attr.ib(init=False)
+
+    @position.default
+    def _position_default(self) -> Reference:
+        if isinstance(self.modification, TextAmendment):
+            return self.modification.position
+        assert isinstance(self.modification, Repeal) and isinstance(self.modification.position, Reference)
+        return self.modification.position
 
     @original_text.default
     def _original_text_default(self) -> str:
@@ -210,8 +218,7 @@ class TextReplacementApplier(ModificationApplier):
         )
 
     def apply(self, act: Act) -> Act:
-        assert isinstance(self.modification, (TextAmendment, Repeal))
-        return act.map_saes(self.text_replacer, self.modification.position)
+        return act.map_saes(self.text_replacer, self.position)
 
     @property
     def priority(self) -> int:
@@ -248,6 +255,37 @@ class ArticleTitleAmendmentApplier(ModificationApplier):
         return act.map_articles(self.modifier, self.modification.position)
 
 
+def get_cut_points_for_structural_reference(position: StructuralReference, children: Tuple[SubArticleChildType, ...]) -> Tuple[int, int]:
+    structural_id, structural_type_nc = position.last_component_with_type()
+    assert structural_id is not None
+    assert structural_type_nc is not None
+    assert issubclass(structural_type_nc, StructuralElement)
+    # Pypy does not properly infer the type of structural_type without this explicit assignment
+    structural_type: Type[StructuralElement] = structural_type_nc
+
+    start_cut = 0
+    if position.book is not None:
+        book_id = position.book
+        start_cut = first_matching_index(children, lambda c: bool(isinstance(c, Book) and book_id == c.identifier))
+        assert start_cut < len(children)
+
+    start_cut = first_matching_index(
+        children,
+        lambda c: isinstance(c, structural_type) and structural_id in (c.identifier, c.title),
+        start=start_cut
+    )
+    # TODO: Insertions are should be legal though, but this is most likely a mistake, so
+    # keep an error until I find an actual insertion. It will need to be handled separately.
+    assert start_cut < len(children), ("Only replacements are supported for structural amendments or repeals", position)
+
+    end_cut = first_matching_index(
+        children,
+        lambda c: isinstance(c, (structural_type, * structural_type.PARENT_TYPES)),
+        start=start_cut + 1
+    )
+    return start_cut, end_cut
+
+
 @attr.s(slots=True, auto_attribs=True)
 class RepealApplier(ModificationApplier):
     @classmethod
@@ -278,12 +316,35 @@ class RepealApplier(ModificationApplier):
             ),
         )
 
+    def apply_to_act(self, act: Act) -> Act:
+        assert isinstance(self.modification, Repeal)
+        assert isinstance(self.modification.position, StructuralReference)
+        position: StructuralReference = self.modification.position
+
+        if position.special is None:
+            start_cut, end_cut = get_cut_points_for_structural_reference(position, act.children)
+        else:
+            assert position.special.position == SubtitleArticleComboType.BEFORE_WITHOUT_ARTICLE, \
+                "Only BEFORE_WITHOUT_ARTICLE is supported for special subtitle repeals for now"
+            article_id = position.special.article_id
+            end_cut = first_matching_index(act.children, lambda c: isinstance(c, Article) and c.identifier == article_id)
+            if end_cut >= len(act.children):
+                # Not found: probably an error. Calling code will Warn probably.
+                return act
+            start_cut = end_cut - 1
+
+        self.applied = True
+        # TODO: Repeal articles instead of deleting them.
+        return attr.evolve(act, children=act.children[:start_cut] + act.children[end_cut:])
+
     def apply(self, act: Act) -> Act:
         assert isinstance(self.modification, Repeal)
-        _, reference_type = self.modification.position.last_component_with_type()
-        if reference_type is Article:
-            return act.map_articles(self.article_repealer, self.modification.position)
-        return act.map_saes(self.sae_repealer, self.modification.position)
+        if isinstance(self.modification.position, Reference):
+            _, reference_type = self.modification.position.last_component_with_type()
+            if reference_type is Article:
+                return act.map_articles(self.article_repealer, self.modification.position)
+            return act.map_saes(self.sae_repealer, self.modification.position)
+        return self.apply_to_act(act)
 
 
 @attr.s(slots=True, auto_attribs=True)
@@ -387,44 +448,13 @@ class BlockAmendmentApplier(ModificationApplier):
             raise ValueError("Unhandled SubtitleArticleComboType", self.position.special.position)
         return start_cut, end_cut
 
-    def get_cut_points_for_structural_reference(self, children: Tuple[SubArticleChildType, ...]) -> Tuple[int, int]:
-        assert isinstance(self.position, StructuralReference)
-        structural_id, structural_type_nc = self.position.last_component_with_type()
-        assert structural_id is not None
-        assert structural_type_nc is not None
-        assert issubclass(structural_type_nc, StructuralElement)
-        # Pypy does not properly infer the type of structural_type without this explicit assignment
-        structural_type: Type[StructuralElement] = structural_type_nc
-
-        start_cut = 0
-        if self.position.book is not None:
-            book_id = self.position.book
-            start_cut = first_matching_index(children, lambda c: bool(isinstance(c, Book) and book_id == c.identifier))
-            assert start_cut < len(children)
-
-        start_cut = first_matching_index(
-            children,
-            lambda c: isinstance(c, structural_type) and structural_id in (c.identifier, c.title),
-            start=start_cut
-        )
-        # TODO: Insertions are should be legal though, but this is most likely a mistake, so
-        # keep an error until I find an actual insertion. It will need to be handled separately.
-        assert start_cut < len(children), ("Only replacements are supported for structural amendments", self.position)
-
-        end_cut = first_matching_index(
-            children,
-            lambda c: isinstance(c, (structural_type, * structural_type.PARENT_TYPES)),
-            start=start_cut + 1
-        )
-        return start_cut, end_cut
-
     def compute_new_children(self, parent_reference: Reference, children: Tuple[SubArticleChildType, ...]) -> Tuple[SubArticleChildType, ...]:
         if isinstance(self.position, Reference):
             start_cut_point, end_cut_point = self.get_cut_points_for_reference(parent_reference, children)
         elif isinstance(self.position, StructuralReference) and self.position.special is not None:
             start_cut_point, end_cut_point = self.get_cut_points_for_special_reference(children)
         elif isinstance(self.position, StructuralReference):
-            start_cut_point, end_cut_point = self.get_cut_points_for_structural_reference(children)
+            start_cut_point, end_cut_point = get_cut_points_for_structural_reference(self.position, children)
         else:
             raise ValueError("Unknown amendment position type", self.position)
 
