@@ -1,0 +1,64 @@
+children:
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: NumericPoint
+        identifier: '19'
+        text: készpénz-helyettesítő fizetési eszköz a hitelintézetekről szóló törvényben
+          meghatározott készpénz-helyettesítő fizetési eszköz és a forgatható utalvány,
+          a kincstári kártya, az utazási csekk, a kifizetőt terhelő adó mellett vagy
+          adómentesen adható, korlátozott körű áruk vagy szolgáltatások ellenértékének
+          kiegyenlítése céljából törvény alapján kibocsátott utalvány és a váltó,
+          feltéve, hogy kivitelezése, kódolása vagy a rajta lévő aláírás folytán a
+          másolás, a meghamisítás vagy a jogosulatlan felhasználás ellen védett;
+      intro: E törvény alkalmazásában
+    intro: 'A Büntető Törvénykönyvről szóló 2012. évi C. törvény 459. § (1) bekezdés
+      19. pontja helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '459'
+        paragraph: '1'
+        point: '19'
+    wrap_up: ''
+  identifier: '114'
+- __type__: Article
+  children:
+  - identifier: '1'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: DaysAfterPublication
+        days: 8
+      position: null
+    text: E törvény – a (2)–(3) bekezdésben meghatározott kivételekkel – a kihirdetését
+      követő 8. napon lép hatályba.
+  - identifier: '2'
+    text: Az 1. § (1) bekezdése, a 2. §, az 5. §, a 9. §, a 14. §, a 15. §, a 17.
+      §, a 114. § és az 1. melléklet az e törvény kihirdetését követő 90. napon lép
+      hatályba.
+  - identifier: '3'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2014
+      position:
+        article: '11'
+    text: A 11. § 2014. január 1-jén lép hatályba.
+  - identifier: '4'
+    text: E törvény 2014. január 2-án hatályát veszti.
+  identifier: '116'
+identifier: 2013. évi XCVIII. törvény
+preamble: ''
+publication_date:
+  day: 21
+  month: 6
+  year: 2013
+subject: egyes pénzügyi tárgyú törvények módosításáról

@@ -1,0 +1,216 @@
+children:
+- __type__: Article
+  children:
+  - act_id_abbreviations:
+    - abbreviation: Ptk.
+      act: 2013. évi V. törvény
+    children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '5'
+        text: A kedvezményezetti jogosultság megszűnik, ha a kedvezményezett a szerződésben
+          meghatározottaktól eltérő jogcímen érvényesít igényt a kezelt vagyonnal
+          szemben.
+    intro: 'A Polgári Törvénykönyvről szóló 2013. évi V. törvény (a továbbiakban:
+      Ptk.) 6:311. §-a a következő (5) bekezdéssel egészül ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 6:311
+        paragraph: '5'
+      pure_insertion: true
+    wrap_up: ''
+  identifier: '22'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '4'
+        text: A vagyonrendelő a halála vagy jogutód nélküli megszűnése esetére a szerződésben
+          kijelölheti a vagyonrendelőt megillető jogok gyakorlására jogosult és a
+          vagyonrendelőt terhelő kötelezettségek teljesítésére köteles személyt. A
+          kijelölésnek a vagyonkezelőhöz intézett nyilatkozattal történő elfogadása
+          esetén a kijelölt személyt a vagyonrendelő jogai és kötelezettségei illetik
+          meg, illetve terhelik abban a körben, amelyben a szerződés e jogait és kötelezettségeit
+          nem korlátozta.
+    intro: 'A Ptk. 6:325. §-a a következő (4) bekezdéssel egészül ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 6:325
+        paragraph: '4'
+      pure_insertion: true
+    wrap_up: ''
+  identifier: '23'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: AlphabeticPoint
+        identifier: e
+        text: a vagyonrendelő a határozatlan időre kötött szerződést – annak eltérő
+          rendelkezése hiányában – felmondja.
+      intro: A bizalmi vagyonkezelés megszűnik, ha
+    intro: 'A Ptk. 6:326. § (1) bekezdése a következő e) ponttal egészül ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 6:326
+        paragraph: '1'
+        point: e
+      pure_insertion: true
+    wrap_up: ''
+  identifier: '24'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '2'
+        text: Végrendelettel alapított bizalmi vagyonkezelési jogviszony a vagyonkezelővé
+          való kijelölésnek a vagyonkezelő által a végrendeletben meghatározott tartalommal
+          történő elfogadásával a vagyonrendelő halálának időpontjára visszamenő hatállyal
+          jön létre.
+    intro: 'A Ptk. 6:329. § (2) bekezdése helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 6:329
+        paragraph: '2'
+    wrap_up: ''
+  identifier: '25'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '1'
+        text: 'A kötelesrész alapja a hagyaték tiszta értéke, valamint az örökhagyó
+          által élők között bárkinek juttatott ingyenes adományok juttatáskori tiszta
+          értéke, ideértve az örökhagyó által bizalmi vagyonkezelésbe adott vagyon
+          értékét is (a továbbiakban: ingyenes adomány).'
+    intro: 'A Ptk. 7:80. § (1) bekezdése helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 7:80
+        paragraph: '1'
+    wrap_up: ''
+  identifier: '26'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '5'
+        text: Végrendelettel alapított bizalmi vagyonkezelési jogviszony esetén a
+          bizalmi vagyonkezelő a hagyatéki tartozásokért a kezelt vagyonnal úgy felel,
+          mintha dologi hagyományban részesült volna.
+    intro: 'A Ptk. 7:96. §-a a következő (5) bekezdéssel egészül ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 7:96
+        paragraph: '5'
+      pure_insertion: true
+    wrap_up: ''
+  identifier: '27'
+- __type__: Article
+  children:
+  - identifier: '1'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: DaysAfterPublication
+        days: 15
+      position: null
+    text: Ez a törvény – a (2) bekezdésben foglalt kivétellel – a kihirdetését követő
+      15. napon lép hatályba.
+  - identifier: '2'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2018
+      position:
+        article: '35'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2018
+      position:
+        article: '39'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2018
+      position:
+        article: '44'
+        point:
+        - e
+        - f
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2018
+      position:
+        article: '44'
+        point: h
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2018
+      position:
+        article: '44'
+        point:
+        - l
+        - m
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2018
+      position:
+        article: '45'
+        point: g
+    text: A 35. §, a 39. §, a 44. § e)–f) h), l)–m) pontja, és a 45. § g) pontja 2018.
+      január 1-jén lép hatályba.
+  identifier: '46'
+identifier: 2017. évi LXI. törvény
+preamble: ''
+publication_date:
+  day: 8
+  month: 6
+  year: 2017
+subject: egyes törvényeknek az üzleti környezet jogi versenyképességének növelése
+  érdekében szükséges módosításáról

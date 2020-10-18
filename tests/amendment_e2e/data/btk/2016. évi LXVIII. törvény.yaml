@@ -1,0 +1,204 @@
+children:
+- __type__: Article
+  children:
+  - identifier: '1'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 11
+        year: 2016
+      position: null
+    text: Ez a törvény – a (2)–(6) bekezdésben meghatározott kivétellel – 2016. november
+      1-jén lép hatályba.
+  - identifier: '2'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2017
+      position:
+        article:
+        - '1'
+        - '19'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2017
+      position:
+        article: '20'
+        paragraph:
+        - '1'
+        - '4'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2017
+      position:
+        article:
+        - '21'
+        - '79'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2017
+      position:
+        article:
+        - '81'
+        - '147'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2017
+      position:
+        article:
+        - '152'
+        - '172'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2017
+      position:
+        article: '174'
+        paragraph:
+        - '1'
+        - '2'
+    text: Az 1–19. §, a 20. § (1)–(4) bekezdése, a 21–79. §, a 81–147. §, a 152–172.
+      §, valamint a 174. § (1)–(2) bekezdése 2017. január 1-jén lép hatályba.
+  - identifier: '3'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 2
+        month: 1
+        year: 2017
+      position:
+        article: '174'
+        paragraph: '3'
+    text: A 174. § (3) bekezdése 2017. január 2-án lép hatályba.
+  - identifier: '4'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2017
+      position:
+        article: '173'
+    text: A 173. § 2017. július 1-jén lép hatályba.
+  - identifier: '5'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 2
+        month: 7
+        year: 2017
+      position:
+        article: '174'
+        paragraph: '4'
+    text: A 174. § (4) bekezdése 2017. július 2-án lép hatályba.
+  - identifier: '6'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2018
+      position:
+        article: '20'
+        paragraph: '5'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2018
+      position:
+        article: '80'
+    text: A 20. § (5) bekezdése és a 80. § 2018. január 1-jén lép hatályba.
+  identifier: '149'
+- __type__: Article
+  children:
+  - act_id_abbreviations:
+    - abbreviation: Btk.
+      act: 2012. évi C. törvény
+    children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '6'
+        text: Az (1)–(5) bekezdés szerint büntetendő, aki a jövedéki adóról szóló
+          törvényben, valamint a felhatalmazásán alapuló jogszabályban megállapított
+          feltétel hiányában vagy hatósági engedély nélkül jövedéki terméket előállít,
+          megszerez, tart, forgalomba hoz, vagy azzal kereskedik, és ezzel a költségvetésnek
+          vagyoni hátrányt okoz.
+    identifier: '1'
+    intro: 'A Büntető Törvénykönyvről szóló 2012. évi C. törvény (a továbbiakban:
+      Btk.) 396. § (6) bekezdése helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '396'
+        paragraph: '6'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        children:
+        - __type__: AlphabeticPoint
+          identifier: a
+          text: jövedéki termék előállítására alkalmas, a jövedéki adóról szóló törvényben,
+            valamint a felhatalmazásán alapuló jogszabályban meghatározott berendezést,
+            készüléket, eszközt vagy alapanyagot engedély nélkül vagy a jogszabály
+            megszegésével előállít, megszerez, tart, forgalomba hoz, illetve
+        - __type__: AlphabeticPoint
+          identifier: b
+          text: a forgalomba hozatalhoz szükséges zárjegyet engedély nélkül vagy jogszabály
+            megszegésével előállít, megszerez vagy tart,
+        identifier: '1'
+        intro: Aki
+        wrap_up: vétség miatt két évig terjedő szabadságvesztéssel büntetendő.
+    identifier: '2'
+    intro: 'A Btk. 398. § (1) bekezdése helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '398'
+        paragraph: '1'
+    wrap_up: ''
+  identifier: '167'
+identifier: 2016. évi LXVIII. törvény
+preamble: 'Az Országgyűlés figyelemmel az államháztartás feladatainak ellátásához
+  szükséges bevételek biztosítására, figyelemmel a versenysemleges adórendszer működtetésének
+  követelményeire, figyelemmel Magyarországnak az Európai Unióban tagállamként való
+  részvételére, különös tekintettel az ebből fakadó, a jövedéki adózás területén jelentkező
+  jogharmonizációs kötelezettségekre, valamint tekintetbe véve a jövedéki adózás bevezetése
+  óta szerzett tapasztalatokat is, a jövedéki adózás szabályairól a következő törvényt
+  alkotja:'
+publication_date:
+  day: 17
+  month: 6
+  year: 2016
+subject: a jövedéki adóról

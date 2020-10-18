@@ -1,0 +1,124 @@
+children:
+- __type__: Article
+  children:
+  - act_id_abbreviations:
+    - abbreviation: Btk.
+      act: 2012. évi C. törvény
+    children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Subtitle
+        identifier: ''
+        title: Jogellenes bevándorlás elősegítése, támogatása
+      - __type__: Article
+        children:
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: Magyarországon menedékjogi eljárás kezdeményezését tegye lehetővé
+              olyan személy részére, aki hazájában vagy a szokásos tartózkodási helye
+              szerinti országban vagy olyan más országban, amelyen keresztül érkezett,
+              nincs faji, nemzeti hovatartozása, meghatározott társadalmi csoporthoz
+              tartozása, vallási, illetve politikai meggyőződése miatt üldözésnek
+              kitéve, vagy a közvetlen üldöztetéstől való félelme nem megalapozott,
+              vagy
+          - __type__: AlphabeticPoint
+            identifier: b
+            text: a Magyarországra jogellenesen belépő vagy jogszerűtlenül tartózkodó
+              személy tartózkodási jogcímet szerezzen, ha súlyosabb bűncselekmény
+              nem valósul meg, vétség miatt elzárással büntetendő.
+          identifier: '1'
+          intro: Aki szervező tevékenységet folytat annak érdekében, hogy
+        - identifier: '2'
+          text: Egy évig terjedő szabadságvesztéssel büntetendő, aki az (1) bekezdésben
+            meghatározott bűncselekmény elkövetéséhez anyagi eszközöket szolgáltat
+            vagy a szervező tevékenységet rendszeresen folytatja.
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: vagyoni haszonszerzés végett,
+          - __type__: AlphabeticPoint
+            identifier: b
+            text: több személynek segítséget nyújtva, vagy
+          - __type__: AlphabeticPoint
+            identifier: c
+            text: 'a személyek határátlépésére irányadó szabályok uniós kódexéről
+              szóló, 2016. március 9-i (EU) 2016/399 európai parlamenti és tanácsi
+              rendelet (a továbbiakban: Schengeni határ-ellenőrzési kódex) 2. cikk
+              2. pontjának megfelelő Magyarország külső határának határvonalától,
+              illetve a határjeltől számított 8 km-es sávon belül'
+          identifier: '3'
+          intro: A (2) bekezdés szerint büntetendő, aki az (1) bekezdésben meghatározott
+            bűncselekményt
+          wrap_up: követi el.
+        - identifier: '4'
+          text: A büntetés korlátlanul enyhíthető – különös méltánylást érdemlő esetben
+            mellőzhető – az (1) bekezdésben meghatározott bűncselekmény elkövetőjével
+            szemben, ha az elkövető a vádemelésig az elkövetés körülményeit feltárja.
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: Magyarország területének Schengeni határ-ellenőrzési kódex 2. cikk
+              2. pontjának megfelelő külső határ szerinti határvonalán, illetve határjelénél
+              határmegfigyelést szervez,
+          - __type__: AlphabeticPoint
+            identifier: b
+            text: információs anyagot készít, terjeszt vagy ilyenre megbízást ad,
+          - __type__: AlphabeticPoint
+            identifier: c
+            text: hálózatot épít vagy működtet.
+          identifier: '5'
+          intro: E § alkalmazásában szervező tevékenységnek minősül különösen, ha
+            az (1) bekezdésben meghatározott célból
+        identifier: 353/A
+    identifier: '1'
+    intro: 'A Büntető Törvénykönyvről szóló 2012. évi C. törvény (a továbbiakban:
+      Btk.) a 353. §-t követően a következő alcímmel és 353/A. §-sal egészül ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: StructuralReference
+        act: 2012. évi C. törvény
+        special:
+          article_id: 353/A
+          position: BEFORE_WITH_ARTICLE
+      pure_insertion: true
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Article
+        children:
+        - text: Az embercsempészés, a határzár tiltott átlépése, a határzár megrongálása,
+            a határzárral kapcsolatos építési munka akadályozása, a jogellenes tartózkodás
+            elősegítése, a jogellenes bevándorlás elősegítése, támogatása és a tiltott
+            szerencsejáték szervezése elkövetőjével szemben kitiltásnak is helye van.
+        identifier: '364'
+    identifier: '2'
+    intro: 'A Btk. 364. §-a helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '364'
+    wrap_up: ''
+  identifier: '11'
+- __type__: Article
+  children:
+  - semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: DayInMonthAfterPublication
+        day: 1
+      position: null
+    text: Ez a törvény a kihirdetését követő hónap első napján lép hatályba.
+  identifier: '12'
+identifier: 2018. évi VI. törvény
+preamble: ''
+publication_date:
+  day: 28
+  month: 6
+  year: 2018
+subject: egyes törvényeknek a jogellenes bevándorlás elleni intézkedésekkel kapcsolatos
+  módosításáról

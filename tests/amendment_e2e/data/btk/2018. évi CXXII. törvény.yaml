@@ -1,0 +1,80 @@
+children:
+- __type__: Article
+  children:
+  - act_id_abbreviations:
+    - abbreviation: Btk.
+      act: 2012. évi C. törvény
+    children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Article
+        children:
+        - identifier: '1'
+          text: A 314–315. §, a 316/A. § és a 318. § alkalmazásában terrorista csoport
+            a három vagy több személyből álló, hosszabb időre szervezett, összehangoltan
+            működő csoport, amelynek célja terrorcselekmény elkövetése.
+        - identifier: '2'
+          text: A 316/A. §, a 318. § és a 318/A. § alkalmazásában anyagi eszközön
+            a terrorizmus leküzdése érdekében egyes személyekkel és szervezetekkel
+            szemben hozott különleges korlátozó intézkedésekről szóló, 2001. december
+            27-i 2580/2001/EK tanácsi rendelet 1. cikk 1. pontjában meghatározott
+            eszközöket, jogi dokumentumokat és okiratokat kell érteni.
+        identifier: '319'
+    intro: 'A Büntető Törvénykönyvről szóló 2012. évi C. törvény (a továbbiakban:
+      Btk.) 319. §-a helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '319'
+    wrap_up: ''
+  identifier: '14'
+- __type__: Article
+  children:
+  - children:
+    - __type__: AlphabeticPoint
+      identifier: a
+      semantic_data:
+      - __type__: Repeal
+        position:
+          __type__: Reference
+          act: 2012. évi C. törvény
+          article: '266'
+          paragraph: '2'
+      text: 266. § (2) bekezdése és
+    - __type__: AlphabeticPoint
+      identifier: b
+      semantic_data:
+      - __type__: Repeal
+        position:
+          __type__: Reference
+          act: 2012. évi C. törvény
+          article: 318/B
+      text: 318/B. §-a.
+    intro: Hatályát veszti a Btk.
+  identifier: '15'
+- __type__: Article
+  children:
+  - semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2019
+      position: null
+      repeal_date:
+        day: 2
+        month: 1
+        year: 2019
+    text: Ez a törvény 2019. január 1-jén lép hatályba, és 2019. január 2-án hatályát
+      veszti.
+  identifier: '29'
+identifier: 2018. évi CXXII. törvény
+preamble: ''
+publication_date:
+  day: 20
+  month: 12
+  year: 2018
+subject: egyes büntetőjogi tárgyú és más kapcsolódó törvények módosításáról

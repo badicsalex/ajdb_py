@@ -1,0 +1,280 @@
+children:
+- __type__: Article
+  children:
+  - semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: DaysAfterPublication
+      position: null
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 9
+        year: 2013
+      position:
+        article: '15'
+        paragraph: '2'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 9
+        year: 2013
+      position:
+        article: '15'
+        paragraph: '4'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 11
+        year: 2013
+      position:
+        article: '15'
+        paragraph: '9'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2016
+      position:
+        article: '15'
+        paragraph: '10'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2014
+      position:
+        article: '15'
+        paragraph: '18'
+    text: E törvény a kihirdetését követő napon lép hatályba. E törvény 15. § (2)
+      bekezdése és 15. § (4) bekezdése 2013. szeptember 1-jén, a 15. § (9) bekezdése
+      2013. november 1-jén lép hatályba. E törvény 15. § (10) bekezdése 2016. július
+      1-jén, a 15. § (18) bekezdése 2014. január 1-jén lép hatályba. A törvény 14.
+      § (1) bekezdés 2. mondata a jelen törvény hatályba lépését követő 45. napon
+      – vagy ha ez munkaszüneti nap – akkor a következő munkanapon lép hatályba.
+  identifier: '21'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: AlphabeticPoint
+        identifier: c
+        text: az átváltoztatható, jegyzési jogot biztosító vagy átváltozó kötvények
+          sorozatát, számát, névértékét és a kötvényekre vonatkozó szabályokat;
+    intro: 'A polgári törvénykönyvről szóló 2013. évi V. tv. 3:250. § (2) bekezdés
+      c) pontja a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 3:250
+        paragraph: '2'
+        point: c
+    wrap_up: ''
+  identifier: '40'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Article
+        children:
+        - identifier: '1'
+          text: A közgyűlés az alapszabályban meghatározott feltételek szerint jogosult
+            jegyzési jogot biztosító kötvények kibocsátásáról határozni, amelyek az
+            alaptőke új részvények forgalomba hozatalával történő felemelése esetén
+            a részvények átvételére, illetve jegyzésére vonatkozó elsőbbséget biztosítanak
+            a kötvény jogosultjának.
+        - identifier: '2'
+          text: Az alaptőke pénzbeli hozzájárulás ellenében történő felemelése esetén
+            a részvényesek, valamint az átváltoztatható, illetve jegyzési jogot biztosító
+            kötvények tulajdonosai a részvények átvételére elsőbbségi joggal rendelkeznek.
+            Az elsőbbségi jog gyakorlására jogosultak sorrendjét és az elsőbbségi
+            jog gyakorlására rendelkezésre álló időtartamot az alapszabályban kell
+            szabályozni.
+        - identifier: '3'
+          text: Az elsőbbségi jog gyakorlására a részvénytársaság legalább tizenöt
+            napos határidőt köteles biztosítani.
+        - identifier: '4'
+          text: A részvénytársaság köteles az alapszabályban meghatározott módon tájékoztatni
+            a részvényeseket, továbbá az átváltoztatható és a jegyzési jogot biztosító
+            kötvények tulajdonosait a megszerezhető részvények névértékéről, illetve
+            kibocsátási értékéről, a jog érvényesítésére nyitva álló időszak kezdő-
+            és záró napjáról és a jog gyakorlásának módjáról.
+        - identifier: '5'
+          text: Az átváltozó kötvény előre meghatározott objektív ok alapján alakul
+            át részvénnyé, ennek megfelelően tulajdonosa számára elsőbbségi jogot
+            nem biztosít
+        identifier: 3:297
+        title: Elsőbbségi jog gyakorlása
+    intro: 'A polgári törvénykönyvről szóló 2013. évi V. tv. 3:297. §-a a következő
+      szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 3:297
+    wrap_up: ''
+  identifier: '41'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '1'
+        text: A részvénytársaság feltételes alaptőke-emelést határozhat el átváltoztatható,
+          ill. átváltozó kötvények forgalomba hozatalával.
+      - __type__: Paragraph
+        identifier: '2'
+        text: A forgalomba hozott átváltoztatható és átváltozó kötvények összesített
+          névértékének összege nem haladhatja meg a részvénytársaság alaptőkéjének
+          felét.
+      - __type__: Paragraph
+        identifier: '3'
+        text: Az átváltoztatható kötvényt az alapszabályban meghatározott feltételek
+          szerint a kötvényes kérésére részvénnyé kell átalakítani.
+      - __type__: Paragraph
+        identifier: '4'
+        text: Az átváltozó kötvény egy később bekövetkező objektív feltétel bekövetkezte
+          esetén részvénnyé alakul át.
+      - __type__: Paragraph
+        children:
+        - __type__: AlphabeticPoint
+          identifier: a
+          text: azt, hogy a kötvény kibocsátása zártkörűen vagy nyilvánosan történik;
+        - __type__: AlphabeticPoint
+          identifier: b
+          text: a kibocsátandó kötvények számát, névértékét, illetve kibocsátási értékét,
+            a kötvények sorozatát, a jegyzés helyét és idejét;
+        - __type__: AlphabeticPoint
+          identifier: c
+          text: a kötvények részvénnyé történő átalakításának, ill. átalakulásának
+            feltételeit, időpontját;
+        - __type__: AlphabeticPoint
+          identifier: d
+          text: a kötvény futamidejét, a kamat vagy egyéb hozam megfizetésének feltételeit;
+        - __type__: AlphabeticPoint
+          identifier: e
+          text: kötvény zártkörű kibocsátása esetén a kötvények átvételére jogosult
+            személyeket és az általuk jegyezhető kötvények számát, névértékét, kibocsátási
+            értékét és sorozatát.
+        identifier: '5'
+        intro: A feltételes alaptőke-emelést elhatározó közgyűlési határozatban meg
+          kell határozni
+    intro: 'A polgári törvénykönyvről szóló 2013. évi V. tv. 3:303. § (1)–(5) bekezdése
+      a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 3:303
+        paragraph:
+        - '1'
+        - '5'
+    wrap_up: ''
+  identifier: '42'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Article
+        children:
+        - identifier: '1'
+          text: Az átváltoztatható kötvény tulajdonosai a kötvény futamidején belül,
+            a közgyűlés által meghatározott időtartam alatt írásban – nyomdai úton
+            előállított kötvények esetén a kötvényeknek az igazgatóság részére történő
+            benyújtásával – kötvényeik helyébe részvényt igényelhetnek. Ha a kötvényeket
+            a részvények névértékénél, illetve kibocsátási értékénél alacsonyabb összeggel
+            bocsátották ki, a kötvénytulajdonos a bejelentéssel egyidejűleg köteles
+            a kötvény és a részvény névértéke, illetve kibocsátási értéke közötti
+            különbözetet a részvénytársaságnak megfizetni. A nyilatkozat megtételével
+            a kötvénytulajdonos jogosulttá válik részvényutalványra.
+        - identifier: '2'
+          text: Az átváltozó kötvény az alaptőke felemelését átváltozó kötvény kibocsátása
+            útján elhatározó közgyűlési határozatban foglalt objektív feltételek bekövetkezte
+            alapján alakul át részvénnyé. Az átváltozó kötvény tulajdonosai az objektív
+            feltétel bekövetkeztét követően belül, a közgyűlés által meghatározott
+            időtartam alatt írásban – nyomdai úton előállított kötvények esetén a
+            kötvényeknek az igazgatóság részére történő benyújtásával – kötvényeik
+            helyébe részvényt igényelhetnek. A kötvénytulajdonos az objektív feltétel
+            bekövetkeztével jogosulttá válik részvényutalványra. A kötvény átváltozása
+            a törvény erejénél fogva következik be.
+        - identifier: '3'
+          text: A kötvényt kibocsátó közgyűlési határozatban foglaltaknak megfelelően
+            az (1) és (2) bekezdés szerinti bejelentés megtételére rendelkezésre álló
+            időtartam lejártát, ill. az objektív feltétel bekövetkeztét követő első
+            közgyűlésen vagy a közgyűlési határozatban meghatározott időpontban kell
+            az alaptőke felemeléséről dönteni, és ennek megfelelően a részvénytársaság
+            alapszabályát módosítani.
+        identifier: 3:305
+        title: Átváltoztatható kötvény helyett részvény igénylése és átváltozó kötvény
+          átalakulása
+    intro: 'A polgári törvénykönyvről szóló 2013. évi V. tv. 3:305. §-a a következő
+      szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 3:305
+    wrap_up: ''
+  identifier: '43'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '5'
+        text: Az átváltoztatható vagy átváltozó kötvény esetén az egyesüléssel létrejövő
+          részvénytársaságnak a kötvénytulajdonos számára olyan jogosultságokat kell
+          biztosítania, amelyek legalább egyenértékűek azokkal a jogosultságokkal,
+          amelyekkel a jogelőd gazdasági társaságban rendelkeztek, kivéve, ha a kötvénytulajdonosok
+          mindegyike hozzájárul jogosultsága csökkenéséhez. A tulajdonos az egyesülő
+          társaságok által kibocsátott átváltoztatható, átváltozó vagy jegyzési jogot
+          biztosító kötvény visszavásárlását is igényelheti a jogutód részvénytársaságtól.
+          Az e bekezdésben foglalt szabályokat nem kell alkalmazni, ha az értékpapír
+          kibocsátásakor előre meghatározták a kötvénytulajdonosok helyzetét egy esetleges
+          egyesülés esetére.
+    intro: 'A polgári törvénykönyvről szóló 2013. évi V. tv. 3:319. § (5) bekezdése
+      a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 3:319
+        paragraph: '5'
+    wrap_up: ''
+  identifier: '44'
+identifier: 2013. évi CXXXV. törvény
+preamble: PREAMBULUM Szükséges a takarékszövetkezeti szektor átalakítása, mivel a
+  szektor tőkeellátottsága alacsony, szervezettsége és szolgáltatási szintje nem megfelelő
+  és félő, hogy jelenlegi formájában nem lesz hosszú távon működőképes. A Magyar Állam
+  az állami vagyon terhére a 2007. évi CCVI. törvényben foglaltak alapján kormányhatározatban
+  állapította meg a takarékszövetkezeti szektor átalakításához elvben minimálisan
+  rendelkezésre álló összeget. A szektor átalakítására ténylegesen fordított összeg
+  azonban a nemzetközi kötelezettségek miatt nem haladhatja meg azt az összeget, ami
+  egy piaci befektetőnek is megfelelő ellenérték lenne hasonló helyzetben a Magyar
+  Állam által a szektorban szerzett jogok és pozíció ellenértékeként. Bár a Magyar
+  Állam fontos tulajdonosi pozíciót szerez a szektorban, azt a szektor átalakítására,
+  professzionalizálására, és átszervezésére fordítja, és az így feljavított és megerősített
+  szektorban pozícióit megfelelő időn belül értékesíteni kívánja, ha az általa elindított
+  pozitív folyamatokat visszafordíthatatlannak látja.
+publication_date:
+  day: 12
+  month: 7
+  year: 2013
+subject: a szövetkezeti hitelintézetek integrációjáról és egyes gazdasági tárgyú jogszabályok
+  módosításáról

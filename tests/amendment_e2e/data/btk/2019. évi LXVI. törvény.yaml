@@ -1,0 +1,450 @@
+children:
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        children:
+        - __type__: AlphabeticPoint
+          identifier: a
+          text: ha a jogszabályban vagy az Európai Unió általános hatályú közvetlenül
+            alkalmazandó jogi aktusában előírt biztonságossági vagy minőségi követelményeknek
+            nem felel meg, vagy
+        - __type__: AlphabeticPoint
+          children:
+          - __type__: AlphabeticSubpoint
+            identifier: ba
+            text: az emberi fogyasztás céljára előállított termék emberi fogyasztásra
+              való alkalmatlanságát elfedték,
+          - __type__: AlphabeticSubpoint
+            identifier: bb
+            text: a termék minőségmegőrzési, fogyaszthatósági, illetve felhasználhatósági
+              idejét jogellenesen meghosszabbították,
+          - __type__: AlphabeticSubpoint
+            identifier: bc
+            text: a terméket nem megengedett összetevő felhasználásával állították
+              elő,
+          - __type__: AlphabeticSubpoint
+            identifier: bd
+            text: a terméket emberi fogyasztásra nem alkalmas anyagokból vagy termékekből
+              állították elő emberi fogyasztás céljára, vagy
+          identifier: b
+          intro: az a) pontban meghatározott előírás hiányában akkor, ha
+        identifier: '6'
+        intro: E § alkalmazásában rossz minőségű a termék,
+        wrap_up: be) a termék rendeltetésszerűen nem használható, vagy használhatósága
+          jelentős mértékben csökkent.
+    intro: 'A Büntető Törvénykönyvről szóló 2012. évi C. törvény 415. § (6) bekezdése
+      helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '415'
+        paragraph: '6'
+    wrap_up: ''
+  identifier: '105'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: AlphabeticSubpoint
+        identifier: ab
+        text: az áru eredete, származási helye és előállításának módja,
+      intro: 'E § alkalmazásában az áru lényeges tulajdonsága:'
+    intro: 'A Büntető Törvénykönyvről szóló 2012. évi C. törvény 417. § (4) bekezdés
+      a) pont ab) alpontja helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '417'
+        paragraph: '4'
+        point: a
+        subpoint: ab
+    wrap_up: ''
+  identifier: '106'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: NumericPoint
+        identifier: '1'
+        text: 'bűnszervezet: legalább három személyből álló, hosszabb időre, hierarchikusan
+          szervezett, konspiratívan működő csoport, amelynek célja ötévi vagy ezt
+          meghaladó szabadságvesztéssel büntetendő szándékos bűncselekmények elkövetése;'
+      intro: E törvény alkalmazásában
+    intro: 'A Büntető Törvénykönyvről szóló 2012. évi C. törvény 459. § (1) bekezdés
+      1. pontja helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '459'
+        paragraph: '1'
+        point: '1'
+    wrap_up: ''
+  identifier: '107'
+- __type__: Article
+  children:
+  - identifier: '1'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: DaysAfterPublication
+      position: null
+    text: Ez a törvény – a (2)–(14) bekezdésben meghatározott kivétellel – a kihirdetését
+      követő napon lép hatályba.
+  - identifier: '2'
+    text: A 22. § az e törvény kihirdetését követő 8. napon lép hatályba.
+  - identifier: '3'
+    text: A 105. §, a 106. §, a 136. § és a 137. § az e törvény kihirdetését követő
+      15. napon lép hatályba.
+  - identifier: '4'
+    text: A 100. § és a 104. § (1) bekezdés 2. pontja az e törvény kihirdetését követő
+      16. napon lép hatályba.
+  - identifier: '5'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 8
+        year: 2019
+      position:
+        article: '17'
+    text: A 17. § 2019. augusztus 15-én lép hatályba.
+  - identifier: '6'
+    text: Az 59. § az e törvény kihirdetését követő 31. napon lép hatályba.
+  - identifier: '7'
+    text: A 132. § a 2019. évi általános nemzetiségi önkormányzati választások kitűzésének
+      napján lép hatályba.
+  - identifier: '8'
+    text: A 165. § az e törvény kihirdetését követő 45. napon lép hatályba.
+  - identifier: '9'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 9
+        year: 2019
+      position:
+        article: '81'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 9
+        year: 2019
+      position:
+        article: '82'
+    text: A 81. § és a 82. § 2019. szeptember 1-jén lép hatályba.
+  - identifier: '10'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 10
+        year: 2019
+      position:
+        article: '47'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 10
+        year: 2019
+      position:
+        article: '49'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 10
+        year: 2019
+      position:
+        article: '50'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 10
+        year: 2019
+      position:
+        article: '52'
+        point: '8'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 10
+        year: 2019
+      position:
+        article:
+        - '117'
+        - '128'
+    text: A 47. §, a 49. §, az 50. §, az 52. § 8. pontja és a 117. §–128. § 2019.
+      október 1-jén lép hatályba.
+  - identifier: '11'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article:
+        - '1'
+        - '3'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '6'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article:
+        - '13'
+        - '15'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '16'
+        paragraph: '1'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '28'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '29'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '31'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '32'
+        point:
+        - '6'
+        - '7'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '33'
+        point: '1'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '58'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '69'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '72'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article:
+        - '87'
+        - '89'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '91'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '99'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '103'
+        point: '4'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '104'
+        paragraph: '1'
+        point: '1'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article:
+        - '108'
+        - '111'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '112'
+        paragraph:
+        - '1'
+        - '2'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '164'
+        paragraph: '2'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '174'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '189'
+        paragraph: '4'
+    text: Az 1. §–3. §, a 6. §, a 13. §–15. §, a 16. § (1) bekezdése, a 28. §, a 29.
+      §, a 31. §, a 32. § 6. és 7. pontja, a 33. § 1. pontja, az 58. §, a 69. §, a
+      72. §, a 87. §–89. §, a 91. §, a 99. §, a 103. § 4. pontja, a 104. § (1) bekezdés
+      1. pontja, a 108. §–111. §, a 112. § (1) és (2) bekezdése, a 164. § (2) bekezdése,
+      a 174. § és a 189. § (4) bekezdése 2020. január 1-jén lép hatályba.
+  - identifier: '12'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 2
+        year: 2020
+      position:
+        article: '171'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 2
+        year: 2020
+      position:
+        article: '172'
+    text: A 171. § és a 172. § 2020. február 1-jén lép hatályba.
+  - identifier: '13'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 10
+        year: 2020
+      position:
+        article: '138'
+        paragraph: '1'
+    text: A 138. § (1) bekezdése 2020. október 1-jén lép hatályba.
+  - identifier: '14'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2022
+      position:
+        article: '16'
+        paragraph: '2'
+    text: A 16. § (2) bekezdése 2022. január 1-jén lép hatályba.
+  identifier: '191'
+identifier: 2019. évi LXVI. törvény
+preamble: ''
+publication_date:
+  day: 9
+  month: 7
+  year: 2019
+subject: Magyarország 2020. évi központi költségvetésének megalapozásáról

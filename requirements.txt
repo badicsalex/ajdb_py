@@ -3,6 +3,7 @@ attrs
 pdfminer.six
 chardet
 tatsu==4.3.0
+pyyaml
 
 # Development
 autopep8

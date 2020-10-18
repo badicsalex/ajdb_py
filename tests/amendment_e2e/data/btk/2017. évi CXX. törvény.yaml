@@ -1,0 +1,36 @@
+children:
+- __type__: Article
+  children:
+  - semantic_data:
+    - __type__: Repeal
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '388'
+        paragraph: '4'
+        point: a
+        subpoint:
+        - ag
+        - ah
+    text: Hatályát veszti a Büntető Törvénykönyvről szóló 2012. évi C. törvény 388.
+      § (4) bekezdés a) pont ag) és ah) alpontja.
+  identifier: '24'
+- __type__: Article
+  children:
+  - semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2018
+      position: null
+    text: Ez a törvény 2018. január 1-jén lép hatályba.
+  identifier: '25'
+identifier: 2017. évi CXX. törvény
+preamble: ''
+publication_date:
+  day: 12
+  month: 10
+  year: 2017
+subject: a használati minták oltalmára vonatkozó szabályozás módosításáról

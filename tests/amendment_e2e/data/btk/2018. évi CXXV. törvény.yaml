@@ -1,0 +1,100 @@
+children:
+- __type__: Article
+  children:
+  - identifier: '1'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2019
+      position: null
+    text: Ez a törvény – a (2) és (3) bekezdésben foglalt kivétellel – 2019. január
+      1-jén lép hatályba.
+  - identifier: '2'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 2
+        month: 1
+        year: 2019
+      position:
+        article: '327'
+    text: A 327. § 2019. január 2-án lép hatályba.
+  - identifier: '3'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 3
+        year: 2019
+      position:
+        article:
+        - '296'
+        - '323'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 3
+        year: 2019
+      position:
+        article:
+        - '325'
+        - '326'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 3
+        year: 2019
+      position:
+        article: '328'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 3
+        year: 2019
+      position:
+        article: '330'
+    text: A 296–323. §, a 325–326. §, a 328. § és a 330. § 2019. március 1-jén lép
+      hatályba.
+  identifier: '282'
+  title: Hatálybalépés
+- __type__: Article
+  children:
+  - semantic_data:
+    - __type__: TextAmendment
+      original_text: minisztériumnál, autonóm államigazgatási szervnél, kormányhivatalnál,
+        központi hivatalnál, önálló szabályozó szervnél, rendvédelmi szervnél, a Katonai
+        Nemzetbiztonsági Szolgálatnál
+      position:
+        act: 2012. évi C. törvény
+        article: '459'
+        paragraph: '1'
+        point: '11'
+        subpoint: k
+      replacement_text: központi államigazgatási szervnél
+    text: A Büntető Törvénykönyvről szóló 2012. évi C. törvény 459. § (1) bekezdés
+      11. pont k) alpontjában a „minisztériumnál, autonóm államigazgatási szervnél,
+      kormányhivatalnál, központi hivatalnál, önálló szabályozó szervnél, rendvédelmi
+      szervnél, a Katonai Nemzetbiztonsági Szolgálatnál” szövegrész helyébe a „központi
+      államigazgatási szervnél” szöveg lép.
+  identifier: '324'
+  title: A Büntető Törvénykönyvről szóló 2012. évi C. törvény módosítása
+identifier: 2018. évi CXXV. törvény
+preamble: 'Az Országgyűlés a korszerű és hatékony kormányzati igazgatási szervezetrendszer
+  kialakítása, a nemzetet magas színvonalon szolgáló kormányzati tisztségviselők szolgálati
+  jogviszonyának szabályozása, szolgálatuk anyagi elismerése, továbbá a közszolgálat
+  és a családi élet összeegyeztethetőségének elősegítése érdekében, az Alaptörvény
+  17. cikk (5) bekezdésében és 18. cikk (5) bekezdésében foglaltak alapján a következő
+  törvényt alkotja:'
+publication_date:
+  day: 21
+  month: 12
+  year: 2018
+subject: a kormányzati igazgatásról

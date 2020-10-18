@@ -1,0 +1,78 @@
+children:
+- __type__: Article
+  children:
+  - act_id_abbreviations:
+    - abbreviation: Btk.
+      act: 2012. évi C. törvény
+    children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        children:
+        - __type__: AlphabeticPoint
+          identifier: a
+          text: a XIII. és XIV. Fejezetben meghatározott bűncselekményeknek,
+        - __type__: AlphabeticPoint
+          identifier: b
+          text: az életfogytig tartó szabadságvesztéssel is büntethető bűncselekményeknek,
+            és
+        - __type__: AlphabeticPoint
+          identifier: c
+          text: a XIX. Fejezetben meghatározott, ötévi szabadságvesztésnél súlyosabban
+            büntetendő bűncselekményeknek, ha a bűncselekmény sértettje a bűncselekmény
+            elkövetésekor a tizennyolcadik életévét nem töltötte be.
+        identifier: '3'
+        intro: Nem évül el a büntethetősége
+    identifier: '1'
+    intro: 'A Büntető Törvénykönyvről szóló 2012. évi C. törvény (a továbbiakban:
+      Btk.) 26. § (3) bekezdése helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '26'
+        paragraph: '3'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: 1a
+        text: Ha az erős felindulásban elkövetett emberölés, a háromévi szabadságvesztésnél
+          súlyosabban büntetendő szándékos súlyos testi sértés, az emberrablás, az
+          emberkereskedelem, a személyi szabadság megsértése, illetve – a 26. § (3)
+          bekezdés c) pontjában foglalt kivétellel – a nemi élet szabadsága és a nemi
+          erkölcs elleni bűncselekmény sértettje a bűncselekmény elkövetésekor a tizennyolcadik
+          életévét még nem töltötte be, az elévülés határidejébe nem számít be az
+          a tartam, amíg a tizennyolcadik életévét be nem tölti vagy be nem töltötte
+          volna.
+    identifier: '2'
+    intro: 'A Btk. 28. § (1a) bekezdése helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '28'
+        paragraph: 1a
+    wrap_up: ''
+  identifier: '1'
+- __type__: Article
+  children:
+  - semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: DaysAfterPublication
+        days: 30
+      position: null
+    text: Ez a törvény a kihirdetését követő harmincadik napon lép hatályba.
+  identifier: '2'
+identifier: 2014. évi LXV. törvény
+preamble: ''
+publication_date:
+  day: 21
+  month: 11
+  year: 2014
+subject: a Büntető Törvénykönyvről szóló 2012. évi C. törvénynek a gyermekek fokozottabb
+  védelme érdekében szükséges módosításáról

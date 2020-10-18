@@ -1,0 +1,76 @@
+children:
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: AlphabeticPoint
+        identifier: a
+        text: olyan ügyletet köt, megbízást ad, visszavon vagy módosít, saját számlás
+          kereskedés során olyan ajánlatot rögzít, visszavon vagy módosít, vagy más
+          olyan magatartást tanúsít, amely az adott pénzügyi eszköz vagy kapcsolódó
+          azonnali árutőzsdei ügylet keresleti vagy kínálati viszonyairól, árfolyamáról
+          vagy áráról hamis vagy félrevezető jelzéseket ad, azt mesterséges vagy rendellenes
+          szinten rögzíti,
+      intro: Aki
+      wrap_up: bűntett miatt három évig terjedő szabadságvesztéssel büntetendő.
+    intro: 'A Büntető Törvénykönyvről szóló 2012. évi C. törvény 411. § (1) bekezdés
+      a) pontja helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '411'
+        paragraph: '1'
+        point: a
+    wrap_up: ''
+  identifier: '24'
+- __type__: Article
+  children:
+  - identifier: '1'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position: null
+    text: Ez a törvény – a (2) bekezdésben foglalt kivétellel – 2020. január 1-jén
+      lép hatályba.
+  - identifier: '2'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 31
+        month: 1
+        year: 2020
+      position:
+        article: '15'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 31
+        month: 1
+        year: 2020
+      position:
+        article: '16'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 31
+        month: 1
+        year: 2020
+      position:
+        article: '17'
+    text: A 15. §, 16. § és 17. § 2020. január 31-én lép hatályba.
+  identifier: '68'
+identifier: 2019. évi LXXXI. törvény
+preamble: ''
+publication_date:
+  day: 28
+  month: 11
+  year: 2019
+subject: a törvényszéki végrehajtással összefüggő egyes törvények módosításáról

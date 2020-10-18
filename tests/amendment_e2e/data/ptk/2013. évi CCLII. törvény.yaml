@@ -1,0 +1,2713 @@
+children:
+- __type__: Article
+  children:
+  - act_id_abbreviations:
+    - abbreviation: Ptk.
+      act: 2013. évi V. törvény
+    children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '3'
+        text: Ha bírósági vagy ügyészségi jogkörben eljáró személy sért személyiségi
+          jogot, az (1) bekezdésben foglalt szankciókat bírósági jogkörben eljárt
+          személy esetén a bírósággal, ügyészségi jogkörben eljárt személy esetén
+          a Legfőbb Ügyészséggel szemben kell érvényesíteni. Ha az eljárt bíróság
+          nem jogi személy, az igényt azzal a bírósággal szemben kell érvényesíteni,
+          amelynek elnöke a nem jogi személy bíróság bírái tekintetében az általános
+          munkáltatói jogkört gyakorolja.
+    intro: 'A Polgári Törvénykönyvről szóló 2013. évi V. törvény (a továbbiakban:
+      Ptk.) 2:51. § (3) bekezdése a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: '2:51'
+        paragraph: '3'
+    wrap_up: ''
+  identifier: '184'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '5'
+        text: Az egyesület alapszabálya az egyesület valamely szervezeti egységét
+          jogi személlyé nyilváníthatja.
+    identifier: '1'
+    intro: 'A Ptk. 3:63. §-a a következő (5) bekezdéssel kiegészülve lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 3:63
+        paragraph: '5'
+      pure_insertion: true
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '4'
+        text: A tagok – a tagdíj megfizetésén túl – az egyesület tartozásaiért saját
+          vagyonukkal nem felelnek.
+    identifier: '2'
+    intro: 'A Ptk. 3:65. §-a a következő (4) bekezdéssel kiegészülve lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 3:65
+        paragraph: '4'
+      pure_insertion: true
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Article
+        children:
+        - text: Egyesület más jogi személlyé nem alakulhat át, csak egyesülettel egyesülhet
+            és csak egyesületekre válhat szét.
+        identifier: 3:83
+        title: Jogutódlással történő megszűnés
+    identifier: '3'
+    intro: 'A Ptk. 3:83. §-a a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 3:83
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '1'
+        text: Az egyesület jogutód nélküli megszűnése esetén a hitelezők követeléseinek
+          kiegyenlítése után fennmaradó vagyont az alapszabályban meghatározott, az
+          egyesület céljával megegyező vagy hasonló cél megvalósítására létrejött
+          közhasznú szervezetnek kell átadni. A nyilvántartó bíróság jogszabályban
+          meghatározott szervezetnek juttatja a vagyont, ha az alapszabály nem tartalmaz
+          rendelkezést a megszűnő egyesület vagyonáról, vagy ha az alapszabályban
+          megjelölt közhasznú szervezet a vagyont nem fogadja el vagy azt nem szerezheti
+          meg.
+    identifier: '4'
+    intro: 'A Ptk. 3:85. § (1) bekezdése a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 3:85
+        paragraph: '1'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '2'
+        text: Ha az egyesület jogutód nélkül megszűnik, a hitelezők kielégítetlen
+          követelésük erejéig kártérítési igényt érvényesíthetnek az egyesület vezető
+          tisztségviselőivel szemben a szerződésen kívül okozott károkért való felelősség
+          szabályai szerint, ha a vezető tisztségviselő az egyesület fizetésképtelenségével
+          fenyegető helyzet beállta után a hitelezői érdekeket nem vette figyelembe.
+          Ez a rendelkezés végelszámolással történő megszűnés esetén nem alkalmazható.
+    identifier: '5'
+    intro: 'A Ptk. 3:86. § (2) bekezdése a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 3:86
+        paragraph: '2'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '1'
+        text: A társaság ügyvezetését egy vagy több ügyvezető látja el. Az ügyvezető
+          képviseleti jogának korlátozása, megosztása, és nyilatkozatának feltételhez
+          vagy jóváhagyáshoz kötése harmadik személyekkel szemben nem hatályos.
+    identifier: '6'
+    intro: 'A Ptk. 3:196. § (1) bekezdése a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 3:196
+        paragraph: '1'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '1'
+        text: A részvénytársaság az alaptőke huszonöt százalékát meg nem haladó mértékben
+          megszerezheti az általa kibocsátott részvényeket. A saját részvények mértékének
+          megállapításánál a részvénytársaság tulajdonaként kell figyelembe venni
+          a részvénytársaság többségi befolyása alatt álló jogi személy – ideértve
+          a külföldi székhellyel rendelkező, a rá irányadó jog szerint korlátolt felelősségű
+          társaságnak vagy részvénytársaságnak minősülő gazdasági társaság – tulajdonában
+          álló részvényeket is. A részvénytársaság tulajdonában álló részvényként
+          kell figyelembe venni azokat a részvényeket is, amelyeket tulajdonosuk a
+          részvénytársaság javára szerzett meg vagy tart magánál, továbbá azokat a
+          saját részvényeket, amelyeket a részvénytársaság követelés biztosítékául
+          fogad el.
+    identifier: '7'
+    intro: 'A Ptk. 3:222. § (1) bekezdése a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 3:222
+        paragraph: '1'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Article
+        children:
+        - identifier: '1'
+          text: Nyilvánosan működő részvénytársaság az általa kibocsátott részvények
+            megszerzéséhez csak piaci feltételek mellett, osztalékfizetésre felhasználható
+            vagyona terhére nyújthat harmadik személynek pénzügyi segítséget, feltéve,
+            hogy ehhez az igazgatóság előterjesztése alapján a közgyűlés legalább
+            háromnegyedes szótöbbséggel meghozott határozatával hozzájárult.
+        - identifier: '2'
+          text: Az előterjesztés tartalmazza a pénzügyi segítségnyújtás indokát, a
+            kockázatokat, a lebonyolítás feltételeit, a részvények ellenértékét és
+            a társaság által a pénzügyi segítségnyújtással elérhető előnyöket. Az
+            előterjesztést az igazgatóság köteles a nyilvántartó bíróságnak benyújtani.
+        identifier: 3:227
+        title: Pénzügyi segítségnyújtás korlátozása
+    identifier: '8'
+    intro: 'A Ptk. 3:227. §-a a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 3:227
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '2'
+        text: Ha a nyilvánosan működő részvénytársaságban együttesen a szavazatok
+          legalább egy százalékával rendelkező részvényesek a napirend kiegészítésére
+          vonatkozó – a napirend részletezettségére vonatkozó szabályoknak megfelelő
+          – javaslatot vagy a napirenden szereplő vagy arra felveendő napirendi ponttal
+          kapcsolatos határozattervezetet a közgyűlés összehívásáról szóló hirdetmény
+          megjelenésétől számított nyolc napon belül közlik az igazgatósággal, az
+          igazgatóság a kiegészített napirendről, a részvényesek által előterjesztett
+          határozattervezetekről a javaslat vele való közlését követően hirdetményt
+          tesz közzé. A hirdetményben megjelölt kérdést napirendre tűzöttnek kell
+          tekinteni.
+    identifier: '9'
+    intro: 'A Ptk. 3:259. § (2) bekezdése a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 3:259
+        paragraph: '2'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '4'
+        text: A zártkörűen működő részvénytársaságnak együttesen a szavazatok legalább
+          öt százalékával rendelkező részvényesei, a nyilvánosan működő részvénytársaságnak
+          együttesen a szavazatok legalább egy százalékával rendelkező részvényesei,
+          valamint a részvénytársaság azon hitelezői, akiknek a kifizetés időpontjában
+          még nem esedékes követelése eléri az alaptőke tíz százalékát, a kifizetéstől
+          számított egyéves jogvesztő határidő lejártáig a költségek megelőlegezésével
+          egyidejűleg kérhetik a nyilvántartó bíróságtól könyvvizsgáló kirendelését
+          a kifizetés jogszerűségének megvizsgálása céljából.
+      - __type__: Paragraph
+        identifier: '5'
+        text: Azokat a kifizetéseket, amelyeket az (1) bekezdés rendelkezései ellenére
+          teljesítettek, a részvénytársaság felszólítására a társaság részére vissza
+          kell fizetni, feltéve, hogy a társaság bizonyítja, hogy a részvényes a kifizetés
+          feltételei fennállásának hiányáról tudott vagy tudnia kellett.
+    identifier: '10'
+    intro: 'A Ptk. 3:261. § (4) és (5) bekezdése a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 3:261
+        paragraph:
+        - '4'
+        - '5'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '1'
+        text: Nyilvánosan működő részvénytársaság esetén a közgyűlésre szóló meghívót
+          a közgyűlés kezdő napját legalább harminc nappal megelőzően, a társaság
+          honlapján kell közzétenni. A közgyűlésre szóló meghívó tartalmazza a napirend
+          kiegészítésére való jog gyakorlásának feltételeit is, továbbá feltünteti
+          a határozattervezetek és a közgyűlés elé terjesztendő dokumentumok eredeti
+          és teljes terjedelmű szövege elérhetőségének helyét.
+    identifier: '11'
+    intro: 'A Ptk. 3:272. § (1) bekezdése a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 3:272
+        paragraph: '1'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        children:
+        - __type__: AlphabeticPoint
+          identifier: a
+          text: az összehívás időpontjában meglévő részvények számára és a szavazati
+            jogok arányára vonatkozó összesített adatokat, ideértve az egyes részvényosztályokra
+            vonatkozó külön összesítéseket;
+        - __type__: AlphabeticPoint
+          identifier: b
+          text: a napirenden szereplő ügyekkel kapcsolatos előterjesztéseket, az azokra
+            vonatkozó felügyelőbizottsági jelentéseket, valamint a határozati javaslatokat;
+        - __type__: AlphabeticPoint
+          identifier: c
+          text: a képviselő útján, illetve levélben történő szavazáshoz használandó
+            nyomtatványokat, ha azokat közvetlenül nem küldték meg a részvényeseknek.
+        identifier: '3'
+        intro: 'A nyilvánosan működő részvénytársaság a társaság honlapján, a közgyűlést
+          megelőzően legalább huszonegy nappal nyilvánosságra hozza:'
+    identifier: '12'
+    intro: 'A Ptk. 3:272. § (3) bekezdése a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 3:272
+        paragraph: '3'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '4'
+        text: Azoknak a részvényeseknek, akik ezt kívánják, a közzéteendő közgyűlési
+          anyagokat a közgyűlési anyagok nyilvánosságra hozatalával egy időben elektronikus
+          úton is meg kell küldeni.
+    identifier: '13'
+    intro: 'A Ptk. 3:272. §-a a következő (4) bekezdéssel kiegészülve lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 3:272
+        paragraph: '4'
+      pure_insertion: true
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '4'
+        text: Ha a nyilvánosan működő részvénytársaság alapszabálya megengedi, hogy
+          a részvényes szavazati jogát a közgyűlést megelőzően postai úton gyakorolja,
+          e jog gyakorlását érvényesen csak olyan feltételhez kötheti, amely a részvényes
+          személyazonossága megállapításához szükséges.
+    identifier: '14'
+    intro: 'A Ptk. 3:273. §-a a következő (4) bekezdéssel kiegészülve lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 3:273
+        paragraph: '4'
+      pure_insertion: true
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: AlphabeticPoint
+        identifier: e
+        text: a határozati javaslatokat, minden határozat esetében azon részvények
+          számát, amelyek tekintetében érvényes szavazat leadására került sor, az
+          ezen szavazatok által képviselt alaptőke részesedés mértékét, a leadott
+          szavazatok és ellenszavazatok, valamint a szavazástól tartózkodók számát.
+      intro: A közgyűlésről jegyzőkönyvet kell készíteni, amely tartalmazza
+    identifier: '15'
+    intro: 'A Ptk. 3:278. § (1) bekezdés e) pontja a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 3:278
+        paragraph: '1'
+        point: e
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '3'
+        text: Az igazgatóság jogait és feladatait testületként gyakorolja. Az igazgatóság
+          tagjai képviseleti jogának korlátozása, megosztása, és nyilatkozatának feltételhez
+          vagy jóváhagyáshoz kötése harmadik személyekkel szemben nem hatályos.
+    identifier: '16'
+    intro: 'A Ptk. 3:282. § (3) bekezdése a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 3:282
+        paragraph: '3'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Article
+        children:
+        - identifier: '1'
+          text: A részvénytársaság feltételes alaptőke-emelést határozhat el átváltoztatható
+            vagy átváltozó kötvények forgalomba hozatalával.
+        - identifier: '2'
+          text: A forgalomba hozott átváltoztatható vagy átváltozó kötvények névértékének
+            összege nem haladhatja meg a részvénytársaság alaptőkéjének felét.
+        - identifier: '3'
+          text: Az átváltoztatható kötvényt az alapszabályban meghatározott feltételek
+            szerint a kötvényes kérésére részvénnyé kell átalakítani. Az átváltozó
+            kötvény a kötvényben meghatározott feltétel bekövetkezése esetén alakul
+            át részvénnyé.
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: azt, hogy a kötvény kibocsátása zártkörűen vagy nyilvánosan történik;
+          - __type__: AlphabeticPoint
+            identifier: b
+            text: a kibocsátandó kötvények számát, névértékét, illetve kibocsátási
+              értékét, a kötvények sorozatát, a jegyzés helyét és idejét;
+          - __type__: AlphabeticPoint
+            identifier: c
+            text: a kötvények részvénnyé történő átalakításának vagy átalakulásának
+              feltételeit, időpontját;
+          - __type__: AlphabeticPoint
+            identifier: d
+            text: a kötvény futamidejét, a kamat vagy egyéb hozam megfizetésének feltételeit;
+          - __type__: AlphabeticPoint
+            identifier: e
+            text: kötvény zártkörű kibocsátása esetén a kötvények átvételére jogosult
+              személyeket és az általuk jegyezhető kötvények számát, névértékét, kibocsátási
+              értékét és sorozatát.
+          identifier: '4'
+          intro: A feltételes alaptőke-emelést elhatározó közgyűlési határozatban
+            meg kell határozni
+        identifier: 3:303
+        title: Feltételes alaptőke-emelés
+    identifier: '17'
+    intro: 'A Ptk. 3:303. §-a a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 3:303
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Article
+        children:
+        - identifier: '1'
+          text: Az átváltoztatható kötvény tulajdonosa a kötvény futamidején belül,
+            a közgyűlés által meghatározott időtartam alatt írásban – nyomdai úton
+            előállított kötvények esetén a kötvényeknek az igazgatóság részére történő
+            benyújtásával – kötvényei helyébe részvényt igényelhet.
+        - identifier: '2'
+          text: Az átváltoztatható kötvény átváltoztatásáról szóló nyilatkozat megtételével,
+            az átváltozó kötvény átváltozására előírt feltétel bekövetkeztével a kötvénytulajdonos
+            jogosulttá válik részvényutalványra.
+        - identifier: '3'
+          text: Az (1) bekezdés szerinti bejelentés megtételére rendelkezésre álló
+            időtartam lejártát vagy az átváltozó kötvény átváltozására előírt feltétel
+            bekövetkeztét követően az igazgatóság – az átváltozó kötvény esetén a
+            feltétel bekövetkeztének megállapítása mellett – haladéktalanul intézkedik
+            az alaptőke-emelés nyilvántartásba történő bejegyzése iránt azzal, hogy
+            az alapszabály módosítására nincs szükség. Az alaptőke-emelés során a
+            nyilvántartásba vételre és a részvény kiadására, jóváírására vonatkozó
+            rendelkezéseket megfelelően alkalmazni kell.
+        identifier: 3:305
+        title: Kötvény helyett részvény igénylése és a kötvény részvénnyé történő
+          átváltozása
+    identifier: '18'
+    intro: 'A Ptk. 3:305. §-a a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 3:305
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Article
+        children:
+        - text: Az átváltoztatható vagy átváltozó kötvény esetén az egyesüléssel létrejövő
+            részvénytársaságnak a kötvénytulajdonos számára olyan jogosultságokat
+            kell biztosítania, amelyek legalább egyenértékűek azokkal a jogosultságokkal,
+            amelyekkel a jogelőd gazdasági társaságban rendelkeztek, kivéve, ha a
+            kötvénytulajdonosok mindegyike hozzájárul jogosultsága csökkenéséhez.
+            A tulajdonos az egyesülő társaságok által kibocsátott átváltoztatható,
+            átváltozó vagy jegyzési jogot biztosító kötvény visszavásárlását is igényelheti
+            a jogutód részvénytársaságtól. Az e bekezdésben foglalt szabályokat nem
+            kell alkalmazni, ha az értékpapír kibocsátásakor előre meghatározták a
+            kötvénytulajdonosok helyzetét egy esetleges egyesülés esetére.
+        identifier: 3:319
+        title: Egyesülés
+    identifier: '19'
+    intro: 'A Ptk. 3:319. §-a a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 3:319
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Article
+        children:
+        - text: Ha több részvényfajta, illetve részvényosztály létezik, az egyesülést
+            kimondó határozat meghozatala során a közgyűlési határozathoz való hozzájárulásra
+            vonatkozó rendelkezéseket megfelelően alkalmazni kell.
+        identifier: 3:320
+        title: Egyesülési közgyűlések
+    identifier: '20'
+    intro: 'A Ptk. 3:320. §-a a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 3:320
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Article
+        children:
+        - identifier: '1'
+          text: Nyilvánosan működő részvénytársaság nem válhat szét.
+        - identifier: '2'
+          text: A részvénytársaság szétválása során a részvénytársaságok egyesülésére
+            vonatkozó szabályokat is alkalmazni kell.
+        identifier: 3:321
+        title: A részvénytársaság szétválása
+    identifier: '21'
+    intro: 'A Ptk. 3:321. §-a a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 3:321
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '2'
+        text: A szövetkezet esetében az előtársaságra vonatkozó rendelkezéseket megfelelően
+          alkalmazni kell.
+    identifier: '22'
+    intro: 'A Ptk. 3:329. § (2) bekezdése a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 3:329
+        paragraph: '2'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '4'
+        text: A tag a tagsági jogviszonyon alapuló jogokból és kötelezettségekből
+          álló szövetkezeti részesedését vagy annak egy hányadát a szövetkezet más
+          tagjára vagy a szövetkezetbe tagként belépni kívánó személyre átruházhatja.
+          Az átruházó szerződést írásba kell foglalni.
+    identifier: '23'
+    intro: 'A Ptk. 3:332. §-a a következő (4) bekezdéssel kiegészülve lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 3:332
+        paragraph: '4'
+      pure_insertion: true
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '3'
+        text: Ha a szövetkezet jogutód nélkül megszűnik, a hitelezők kielégítetlen
+          követeléseik erejéig kártérítési igényt érvényesíthetnek a szövetkezet vezető
+          tisztségviselőjével szemben a szerződésen kívül okozott károkért való felelősség
+          szabályai szerint, ha a vezető tisztségviselő a szövetkezet fizetésképtelenségével
+          fenyegető helyzet beállta után a hitelezői érdekeket nem vette figyelembe.
+          Ez a rendelkezés végelszámolással történő megszűnés esetén nem alkalmazható.
+    identifier: '24'
+    intro: 'A Ptk. 3:347. §-a a következő (3) bekezdéssel kiegészülve lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 3:347
+        paragraph: '3'
+      pure_insertion: true
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '4'
+        text: A szövetkezetbe tagként belépni kívánó személy nem köteles vagyoni hozzájárulás
+          teljesítésére annyiban, amennyiben más tag a szövetkezeti részesedését vagy
+          annak egy hányadát rá átruházza.
+    identifier: '25'
+    intro: 'A Ptk. 3:354. § (4) bekezdése a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 3:354
+        paragraph: '4'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '1'
+        text: A tagsági jogviszony megszűnése esetén a tagot vagy jogutódját a vagyoni
+          hozzájárulásának értéke, valamint a tagsági jogviszony időtartama alatt
+          keletkezett, a vagyoni hozzájárulásra jutó saját tőke – lekötött tartalékkal
+          csökkentett – összege illeti meg, abban az esetben, ha az a veszteség fedezésére
+          nem került felhasználásra. Az összeget a tagsági jogviszony megszűnését
+          követő három hónapon belül kell kiadni; a három hónapnál hosszabb időtartamot
+          előíró alapszabályi rendelkezés a nyolc évet meghaladó részében semmis.
+    identifier: '26'
+    intro: 'A Ptk. 3:361. § (1) bekezdése a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 3:361
+        paragraph: '1'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '3'
+        text: Az alapító az alapító okiratban az alapítvány szervezeti egységét jogi
+          személynek nyilváníthatja.
+    identifier: '27'
+    intro: 'A Ptk. 3:391. §-a a következő (3) bekezdéssel kiegészülve lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 3:391
+        paragraph: '3'
+      pure_insertion: true
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '1'
+        text: Az alapítvány más jogi személlyé nem alakulhat át. Alapítvány csak alapítvánnyal
+          egyesülhet és csak alapítványokra válhat szét.
+    identifier: '28'
+    intro: 'A Ptk. 3:402. § (1) bekezdése a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 3:402
+        paragraph: '1'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '3'
+        text: A nyilvántartó bíróság jogszabályban meghatározott szervezetnek juttatja
+          a vagyont, ha az alapító okirat, vagy az alapító nem rendelkezik a megszűnő
+          alapítvány vagyonáról, vagy ha az alapító okirat által megjelölt személy,
+          vagy az alapító által megjelölt alapítvány, egyesület a vagyont nem fogadja
+          el vagy azt nem szerezheti meg.
+    identifier: '29'
+    intro: 'A Ptk. 3:404. § (3) bekezdése a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 3:404
+        paragraph: '3'
+    wrap_up: ''
+  - children:
+    - __type__: AlphabeticPoint
+      identifier: a
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: egységre
+        position:
+          act: 2013. évi V. törvény
+          article: '3:32'
+          paragraph: '2'
+        replacement_text: egységére
+      text: 3:32. § (2) bekezdése az „egységre” szövegrész helyett az „egységére”
+        szöveggel,
+    - __type__: AlphabeticPoint
+      identifier: b
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: ellenérték legmagasabb összegének
+        position:
+          act: 2013. évi V. törvény
+          article: 3:223
+          paragraph: '1'
+        replacement_text: ellenérték legalacsonyabb és legmagasabb összegének
+      text: 3:223. § (1) bekezdése az „ellenérték legmagasabb összegének” szövegrész
+        helyett az „ellenérték legalacsonyabb és legmagasabb összegének” szöveggel,
+    - __type__: AlphabeticPoint
+      identifier: c
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: megszerzésének indokáról,
+        position:
+          act: 2013. évi V. törvény
+          article: 3:223
+          paragraph: '4'
+        replacement_text: megszerzésének indokáról és jellegéről,
+      text: 3:223. § (4) bekezdése a „megszerzésének indokáról,” szövegrész helyett
+        a „megszerzésének indokáról és jellegéről,” szöveggel,
+    - __type__: AlphabeticPoint
+      identifier: d
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: alapítás során kibocsátandó
+        position:
+          act: 2013. évi V. törvény
+          article: 3:250
+          paragraph: '1'
+          point: b
+        replacement_text: alaptőke összegét, az alapítás során kibocsátandó
+      text: 3:250. § (1) bekezdés b) pontja az „alapítás során kibocsátandó” szövegrész
+        helyett az „alaptőke összegét, az alapítás során kibocsátandó” szöveggel,
+    - __type__: AlphabeticPoint
+      identifier: e
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: nem pénzbeli vagyoni hozzájárulás értékelését
+        position:
+          act: 2013. évi V. törvény
+          article: 3:251
+          paragraph: '1'
+        replacement_text: nem pénzbeli vagyoni hozzájárulás leírását, értékét, értékelését,
+          az alkalmazott értékelési módszer ismertetését és azt, hogy az értékelést
+          érintő új befolyásoló körülmény nem merült fel
+      text: 3:251. § (1) bekezdése a „nem pénzbeli vagyoni hozzájárulás értékelését”
+        szövegrész helyett a „nem pénzbeli vagyoni hozzájárulás leírását, értékét,
+        értékelését, az alkalmazott értékelési módszer ismertetését és azt, hogy az
+        értékelést érintő új befolyásoló körülmény nem merült fel” szöveggel,
+    - __type__: AlphabeticPoint
+      identifier: f
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: által – nem pénzbeli vagyoni hozzájárulásként – a szövetkezet
+        position:
+          act: 2013. évi V. törvény
+          article: 3:361
+          paragraph: '2'
+        replacement_text: által a szövetkezet
+      text: 3:361. § (2) bekezdése az „által – nem pénzbeli vagyoni hozzájárulásként
+        – a szövetkezet” szövegrész helyett az „által a szövetkezet” szöveggel
+    identifier: '30'
+    intro: A Ptk.
+    wrap_up: lép hatályba.
+  - children:
+    - __type__: AlphabeticPoint
+      identifier: a
+      semantic_data:
+      - __type__: Repeal
+        position:
+          __type__: Reference
+          act: 2013. évi V. törvény
+          article: 3:329
+          paragraph: '3'
+      text: 3:329. § (3) bekezdése,
+    - __type__: AlphabeticPoint
+      identifier: b
+      semantic_data:
+      - __type__: Repeal
+        position:
+          __type__: Reference
+          act: 2013. évi V. törvény
+          article: 3:404
+          paragraph: '4'
+      text: 3:404. § (4) bekezdése.
+    identifier: '31'
+    intro: Nem lép hatályba a Ptk.
+  - identifier: '32'
+    semantic_data:
+    - __type__: Repeal
+      position:
+        __type__: Reference
+        act: 2013. évi CXXXV. törvény
+        article: '39'
+    - __type__: Repeal
+      position:
+        __type__: Reference
+        act: 2013. évi CXXXV. törvény
+        article:
+        - '42'
+        - '44'
+    text: Hatályát veszti a szövetkezeti hitelintézetek integrációjáról és egyes gazdasági
+      tárgyú jogszabályok módosításáról szóló 2013. évi CXXXV. törvény 39. §-a, valamint
+      42–44. §-a.
+  identifier: '185'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        children:
+        - __type__: AlphabeticPoint
+          identifier: a
+          text: gyermekével egy éve nem tart rendszeres kapcsolatot vagy fél éven
+            át semmilyen formában nem tart kapcsolatot, illetve életvitelén, körülményein
+            nem változtat, és emiatt a nevelésbe vétel nem szüntethető meg; vagy
+        - __type__: AlphabeticPoint
+          identifier: b
+          text: lakó- és tartózkodási helyét az új lakó- és tartózkodási helyének
+            hátrahagyása nélkül megváltoztatja, és az annak felderítésére irányuló
+            intézkedések hat hónapon belül nem vezetnek eredményre.
+        identifier: '1'
+        intro: A gyámhatóság a nevelésbe vett gyermeket legfeljebb két évre örökbefogadhatónak
+          nyilvánítja, ha a szülőjének szülői felügyeleti joga nem szűnt meg és a
+          szülő önhibájából
+    identifier: '1'
+    intro: 'A Ptk. 4:124. § (1) bekezdése a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 4:124
+        paragraph: '1'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        children:
+        - __type__: AlphabeticPoint
+          identifier: a
+          text: aki cselekvőképességet érintő gondnokság alatt áll;
+        - __type__: AlphabeticPoint
+          identifier: b
+          text: aki szülői felügyeletet megszüntető vagy közügyektől eltiltó jogerős
+            ítélet hatálya alatt áll;
+        - __type__: AlphabeticPoint
+          identifier: c
+          text: akinek szülői felügyeleti joga azért szünetel, mert gyermekét nevelésbe
+            vették;
+        - __type__: AlphabeticPoint
+          identifier: d
+          text: akinek a gyermekét örökbefogadhatónak nyilvánították; vagy
+        - __type__: AlphabeticPoint
+          identifier: e
+          text: akit a szülői felügyelet gyakorlására jogosult szülő a gyámságból
+            közokiratban vagy végrendeletben kizárt.
+        identifier: '1'
+        intro: Nem rendelhető gyámul az a személy,
+    identifier: '2'
+    intro: 'A Ptk. 4:233. § (1) bekezdése a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 4:233
+        paragraph: '1'
+    wrap_up: ''
+  - children:
+    - __type__: AlphabeticPoint
+      identifier: a
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: gyermeke átmeneti vagy tartós nevelésben van
+        position:
+          act: 2013. évi V. törvény
+          article: 4:121
+          paragraph: '3'
+        replacement_text: gyermekét nevelésbe vették
+      text: 4:121. § (3) bekezdése a „gyermeke átmeneti vagy tartós nevelésben van”
+        szövegrész helyett a „gyermekét nevelésbe vették” szöveggel,
+    - __type__: AlphabeticPoint
+      identifier: b
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: az átmeneti nevelést
+        position:
+          act: 2013. évi V. törvény
+          article: 4:124
+          paragraph: '3'
+        replacement_text: a nevelésbe vételt
+      text: 4:124. § (3) bekezdése az „az átmeneti nevelést” szövegrész helyett az
+        „a nevelésbe vételt” szöveggel,
+    - __type__: AlphabeticPoint
+      identifier: c
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: az átmeneti nevelést
+        position:
+          act: 2013. évi V. törvény
+          article: 4:124
+          paragraph: '5'
+        replacement_text: a nevelésbe vételt
+      text: 4:124. § (5) bekezdése az „az átmeneti nevelést” szövegrész helyett az
+        „a nevelésbe vételt” szöveggel,
+    - __type__: AlphabeticPoint
+      identifier: d
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: átmeneti nevelésbe
+        position:
+          act: 2013. évi V. törvény
+          article: 4:127
+          paragraph: '1'
+          point: b
+        replacement_text: nevelésbe
+      text: 4:127. § (1) bekezdés b) pontja az „átmeneti nevelésbe” szövegrész helyett
+        a „nevelésbe” szöveggel,
+    - __type__: AlphabeticPoint
+      identifier: e
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: tartós nevelésbe
+        position:
+          act: 2013. évi V. törvény
+          article: 4:178
+          paragraph: '5'
+        replacement_text: nevelésbe
+      text: 4:178. § (5) bekezdése a „tartós nevelésbe” szövegrész helyett a „nevelésbe”
+        szöveggel,
+    - __type__: AlphabeticPoint
+      identifier: f
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: átmeneti nevelésbe vett vagy tartós nevelésbe vett
+        position:
+          act: 2013. évi V. törvény
+          article: 4:129
+          paragraph: '2'
+        replacement_text: nevelésbe vett
+      - __type__: TextAmendment
+        original_text: a gyermeket a tartós nevelésbe vételt vagy az örökbefogadhatóvá
+          nyilvánítást követően
+        position:
+          act: 2013. évi V. törvény
+          article: 4:129
+          paragraph: '2'
+        replacement_text: a nevelésbe vett, örökbefogadható gyermeket
+      text: 4:129. § (2) bekezdése az „átmeneti nevelésbe vett vagy tartós nevelésbe
+        vett” szövegrész helyett a „nevelésbe vett” szöveggel, az „a gyermeket a tartós
+        nevelésbe vételt vagy az örökbefogadhatóvá nyilvánítást követően” szövegrész
+        helyett az „a nevelésbe vett, örökbefogadható gyermeket” szöveggel,
+    - __type__: AlphabeticPoint
+      identifier: g
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: átmeneti nevelésbe vette;
+        position:
+          act: 2013. évi V. törvény
+          article: 4:186
+          paragraph: '1'
+          point: g
+        replacement_text: nevelésbe vette és a szülő szülői felügyeleti joga nem szűnt
+          meg vagy azt a bíróság nem szüntette meg;
+      text: 4:186. § (1) bekezdés g) pontja az „átmeneti nevelésbe vette;” szövegrész
+        helyett a „nevelésbe vette és a szülő szülői felügyeleti joga nem szűnt meg
+        vagy azt a bíróság nem szüntette meg;” szöveggel,
+    - __type__: AlphabeticPoint
+      identifier: h
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: átmeneti nevelésbe
+        position:
+          act: 2013. évi V. törvény
+          article: 4:191
+          paragraph: '1'
+          point: b
+        replacement_text: nevelésbe
+      - __type__: TextAmendment
+        original_text: a szülő
+        position:
+          act: 2013. évi V. törvény
+          article: 4:191
+          paragraph: '1'
+          point: b
+        replacement_text: az a szülő, akinek szülői felügyeleti joga szünetel,
+      - __type__: TextAmendment
+        original_text: az átmeneti nevelésbe
+        position:
+          act: 2013. évi V. törvény
+          article: 4:191
+          paragraph: '1'
+          point: b
+        replacement_text: a nevelésbe
+      text: 4:191. § (1) bekezdés b) pontja az „átmeneti nevelésbe” szövegrész helyett
+        a „nevelésbe” szöveggel, az „a szülő” szövegrész helyett az „az a szülő, akinek
+        szülői felügyeleti joga szünetel,” szöveggel, az „az átmeneti nevelésbe” szövegrész
+        helyett az „a nevelésbe” szöveggel,
+    - __type__: AlphabeticPoint
+      identifier: i
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: átmeneti vagy tartós nevelésbe
+        position:
+          act: 2013. évi V. törvény
+          article: 4:230
+          point: a
+        replacement_text: nevelésbe
+      text: 4:230. § a) pontja az „átmeneti vagy tartós nevelésbe” szövegrész helyett
+        a „nevelésbe” szöveggel
+    identifier: '3'
+    intro: A Ptk.
+    wrap_up: lép hatályba.
+  identifier: '186'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '1'
+        text: Óvadék esetén, ha annak tárgya pénz, fizetésiszámla-követelés, tőzsdei
+          vagy egyéb nyilvánosan jegyzett piaci árral rendelkező értékpapír vagy adott
+          időpontban az értékpapírban foglalt feltételek szerint a felektől függetlenül
+          meghatározható értékkel rendelkező pénzkövetelést megtestesítő értékpapír,
+          a zálogjogosult a kielégítési joga megnyílásakor a zálogkötelezetthez címzett
+          egyoldalú nyilatkozattal – a biztosított követelés összege erejéig – a zálogtárgy
+          tulajdonjogát megszerezheti, illetve ha már korábban megszerezte, megszüntetheti
+          azt a kötelezettségét, hogy a kapott óvadékkal egyező fajtájú és mennyiségű
+          vagyontárgyat ruházzon át a zálogkötelezettre.
+      - __type__: Paragraph
+        identifier: '2'
+        text: A zálogjogosult a közvetlen kielégítési jog gyakorlását követően késedelem
+          nélkül köteles a zálogkötelezettel írásban elszámolni és a biztosított követelést
+          meghaladó fedezetet a zálogkötelezett részére kiadni. Az elszámolás során
+          a pénzt és a fizetésiszámla-követelést annak névértékén, az értékpapírt
+          nyilvános forgalmi vagy az (1) bekezdésben foglaltak szerint felektől függetlenül
+          meghatározott értékén kell figyelembe venni.
+    identifier: '1'
+    intro: 'A Ptk. 5:138. § (1) és (2) bekezdése a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 5:138
+        paragraph:
+        - '1'
+        - '2'
+    wrap_up: ''
+  - identifier: '2'
+    semantic_data:
+    - __type__: Repeal
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 5:96
+        paragraph: '3'
+      text: A zálogjogosulti bizományos kérheti, hogy az ingatlan-nyilvántartás, a
+        lajstrom vagy a hitelbiztosítéki nyilvántartás zálogjogosultként feltüntesse.
+    text: Nem lép hatályba a Ptk. 5:96. § (3) bekezdésében az „A zálogjogosulti bizományos
+      kérheti, hogy az ingatlan-nyilvántartás, a lajstrom vagy a hitelbiztosítéki
+      nyilvántartás zálogjogosultként feltüntesse.” szövegrész.
+  identifier: '187'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Article
+        children:
+        - identifier: '1'
+          text: Vállalkozások közötti szerződés részévé általános szerződési feltételként
+            váló, a pénztartozás teljesítésének idejét, a késedelmi kamat mértékét,
+            esedékességét a jóhiszeműség és tisztesség követelményének megsértésével
+            egyoldalúan és indokolatlanul a jogosult hátrányára megállapító kikötést
+            – mint tisztességtelen kikötést – a vállalkozások érdekeinek képviseletét
+            ellátó szervezet is megtámadhatja.
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: hatvan napnál hosszabb határidőben meghatározó szerződési kikötés
+              hatvan napot meghaladó része semmisségének megállapítását; vagy
+          - __type__: AlphabeticPoint
+            identifier: b
+            text: az e törvényben a szerződő hatóságra vonatkozóan meghatározottaktól
+              eltérően, a jóhiszeműség és tisztesség követelményének megsértésével
+              egyoldalúan és indokolatlanul a szerződő hatóságnak nem minősülő vállalkozás
+              hátrányára meghatározó, hatvan napot meg nem haladó határidőre vonatkozó
+              kikötés – mint tisztességtelen kikötés – megtámadásával a kikötés érvénytelenségének
+              megállapítását
+          identifier: '2'
+          intro: A szerződő hatóság és a szerződő hatóságnak nem minősülő vállalkozás
+            közötti szerződés részévé általános szerződési feltételként váló, a pénztartozás
+            teljesítésének idejét
+          wrap_up: a vállalkozások érdekeinek képviseletét ellátó szervezet is kérheti.
+        - identifier: '3'
+          text: Az (1) és a (2) bekezdés szerinti kérelem alapossága esetén a bíróság
+            a kikötés semmisségét, illetve érvénytelenségét a kikötés alkalmazójával
+            szerződő valamennyi félre kiterjedő hatállyal megállapítja. A semmisség,
+            illetve az érvénytelenség megállapítása nem érinti azokat a szerződéseket,
+            amelyeket már teljesítettek.
+        - identifier: '4'
+          text: A vállalkozások érdekeinek képviseletét ellátó szervezet kérheti az
+            (1) és a (2) bekezdés szerinti olyan általános szerződési feltétel tisztességtelenségének,
+            illetve semmisségének megállapítását, amelyet szerződéskötések céljából
+            határoztak meg és tettek nyilvánosan megismerhetővé, abban az esetben
+            is, ha az érintett feltétel még nem került alkalmazásra. A bíróság a sérelmes
+            általános szerződési feltétel tisztességtelenségének, illetve semmisségének
+            megállapítása esetén eltiltja a nyilvánosságra hozót a feltétel alkalmazásától.
+        - identifier: '5'
+          text: Az (1)–(2) és a (4) bekezdés szerinti eljárásban a bíróság az igény
+            érvényesítőjének kérelmére elrendeli, hogy a szerződési feltétel alkalmazója,
+            nyilvánosságra hozója, illetve alkalmazásra ajánlója saját költségére
+            gondoskodjék a szerződési feltétel tisztességtelenségének, illetve semmisségének
+            megállapítására vonatkozó közlemény közzétételéről. A közlemény szövegéről
+            és a közzététel módjáról a bíróság határoz. A közleménynek tartalmaznia
+            kell az érintett szerződési feltétel pontos meghatározását, tisztességtelenségének,
+            illetve semmisségének megállapítását, valamint az e jellegét alátámasztó
+            érveket.
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: vállalkozások közötti szerződésben kizárja a késedelmi kamatfizetési,
+              illetve kizárja vagy korlátozza a követelés behajtásával kapcsolatos
+              költségek megfizetésére vonatkozó kötelezettséget;
+          - __type__: AlphabeticPoint
+            identifier: b
+            text: a szerződő hatóság és a szerződő hatóságnak nem minősülő vállalkozás
+              közötti szerződésben a késedelmi kamat esedékességét a pénztartozás
+              teljesítésének idejére az e törvény által meghatározott fizetési határidőt
+              követő naptól eltérően határozza meg, illetve kizárja vagy korlátozza
+              a késedelmi kamatfizetési, illetve a követelés behajtásával kapcsolatos
+              költségek megfizetésére vonatkozó kötelezettséget.
+          identifier: '6'
+          intro: A vállalkozások érdekeinek képviseletét ellátó szervezet kérheti
+            az olyan általános szerződési feltétel semmisségének megállapítását, amely
+        identifier: 6:106
+        title: Vállalkozások közötti szerződéssel, valamint szerződő hatóság szerződő
+          hatóságnak nem minősülő vállalkozással kötött szerződésével kapcsolatos
+          közérdekű kereset
+    identifier: '1'
+    intro: 'A Ptk. 6:106. §-a a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 6:106
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Article
+        children:
+        - identifier: '1'
+          text: Ha a felek a szerződésben a pénztartozás teljesítésének idejét nem
+            határozták meg, a pénztartozást a jogosult fizetési felszólításának vagy
+            számlájának kézhezvételétől számított harminc napon belül kell teljesíteni.
+            Ha a pénztartozás fizetésére kötelezett szerződő hatóság, a szerződő hatóságnak
+            nem minősülő vállalkozással kötött szerződése esetén pénztartozását a
+            jogosult fizetési felszólításának vagy számlájának kézhezvételétől számított
+            harminc napon belül köteles teljesíteni, ebben az esetben a számla kézhezvételének
+            napja nem képezheti a felek között érvényes megállapodás tárgyát.
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: a jogosult fizetési felszólításának vagy számlájának kézhezvétele
+              a jogosult teljesítését (vállalkozási szerződés esetén az átadás-átvételi
+              eljárás befejezését) megelőzte;
+          - __type__: AlphabeticPoint
+            identifier: b
+            text: nem állapítható meg egyértelműen a jogosult fizetési felszólítása
+              vagy számlája kézhezvételének időpontja; vagy
+          - __type__: AlphabeticPoint
+            identifier: c
+            text: a kötelezettnek fizetési felszólítás vagy számla bevárása nélkül
+              teljesítenie kell fizetési kötelezettségét.
+          identifier: '2'
+          intro: A jogosult teljesítésétől számított harminc napon belül kell teljesíteni
+            a pénztartozást, ha
+        - identifier: '3'
+          text: Vállalkozások közötti szerződés esetén az e § rendelkezéseitől a jóhiszeműség
+            és tisztesség követelményének megsértésével egyoldalúan és indokolatlanul
+            a jogosult hátrányára eltérő szerződési feltételt – mint tisztességtelen
+            kikötést – a jogosult megtámadhatja. Pénztartozás fizetésére kötelezett
+            szerződő hatóságnak szerződő hatóságnak nem minősülő vállalkozással kötött
+            szerződése esetén a pénztartozás teljesítésére kikötött idő az (1)–(2)
+            bekezdésben meghatározott határidőket csak akkor haladhatja meg, ha a
+            szerződésben a felek a pénztartozás halasztott teljesítésében állapodtak
+            meg, feltéve hogy a szerződés jellege miatt ez tényszerűen indokolt; a
+            pénztartozás teljesítésére kikötött idő ebben az esetben sem haladhatja
+            meg a hatvan napot. Pénztartozás fizetésére kötelezett szerződő hatóságnak
+            szerződő hatóságnak nem minősülő vállalkozással kötött szerződése esetén
+            a pénztartozás teljesítésére kikötött idő a hatvan napot meghaladó részében
+            semmis.
+        - identifier: '4'
+          text: Vállalkozások közötti szerződés esetén az ellenkező bizonyításáig
+            tisztességtelen kikötésnek kell tekinteni a jóhiszeműség és tisztesség
+            követelményének megsértésével egyoldalúan és indokolatlanul a jogosult
+            hátrányára eltérő olyan szerződési feltételt, amely a pénztartozás teljesítésére
+            az (1) és (2) bekezdésben foglaltaktól eltérő, hatvan napnál hosszabb
+            határidőt határoz meg. Pénztartozás fizetésére kötelezett szerződő hatóságnak
+            szerződő hatóságnak nem minősülő vállalkozással kötött szerződése esetén
+            a pénztartozás teljesítésére az (1)–(2) bekezdés rendelkezéseitől eltérően,
+            a jóhiszeműség és tisztesség követelményének megsértésével egyoldalúan
+            és indokolatlanul a jogosult hátrányára kikötött olyan határidőt, amely
+            a hatvan napot nem haladja meg – mint tisztességtelen kikötést –, a jogosult
+            megtámadhatja.
+        identifier: 6:130
+        title: Pénztartozás teljesítésének ideje
+    identifier: '2'
+    intro: 'A Ptk. 6:130. §-a a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 6:130
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Article
+        children:
+        - identifier: '1'
+          text: Vállalkozások közötti szerződés, valamint pénztartozás fizetésére
+            kötelezett szerződő hatóságnak szerződő hatóságnak nem minősülő vállalkozással
+            kötött szerződése esetén a késedelmi kamat mértéke a késedelemmel érintett
+            naptári félév első napján érvényes jegybanki alapkamat – idegen pénznemben
+            meghatározott pénztartozás esetén az adott pénznemre a kibocsátó jegybank
+            által meghatározott alapkamat, ennek hiányában a pénzpiaci kamat – nyolc
+            százalékponttal növelt értéke. A kamat számításakor a késedelemmel érintett
+            naptári félév első napján érvényes jegybanki alapkamat irányadó az adott
+            naptári félév teljes idejére.
+        - identifier: '2'
+          text: Ha vállalkozások közötti szerződés esetén a kötelezett, szerződő hatóságnak
+            szerződő hatóságnak nem minősülő vállalkozással kötött szerződése esetén
+            a szerződő hatóság fizetési késedelembe esik, köteles a jogosultnak a
+            követelése behajtásával kapcsolatos költségei fedezésére negyven eurónak
+            a Magyar Nemzeti Bank késedelmi kamatfizetési kötelezettség kezdőnapján
+            érvényes hivatalos deviza-középárfolyama alapján meghatározott forintösszeget
+            megfizetni. E kötelezettség teljesítése nem mentesít a késedelem egyéb
+            jogkövetkezményei alól; a kártérítésbe azonban a behajtási költségátalány
+            összege beszámít. A behajtási költségátalányt kizáró, vagy azt negyven
+            eurónál alacsonyabb összegben meghatározó szerződési kikötés semmis.
+        - identifier: '3'
+          text: Vállalkozások közötti szerződés esetén a késedelmi kamat mértékét
+            az (1) bekezdésben foglaltaktól eltérően, a késedelmi kamat esedékességét
+            a pénztartozás teljesítésének idejére az e törvény által meghatározott
+            fizetési határidőt követő naptól eltérően a jóhiszeműség és tisztesség
+            követelményének megsértésével egyoldalúan és indokolatlanul a jogosult
+            hátrányára megállapító szerződési feltételt – mint tisztességtelen kikötést
+            – a jogosult megtámadhatja. Szerződő hatóságnak szerződő hatóságnak nem
+            minősülő vállalkozással kötött szerződése esetén a késedelmi kamat esedékességét
+            a pénztartozás teljesítésének idejére e törvény által meghatározott fizetési
+            határidőt követő naptól eltérően megállapító szerződési feltétel semmis.
+        - identifier: '4'
+          text: Vállalkozások közötti szerződés esetén a késedelmi kamatot kizáró
+            szerződési feltétel, szerződő hatóságnak szerződő hatóságnak nem minősülő
+            vállalkozással kötött szerződése esetén a késedelmi kamatot kizáró vagy
+            azt az (1) bekezdésben meghatározott mértékhez képest alacsonyabb értékben
+            meghatározó szerződési feltétel semmis, kivéve, ha a kötelezett késedelme
+            esetére kötbér fizetésére köteles.
+        identifier: 6:155
+        title: Fizetési késedelem vállalkozások közötti szerződésben, valamint pénztartozás
+          fizetésére kötelezett hatóság szerződése esetén
+    identifier: '3'
+    intro: 'A Ptk. 6:155. §-a a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 6:155
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '3'
+        text: Ha a kötelezett az engedményező részére teljesít, az engedményező köteles
+          a szolgáltatás teljesítéseként birtokába került vagyontárgyakat a sajátjától
+          elkülönítve kezelni, és az engedményes részére késedelem nélkül kiadni.
+          Az engedményező hitelezői az ilyen vagyontárgyakra nem tarthatnak igényt.
+    identifier: '4'
+    intro: 'A Ptk. 6:198. § (3) bekezdése a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 6:198
+        paragraph: '3'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '2'
+        text: Határidőben teljesít a vállalkozó, ha az átadás-átvétel a szerződésben
+          előírt teljesítési határidőn belül megkezdődik. Az átadás-átvétel időtartama
+          harminc nap. Vállalkozások közötti szerződés, illetve szerződő hatóság által
+          megrendelőként szerződő hatóságnak nem minősülő vállalkozással kötött szerződés
+          esetén az átadás-átvétel időtartamára vonatkozó rendelkezéstől a jóhiszeműség
+          és tisztesség követelményének megsértésével egyoldalúan és indokolatlanul
+          a vállalkozó hátrányára eltérő szerződési feltételt – mint tisztességtelen
+          kikötést – a vállalkozó megtámadhatja.
+    identifier: '5'
+    intro: 'A Ptk. 6:247. § (2) bekezdése a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 6:247
+        paragraph: '2'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '4'
+        text: A kötelezett ellen indult csődeljárásban biztosított fizetési haladék
+          a kezes kötelezettségét nem érinti. A kötelezett ellen indult felszámolási
+          vagy csődeljárásban kötött egyezség a kezes kötelezettségét nem érinti,
+          ha a jogosult a kezest az egyezség megkötését megelőzően annak feltételeiről
+          tájékoztatta. A tájékoztatást követően a kezes jogosult a kötelezett tartozásának
+          a teljesítésére; teljesítés esetén a kezes a felszámolási vagy a csődeljárásban
+          a jogosult helyébe lép. A tájékoztatás elmaradása esetén a kezes kötelezettsége
+          lecsökken az egyezségben meghatározott mértékre.
+    identifier: '6'
+    intro: 'A Ptk. 6:417. § (4) bekezdése a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 6:417
+        paragraph: '4'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Article
+        children:
+        - text: Ha a jogosult lemond a követelést biztosító valamely jogról vagy egyébként
+            az ő hibájából a követelés a kötelezettel szemben behajthatatlanná válik
+            vagy a behajtása jelentősen megnehezül, a kezes szabadul annyiban, amennyiben
+            a kötelezettel szembeni megtérítési igénye alapján egyébként kielégítést
+            kaphatott volna.
+        identifier: 6:426
+        title: A kezes szabadulása a kötelemből
+    identifier: '7'
+    intro: 'A Ptk. 6:426. §-a a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 6:426
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '1'
+        text: Felelősségbiztosítási szerződés alapján a biztosított követelheti, hogy
+          a biztosító a szerződésben megállapított módon és mértékben mentesítse őt
+          olyan kár megtérítése, illetve sérelemdíj megfizetése alól, amelyre jogszabály
+          értelmében köteles.
+    identifier: '8'
+    intro: 'A Ptk. 6:470. § (1) bekezdése a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 6:470
+        paragraph: '1'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '1'
+        text: A bírósági és az ügyészségi jogkörben okozott kárért való felelősségre
+          a közigazgatási jogkörben okozott kárért való felelősség szabályait kell
+          megfelelően alkalmazni, azzal, hogy a kárigényt bírósági jogkörben okozott
+          kár esetén a bírósággal, ügyészségi jogkörben okozott kár esetén a Legfőbb
+          Ügyészséggel szemben kell érvényesíteni. Ha az eljárt bíróság nem jogi személy,
+          a kárigényt azzal a bírósággal szemben kell érvényesíteni, amelynek elnöke
+          a nem jogi személy bíróság bírái tekintetében az általános munkáltatói jogkört
+          gyakorolja. A kártérítési keresetnek előfeltétele a rendes jogorvoslat kimerítése.
+    identifier: '9'
+    intro: 'A Ptk. 6:549. § (1) bekezdése a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 6:549
+        paragraph: '1'
+    wrap_up: ''
+  - children:
+    - __type__: AlphabeticPoint
+      identifier: a
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: jogcím
+        position:
+          act: 2013. évi V. törvény
+          article: 6:194
+          paragraph: '2'
+        replacement_text: jogcím,
+      text: 6:194. § (2) bekezdése a „jogcím” szövegrész helyett „jogcím,” szöveggel,
+    - __type__: AlphabeticPoint
+      identifier: b
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: látra szóló betétként
+        position:
+          act: 2013. évi V. törvény
+          article: 6:395
+          paragraph: '2'
+        replacement_text: látra szóló betétként vagy letétként
+      text: 6:395. § (2) bekezdése a „látra szóló betétként” szövegrész helyett „látra
+        szóló betétként vagy letétként” szöveggel,
+    - __type__: AlphabeticPoint
+      identifier: c
+      semantic_data:
+      - __type__: ArticleTitleAmendment
+        original_text: életviszonyok
+        position:
+          act: 2013. évi V. törvény
+          article: 6:534
+        replacement_text: értékviszonyok
+      text: 6:534. § címe az „életviszonyok” szövegrész helyett az „értékviszonyok”
+        szöveggel
+    identifier: '10'
+    intro: A Ptk.
+    wrap_up: lép hatályba.
+  - identifier: '11'
+    semantic_data:
+    - __type__: Repeal
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 6:430
+        paragraph: '4'
+    text: Nem lép hatályba a Ptk. 6:430. § (4) bekezdése.
+  identifier: '188'
+- __type__: Article
+  children:
+  - semantic_data:
+    - __type__: TextAmendment
+      original_text: Semmis
+      position:
+        act: 2013. évi V. törvény
+        article: '7:43'
+        paragraph: '3'
+      replacement_text: Érvénytelen
+    text: A Ptk. 7:43. § (3) bekezdése a „Semmis” szövegrész helyett az „Érvénytelen”
+      szöveggel lép hatályba.
+  identifier: '189'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: NumericPoint
+        identifier: '7'
+        text: 'szerződő hatóság: a közbeszerzésekről szóló törvény szerinti ajánlatkérő,
+          akkor is, ha közbeszerzési eljárás lefolytatására nem köteles.'
+      intro: E törvény alkalmazásában
+    identifier: '1'
+    intro: 'A Ptk. 8:1. § (1) bekezdése a következő 7. ponttal kiegészülve lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: '8:1'
+        paragraph: '1'
+        point: '7'
+      pure_insertion: true
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '6'
+        text: A Ptk. épületekre vonatkozó rendelkezéseit más építményekre is megfelelően
+          alkalmazni kell.
+    identifier: '2'
+    intro: 'A Ptk. 8:1. §-a a következő (6) bekezdéssel kiegészülve lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: '8:1'
+        paragraph: '6'
+      pure_insertion: true
+    wrap_up: ''
+  identifier: '190'
+- __type__: Article
+  children:
+  - identifier: '1'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2014
+      position: null
+      repeal_date:
+        day: 31
+        month: 12
+        year: 2015
+    text: Ez a törvény – a (2)–(9) bekezdésben meghatározott kivétellel – 2014. január
+      1-jén lép hatályba, és 2015. december 31-én hatályát veszti.
+  - identifier: '2'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 2
+        month: 1
+        year: 2014
+      position:
+        article: '77'
+        paragraph: '5'
+    text: A 77. § (5) bekezdése 2014. január 2-án lép hatályba.
+  - identifier: '3'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article:
+        - '1'
+        - '30'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '31'
+        paragraph: '1'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '31'
+        paragraph:
+        - '3'
+        - '5'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article:
+        - '32'
+        - '34'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '35'
+        paragraph: '1'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '35'
+        paragraph:
+        - '3'
+        - '5'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '36'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '37'
+        paragraph: '1'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '37'
+        paragraph:
+        - '3'
+        - '5'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '38'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '39'
+        paragraph: '1'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '39'
+        paragraph:
+        - '3'
+        - '5'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article:
+        - '40'
+        - '59'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '60'
+        paragraph: '1'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '61'
+        paragraph:
+        - '1'
+        - '2'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '61'
+        paragraph: '7'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article:
+        - '62'
+        - '66'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '67'
+        paragraph: '5'
+        point:
+        - a
+        - d
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '67'
+        paragraph: '5'
+        point: g
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '68'
+        paragraph:
+        - '1'
+        - '3'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '68'
+        paragraph: '10'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '68'
+        paragraph:
+        - '12'
+        - '15'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '68'
+        paragraph: '17'
+        point:
+        - '1'
+        - '2'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '68'
+        paragraph: '17'
+        point: '4'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '68'
+        paragraph: '17'
+        point:
+        - '6'
+        - '8'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '68'
+        paragraph: '17'
+        point:
+        - '10'
+        - '13'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '68'
+        paragraph: '17'
+        point:
+        - '15'
+        - '16'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '68'
+        paragraph: '17'
+        point:
+        - '18'
+        - '20'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '68'
+        paragraph: '17'
+        point: '25'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article:
+        - '69'
+        - '76'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '77'
+        paragraph:
+        - '3'
+        - '4'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article:
+        - '78'
+        - '82'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '83'
+        paragraph: '1'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '83'
+        paragraph: '3'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '84'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '85'
+        paragraph:
+        - '1'
+        - '4'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '85'
+        paragraph:
+        - '6'
+        - '10'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '85'
+        paragraph:
+        - '12'
+        - '37'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article:
+        - '86'
+        - '88'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '89'
+        paragraph:
+        - '3'
+        - '4'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article:
+        - '90'
+        - '99'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '100'
+        paragraph:
+        - '2'
+        - '3'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '100'
+        paragraph: '6'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '100'
+        paragraph: '8'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '100'
+        paragraph:
+        - '12'
+        - '17'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '100'
+        paragraph:
+        - '24'
+        - '26'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '100'
+        paragraph: '30'
+        point:
+        - c
+        - h
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '100'
+        paragraph: '32'
+        point:
+        - b
+        - d
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article:
+        - '101'
+        - '111'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '112'
+        paragraph:
+        - '1'
+        - '3'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '112'
+        paragraph:
+        - '5'
+        - '9'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '112'
+        paragraph:
+        - '11'
+        - '31'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '112'
+        paragraph:
+        - '34'
+        - '42'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '112'
+        paragraph:
+        - '45'
+        - '47'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '112'
+        paragraph:
+        - '49'
+        - '50'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '112'
+        paragraph:
+        - '52'
+        - '53'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '112'
+        paragraph: '54'
+        point:
+        - '1'
+        - '29'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '112'
+        paragraph: '54'
+        point:
+        - '31'
+        - '32'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '112'
+        paragraph: '55'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article:
+        - '113'
+        - '115'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '116'
+        paragraph: '1'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '116'
+        paragraph:
+        - '4'
+        - '5'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article:
+        - '117'
+        - '129'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '130'
+        paragraph:
+        - '1'
+        - '7'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '130'
+        paragraph:
+        - '9'
+        - '15'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '130'
+        paragraph:
+        - '17'
+        - '21'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '130'
+        paragraph:
+        - '24'
+        - '27'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '131'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '132'
+        paragraph:
+        - '1'
+        - '2'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '132'
+        paragraph: '4'
+        point: b
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article:
+        - '133'
+        - '153'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '154'
+        paragraph:
+        - '1'
+        - '14'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '154'
+        paragraph:
+        - '16'
+        - '20'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '155'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '156'
+        paragraph: '1'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '156'
+        paragraph:
+        - '3'
+        - '4'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article:
+        - '157'
+        - '173'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '174'
+        paragraph:
+        - '1'
+        - '10'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '174'
+        paragraph:
+        - '13'
+        - '24'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '175'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '176'
+        paragraph: '2'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article:
+        - '177'
+        - '179'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '181'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '182'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '192'
+        point:
+        - a
+        - b
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '192'
+        point:
+        - d
+        - n
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '193'
+    text: Az 1–30. §, a 31. § (1) és (3)−(5) bekezdése, a 32–34. §, a 35. § (1) és
+      (3)–(5) bekezdése, a 36. §, a 37. § (1) és (3)–(5) bekezdése, a 38. §, a 39.
+      § (1) és (3)–(5) bekezdése, a 40–59. §, a 60. § (1) bekezdése, a 61. § (1),
+      (2) és (7) bekezdése, 62–66. §, a 67. § (5) bekezdés a)–d) és g) pontja, a 68.
+      § (1)–(3), (10) és (12)–(15) bekezdése, (17) bekezdés 1., 2., 4., 6–8., 10–13.,
+      15., 16., 18–20. és 25. pontja, a 69–76. §, a 77. § (3) és (4) bekezdése, a
+      78–82. §, 83. § (1) és (3) bekezdése, 84. §, a 85. § (1)–(4), (6)–(10), és (12)–(37)
+      bekezdése, a 86–88. §, a 89. § (3)–(4) bekezdés, 90–99. §, a 100. § (2) és (3),
+      (6), (8), (12)–(17), (24)–(26) bekezdése, (30) bekezdés c)–h) pontja, (32) bekezdés
+      b)–d) pontja, a 101–111. §, a 112. § (1)–(3), (5)–(9), (11)–(31), (34)–(42),
+      (45)–(47), (49), (50), (52) és (53) bekezdése, (54) bekezdés 1−29., valamint
+      31. és 32. pontja, (55) bekezdése, a 113–115. §, a 116. § (1), (4) és (5) bekezdése,
+      a 117–129. §, a 130. § (1)–(7), (9)–(15), (17)–(21) és (24)–(27) bekezdése,
+      a 131. §, a 132. § (1) és (2) bekezdése, valamint (4) bekezdés b) pontja, a
+      133–153. §, a 154. § (1)–(14) és (16)–(20) bekezdése, a 155. §, a 156. § (1),
+      (3) és (4) bekezdése, a 157−173. §, a 174. § (1)–(10) és (13)–(24) bekezdése,
+      a 175. §, a 176. § (2) bekezdése, a 177–179. §, a 181. §, a 182. §, a 192. §
+      a)–b) pontja, valamint d)–n) pontja és a 193. § 2014. március 15-én lép hatályba.
+  - identifier: '4'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 5
+        year: 2014
+      position:
+        article: '35'
+        paragraph: '2'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 5
+        year: 2014
+      position:
+        article: '100'
+        paragraph:
+        - '4'
+        - '5'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 5
+        year: 2014
+      position:
+        article: '100'
+        paragraph: '7'
+    text: A 35. § (2) bekezdése, a 100. § (4), (5), valamint (7) bekezdése 2014. május
+      1-jén lép hatályba.
+  - identifier: '5'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2014
+      position:
+        article: '112'
+        paragraph: '4'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2014
+      position:
+        article: '112'
+        paragraph: '10'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2014
+      position:
+        article: '112'
+        paragraph: '32'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2014
+      position:
+        article: '112'
+        paragraph: '44'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2014
+      position:
+        article: '112'
+        paragraph: '48'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2014
+      position:
+        article: '112'
+        paragraph: '51'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2014
+      position:
+        article: '112'
+        paragraph: '54'
+        point: '30'
+    text: A 112. § (4), (10), (32), (44), (48) és (51) bekezdése, (54) bekezdésének
+      30. pontja 2014. július 1-jén lép hatályba.
+  - identifier: '6'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 9
+        year: 2014
+      position:
+        article: '31'
+        paragraph: '2'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 9
+        year: 2014
+      position:
+        article: '37'
+        paragraph: '2'
+    text: A 31. § (2) bekezdése és a 37. § (2) bekezdése 2014. szeptember 1-jén lép
+      hatályba.
+  - identifier: '7'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 31
+        month: 12
+        year: 2014
+      position:
+        article: '39'
+        paragraph: '2'
+    text: A 39. § (2) bekezdése 2014. december 31-én lép hatályba.
+  - identifier: '8'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2015
+      position:
+        article: '77'
+        paragraph:
+        - '1'
+        - '2'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2015
+      position:
+        article: '100'
+        paragraph:
+        - '9'
+        - '10'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2015
+      position:
+        article: '100'
+        paragraph: '19'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2015
+      position:
+        article: '100'
+        paragraph: '23'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2015
+      position:
+        article: '100'
+        paragraph: '28'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2015
+      position:
+        article: '100'
+        paragraph: '31'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2015
+      position:
+        article: '112'
+        paragraph: '33'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2015
+      position:
+        article: '130'
+        paragraph: '8'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2015
+      position:
+        article: '130'
+        paragraph: '16'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2015
+      position:
+        article: '154'
+        paragraph: '15'
+    text: A 77. § (1) és (2) bekezdése, a 100. § (9) és (10), (19), (23), (28), valamint
+      (31) bekezdése, a 112. § (33) bekezdése, a 130. § (8) és (16) bekezdése és a
+      154. § (15) bekezdése 2015. január 1-jén lép hatályba.
+  - identifier: '9'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 2
+        month: 1
+        year: 2015
+      position:
+        article: '130'
+        paragraph: '22'
+    text: A 130. § (22) bekezdése 2015. január 2-án lép hatályba.
+  identifier: '191'
+identifier: 2013. évi CCLII. törvény
+preamble: ''
+publication_date:
+  day: 30
+  month: 12
+  year: 2013
+subject: egyes törvényeknek az új Polgári Törvénykönyv hatálybalépésével összefüggő
+  módosításáról

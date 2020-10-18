@@ -1,0 +1,238 @@
+children:
+- __type__: Article
+  children:
+  - identifier: '1'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 10
+        year: 2018
+      position: null
+    text: Ez a törvény 2018. október 1. napján lép hatályba.
+  - identifier: '2'
+    text: Hatályát veszti a gyülekezési jogról szóló 1989. évi III. törvény.
+  identifier: '22'
+  title: Hatálybalépés
+- __type__: Article
+  children:
+  - act_id_abbreviations:
+    - abbreviation: Btk.
+      act: 2012. évi C. törvény
+    children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Subtitle
+        identifier: ''
+        title: Az egyesülési és a gyülekezési szabadság megsértése
+      - __type__: Article
+        children:
+        - identifier: '1'
+          text: Aki mást egyesülési vagy gyülekezési jogának gyakorlásában erőszakkal
+            vagy fenyegetéssel akadályoz, bűntett miatt három évig terjedő szabadságvesztéssel
+            büntetendő.
+        - identifier: '2'
+          text: Aki valamely gyűlést akadályoz, ellehetetlenít, vagy annak lebonyolítását
+            egyébként meghiúsítja, illetve a gyűlést súlyosan megzavarja, ha súlyosabb
+            bűncselekmény nem valósul meg, vétség miatt egy évig terjedő szabadságvesztéssel
+            büntetendő.
+        identifier: '217'
+    identifier: '1'
+    intro: 'A Büntető Törvénykönyvről szóló 2012. évi C. törvény (a továbbiakban:
+      Btk.) 217. §-a és az azt megelőző alcím helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: StructuralReference
+        act: 2012. évi C. törvény
+        special:
+          article_id: '217'
+          position: BEFORE_WITH_ARTICLE
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Article
+        children:
+        - text: Aki a gyűlésen a gyűlés szervezőjének, vezetőjének vagy a rendezőknek
+            rendezői feladataik jogszerű teljesítése során erőszakkal vagy fenyegetéssel
+            ellenszegül, vagy őket rendezői feladataik ellátása alatt bántalmazza,
+            ha más bűncselekmény nem valósul meg, vétség miatt két évig terjedő szabadságvesztéssel
+            büntetendő.
+        identifier: 217/A
+    identifier: '2'
+    intro: 'A Btk. Az egyesülési és a gyülekezési szabadság megsértése alcíme a következő
+      217/A. §-sal egészül ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: 217/A
+      pure_insertion: true
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Article
+        children:
+        - identifier: '1'
+          text: Aki a gyűlés gyülekezési jogról szóló törvény szerinti békés jellegét
+            biztosító korlátozásait megsérti, ha súlyosabb bűncselekmény nem valósul
+            meg, vétség miatt egy évig terjedő szabadságvesztéssel büntetendő.
+        - identifier: '2'
+          text: Az (1) bekezdés szerint büntetendő a gyűlés vezetője, ha az általa
+            alkalmazott rendező a gyűlés békés jellegét biztosító korlátozásokat megsérti
+            és annak tudomására jutásától haladéktalanul nem intézkedik a rendező
+            leváltásáról.
+        identifier: 217/B
+    identifier: '3'
+    intro: 'A Btk. a következő 217/B. §-sal egészül ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: 217/B
+      pure_insertion: true
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Article
+        children:
+        - text: Aki megtiltott gyűlést szervez, vagy azon való részvételre a gyülekezési
+            jogról szóló törvény szerint felhív, ha más bűncselekmény nem valósul
+            meg, vétség miatt egy évig terjedő szabadságvesztéssel büntetendő.
+        identifier: 217/C
+    identifier: '4'
+    intro: 'A Btk. a következő 217/C. §-sal egészül ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: 217/C
+      pure_insertion: true
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: AlphabeticPoint
+        identifier: e
+        text: a gyűlés gyülekezési jogról szóló törvény szerinti békés jellegét biztosító
+          korlátozásokat megsértve
+      intro: (3) A büntetés bűntett miatt három évig terjedő szabadságvesztés, ha
+        a rendbontást
+      wrap_up: követik el.
+    identifier: '5'
+    intro: 'A Btk. 340. § (3) bekezdése a következő e) ponttal egészül ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '340'
+        paragraph: '3'
+        point: e
+      pure_insertion: true
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: NumericPoint
+        identifier: '24'
+        text: 'gyűlés: a gyülekezési jogról szóló törvény hatálya alá tartozó gyűlés;'
+      - __type__: NumericPoint
+        identifier: 24a
+        text: 'nyilvános rendezvény: a gyűlés kivételével olyan rendezvény, amely
+          mindenki számára azonos feltételek mellett nyitva áll;'
+      intro: (1) E törvény alkalmazásában
+    identifier: '6'
+    intro: 'A Btk. 459. § (1) bekezdés 24. pontja helyébe a következő rendelkezés
+      lép, valamint a 459. § (1) bekezdése a következő 24a. ponttal egészül ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '459'
+        paragraph: '1'
+        point:
+        - '24'
+        - 24a
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: AlphabeticSubpoint
+        identifier: f
+        text: a lelkiismeret és vallásszabadság megsértése (215. §), a közösség tagja
+          elleni erőszak [216. § (2)–(3) bekezdés], az egyesülési és a gyülekezési
+          szabadság megsértése [217. § (1) bekezdés];
+      intro: '(1) E törvény alkalmazásában 26. személy elleni erőszakos bűncselekmény:'
+    identifier: '7'
+    intro: 'A Btk. 459. § (1) bekezdés 26. pont f) alpontja helyébe a következő rendelkezés
+      lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '459'
+        paragraph: '1'
+        point: '26'
+        subpoint: f
+    wrap_up: ''
+  - children:
+    - __type__: AlphabeticPoint
+      identifier: a
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: nyilvános rendezvényeket,
+        position:
+          act: 2012. évi C. törvény
+          article: '71'
+          paragraph: '2'
+          point: c
+        replacement_text: nyilvános rendezvényeket, valamint gyűléseket,
+      text: 71. § (2) bekezdés c) pontjában a „nyilvános rendezvényeket,” szövegrész
+        helyébe a „nyilvános rendezvényeket, valamint gyűléseket,” szöveg,
+    - __type__: AlphabeticPoint
+      identifier: b
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: nyilvános rendezvényen
+        position:
+          act: 2012. évi C. törvény
+          article: '339'
+          paragraph: '2'
+          point: e
+        replacement_text: nyilvános rendezvényen vagy gyűlésen
+      text: 339. § (2) bekezdés e) pontjában a „nyilvános rendezvényen” szövegrész
+        helyébe a „nyilvános rendezvényen vagy gyűlésen” szöveg,
+    - __type__: AlphabeticPoint
+      identifier: c
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: nyilvános rendezvény
+        position:
+          act: 2012. évi C. törvény
+          article: '340'
+          paragraph: '1'
+        replacement_text: nyilvános rendezvény vagy gyűlés
+      text: 340. § (1) bekezdésében a „nyilvános rendezvény” szövegrész helyébe a
+        „nyilvános rendezvény vagy gyűlés” szöveg
+    identifier: '8'
+    intro: A Btk.
+    wrap_up: lép.
+  identifier: '25'
+  title: Módosító rendelkezések
+identifier: 2018. évi LV. törvény
+preamble: ''
+publication_date:
+  day: 31
+  month: 7
+  year: 2018
+subject: a gyülekezési jogról

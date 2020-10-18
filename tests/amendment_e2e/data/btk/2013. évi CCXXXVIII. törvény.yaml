@@ -1,0 +1,107 @@
+children:
+- __type__: Article
+  children:
+  - identifier: '1'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 18
+        month: 1
+        year: 2014
+      position: null
+    text: Ez a törvény – a (2) bekezdésben meghatározott kivétellel – az országgyűlési
+      képviselők 2014. évi általános választása kitűzésének napján lép hatályba.
+  - identifier: '2'
+    text: A VI. Fejezet 2014. október 1-jén lép hatályba.
+  - identifier: '3'
+    text: Az (1) bekezdés szerinti feltétel bekövetkezéséről a választójogi és népszavazási
+      szabályozásért felelős miniszter tesz közzé határozatot.
+  identifier: '93'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Subtitle
+        identifier: ''
+        title: A választás, népszavazás és európai polgári kezdeményezés rendje elleni
+          bűncselekmény
+      - __type__: Article
+        children:
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: a jelölési eljárás szabályait megszegve erőszakkal, fenyegetéssel,
+              megtévesztéssel vagy anyagi juttatással szerez ajánlást,
+          - __type__: AlphabeticPoint
+            identifier: b
+            text: népszavazás vagy európai polgári kezdeményezés indítványozása érdekében
+              erőszakkal, fenyegetéssel, megtévesztéssel vagy anyagi juttatással szerez
+              aláírást,
+          - __type__: AlphabeticPoint
+            identifier: c
+            text: jogosultság nélkül szavaz,
+          - __type__: AlphabeticPoint
+            identifier: d
+            text: jogosulatlanul aláír, hamis adatokat tüntet fel,
+          - __type__: AlphabeticPoint
+            identifier: e
+            text: arra jogosultat a választásban, a népszavazásban, a népszavazási
+              vagy az európai polgári kezdeményezésben akadályoz, vagy erőszakkal,
+              fenyegetéssel, megtévesztéssel, vagy anyagi juttatással befolyásolni
+              törekszik,
+          - __type__: AlphabeticPoint
+            identifier: f
+            text: megsérti a választás vagy a népszavazás titkosságát,
+          - __type__: AlphabeticPoint
+            identifier: g
+            text: meghamisítja a választás, a népszavazás, a népszavazási vagy az
+              európai polgári kezdeményezés eredményét,
+          - __type__: AlphabeticPoint
+            identifier: h
+            text: a jelölési eljárás során az ajánlásáért, illetve a népszavazás kezdeményezése
+              vagy európai polgári kezdeményezés indítványozása során az aláírásáért
+              anyagi juttatást fogad el,
+          - __type__: AlphabeticPoint
+            identifier: i
+            text: szavazatát anyagi juttatás nyújtásától teszi függővé, és erre tekintettel
+              anyagi juttatást fogad el,
+          identifier: '1'
+          intro: Aki a választási eljárásról szóló törvény vagy a népszavazás kezdeményezéséről,
+            az európai polgári kezdeményezésről, valamint a népszavazási eljárásról
+            szóló törvény hatálya alá tartozó választás, népszavazás és európai polgári
+            kezdeményezés során
+          wrap_up: bűntettet követ el és három évig terjedő szabadságvesztéssel büntetendő.
+        - identifier: '2'
+          text: Az (1) bekezdés szerint büntetendő, aki nemzetiségi önkormányzati
+            képviselőjelöltként történő nyilvántartásba vételhez szükséges nyilatkozatában
+            korábbi nemzetiségi önkormányzati képviselőjelöltségére vonatkozóan valótlan
+            tartalmú nyilatkozatot tesz.
+        identifier: '350'
+    intro: 'A Büntető Törvénykönyvről szóló 2012. évi C. törvény 350. §-a és az azt
+      megelőző alcím-megjelölése helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: StructuralReference
+        act: 2012. évi C. törvény
+        special:
+          article_id: '350'
+          position: BEFORE_WITH_ARTICLE
+    wrap_up: ''
+  identifier: '97'
+identifier: 2013. évi CCXXXVIII. törvény
+preamble: 'Alkotmányos alapelv, hogy a hatalom birtokosa a nép. Hatalmát az Alaptörvény
+  keretei között, elsősorban választott képviselői útján gyakorolja. A demokratikus
+  hatalomgyakorlás része, hogy az ország sorsát érintő legfontosabb ügyek eldöntésében
+  a polgárok közvetlenül, népszavazás útján is részt vehessenek. Ugyanezen jogok a
+  helyi közhatalom gyakorlása keretében a helyi önkormányzat közösségét is megilletik.
+  Ezekre az elvi alapokra figyelemmel, az Alaptörvény 8. cikkének és 31. cikk (2)
+  bekezdésének végrehajtására az Országgyűlés a következő törvényt alkotja:'
+publication_date:
+  day: 23
+  month: 12
+  year: 2013
+subject: a népszavazás kezdeményezéséről, az európai polgári kezdeményezésről, valamint
+  a népszavazási eljárásról

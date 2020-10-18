@@ -1,0 +1,40 @@
+children:
+- __type__: Article
+  children:
+  - semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: DaysAfterPublication
+        days: 15
+      position: null
+    text: Ez a törvény a kihirdetését követő tizenötödik napon lép hatályba.
+  identifier: '347'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: AlphabeticSubpoint
+        identifier: l
+        text: a választási bizottság tagja;
+    intro: 'A BüntetőTörvénykönyvről szóló 2012. évi C. törvény 459. § (1) bekezdés
+      11. pontja a következő l) alponttal kiegészülve lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '459'
+        paragraph: '1'
+        point: '11'
+        subpoint: l
+      pure_insertion: true
+    wrap_up: ''
+  identifier: '364'
+identifier: 2013. évi XXXVI. törvény
+preamble: ''
+publication_date:
+  day: 18
+  month: 4
+  year: 2013
+subject: a választási eljárásról

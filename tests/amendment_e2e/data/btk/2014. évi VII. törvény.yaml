@@ -1,0 +1,93 @@
+children:
+- __type__: Article
+  children:
+  - identifier: '1'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: DaysAfterPublication
+        days: 30
+      position: null
+    text: Ez a törvény – a (2) bekezdésben meghatározott kivétellel – a kihirdetését
+      követő 30. napon lép hatályba.
+  - identifier: '2'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 2
+        month: 5
+        year: 2014
+      position:
+        article: '11'
+    text: A 11. § 2014. május 2-án lép hatályba.
+  identifier: '8'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Subtitle
+        identifier: ''
+        title: Mező- és erdőgazdasági hasznosítású föld jogellenes megszerzése
+      - __type__: Article
+        children:
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: mező- és erdőgazdasági hasznosítású föld tulajdonjogának megszerzése,
+          - __type__: AlphabeticPoint
+            identifier: b
+            text: mező- és erdőgazdasági hasznosítású földre vonatkozó haszonélvezeti
+              jog vagy használat jogának alapítása
+          identifier: '1'
+          intro: Aki
+          wrap_up: céljából az ezekre vonatkozó jogszabályi tilalom vagy korlátozás
+            kijátszásával semmis szerződést köt, bűntett miatt egy évtől öt évig terjedő
+            szabadságvesztéssel büntetendő.
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: mező- és erdőgazdasági hasznosítású föld tulajdonjogának megszerzésére,
+          - __type__: AlphabeticPoint
+            identifier: b
+            text: mező- és erdőgazdasági hasznosítású földre vonatkozó haszonélvezeti
+              jog vagy használat jogának alapítására
+          identifier: '2'
+          intro: Aki
+          wrap_up: vonatkozó jogszabályi tilalom vagy korlátozás kijátszásával általa
+            kötött semmis szerződés leplezésére létrehozott megállapodás alapján mező-
+            és erdőgazdasági hasznosítású földet használ, illetve szedi annak hasznait,
+            ha súlyosabb bűncselekmény nem valósul meg, bűntett miatt három évig terjedő
+            szabadságvesztéssel büntetendő.
+        - identifier: '3'
+          text: Az (1) bekezdés szerint büntetendő az az ügyvéd, jogtanácsos vagy
+            közjegyző, aki az (1) bekezdés szerinti szerződés megkötésében közreműködik.
+        - identifier: '4'
+          text: Korlátlanul enyhíthető az (1) és (2) bekezdés szerinti bűncselekmény
+            elkövetőjének a büntetése, ha a bűncselekményt, mielőtt az a hatóság tudomására
+            jutott volna, a hatóságnak bejelenti és az elkövetés körülményeit feltárja.
+        identifier: '349'
+    intro: 'A Büntető Törvénykönyvről szóló 2012. évi C. törvény 349. §-a és a megelőző
+      alcím helyébe a következő rendelkezés és alcím lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: StructuralReference
+        act: 2012. évi C. törvény
+        special:
+          article_id: '349'
+          position: BEFORE_WITH_ARTICLE
+    wrap_up: ''
+  identifier: '11'
+identifier: 2014. évi VII. törvény
+preamble: 'Az Országgyűlés a termőföldek tulajdonjogának megszerzését vagy használatát
+  korlátozó jogszabályi rendelkezések kijátszását célzó múltbeli jogügyletek feltárására,
+  a jogügyletekhez kapcsolódó joghatás kiváltásának megelőzésére, valamint a jogsértő
+  állapot megszüntetésére a következő törvényt alkotja:'
+publication_date:
+  day: 11
+  month: 2
+  year: 2014
+subject: a termőföld tulajdonjogának megszerzését vagy használatát korlátozó jogszabályi
+  rendelkezések kijátszására irányuló jogügyletek feltárásáról és megakadályozásáról

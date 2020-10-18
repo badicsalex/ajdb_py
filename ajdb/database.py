@@ -6,6 +6,7 @@ import gzip
 import json
 from collections import defaultdict
 
+import yaml
 import attr
 
 from hun_law.structure import \
@@ -555,10 +556,15 @@ class ActSet:
         if path.suffix == '.gz':
             with gzip.open(path, 'rt') as f:
                 the_dict = json.load(f)
+        elif path.suffix == '.yaml':
+            with open(path, 'rt') as f:
+                the_dict = yaml.load(f, Loader=yaml.Loader)
         else:
             with open(path, 'rt') as f:
                 the_dict = json.load(f)
-        act = act_converter.to_object(the_dict)
+        self.add_act(act_converter.to_object(the_dict))
+
+    def add_act(self, act: Act) -> None:
         act = apply_fixups(act)
         self.acts[act.identifier] = ActWithCachedData(act)
 

@@ -1,0 +1,93 @@
+children:
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Subtitle
+        identifier: ''
+        title: Jogellenesen átalakított személyszállítást végző jármű vezetése
+      - __type__: Article
+        children:
+        - identifier: '1'
+          text: Aki közúton, illetve közforgalom elől el nem zárt magánúton engedély
+            nélkül vagy az engedélytől eltérően átalakított, a személyszállítási szolgáltatásokról
+            szóló törvényben meghatározott közúti járművet vagy különleges személyszállító
+            szolgáltatást nyújtó járművet vezet, ha súlyosabb bűncselekmény nem valósul
+            meg, vétség miatt egy évig terjedő szabadságvesztéssel büntetendő.
+        - identifier: '2'
+          text: A büntetés két évig terjedő szabadságvesztés, ha a bűncselekményt
+            iskolabusszal vagy különleges igényű – így különösen mozgásában korlátozott,
+            idős vagy beteg – személyek szállítására szolgáló közúti járművel követik
+            el.
+        - identifier: '3'
+          text: Aki az e §-ban meghatározott járművet engedély nélkül átalakít vagy
+            átalakíttat, vétség miatt elzárással büntetendő.
+        identifier: 239/A
+    intro: 'A Büntető Törvénykönyvről szóló 2012. évi C. törvény a következő alcímmel
+      és 239/A. §-sal egészül ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: StructuralReference
+        act: 2012. évi C. törvény
+        special:
+          article_id: 239/A
+          position: BEFORE_WITH_ARTICLE
+      pure_insertion: true
+    wrap_up: ''
+  identifier: '1'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        children:
+        - __type__: AlphabeticPoint
+          identifier: a
+          text: házastársa, volt házastársa, élettársa vagy volt élettársa sérelmére,
+        - __type__: AlphabeticPoint
+          identifier: b
+          text: nevelése, felügyelete, gondozása vagy gyógykezelése alatt álló személy
+            sérelmére,
+        - __type__: AlphabeticPoint
+          identifier: c
+          text: hatalmi vagy befolyási helyzetével visszaélve, illetve
+        - __type__: AlphabeticPoint
+          identifier: d
+          text: hivatalos személy sérelmére, hivatali tevékenységével össze nem egyeztethető
+            helyen vagy időben
+        identifier: '3'
+        intro: Aki a zaklatást
+        wrap_up: követi el, az (1) bekezdésben meghatározott esetben két évig, a (2)
+          bekezdésben meghatározott esetben bűntett miatt három évig terjedő szabadságvesztéssel
+          büntetendő.
+    intro: 'A Büntető Törvénykönyvről szóló 2012. évi C. törvény 222. § (3) bekezdése
+      helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '222'
+        paragraph: '3'
+    wrap_up: ''
+  identifier: '2'
+- __type__: Article
+  children:
+  - semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: DaysAfterPublication
+        days: 8
+      position: null
+    text: Ez a törvény a kihirdetését követő 8. napon lép hatályba.
+  identifier: '3'
+identifier: 2018. évi XLIII. törvény
+preamble: ''
+publication_date:
+  day: 30
+  month: 7
+  year: 2018
+subject: a Büntető Törvénykönyvről szóló 2012. évi C. törvény módosításáról

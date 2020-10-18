@@ -1,0 +1,37 @@
+children:
+- __type__: Article
+  children:
+  - semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: DaysAfterPublication
+      position: null
+    text: Ez a törvény a kihirdetését követő napon lép hatályba.
+  identifier: '4'
+- __type__: Article
+  children:
+  - children:
+    - __type__: AlphabeticPoint
+      identifier: a
+      semantic_data:
+      - __type__: Repeal
+        position:
+          __type__: Reference
+          act: 2013. évi V. törvény
+          article: 6:155
+          paragraph: '2'
+      text: a Polgári Törvénykönyvről szóló 2013. évi V. törvény 6:155. § (2) bekezdése,
+    - __type__: AlphabeticPoint
+      identifier: b
+      text: a Polgári Törvénykönyvről szóló 2013. évi V. törvény hatálybalépésével
+        összefüggő átmeneti és felhatalmazó rendelkezésekről szóló 2013. évi CLXXVII.
+        törvény „22/B. Behajtási költségátalány megfizetése” alcíme és 53/B. §-a.
+    intro: Hatályát veszti
+  identifier: '8'
+identifier: 2016. évi IX. törvény
+preamble: ''
+publication_date:
+  day: 23
+  month: 3
+  year: 2016
+subject: a behajtási költségátalányról

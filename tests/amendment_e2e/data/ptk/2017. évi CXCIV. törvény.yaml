@@ -1,0 +1,66 @@
+children:
+- __type__: Article
+  children:
+  - act_id_abbreviations:
+    - abbreviation: Ptk.
+      act: 2013. évi V. törvény
+    children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '2'
+        text: A díjengedmény, illetve a kártérítési igény elévülése szempontjából
+          a fogyasztónak nem minősülő megrendelőt is fogyasztónak kell tekinteni.
+    identifier: '1'
+    intro: 'A Polgári Törvénykönyvről szóló 2013. évi V. törvény (a továbbiakban:
+      Ptk.) 6:254. § (2) bekezdése helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 6:254
+        paragraph: '2'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: AlphabeticPoint
+        identifier: d
+        text: az utazási csomagokról és az utazási szolgáltatásegyüttesekről, valamint
+          a 2006/2004/EK rendelet és a 2011/83/EU európai parlamenti és tanácsi irányelv
+          módosításáról, továbbá a 90/314/EGK tanácsi irányelv hatályon kívül helyezéséről
+          szóló, 2015. november 25-i 2015/2302/EU európai parlamenti és tanácsi irányelvnek;
+      intro: 'E törvény:'
+      wrap_up: való megfelelést szolgálja.
+    identifier: '2'
+    intro: 'A Ptk. 8:6. § d) pontja helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: '8:6'
+        point: d
+    wrap_up: ''
+  identifier: '2'
+- __type__: Article
+  children:
+  - semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2018
+      position: null
+    text: Ez a törvény 2018. július 1-jén lép hatályba.
+  identifier: '4'
+identifier: 2017. évi CXCIV. törvény
+preamble: ''
+publication_date:
+  day: 18
+  month: 12
+  year: 2017
+subject: egyes törvények szervezett utazási tárgyú jogharmonizációjával kapcsolatos
+  módosításáról

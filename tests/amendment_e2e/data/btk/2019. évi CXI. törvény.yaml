@@ -1,0 +1,132 @@
+children:
+- __type__: Article
+  children:
+  - act_id_abbreviations:
+    - abbreviation: Btk.
+      act: 2012. évi C. törvény
+    children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        children:
+        - __type__: AlphabeticPoint
+          identifier: a
+          text: az orvosi gyakorlat,
+        - __type__: AlphabeticPoint
+          identifier: b
+          text: az egészségügyi szakképesítéshez kötött pszichoterápiás gyakorlat
+            vagy
+        - __type__: AlphabeticPoint
+          identifier: c
+          text: a nem-konvencionális gyógyító és természetgyógyászati eljárások
+        identifier: '1'
+        intro: Aki ellenszolgáltatásért vagy rendszeresen
+        wrap_up: körébe tartozó tevékenységet jogosulatlanul fejt ki, vétség miatt
+          egy évig terjedő szabadságvesztéssel büntetendő.
+    intro: 'A Büntető Törvénykönyvről szóló 2012. évi C. törvény (a továbbiakban:
+      Btk.) 187. § (1) bekezdése helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '187'
+        paragraph: '1'
+    wrap_up: ''
+  identifier: '13'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Subtitle
+        identifier: ''
+        title: Oktatással összefüggő jogosulatlan tevékenység
+      - __type__: Article
+        children:
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: felsőoktatásban megszerezhető szakképzettséget igazoló oklevéllel
+              vagy iskolarendszeren kívüli képzésben, illetve iskolai rendszerű szakképzésben
+              megszerezhető szakképesítést igazoló bizonyítvánnyal összetéveszthető
+              okiratot állít ki, vagy
+          - __type__: AlphabeticPoint
+            children:
+            - __type__: AlphabeticSubpoint
+              identifier: ba
+              text: szakképzettséget igazoló oklevelet,
+            - __type__: AlphabeticSubpoint
+              identifier: bb
+              text: tudományos fokozatot,
+            - __type__: AlphabeticSubpoint
+              identifier: bc
+              text: címet vagy
+            - __type__: AlphabeticSubpoint
+              identifier: bd
+              text: rövidítést
+            identifier: b
+            intro: a nemzeti felsőoktatásról szóló törvényben meghatározott vagy azzal
+              összetéveszthető
+            wrap_up: jogosulatlanul adományoz,
+          identifier: '1'
+          intro: Aki
+          wrap_up: vétség miatt két évig terjedő szabadságvesztéssel büntetendő.
+        - identifier: '2'
+          text: Aki az (1) bekezdésben meghatározott bűncselekményt bűnszövetségben
+            vagy üzletszerűen követi el, bűntett miatt három évig terjedő szabadságvesztéssel
+            büntetendő.
+        identifier: 343/A
+    intro: 'A Btk. a 343. §-t követően a következő alcímmel és 343/A. §-sal egészül
+      ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: StructuralReference
+        act: 2012. évi C. törvény
+        special:
+          article_id: 343/A
+          position: BEFORE_WITH_ARTICLE
+      pure_insertion: true
+    wrap_up: ''
+  identifier: '14'
+- __type__: Article
+  children:
+  - identifier: '1'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position: null
+    text: Ez a törvény – a (2) és (3) bekezdésben foglalt kivétellel – 2020. január
+      1-jén lép hatályba.
+  - identifier: '2'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 2
+        year: 2020
+      position:
+        article: '12'
+        paragraph:
+        - '2'
+        - '3'
+    text: A 12. § (2) és (3) bekezdése 2020. február 1-jén lép hatályba.
+  - identifier: '3'
+    text: A 10. §, a 12. § (1) bekezdése, a 13. §, a 14. § az e törvény kihirdetését
+      követő hatvanadik napon lép hatályba.
+  identifier: '15'
+identifier: 2019. évi CXI. törvény
+preamble: ''
+publication_date:
+  day: 17
+  month: 12
+  year: 2019
+subject: egyes törvényeknek az egészségügyi szolgáltatások fejlesztésével, valamint
+  a bizonytalan minőségű, tisztázatlan hátterű egészségügyi szolgáltatók tevékenységének
+  visszaszorításával összefüggő módosításáról

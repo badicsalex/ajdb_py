@@ -1,0 +1,72 @@
+children:
+- __type__: Article
+  children:
+  - act_id_abbreviations:
+    - abbreviation: Btk.
+      act: 2012. évi C. törvény
+    children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '3'
+        text: A nemi élet szabadsága és a nemi erkölcs elleni bűncselekmény elkövetőjét,
+          ha a bűncselekményt tizennyolcadik életévét be nem töltött személy sérelmére
+          követte el, végleges hatállyal el kell tiltani bármely olyan foglalkozás
+          gyakorlásától vagy egyéb tevékenységtől, amelynek keretében tizennyolcadik
+          életévét be nem töltött személy nevelését, felügyeletét, gondozását, gyógykezelését
+          végzi, illetve ilyen személlyel egyéb hatalmi vagy befolyási viszonyban
+          áll.
+    intro: 'A Büntető Törvénykönyvről szóló 2012. évi C. törvény (a továbbiakban:
+      Btk.) 52. § (3) bekezdése helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '52'
+        paragraph: '3'
+    wrap_up: ''
+  identifier: '1'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '4'
+        text: A kiskorú veszélyeztetése bűncselekmény elkövetőjét el kell tiltani
+          bármely olyan foglalkozás gyakorlásától vagy egyéb tevékenységtől, amelynek
+          keretében tizennyolcadik életévét be nem töltött személy nevelését, felügyeletét,
+          gondozását, gyógykezelését végzi, illetve ilyen személlyel egyéb hatalmi
+          vagy befolyási viszonyban áll. Különös méltánylást érdemlő esetben a foglalkozástól
+          eltiltás kötelező alkalmazása mellőzhető.
+    intro: 'A Btk. 52. §-a a következő (4) bekezdéssel egészül ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '52'
+        paragraph: '4'
+      pure_insertion: true
+    wrap_up: ''
+  identifier: '2'
+- __type__: Article
+  children:
+  - semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 12
+        year: 2017
+      position: null
+    text: Ez a törvény 2017. december 1-jén lép hatályba.
+  identifier: '5'
+identifier: 2017. évi CXLIX. törvény
+preamble: ''
+publication_date:
+  day: 22
+  month: 11
+  year: 2017
+subject: egyes törvényeknek a gyermekek fokozottabb védelme érdekében szükséges módosításáról

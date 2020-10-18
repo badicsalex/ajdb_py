@@ -1,0 +1,530 @@
+children:
+- __type__: Article
+  children:
+  - act_id_abbreviations:
+    - abbreviation: Btk.
+      act: 2012. évi C. törvény
+    children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: AlphabeticSubpoint
+        identifier: ab
+        text: állam elleni bűncselekmény, – kivéve a szövetséges fegyveres erő ellen
+          elkövetett kémkedést és a kémkedést az Európai Unió intézményei ellen –
+          tekintet nélkül arra, hogy az az elkövetés helyének törvénye szerint büntetendő-e,
+      intro: A magyar büntető törvényt kell alkalmazni a) a nem magyar állampolgár
+        által külföldön elkövetett cselekményre is, ha az
+    identifier: '1'
+    intro: 'A Büntető Törvénykönyvről szóló 2012. évi C. törvény (a továbbiakban:
+      Btk.) 3. § (2) bekezdés a) pont ab) alpontja helyébe a következő rendelkezés
+      lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '3'
+        paragraph: '2'
+        point: a
+        subpoint: ab
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Article
+        children:
+        - identifier: '1'
+          text: Aki új pszichoaktív anyagot kínál, átad, forgalomba hoz vagy azzal
+            kereskedik, bűntett miatt egy évtől öt évig terjedő szabadságvesztéssel
+            büntetendő.
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: bűnszövetségben,
+          - __type__: AlphabeticPoint
+            identifier: b
+            text: hivatalos vagy közfeladatot ellátó személyként, e minőséget felhasználva
+              vagy
+          - __type__: AlphabeticPoint
+            identifier: c
+            text: a Magyar Honvédség, a rendvédelmi szervek vagy a Nemzeti Adó- és
+              Vámhivatal létesítményében
+          identifier: '2'
+          intro: A büntetés két évtől nyolc évig terjedő szabadságvesztés, ha a bűncselekményt
+          wrap_up: követik el.
+        - identifier: '3'
+          text: Az (1)–(2) bekezdés szerint büntetendő, aki az ott meghatározott bűncselekmény
+            elkövetéséhez anyagi eszközöket szolgáltat.
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: az (1) bekezdésben meghatározott esetben vétség miatt egy évig,
+          - __type__: AlphabeticPoint
+            identifier: b
+            text: a (2) bekezdés b)–c) pontjában meghatározott esetben bűntett miatt
+              három évig
+          identifier: '4'
+          intro: Aki csekély mennyiségű új pszichoaktív anyagot kínál vagy átad,
+          wrap_up: terjedő szabadságvesztéssel büntetendő.
+        - identifier: '5'
+          text: Aki az (1) vagy a (2) bekezdésben meghatározott bűncselekményre irányuló
+            előkészületet követ el, vétség miatt két évig terjedő szabadságvesztéssel
+            büntetendő.
+        identifier: '184'
+    identifier: '2'
+    intro: 'A Btk. 184. §-a helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '184'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Article
+        children:
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: tizennyolcadik életévét be nem töltött személynek új pszichoaktív
+              anyagot kínál, átad,
+          - __type__: AlphabeticPoint
+            identifier: b
+            text: tizennyolcadik életévét be nem töltött személy felhasználásával
+              új pszichoaktív anyagot forgalomba hoz vagy azzal kereskedik,
+          - __type__: AlphabeticPoint
+            children:
+            - __type__: AlphabeticSubpoint
+              identifier: ca
+              text: kínál, átad,
+            - __type__: AlphabeticSubpoint
+              identifier: cb
+              text: forgalomba hoz vagy azzal kereskedik,
+            identifier: c
+            intro: oktatási, köznevelési, gyermekjóléti vagy gyermekvédelmi feladatok
+              ellátására rendelt épület területén, illetve annak közvetlen környezetében
+              új pszichoaktív anyagot
+          identifier: '1'
+          intro: Az a tizennyolcadik életévét betöltött személy, aki
+          wrap_up: bűntett miatt két évtől nyolc évig terjedő szabadságvesztéssel
+            büntetendő.
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: bűnszövetségben,
+          - __type__: AlphabeticPoint
+            identifier: b
+            text: hivatalos vagy közfeladatot ellátó személyként, e minőséget felhasználva
+          identifier: '2'
+          intro: A büntetés öt évtől tíz évig terjedő szabadságvesztés, ha a bűncselekményt
+          wrap_up: követik el.
+        - identifier: '3'
+          text: Az (1)–(2) bekezdés szerint büntetendő, aki az ott meghatározott bűncselekmény
+            elkövetéséhez anyagi eszközöket szolgáltat.
+        - identifier: '4'
+          text: Aki az (1) bekezdés a) pontjában vagy c) pont ca) alpontjában meghatározott
+            bűncselekményt csekély mennyiségű új pszichoaktív anyagra követi el, három
+            évig, hivatalos vagy közfeladatot ellátó személyként, e minőséget felhasználva
+            történő elkövetés esetén egy évtől öt évig terjedő szabadságvesztéssel
+            büntetendő.
+        - identifier: '5'
+          text: Aki az (1) vagy a (2) bekezdésben meghatározott bűncselekmény elkövetésére
+            irányuló előkészületet követ el, vétség miatt két évig terjedő szabadságvesztéssel
+            büntetendő.
+        identifier: 184/A
+      - __type__: Article
+        children:
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: új pszichoaktív anyagot előállít, az ország területére behoz, onnan
+              kivisz vagy azon átszállít,
+          - __type__: AlphabeticPoint
+            identifier: b
+            text: csekély mennyiséget meghaladó új pszichoaktív anyagot megszerez
+              vagy tart,
+          identifier: '1'
+          intro: Aki
+          wrap_up: bűntett miatt három évig terjedő szabadságvesztéssel büntetendő.
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: üzletszerűen,
+          - __type__: AlphabeticPoint
+            identifier: b
+            text: bűnszövetségben,
+          - __type__: AlphabeticPoint
+            identifier: c
+            text: hivatalos vagy közfeladatot ellátó személyként, e minőséget felhasználva
+          identifier: '2'
+          intro: A büntetés egy évtől öt évig terjedő szabadságvesztés, ha a bűncselekményt
+          wrap_up: követik el.
+        - identifier: '3'
+          text: Az (1)–(2) bekezdés szerint büntetendő, aki az ott meghatározott bűncselekmény
+            elkövetéséhez anyagi eszközöket szolgáltat.
+        - identifier: '4'
+          text: Aki az (1)–(2) bekezdésben meghatározott bűncselekmény elkövetésére
+            irányuló előkészületet követ el, vétség miatt két évig terjedő szabadságvesztéssel
+            büntetendő.
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: az (1) bekezdés a) pontjában meghatározott esetben vétség miatt
+              egy évig,
+          - __type__: AlphabeticPoint
+            identifier: b
+            text: a (2) bekezdés a) és c) pontjában meghatározott esetben vétség miatt
+              két évig
+          identifier: '5'
+          intro: Ha a bűncselekményt csekély mennyiségű új pszichoaktív anyagra követik
+            el, a büntetés
+          wrap_up: terjedő szabadságvesztés.
+        identifier: 184/B
+      - __type__: Article
+        children:
+        - children:
+          - __type__: AlphabeticPoint
+            children:
+            - __type__: AlphabeticSubpoint
+              identifier: aa
+              text: új pszichoaktív anyagot előállít, az ország területére behoz,
+                onnan kivisz vagy azon átszállít,
+            - __type__: AlphabeticSubpoint
+              identifier: ab
+              text: csekély mennyiséget meghaladó új pszichoaktív anyagot megszerez
+                vagy tart,
+            identifier: a
+            intro: tizennyolcadik életévét be nem töltött személy felhasználásával
+          - __type__: AlphabeticPoint
+            children:
+            - __type__: AlphabeticSubpoint
+              identifier: ba
+              text: új pszichoaktív anyagot előállít,
+            - __type__: AlphabeticSubpoint
+              identifier: bb
+              text: csekély mennyiséget meghaladó új pszichoaktív anyagot megszerez
+                vagy tart,
+            identifier: b
+            intro: oktatási, köznevelési, gyermekjóléti vagy gyermekvédelmi feladatok
+              ellátására rendelt épület területén, illetve annak közvetlen környezetében
+          identifier: '1'
+          intro: Az a tizennyolcadik életévét betöltött személy, aki
+          wrap_up: bűntett miatt egy évtől öt évig terjedő szabadságvesztéssel büntetendő.
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: bűnszövetségben,
+          - __type__: AlphabeticPoint
+            identifier: b
+            text: üzletszerűen,
+          - __type__: AlphabeticPoint
+            identifier: c
+            text: hivatalos vagy közfeladatot ellátó személyként, e minőséget felhasználva
+          identifier: '2'
+          intro: A büntetés két évtől nyolc évig terjedő szabadságvesztés, ha a bűncselekményt
+          wrap_up: követik el.
+        - identifier: '3'
+          text: Az (1)–(2) bekezdés szerint büntetendő, aki az ott meghatározott bűncselekmény
+            elkövetéséhez anyagi eszközöket szolgáltat.
+        - identifier: '4'
+          text: Aki az (1)–(2) bekezdésben meghatározott bűncselekmény elkövetésére
+            irányuló előkészületet követ el, vétség miatt két évig terjedő szabadságvesztéssel
+            büntetendő.
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: az (1) bekezdés a) pont aa) alpontjában és b) pont ba) alpontjában
+              meghatározott esetben vétség miatt két évig,
+          - __type__: AlphabeticPoint
+            identifier: b
+            text: a (2) bekezdés b) és c) pontjában meghatározott esetben bűntett
+              miatt három évig
+          identifier: '5'
+          intro: Ha a bűncselekményt csekély mennyiségű új pszichoaktív anyagra követik
+            el, a büntetés
+          wrap_up: terjedő szabadságvesztés.
+        identifier: 184/C
+      - __type__: Article
+        children:
+        - identifier: '1'
+          text: A 184–184/C. § alkalmazásában új pszichoaktív anyagon az emberi alkalmazásra
+            kerülő gyógyszerekről és egyéb, a gyógyszerpiacot szabályozó törvények
+            módosításáról szóló törvényben meghatározott fogalmat kell érteni.
+        - identifier: '2'
+          text: A 184–184/C. § alkalmazásában az új pszichoaktív anyag csekély mennyiségű,
+            ha a készítmény legfeljebb 10 gramm tömegű új pszichoaktív anyagot tartalmaz.
+        identifier: 184/D
+    identifier: '3'
+    intro: 'A Btk. „Új pszichoaktív anyaggal visszaélés” alcíme a következő 184/A–184/D.
+      §-sal egészül ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article:
+        - 184/A
+        - 184/D
+      pure_insertion: true
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '3'
+        text: A 236. és a 238. § alkalmazásában ittas állapotban lévő személy az,
+          akinek a szervezetében 0,50 gramm/liter véralkohol-, illetve 0,25 milligramm/liter
+          levegőalkohol-koncentrációnál nagyobb érték előidézésére alkalmas szeszes
+          ital fogyasztásából származó alkohol van.
+    identifier: '4'
+    intro: 'A Btk. 240. § (3) bekezdése helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '240'
+        paragraph: '3'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Subtitle
+        identifier: ''
+        title: Kémkedés az Európai Unió intézményei ellen
+      - __type__: Article
+        children:
+        - text: A 261. § szerint büntetendő, aki az Európai Unión kívüli harmadik
+            állam részére az Európai Parlament, az Európai Bizottság vagy az Európai
+            Unió Tanácsa ellen hírszerző tevékenységet folytat.
+        identifier: 261/A
+    identifier: '5'
+    intro: 'A Btk. XXIV. Fejezete a következő alcímmel és 261/A. §-sal egészül ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: StructuralReference
+        act: 2012. évi C. törvény
+        special:
+          article_id: 261/A
+          position: BEFORE_WITH_ARTICLE
+      pure_insertion: true
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '1'
+        text: Aki hitelt érdemlő tudomást szerez arról, hogy alkotmányos rend erőszakos
+          megváltoztatása, alkotmányos rend elleni szervezkedés, lázadás, rombolás,
+          hazaárulás, hűtlenség, az ellenség támogatása, kémkedés, szövetséges fegyveres
+          erő ellen elkövetett kémkedés, kémkedés az Európai Unió intézményei ellen
+          készül, vagy még le nem leplezett ilyen bűncselekményt követtek el, és erről
+          a hatóságnak vagy az állam illetékes szervének, mihelyt teheti, nem tesz
+          feljelentést, vétség miatt két évig terjedő szabadságvesztéssel büntetendő.
+    identifier: '6'
+    intro: 'A Btk. 263. § (1) bekezdése helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '263'
+        paragraph: '1'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '2'
+        text: Aki abból a célból, hogy az ellene folytatott büntetőeljárás alól oly
+          módon vonja ki magát, hogy a lakhelyelhagyási tilalom tartama alatt a számára
+          kijelölt területet, körzetet vagy a házi őrizet tartama alatt a kijelölt
+          lakást és az ahhoz tartozó bekerített helyet a házi őrizet szabályainak
+          megszegésével elhagyja, vétség miatt két évig terjedő szabadságvesztéssel
+          büntetendő.
+    identifier: '7'
+    intro: 'A Btk. 283. § (2) bekezdése helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '283'
+        paragraph: '2'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Subtitle
+        identifier: ''
+        title: Sporteredmény tiltott befolyásolása
+      - __type__: Article
+        children:
+        - identifier: '1'
+          text: Aki olyan megállapodást köt, aminek következtében valamely sportszövetség
+            versenyrendszerében szervezett vagy a sportszövetség versenynaptárában
+            egyébként szereplő verseny, mérkőzés eredménye nem a versenyszabályzatnak
+            vagy a tisztességes játék elveinek megfelelő módon alakul ki, ha más bűncselekmény
+            nem valósul meg, bűntett miatt három évig terjedő szabadságvesztéssel
+            büntetendő.
+        - identifier: '2'
+          text: A büntetés egy évtől öt évig terjedő szabadságvesztés, ha a bűncselekményt
+            bűnszövetségben vagy üzletszerűen követik el.
+        identifier: 349/A
+    identifier: '8'
+    intro: 'A Btk. XXXIII. Fejezete a következő alcímmel és 349/A. §-sal egészül ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: StructuralReference
+        act: 2012. évi C. törvény
+        special:
+          article_id: 349/A
+          position: BEFORE_WITH_ARTICLE
+      pure_insertion: true
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Subtitle
+        identifier: ''
+        title: Magánindítvány
+      - __type__: Article
+        children:
+        - text: A szellemi tulajdonjogok vámhatósági érvényesítéséről és az 1383/2003/EK
+            tanácsi rendelet hatályon kívül helyezéséről szóló, 2013. június 12-i
+            608/2013/EU európai parlamenti és tanácsi rendelet 1. cikk (1) bekezdése
+            szerinti esetekben a 385. §-ban és a 388. §-ban meghatározott bűncselekmény
+            csak magánindítványra büntethető, kivéve, ha azzal összefüggően nem magánindítványra
+            büntetendő bűncselekményt is elkövetnek.
+        identifier: 388/A
+    identifier: '9'
+    intro: 'A Btk. 388/A. §-a és az azt megelőző alcím helyébe a következő alcím és
+      rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: StructuralReference
+        act: 2012. évi C. törvény
+        special:
+          article_id: 388/A
+          position: BEFORE_WITH_ARTICLE
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Subtitle
+        identifier: ''
+        title: Értelmező rendelkezés
+      - __type__: Article
+        children:
+        - text: E fejezet alkalmazásában a különös visszaesés szempontjából hasonló
+            jellegű bűncselekmény a vagyon elleni bűncselekmény.
+        identifier: 388/B
+    identifier: '10'
+    intro: 'A Btk. a következő 388/B. §-sal és az azt megelőző alcímmel egészül ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: StructuralReference
+        act: 2012. évi C. törvény
+        special:
+          article_id: 388/B
+          position: BEFORE_WITH_ARTICLE
+      pure_insertion: true
+    wrap_up: ''
+  - children:
+    - __type__: AlphabeticPoint
+      identifier: a
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: gyógyszerhamisítás
+        position:
+          act: 2012. évi C. törvény
+          article: '73'
+          point: c
+        replacement_text: egészségügyi termék hamisítása
+      text: 73. § c) pontjában a „gyógyszerhamisítás” szövegrész helyébe az „egészségügyi
+        termék hamisítása”,
+    - __type__: AlphabeticPoint
+      identifier: b
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: információs rendszer útján rögzített adatok
+        position:
+          act: 2012. évi C. törvény
+          article: '287'
+          paragraph: '1'
+          point: c
+        replacement_text: információs rendszerben tárolt adatok
+      text: 287. § (1) bekezdés c) pontjában az „információs rendszer útján rögzített
+        adatok” szövegrész helyébe az „információs rendszerben tárolt adatok”
+    identifier: '11'
+    intro: A Btk.
+    wrap_up: szöveg lép.
+  identifier: '118'
+- __type__: Article
+  children:
+  - identifier: '1'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: DaysAfterPublication
+      position: null
+    text: Ez a törvény – a (2) és (3) bekezdésben meghatározott kivételekkel – a kihirdetését
+      követő napon lép hatályba.
+  - identifier: '2'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2014
+      position:
+        article:
+        - '1'
+        - '13'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2014
+      position:
+        article:
+        - '15'
+        - '99'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2014
+      position:
+        article:
+        - '101'
+        - '119'
+    text: Az 1–13. §, a 15–99. § és a 101–119. § 2014. január 1-jén lép hatályba.
+  - identifier: '3'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '100'
+    text: A 100. § 2014. március 15-én lép hatályba.
+  identifier: '120'
+identifier: 2013. évi CLXXXVI. törvény
+preamble: ''
+publication_date:
+  day: 18
+  month: 11
+  year: 2013
+subject: egyes büntetőjogi tárgyú és ehhez kapcsolódó más törvények módosításáról

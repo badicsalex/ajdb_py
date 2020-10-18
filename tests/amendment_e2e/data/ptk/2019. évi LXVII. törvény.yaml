@@ -1,0 +1,687 @@
+children:
+- __type__: Article
+  children:
+  - identifier: '1'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: DaysAfterPublication
+        days: 8
+      position: null
+    text: Ez a törvény – a (2)–(8) bekezdésben foglalt kivétellel – a kihirdetést
+      követő 8. napon lép hatályba.
+  - identifier: '2'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: DaysAfterPublication
+        days: 16
+      position:
+        article: '35'
+    - __type__: EnforcementDate
+      date:
+        __type__: DaysAfterPublication
+        days: 16
+      position:
+        article:
+        - '41'
+        - '46'
+    - __type__: EnforcementDate
+      date:
+        __type__: DaysAfterPublication
+        days: 16
+      position:
+        article: '48'
+    - __type__: EnforcementDate
+      date:
+        __type__: DaysAfterPublication
+        days: 16
+      position:
+        article: '50'
+        point:
+        - a
+        - i
+    - __type__: EnforcementDate
+      date:
+        __type__: DaysAfterPublication
+        days: 16
+      position:
+        article: '50'
+        point:
+        - l
+        - m
+    - __type__: EnforcementDate
+      date:
+        __type__: DaysAfterPublication
+        days: 16
+      position:
+        article: '51'
+    - __type__: EnforcementDate
+      date:
+        __type__: DaysAfterPublication
+        days: 16
+      position:
+        article: '74'
+        paragraph: '1'
+    - __type__: EnforcementDate
+      date:
+        __type__: DaysAfterPublication
+        days: 16
+      position:
+        article:
+        - '75'
+        - '77'
+    - __type__: EnforcementDate
+      date:
+        __type__: DaysAfterPublication
+        days: 16
+      position:
+        article: '78'
+        point:
+        - a
+        - b
+    - __type__: EnforcementDate
+      date:
+        __type__: DaysAfterPublication
+        days: 16
+      position:
+        article:
+        - '79'
+        - '86'
+    - __type__: EnforcementDate
+      date:
+        __type__: DaysAfterPublication
+        days: 16
+      position:
+        article: '87'
+    - __type__: EnforcementDate
+      date:
+        __type__: DaysAfterPublication
+        days: 16
+      position:
+        article:
+        - '99'
+        - '109'
+    - __type__: EnforcementDate
+      date:
+        __type__: DaysAfterPublication
+        days: 16
+      position:
+        article: '110'
+        point: a
+    - __type__: EnforcementDate
+      date:
+        __type__: DaysAfterPublication
+        days: 16
+      position:
+        article:
+        - '146'
+        - '148'
+    text: A 35. §, a 41–46. §, a 48. §, az 50. § a–i) pontja, az 50. § l–m) pontja,
+      az 51. §, a 74. § (1) bekezdése, a 75–77. §, a 78. § a) és b) pontja, a 79–86.
+      §, a 87. §, a 99–109. §, a 110. § a) pontja és a 146–148. § a kihirdetést követő
+      16. napon lép hatályba.
+  - identifier: '3'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 9
+        year: 2019
+      position:
+        article:
+        - '55'
+        - '66'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 9
+        year: 2019
+      position:
+        article: '70'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 9
+        year: 2019
+      position:
+        article: '72'
+        point: a
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 9
+        year: 2019
+      position:
+        article: '73'
+        point:
+        - a
+        - b
+    text: Az 55–66. §, a 70. § és a 72. § a) pontja, a 73. § a) és b) pontja 2019.
+      szeptember 1-jén lép hatályba.
+  - identifier: '4'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 10
+        year: 2019
+      position:
+        article: '32'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 10
+        year: 2019
+      position:
+        article: '34'
+        paragraph: '1'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 10
+        year: 2019
+      position:
+        article: '36'
+        paragraph: '1'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 10
+        year: 2019
+      position:
+        article: '36'
+        paragraph: '3'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 10
+        year: 2019
+      position:
+        article:
+        - '37'
+        - '40'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 10
+        year: 2019
+      position:
+        article: '114'
+    text: A 32. §, a 34. § (1) bekezdése, a 36. § (1) és (3) bekezdése, a 37–40. §
+      és a 114. § 2019. október 1-jén lép hatályba.
+  - identifier: '5'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '33'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '47'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '50'
+        point:
+        - j
+        - k
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '50'
+        point: n
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '74'
+        paragraph: '2'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '78'
+        point: c
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '97'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '110'
+        point: b
+    text: A 33. §, a 47. §, az 50. § j–k) és n) pontja, a 74. § (2) bekezdése, a 78.
+      § c) pontja, a 97. § és a 110. § b) pontja 2020. január 1-jén lép hatályba.
+  - identifier: '6'
+    text: Az 52–54 §, a 67–69. §, a 71. §, a 72. § b) és c) pontja, a 73. § c) pontja,
+      a 88–89. §, a 111–113. §, a 116–119. §, a 133–134. §, a 137–138. § és az 1.
+      melléklet 2020. január 17-én lép hatályba.
+  - identifier: '7'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2020
+      position:
+        article:
+        - '93'
+        - '95'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2020
+      position:
+        article: '96'
+        paragraph: '2'
+    text: A 93–95. § és a 96. § (2) bekezdése 2020. július 1-jén lép hatályba.
+  - identifier: '8'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 3
+        month: 9
+        year: 2020
+      position:
+        article:
+        - '3'
+        - '8'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 3
+        month: 9
+        year: 2020
+      position:
+        article: '29'
+        paragraph: '1'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 3
+        month: 9
+        year: 2020
+      position:
+        article: '29'
+        paragraph: '5'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 3
+        month: 9
+        year: 2020
+      position:
+        article: '31'
+        paragraph: '2'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 3
+        month: 9
+        year: 2020
+      position:
+        article: '90'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 3
+        month: 9
+        year: 2020
+      position:
+        article: '115'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 3
+        month: 9
+        year: 2020
+      position:
+        article: '124'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 3
+        month: 9
+        year: 2020
+      position:
+        article: '126'
+    text: A 3–8. §, a 29. § (1) és (5) bekezdése, a 31. § (2) bekezdése, a 90. §,
+      115. §, a 124. § és a 126. § 2020. szeptember 3-án lép hatályba.
+  identifier: '28'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '2'
+        text: Nyilvánosan működő részvénytársaság esetén a közgyűlés kizárólagos hatáskörébe
+          tartozik a javadalmazási politikáról való véleménynyilvánító szavazás. A
+          javadalmazási politikát annak jelentős változása esetén, de legalább négyévente
+          a közgyűlés napirendjére kell tűzni.
+      - __type__: Paragraph
+        identifier: '3'
+        text: Nyilvánosan működő részvénytársaság esetén az előző üzleti évre vonatkozó
+          javadalmazási jelentést véleménynyilvánító szavazás céljából a közgyűlés
+          napirendjére kell tűzni.
+      - __type__: Paragraph
+        identifier: '4'
+        text: Nyilvánosan működő részvénytársaság esetén a közgyűlés hatáskörébe tartozó
+          kérdésekről nem lehet közgyűlés tartása nélkül határozatot hozni.
+    intro: 'A Ptk. 3:268. § (2) és (3) bekezdése helyébe a következő rendelkezések
+      lépnek, és a § a következő (4) bekezdéssel egészül ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 3:268
+        paragraph:
+        - '2'
+        - '4'
+    wrap_up: ''
+  identifier: '123'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '5'
+        text: A részvényes kérelmére a részvényesnek vagy az általa megjelölt személynek
+          az igazgatóság köteles visszaigazolni, hogy a részvényes szavazatát a közgyűlésen
+          szabályszerűen rögzítették és azt beszámították, kivéve, ha a szükséges
+          tájékoztatás a részvényes rendelkezésére áll.
+    intro: 'A Ptk. 3:273. §-a a következő (5) bekezdéssel egészül ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 3:273
+        paragraph: '5'
+      pure_insertion: true
+    wrap_up: ''
+  identifier: '124'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Article
+        children:
+        - identifier: '1'
+          text: A nyilvánosan működő részvénytársaság a közgyűlésen hozott határozatokat
+            köteles honlapján nyilvánosságra hozni.
+        - identifier: '2'
+          text: A nyilvánosan működő részvénytársaság a javadalmazási politikáját
+            és a javadalmazási jelentést köteles honlapján nyilvánosságra hozni.
+        identifier: 3:279
+        title: Határozatok nyilvánosságra hozatala
+    intro: 'A Ptk. 3:279. §-a helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 3:279
+    wrap_up: ''
+  identifier: '125'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '3'
+        text: Ha a konferencia-közgyűlésen elektronikus hírközlő eszközök igénybevételével
+          történő szavazásra kerül sor, biztosítani kell, hogy az elektronikus hírközlő
+          eszközzel szavazó részvényes elektronikus visszaigazolást kapjon a szavazat
+          leadásáról.
+    intro: 'A Ptk. 3:281. §-a a következő (3) bekezdéssel egészül ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 3:281
+        paragraph: '3'
+      pure_insertion: true
+    wrap_up: ''
+  identifier: '126'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '7'
+        text: Az önálló zálogjoggal terhelt zálogtárgy tulajdonjogát megszerző fél
+          a biztosítéki szerződésben a zálogkötelezett helyébe lép. A biztosítéki
+          szerződés szerint kielégíthető követelést kielégítő kötelezettet, zálogkötelezettet
+          vagy harmadik személyt a megtérítési követelése biztosítására – ha az nem
+          pénzügyi intézmény – az önálló zálogjog ranghelyén, annak helyébe lépő követelést
+          biztosító zálogjog illeti meg. A megtérítési követelése biztosítékaként
+          a követelést kielégítő pénzügyi intézményre az önálló zálogjog átszáll.
+    intro: 'A Ptk. 5:100. § (7) bekezdése helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 5:100
+        paragraph: '7'
+    wrap_up: ''
+  identifier: '127'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '1'
+        text: Az alzálogjog jogosultja a zálogjogosultnak a zálogjogból fakadó jogait
+          annyiban gyakorolhatja, amennyiben e jogok gyakorlására a zálogjogosult
+          maga is jogosult. Ha a követelést kézizálogjog biztosítja, a zálogjogosult
+          az alzálogjog jogosultjának kérésére köteles a zálogtárgy birtokát részére
+          átruházni.
+    identifier: '1'
+    intro: 'A Ptk. 5:140. § (1) bekezdése helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 5:140
+        paragraph: '1'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '3'
+        text: Ha a zálogjog tárgyául szolgáló követelés kezességgel van biztosítva,
+          a zálogjogosult a kezességből fakadó jogait a követelés kezesével szemben
+          – a (2) bekezdés megfelelő alkalmazásával – a kezesség jogosultjára irányadó
+          szabályok szerint gyakorolhatja.
+    identifier: '2'
+    intro: 'A Ptk. 5:140. §-a a következő (3) bekezdéssel egészül ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 5:140
+        paragraph: '3'
+      pure_insertion: true
+    wrap_up: ''
+  identifier: '128'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '2'
+        text: A zálogjoggal biztosított követelés megszűnése ellenére is fennmarad
+          a zálogjog a követelést kielégítő személyes kötelezettet, zálogkötelezettet
+          vagy harmadik személyt megillető megtérítési követelés biztosítására akként,
+          hogy a fennmaradó zálogjog a megtérítési követelés jogosultját illeti meg.
+    intro: 'A Ptk. 5:142. § (2) bekezdése helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 5:142
+        paragraph: '2'
+    wrap_up: ''
+  identifier: '129'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: AlphabeticPoint
+        identifier: d
+        text: az utazási csomagokról és az utazási szolgáltatásegyüttesekről, valamint
+          a 2006/2004/EK rendelet és a 2011/83/EU európai parlamenti és tanácsi irányelv
+          módosításáról, továbbá a 90/314/EGK tanácsi irányelv hatályon kívül helyezéséről
+          szóló, 2015. november 25-i (EU) 2015/2302 európai parlamenti és tanácsi
+          irányelvnek;
+      intro: 'E törvény:'
+      wrap_up: való megfelelést szolgálja.
+    identifier: '1'
+    intro: 'A Ptk. 8:6. § d) pontja helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: '8:6'
+        point: d
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: AlphabeticPoint
+        identifier: r
+        text: a társasági jog egyes vonatkozásairól szóló, 2017. június 14-i (EU)
+          2017/1132 európai parlamenti és tanácsi irányelvnek;
+      - __type__: AlphabeticPoint
+        identifier: s
+        text: a 2007/36/EK irányelvnek a hosszú távú részvényesi szerepvállalás ösztönzése
+          tekintetében történő módosításáról szóló, 2017. május 17-i (EU) 2017/828
+          európai parlamenti és tanácsi irányelvnek
+      intro: 'E törvény:'
+      wrap_up: való megfelelést szolgálja.
+    identifier: '2'
+    intro: 'A Ptk. 8:6. § r) pontja helyébe a következő rendelkezés lép, és a § a
+      következő s) ponttal egészül ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: '8:6'
+        point:
+        - r
+        - s
+    wrap_up: ''
+  identifier: '130'
+- __type__: Article
+  children:
+  - semantic_data:
+    - __type__: ArticleTitleAmendment
+      original_text: átruházása
+      position:
+        act: 2013. évi V. törvény
+        article: 5:99
+      replacement_text: átruházása és megterhelése
+    text: A Ptk. 5:99. § címében az „átruházása” szövegrész helyébe az „átruházása
+      és megterhelése” szöveg lép.
+  identifier: '131'
+- __type__: Article
+  children:
+  - semantic_data:
+    - __type__: Repeal
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: '8:6'
+        point: a
+    - __type__: Repeal
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: '8:6'
+        point: l
+    - __type__: Repeal
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: '8:6'
+        point: n
+    - __type__: Repeal
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: '8:6'
+        point: p
+    text: Hatályát veszti a Ptk. 8:6. § a), l), n) és p) pontja.
+  identifier: '132'
+identifier: 2019. évi LXVII. törvény
+preamble: ''
+publication_date:
+  day: 9
+  month: 7
+  year: 2019
+subject: a hosszú távú részvényesi szerepvállalás ösztönzéséről és egyes törvények
+  jogharmonizációs célú módosításáról

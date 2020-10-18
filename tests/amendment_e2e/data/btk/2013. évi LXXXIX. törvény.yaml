@@ -1,0 +1,97 @@
+children:
+- __type__: Article
+  children:
+  - identifier: '1'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: DaysAfterPublication
+      position: null
+    text: Ez a törvény – a (2) bekezdésben foglalt kivétellel – a kihirdetését követő
+      napon lép hatályba.
+  - identifier: '2'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 5
+        year: 2019
+      position:
+        article: '59'
+        point: b
+    text: Az 59. § b) pontja 2019. május 1-jén lép hatályba.
+  identifier: '57'
+- __type__: Article
+  children:
+  - children:
+    - __type__: AlphabeticPoint
+      identifier: a
+      semantic_data:
+      - __type__: Repeal
+        position:
+          __type__: Reference
+          act: 1959. évi IV. törvény
+          article: 15/B
+      text: a Polgári Törvénykönyvről szóló 1959. évi IV. törvény 15/B. §-a,
+    - __type__: AlphabeticPoint
+      identifier: b
+      semantic_data:
+      - __type__: Repeal
+        position:
+          __type__: Reference
+          act: 2012. évi C. törvény
+          article: '350'
+          paragraph: '2'
+      text: a Büntető Törvénykönyvről szóló 2012. évi C. törvény 350. § (2) bekezdése,
+    - __type__: AlphabeticPoint
+      identifier: c
+      text: a Ve. 227. § (2) bekezdése, 265. §-a, 266. § (1), (3) és (4) bekezdése,
+        267. § a) pontja, 275. § (2) bekezdés a) pontja, 276. §-a, 279. § (1) bekezdése,
+        281. § (2) bekezdésében a „16 és 9 óra között” szövegrész, 287. § (2) bekezdésében
+        a „ , valamint a külképviseleteken levélben leadott, az országgyűlési egyéni
+        választókerületi választási iroda részére megcímzett válaszborítékokat” szövegrész,
+        288. § (1) bekezdésében a „magyarországi lakcímmel rendelkező választópolgárok
+        szavazatát tartalmazó szavazási iratok ellenőrzését az országgyűlési egyéni
+        választókerületi választási iroda, a” szövegrész, (2) bekezdésében az „ ,
+        az országgyűlési egyéni választókerületi választási iroda legkorábban a szavazást
+        követő napon” szövegrész, 291. § (4) bekezdése, 292. § (1) bekezdésében az
+        „ , valamint a választókerületben lakcímmel rendelkező választópolgárok által
+        levélben leadott szavazatok” szövegrész, (3) bekezdésének c) pontja, 300.
+        § (1) bekezdése, 305. §-a, 310. §-ának a) pontja, a 314. §-ában az „az ajánlószelvény,”
+        szövegrész, 315. §-a, 321. § (4) bekezdése, 322. §-a, 323. § (1) bekezdésében
+        a „ , települési nemzetiségi önkormányzati választásban érintett” szövegrész,
+        324. §-a, 325. §-a, 332. § (1) bekezdése és (2) bekezdésében az „ ,a helyi
+        önkormányzati képviselők és polgármesterek általános választását és a nemzetiségi
+        önkormányzati képviselők általános választását” szövegrész, 333. §-a 335.
+        § e) pontjában a „ , szavazókör” szövegrész, 164. alcím címében a „levél útján”
+        szövegrész, 343. § (2) bekezdés c) pontja, 345. §-a, 8. mellékletének c) pontja,
+        dc) alpontja és e) pontja,
+    - __type__: AlphabeticPoint
+      identifier: d
+      text: a Vjt. 2. mellékletében Veszprém megye 02. számú országgyűlési egyéni
+        választókerületének területét meghatározó rendelkezések 14. pontja,
+    - __type__: AlphabeticPoint
+      identifier: e
+      text: az Njtv. 24. § (1) bekezdésének utolsó mondata, 118. § (1) bekezdés e)
+        pontja, valamint 160. § (1) bekezdése,
+    - __type__: AlphabeticPoint
+      identifier: f
+      semantic_data:
+      - __type__: Repeal
+        position:
+          __type__: Reference
+          act: 2011. évi CLXXXIX. törvény
+          article: '125'
+          paragraph: '3'
+      text: a Magyarország helyi önkormányzatairól szóló 2011. évi CLXXXIX. törvény
+        125. § (3) bekezdése.
+    intro: Hatályát veszti
+  identifier: '59'
+identifier: 2013. évi LXXXIX. törvény
+preamble: ''
+publication_date:
+  day: 20
+  month: 6
+  year: 2013
+subject: a választási eljárásról szóló 2013. évi XXXVI. törvény módosításáról

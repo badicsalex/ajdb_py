@@ -1,0 +1,164 @@
+children:
+- __type__: Article
+  children:
+  - children:
+    - __type__: AlphabeticPoint
+      identifier: a
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: jogtanácsosa
+        position:
+          act: 2013. évi V. törvény
+          article: 3:95
+          paragraph: '2'
+        replacement_text: kamarai jogtanácsosa
+      - __type__: TextAmendment
+        original_text: jogtanácsosa
+        position:
+          act: 2013. évi V. törvény
+          article: 3:102
+          paragraph: '4'
+        replacement_text: kamarai jogtanácsosa
+      text: 3:95. § (2) bekezdésében és 3:102. § (4) bekezdésében a „jogtanácsosa”
+        szövegrész helyébe a „kamarai jogtanácsosa” szöveg,
+    - __type__: AlphabeticPoint
+      identifier: b
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: jogtanácsosi
+        position:
+          act: 2013. évi V. törvény
+          article: 3:100
+          paragraph: '1'
+        replacement_text: kamarai jogtanácsosi
+      - __type__: TextAmendment
+        original_text: jogtanácsosi
+        position:
+          act: 2013. évi V. törvény
+          article: 3:101
+          paragraph: '1'
+        replacement_text: kamarai jogtanácsosi
+      - __type__: TextAmendment
+        original_text: jogtanácsosi
+        position:
+          act: 2013. évi V. törvény
+          article: 3:329
+          paragraph: '1'
+        replacement_text: kamarai jogtanácsosi
+      text: 3:100. § (1) bekezdésében, 3:101. § (1) bekezdésében és 3:329. § (1) bekezdésében
+        a „jogtanácsosi” szövegrész helyébe a „kamarai jogtanácsosi” szöveg,
+    - __type__: AlphabeticPoint
+      identifier: c
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: jogtanácsosa
+        position:
+          act: 2013. évi V. törvény
+          article: 3:331
+          paragraph: '3'
+        replacement_text: kamarai jogtanácsosa
+      text: 3:331. § (3) bekezdésében a „jogtanácsosa” szövegrészek helyébe a „kamarai
+        jogtanácsosa” szöveg
+    intro: A Polgári Törvénykönyvről szóló 2013. évi V. törvény
+    wrap_up: lép.
+  identifier: '83'
+- __type__: Article
+  children:
+  - identifier: '1'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: DaysAfterPublication
+        days: 8
+      position: null
+    text: Ez a törvény – a (2) és (3) bekezdésben meghatározott kivétellel – a kihirdetését
+      követő nyolcadik napon lép hatályba.
+  - identifier: '2'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2018
+      position:
+        article:
+        - '1'
+        - '12'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2018
+      position:
+        article:
+        - '14'
+        - '20'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2018
+      position:
+        article: '21'
+        paragraph: '1'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2018
+      position:
+        article:
+        - '22'
+        - '52'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2018
+      position:
+        article:
+        - '55'
+        - '94'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2018
+      position:
+        article: '98'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2018
+      position:
+        article: '99'
+    text: Az 1–12. §, a 14–20. §, a 21. § (1) bekezdés, a 22–52. §, az 55–94. §, a
+      98. § és a 99. § 2018. január 1-jén lép hatályba.
+  - identifier: '3'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2019
+      position:
+        article: '13'
+    text: A 13. § 2019. január 1-jén lép hatályba.
+  identifier: '104'
+identifier: 2017. évi CXXXVI. törvény
+preamble: ''
+publication_date:
+  day: 10
+  month: 11
+  year: 2017
+subject: az ügyvédi tevékenységről szóló 2017. évi LXXVIII. törvény hatálybalépésével
+  összefüggő egyes törvények és egyéb igazságügyi tárgyú törvények módosításáról

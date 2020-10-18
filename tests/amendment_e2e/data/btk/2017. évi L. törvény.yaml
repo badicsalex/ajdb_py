@@ -1,0 +1,40 @@
+children:
+- __type__: Article
+  children:
+  - semantic_data:
+    - __type__: TextAmendment
+      original_text: jogerős
+      position:
+        act: 2012. évi C. törvény
+        article: '275'
+        paragraph: '2'
+      replacement_text: jogerős vagy végleges
+    text: A Büntető Törvénykönyvről szóló 2012. évi C. törvény 275. § (2) bekezdésében
+      a „jogerős” szövegrész helyébe a „jogerős vagy végleges” szöveg lép.
+  identifier: '415'
+- __type__: Article
+  children:
+  - identifier: '1'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: DaysAfterPublication
+      position: null
+    text: E törvény – a (2) és (3) bekezdésben foglalt kivétellel – a kihirdetését
+      követő napon lép hatályba.
+  - identifier: '2'
+    text: A 236., 237., 240. és 242. alcím 2017. december 31-én lép hatályba.
+  - identifier: '3'
+    text: Az 1–390. §, a 391. § (1)–(8) bekezdése, a 392–517. §, a 241. alcím, az
+      1. melléklet és a 2. melléklet 2018. január 1-jén lép hatályba.
+  - identifier: '4'
+    text: E törvény 2018. január 2-án hatályát veszti.
+  identifier: '528'
+identifier: 2017. évi L. törvény
+preamble: ''
+publication_date:
+  day: 25
+  month: 5
+  year: 2017
+subject: az általános közigazgatási rendtartásról szóló törvény és a közigazgatási
+  perrendtartásról szóló törvény hatálybalépésével összefüggő egyes törvények módosításáról

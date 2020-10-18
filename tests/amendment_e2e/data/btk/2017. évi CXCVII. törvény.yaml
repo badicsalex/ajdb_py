@@ -1,0 +1,1483 @@
+children:
+- __type__: Article
+  children:
+  - act_id_abbreviations:
+    - abbreviation: Btk.
+      act: 2012. évi C. törvény
+    children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '2'
+        text: Ha a büntetőeljárást felfüggesztik, a felfüggesztés tartama az elévülés
+          határidejébe nem számít be. Ez a rendelkezés nem alkalmazható, ha a büntetőeljárást
+          azért függesztik fel, mert az elkövető kiléte a nyomozásban nem volt megállapítható,
+          ismeretlen helyen tartózkodik, vagy kóros elmeállapotú lett, továbbá ha
+          a szabadlábon lévő terhelt külföldön ismert helyen tartózkodik és a büntetőeljárás
+          a távollétében nem folytatható le.
+    identifier: '1'
+    intro: 'A Büntető Törvénykönyvről szóló 2012. évi C. törvény (a továbbiakban:
+      Btk.) 28. § (2) bekezdése helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '28'
+        paragraph: '2'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '4'
+        text: Próbára bocsátás esetén a próbaidő tartama és a jóvátételi munka tartama
+          az elévülés határidejébe nem számít be.
+    identifier: '2'
+    intro: 'A Btk. 28. § (4) bekezdése helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '28'
+        paragraph: '4'
+    wrap_up: ''
+  identifier: '328'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '3'
+        text: A büntetőeljárásról szóló 2017. évi XC. törvény 69. § (5) bekezdésében
+          meghatározott esetekben a magánindítványt a sértett törvényes képviselője
+          terjesztheti elő. A magánindítványt a korlátozottan cselekvőképes kiskorú
+          sértett önállóan is előterjesztheti, és erre törvényes képviselője is jogosult.
+          Ezekben az esetekben a magánindítvány előterjesztésére a gyámhatóság is
+          jogosult. Érdekellentét esetén a Polgári Törvénykönyv szabályai az irányadók.
+    intro: 'A Btk. 31. § (3) bekezdése helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '31'
+        paragraph: '3'
+    wrap_up: ''
+  identifier: '329'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Subtitle
+        identifier: ''
+        title: A büntetés kiszabása egyezség esetén
+    identifier: '1'
+    intro: 'A Btk. 83. §-t megelőző alcím helyébe a következő alcím lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: StructuralReference
+        act: 2012. évi C. törvény
+        special:
+          article_id: '83'
+          position: BEFORE_WITHOUT_ARTICLE
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '1'
+        text: 'A büntetőeljárásról szóló 2017. évi XC. törvény XCIX. Fejezete szerinti
+          eljárásban az egyezség (a továbbiakban: egyezség) jóváhagyása esetén a büntetés
+          kiszabásakor a 82. § (2) bekezdésében meghatározott enyhébb büntetési tételek
+          alsó határát kell alapul venni.'
+      - __type__: Paragraph
+        identifier: '2'
+        text: Ha az egyezség jóváhagyására olyan terhelt esetében kerül sor, aki az
+          ügy, illetve más büntetőügy bizonyításához hozzájárulva az ügyészséggel,
+          illetve a nyomozó hatósággal jelentős mértékben együttműködött, a büntetést
+          a 82. § (2) bekezdés soron következő pontja alapján is ki lehet szabni.
+    identifier: '2'
+    intro: 'A Btk. 83. § (1) és (2) bekezdése helyébe a következő rendelkezések lépnek:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '83'
+        paragraph:
+        - '1'
+        - '2'
+    wrap_up: ''
+  identifier: '330'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '1'
+        text: A különös és a többszörös visszaesővel szemben az újabb bűncselekmény
+          büntetési tételének felső határa szabadságvesztés esetén a felével emelkedik,
+          de nem haladhatja meg a huszonöt évet.
+    intro: 'A Btk. 89. § (1) bekezdése helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '89'
+        paragraph: '1'
+    wrap_up: ''
+  identifier: '331'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '2'
+        text: Az erőszakos többszörös visszaesővel szemben az erőszakos többszörös
+          visszaesőkénti minősítést megalapozó bűncselekmény büntetési tételének felső
+          határa szabadságvesztés esetén a kétszeresére emelkedik. Ha a büntetési
+          tétel így felemelt felső határa a húsz évet meghaladná, vagy a törvény szerint
+          a bűncselekmény életfogytig tartó szabadságvesztéssel is büntethető, az
+          elkövetővel szemben életfogytig tartó szabadságvesztést kell kiszabni.
+    intro: 'A Btk. 90. § (2) bekezdése helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '90'
+        paragraph: '2'
+    wrap_up: ''
+  identifier: '332'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '1'
+        text: Azzal szemben, aki a szándékos bűncselekményt bűnszervezetben követte
+          el, a bűncselekmény büntetési tételének felső határa a kétszeresére emelkedik,
+          de a huszonöt évet nem haladhatja meg.
+    intro: 'A Btk. 91. § (1) bekezdése helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '91'
+        paragraph: '1'
+    wrap_up: ''
+  identifier: '333'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Subtitle
+        identifier: ''
+        title: Az előzetes fogvatartás, a bűnügyi felügyelet és a szabálysértési büntetések
+          beszámítása
+    identifier: '1'
+    intro: 'A Btk. 92. §-át megelőző alcím helyébe a következő alcím lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: StructuralReference
+        act: 2012. évi C. törvény
+        special:
+          article_id: '92'
+          position: BEFORE_WITHOUT_ARTICLE
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '1'
+        text: A kiszabott szabadságvesztésbe, elzárásba, közérdekű munkába és pénzbüntetésbe
+          be kell számítani az előzetes fogvatartás és az olyan bűnügyi felügyelet
+          teljes idejét, amelynek során a bíróság a terhelt számára előírta, hogy
+          lakást, egyéb helyiséget, intézményt, vagy ahhoz tartozó bekerített helyet
+          engedély nélkül nem hagyhat el.
+    identifier: '2'
+    intro: 'A Btk. 92. § (1) bekezdése helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '92'
+        paragraph: '1'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        children:
+        - __type__: AlphabeticPoint
+          identifier: a
+          text: egynapi szabadságvesztésnek fegyház fokozat esetén öt nap, börtön
+            fokozat esetén négy nap, fogház fokozat esetén három nap,
+        - __type__: AlphabeticPoint
+          identifier: b
+          text: egynapi elzárásnak két nap,
+        - __type__: AlphabeticPoint
+          identifier: c
+          text: négy óra közérdekű munkának egy nap,
+        - __type__: AlphabeticPoint
+          identifier: d
+          text: egynapi tétel pénzbüntetésnek egy nap
+        identifier: '3'
+        intro: A beszámításnál
+        wrap_up: az (1) bekezdésben meghatározott bűnügyi felügyeletben töltött idő
+          felel meg.
+      - __type__: Paragraph
+        identifier: '4'
+        text: A (2) és (3) bekezdés szerinti beszámítás után fennmaradó tartamot egynapi
+          szabadságvesztésként kell beszámítani.
+    identifier: '3'
+    intro: 'A Btk. 92. § (3) és (4) bekezdése helyébe a következő rendelkezések lépnek:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '92'
+        paragraph:
+        - '3'
+        - '4'
+    wrap_up: ''
+  identifier: '334'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Subtitle
+        identifier: ''
+        title: A büntetés kiszabása egyezség esetén
+      - __type__: Article
+        children:
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: életfogytig tartó szabadságvesztéssel is büntethető bűncselekmény
+              elkövetése esetén a nyolc évet,
+          - __type__: AlphabeticPoint
+            identifier: b
+            text: öt évet meghaladó tartamú szabadságvesztéssel büntetendő bűncselekmény
+              elkövetése esetén a három évet,
+          - __type__: AlphabeticPoint
+            identifier: c
+            text: a három évet meghaladó tartamú szabadságvesztéssel büntetendő bűncselekmény
+              elkövetése esetén a két évet,
+          - __type__: AlphabeticPoint
+            identifier: d
+            text: a három évet meg nem haladó tartamú szabadságvesztéssel büntetendő
+              bűncselekmény elkövetése esetén a hat hónapot
+          identifier: '1'
+          intro: Ha az egyezség jóváhagyására olyan a bűncselekmény elkövetésekor
+            tizenhatodik életévét be nem töltött fiatalkorú esetében kerül sor, aki
+            az ügy, illetve más büntetőügy bizonyításához hozzájárulva az ügyészséggel,
+            illetve a nyomozó hatósággal jelentős mértékben együttműködött, a kiszabható
+            szabadságvesztés mértéke
+          wrap_up: nem haladhatja meg.
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: életfogytig tartó szabadságvesztéssel is büntethető bűncselekmény
+              elkövetése esetén a tíz évet,
+          - __type__: AlphabeticPoint
+            identifier: b
+            text: a tíz évet meghaladó tartamú szabadságvesztéssel büntetendő bűncselekmény
+              elkövetése esetén a nyolc évet,
+          - __type__: AlphabeticPoint
+            identifier: c
+            text: öt évet meghaladó tartamú szabadságvesztéssel büntetendő bűncselekmény
+              elkövetése esetén a három évet,
+          - __type__: AlphabeticPoint
+            identifier: d
+            text: a három évet meghaladó tartamú szabadságvesztéssel büntetendő bűncselekmény
+              elkövetése esetén a két évet,
+          - __type__: AlphabeticPoint
+            identifier: e
+            text: a három évet meg nem haladó tartamú szabadságvesztéssel büntetendő
+              bűncselekmény elkövetése esetén a hat hónapot
+          identifier: '2'
+          intro: Ha az egyezség jóváhagyására olyan a bűncselekmény elkövetésekor
+            tizenhatodik életévét betöltött fiatalkorú esetében kerül sor, aki az
+            ügy, illetve más büntetőügy bizonyításához hozzájárulva az ügyészséggel,
+            illetve a nyomozó hatósággal jelentős mértékben együttműködött, a kiszabható
+            szabadságvesztés mértéke
+          wrap_up: nem haladhatja meg.
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: bűnhalmazat esetén,
+          - __type__: AlphabeticPoint
+            identifier: b
+            text: a különös, többszörös, illetve erőszakos többszörös visszaesővel
+              szemben, illetve
+          - __type__: AlphabeticPoint
+            identifier: c
+            text: bűncselekmény bűnszervezetben történő elkövetése esetén
+          identifier: '3'
+          intro: A büntetés kiszabása során
+          wrap_up: az (1) és (2) bekezdés szerinti büntetési tételt kell alapul venni.
+        identifier: 124/A
+    intro: 'A Btk. a 124. §-t követően a következő alcímmel és 124/A. §-sal egészül
+      ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: StructuralReference
+        act: 2012. évi C. törvény
+        special:
+          article_id: 124/A
+          position: BEFORE_WITH_ARTICLE
+      pure_insertion: true
+    wrap_up: ''
+  identifier: '335'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Subtitle
+        identifier: ''
+        title: Az előzetes fogvatartás és a bűnügyi felügyelet beszámítása
+      - __type__: Article
+        children:
+        - identifier: '1'
+          text: Az elrendelt javítóintézeti nevelésbe be kell számítani az előzetes
+            fogvatartás és az olyan bűnügyi felügyelet teljes idejét, amelynek során
+            a bíróság a terhelt számára előírta, hogy lakást, egyéb helyiséget, intézményt,
+            vagy ahhoz tartozó bekerített helyet engedély nélkül nem hagyhat el.
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: egynapi előzetes fogvatartás és
+          - __type__: AlphabeticPoint
+            identifier: b
+            text: három nap az (1) bekezdésben meghatározott bűnügyi felügyelet
+          identifier: '2'
+          intro: A beszámításnál egynapi javítóintézeti nevelésnek
+          wrap_up: felel meg.
+        - identifier: '3'
+          text: A beszámítás után fennmaradó tartamot egynapi javítóintézeti nevelésként
+            kell beszámítani.
+        identifier: '125'
+    intro: 'A Btk. 125. §-a és az azt megelőző alcím helyébe a következő alcím és
+      rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: StructuralReference
+        act: 2012. évi C. törvény
+        special:
+          article_id: '125'
+          position: BEFORE_WITH_ARTICLE
+    wrap_up: ''
+  identifier: '336'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        children:
+        - __type__: AlphabeticPoint
+          identifier: a
+          text: az elkövetővel szemben az eljárást az (1) bekezdésben meghatározott
+            büntethetőséget megszüntető okra figyelemmel függesztették fel, vagy
+        - __type__: AlphabeticPoint
+          identifier: b
+          text: az elkövető büntetőjogi felelősségét kábítószer-kereskedelem vagy
+            kábítószer birtoklása miatt megállapították.
+        identifier: '2'
+        intro: Az (1) bekezdés nem alkalmazható, ha a bűncselekmény elkövetését megelőző
+          két éven belül
+    intro: 'A Btk. 180. § (2) bekezdése helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '180'
+        paragraph: '2'
+    wrap_up: ''
+  identifier: '337'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '2'
+        text: Aki abból a célból, hogy az ellene folytatott büntetőeljárás alól kivonja
+          magát, a bűnügyi felügyelet tartama alatt a számára meghatározott területet,
+          lakást, egyéb helyiséget, intézményt, vagy ahhoz tartozó bekerített helyet
+          a kényszerintézkedés szabályainak megszegésével elhagyja, vétség miatt két
+          évig terjedő szabadságvesztéssel büntetendő.
+      - __type__: Paragraph
+        identifier: 2a
+        text: A (2) bekezdés szerint büntetendő, aki abból a célból, hogy az ellene
+          folytatott kiadatási vagy átadási eljárás alól kivonja magát, az ideiglenes
+          kiadatási, illetve az ideiglenes átadási bűnügyi felügyelet tartama alatt
+          a számára meghatározott területet, lakást, egyéb helyiséget, intézményt,
+          vagy ahhoz tartozó bekerített helyet a kényszerintézkedés szabályainak megszegésével
+          elhagyja.
+    intro: 'A Btk. 283. § (2) és (2a) bekezdése helyébe a következő rendelkezések
+      lépnek:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '283'
+        paragraph:
+        - '2'
+        - 2a
+    wrap_up: ''
+  identifier: '338'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Subtitle
+        identifier: ''
+        title: Jogosulatlan titkos információgyűjtés vagy leplezett eszköz jogosulatlan
+          alkalmazása
+    identifier: '1'
+    intro: 'A Btk. 307. §-át megelőző alcím helyébe a következő alcím lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: StructuralReference
+        act: 2012. évi C. törvény
+        special:
+          article_id: '307'
+          position: BEFORE_WITHOUT_ARTICLE
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        children:
+        - __type__: AlphabeticPoint
+          identifier: a
+          text: bíró vagy az igazságügyért felelős miniszter engedélyéhez kötött titkos
+            információgyűjtést engedély nélkül végez, illetve bírói engedélyhez kötött
+            leplezett eszközt engedély nélkül alkalmaz vagy az ezekre vonatkozó engedély
+            kereteit túllépi,
+        - __type__: AlphabeticPoint
+          identifier: b
+          text: bíró vagy az igazságügyért felelős miniszter engedélyéhez kötött titkos
+            információgyűjtést, illetve bírói engedélyhez kötött leplezett eszköz
+            alkalmazását jogosulatlanul elrendeli vagy engedélyezi,
+        identifier: '1'
+        intro: Az a hivatalos személy, aki
+        wrap_up: bűntett miatt három évig terjedő szabadságvesztéssel büntetendő.
+      - __type__: Paragraph
+        identifier: '2'
+        text: Az (1) bekezdés szerint büntetendő az a hivatalos személy, akinek valótlan
+          tényállítása alapján a bíró vagy az igazságügyért felelős miniszter engedélyéhez
+          kötött titkos információgyűjtést, illetve a bírói engedélyhez kötött leplezett
+          eszköz alkalmazását elrendelik vagy engedélyezik.
+    identifier: '2'
+    intro: 'A Btk. 307. § (1) és (2) bekezdése helyébe a következő rendelkezések lépnek:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '307'
+        paragraph:
+        - '1'
+        - '2'
+    wrap_up: ''
+  identifier: '339'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: AlphabeticPoint
+        identifier: d
+        text: elektronikus hírközlő hálózat vagy eszköz útján, illetve információs
+          rendszeren folytatott kommunikáció tartalmát titokban kifürkészi, és az
+          észlelteket technikai eszközzel rögzíti,
+      intro: Aki személyes adat, magántitok, gazdasági titok vagy üzleti titok jogosulatlan
+        megismerése céljából
+      wrap_up: bűntett miatt három évig terjedő szabadságvesztéssel büntetendő.
+    identifier: '1'
+    intro: 'A Btk. 422. § (1) bekezdés d) pontja helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '422'
+        paragraph: '1'
+        point: d
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: AlphabeticPoint
+        identifier: e
+        text: információs rendszerben kezelt adatokat titokban kifürkész, és az észlelteket
+          technikai eszközzel rögzíti,
+      intro: Aki személyes adat, magántitok, gazdasági titok vagy üzleti titok jogosulatlan
+        megismerése céljából
+      wrap_up: bűntett miatt három évig terjedő szabadságvesztéssel büntetendő.
+    identifier: '2'
+    intro: 'A Btk. 422. § (1) bekezdése a következő e) ponttal egészül ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '422'
+        paragraph: '1'
+        point: e
+      pure_insertion: true
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: AlphabeticPoint
+        identifier: a
+        text: nyilvános vagy a közönség részére nyitva álló helyen kívül más helyiséget
+          vagy területet, – a közösségi közlekedési eszköz kivételével – járművet,
+          továbbá más használatában levő tárgyat titokban átkutat,
+      intro: Az (1) bekezdés szerint büntetendő, aki személyes adat, magántitok, gazdasági
+        titok vagy üzleti titok jogosulatlan megismerése céljából
+    identifier: '3'
+    intro: 'A Btk. 422. § (1a) bekezdés a) pontja helyébe a következő rendelkezés
+      lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '422'
+        paragraph: 1a
+        point: a
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '2'
+        text: Az (1) bekezdés szerint büntetendő, aki fedett nyomozó, illetve titkos
+          információgyűjtés folytatására vagy leplezett eszközök alkalmazására feljogosított
+          szervvel titkosan együttműködő személy kilétének vagy tevékenységének megállapítása
+          céljából az (1) bekezdésben meghatározottakon kívül információt gyűjt.
+    identifier: '4'
+    intro: 'A Btk. 422. § (2) bekezdése helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '422'
+        paragraph: '2'
+    wrap_up: ''
+  identifier: '340'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: AlphabeticSubpoint
+        identifier: ad
+        text: amfetamin, metamfetamin, MDPV és alfa-PVP esetén a 0,5 gramm,
+      intro: A 176–180. § alkalmazásában a kábítószer csekély mennyiségű, ha annak
+        bázis formában megadott tiszta hatóanyag-tartalma
+      wrap_up: mennyiséget nem haladja meg.
+    identifier: '1'
+    intro: 'A Btk. 461. § (1) bekezdés a) pont ad) alpontja helyébe a következő rendelkezés
+      lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '461'
+        paragraph: '1'
+        point: a
+        subpoint: ad
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: AlphabeticSubpoint
+        identifier: al
+        text: pentedron esetén a 0,4 gramm,
+      intro: A 176–180. § alkalmazásában a kábítószer csekély mennyiségű, ha annak
+        bázis formában megadott tiszta hatóanyag-tartalma
+      wrap_up: mennyiséget nem haladja meg.
+    identifier: '2'
+    intro: 'A Btk. 461. § (1) bekezdés a) pontja a következő al) alponttal egészül
+      ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '461'
+        paragraph: '1'
+        point: a
+        subpoint: al
+      pure_insertion: true
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: AlphabeticPoint
+        children:
+        - __type__: AlphabeticSubpoint
+          identifier: da
+          text: GBL esetén a 6,2 gramm,
+        - __type__: AlphabeticSubpoint
+          identifier: db
+          text: AB-CHMINACA, MDMB-CHMICA, AM-2201, AB-PINACA, AB-FUBINACA, és ADB-FUBINACA
+            esetén a 0,05 gramm
+        identifier: d
+        intro: annak tiszta hatóanyag-tartalma
+      intro: A 176–180. § alkalmazásában a kábítószer csekély mennyiségű, ha
+      wrap_up: mennyiséget nem haladja meg.
+    identifier: '3'
+    intro: 'A Btk. 461. § (1) bekezdése a következő d) ponttal egészül ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '461'
+        paragraph: '1'
+        point: d
+      pure_insertion: true
+    wrap_up: ''
+  identifier: '341'
+- __type__: Article
+  children:
+  - children:
+    - __type__: NumericPoint
+      identifier: '1'
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: ügyésznek
+        position:
+          act: 2012. évi C. törvény
+          article: '28'
+          paragraph: '1'
+        replacement_text: ügyészségnek
+      text: 28. § (1) bekezdésében az „ügyésznek” szövegrész helyébe az „ügyészségnek”
+        szöveg,
+    - __type__: NumericPoint
+      identifier: '2'
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: alatt közjogi tisztség betöltésén alapuló
+        position:
+          act: 2012. évi C. törvény
+          article: '28'
+          paragraph: '3'
+        replacement_text: alatt a mentelmi jogon alapuló
+      text: 28. § (3) bekezdésében az „alatt közjogi tisztség betöltésén alapuló”
+        szövegrész helyébe az „alatt a mentelmi jogon alapuló” szöveg,
+    - __type__: NumericPoint
+      identifier: '3'
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: vagy vádemelés elhalasztásának tartama
+        position:
+          act: 2012. évi C. törvény
+          article: '29'
+          paragraph: '3'
+          point: d
+        replacement_text: vagy feltételes ügyészi felfüggesztés tartama
+      text: 29. § (3) bekezdés d) pontjában a „vagy vádemelés elhalasztásának tartama”
+        szövegrész helyébe a „vagy feltételes ügyészi felfüggesztés tartama” szöveg,
+    - __type__: NumericPoint
+      identifier: '4'
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: az ügydöntő határozat jogerőre emelkedésétől
+        position:
+          act: 2012. évi C. törvény
+          article: '29'
+          paragraph: '3'
+          point: e
+        replacement_text: a határozat véglegessé válásától
+      text: 29. § (3) bekezdés e) pontjában az „az ügydöntő határozat jogerőre emelkedésétől”
+        szövegrész helyébe az „a határozat véglegessé válásától” szöveg,
+    - __type__: NumericPoint
+      identifier: '5'
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: ítéletében
+        position:
+          act: 2012. évi C. törvény
+          article: '38'
+          paragraph: '1'
+        replacement_text: ügydöntő határozatában
+      - __type__: TextAmendment
+        original_text: ítéletében
+        position:
+          act: 2012. évi C. törvény
+          article: '42'
+        replacement_text: ügydöntő határozatában
+      text: 38. § (1) bekezdésében és 42. §-ában az „ítéletében” szövegrész helyébe
+        az „ügydöntő határozatában” szöveg,
+    - __type__: NumericPoint
+      identifier: '6'
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: ítéletében
+        position:
+          act: 2012. évi C. törvény
+          article: '38'
+          paragraph: '3'
+        replacement_text: az ügydöntő határozatában
+      - __type__: TextAmendment
+        original_text: ítéletében
+        position:
+          act: 2012. évi C. törvény
+          article: '39'
+          paragraph: '1'
+        replacement_text: az ügydöntő határozatában
+      - __type__: TextAmendment
+        original_text: ítéletében
+        position:
+          act: 2012. évi C. törvény
+          article: '47'
+          paragraph: '3'
+        replacement_text: az ügydöntő határozatában
+      - __type__: TextAmendment
+        original_text: ítéletében
+        position:
+          act: 2012. évi C. törvény
+          article: '50'
+          paragraph: '4'
+        replacement_text: az ügydöntő határozatában
+      text: 38. § (3) bekezdésében, 39. § (1) bekezdésében, 47. § (3) bekezdésében,
+        50. § (4) bekezdésében, az „ítéletében” szövegrész helyébe az „az ügydöntő
+        határozatában” szöveg,
+    - __type__: NumericPoint
+      identifier: '7'
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: ítélet
+        position:
+          act: 2012. évi C. törvény
+          article: '40'
+          paragraph: '1'
+        replacement_text: ügydöntő határozat
+      - __type__: TextAmendment
+        original_text: ítélet
+        position:
+          act: 2012. évi C. törvény
+          article: '40'
+          paragraph: '4'
+        replacement_text: ügydöntő határozat
+      - __type__: TextAmendment
+        original_text: ítélet
+        position:
+          act: 2012. évi C. törvény
+          article: '53'
+          paragraph: '3'
+        replacement_text: ügydöntő határozat
+      - __type__: TextAmendment
+        original_text: ítélet
+        position:
+          act: 2012. évi C. törvény
+          article: '56'
+          paragraph: '4'
+        replacement_text: ügydöntő határozat
+      - __type__: TextAmendment
+        original_text: ítélet
+        position:
+          act: 2012. évi C. törvény
+          article: '57'
+          paragraph: '3'
+        replacement_text: ügydöntő határozat
+      - __type__: TextAmendment
+        original_text: ítélet
+        position:
+          act: 2012. évi C. törvény
+          article: '58'
+          paragraph: '3'
+        replacement_text: ügydöntő határozat
+      - __type__: TextAmendment
+        original_text: ítélet
+        position:
+          act: 2012. évi C. törvény
+          article: '60'
+          paragraph: '4'
+        replacement_text: ügydöntő határozat
+      - __type__: TextAmendment
+        original_text: ítélet
+        position:
+          act: 2012. évi C. törvény
+          article: '61'
+          paragraph: '3'
+        replacement_text: ügydöntő határozat
+      - __type__: TextAmendment
+        original_text: ítélet
+        position:
+          act: 2012. évi C. törvény
+          article: '62'
+          paragraph: '2'
+        replacement_text: ügydöntő határozat
+      - __type__: TextAmendment
+        original_text: ítélet
+        position:
+          act: 2012. évi C. törvény
+          article: '93'
+          paragraph: '1'
+        replacement_text: ügydöntő határozat
+      - __type__: TextAmendment
+        original_text: ítélet
+        position:
+          act: 2012. évi C. törvény
+          article: '100'
+          paragraph: '1'
+          point:
+          - a
+          - b
+        replacement_text: ügydöntő határozat
+      - __type__: TextAmendment
+        original_text: ítélet
+        position:
+          act: 2012. évi C. törvény
+          article: '101'
+          paragraph: '3'
+        replacement_text: ügydöntő határozat
+      - __type__: TextAmendment
+        original_text: ítélet
+        position:
+          act: 2012. évi C. törvény
+          article: '112'
+        replacement_text: ügydöntő határozat
+      - __type__: TextAmendment
+        original_text: ítélet
+        position:
+          act: 2012. évi C. törvény
+          article: '117'
+        replacement_text: ügydöntő határozat
+      - __type__: TextAmendment
+        original_text: ítélet
+        position:
+          act: 2012. évi C. törvény
+          article: '120'
+          paragraph: '1'
+        replacement_text: ügydöntő határozat
+      - __type__: TextAmendment
+        original_text: ítélet
+        position:
+          act: 2012. évi C. törvény
+          article: '126'
+          paragraph: '1'
+          point: a
+        replacement_text: ügydöntő határozat
+      - __type__: TextAmendment
+        original_text: ítélet
+        position:
+          act: 2012. évi C. törvény
+          article: '141'
+          paragraph: '1'
+        replacement_text: ügydöntő határozat
+      - __type__: TextAmendment
+        original_text: ítélet
+        position:
+          act: 2012. évi C. törvény
+          article: '180'
+          paragraph: '1'
+        replacement_text: ügydöntő határozat
+      - __type__: TextAmendment
+        original_text: ítélet
+        position:
+          act: 2012. évi C. törvény
+          article: '210'
+          paragraph: '2'
+        replacement_text: ügydöntő határozat
+      - __type__: TextAmendment
+        original_text: ítélet
+        position:
+          act: 2012. évi C. törvény
+          article: '212'
+          paragraph: '3'
+        replacement_text: ügydöntő határozat
+      - __type__: TextAmendment
+        original_text: ítélet
+        position:
+          act: 2012. évi C. törvény
+          article: '241'
+          paragraph: '3'
+        replacement_text: ügydöntő határozat
+      text: 40. § (1) és (4) bekezdésében, 53. § (3) bekezdésében, 56. § (4) bekezdésében,
+        57. § (3) bekezdésében, 58. § (3) bekezdésében, 60. § (4) bekezdésében, 61.
+        § (3) bekezdésében, 62. § (2) bekezdésében, 93. § (1) bekezdésében, 100. §
+        (1) bekezdés a) és b) pontjában, 101. § (3) bekezdésében, 112. §-ában, 117.
+        §-ában, 120. § (1) bekezdésében, 126. § (1) bekezdés a) pontjában, 141. §
+        (1) bekezdésében, 180. § (1) bekezdésében, 210. § (2) bekezdésében, 212. §
+        (3) bekezdésében, 241. § (3) bekezdésében az „ítélet” szövegrész helyébe az
+        „ügydöntő határozat” szöveg,
+    - __type__: NumericPoint
+      identifier: '8'
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: házi őrizet
+        position:
+          act: 2012. évi C. törvény
+          article: '45'
+          paragraph: '6'
+        replacement_text: bűnügyi felügyelet
+      text: 45. § (6) bekezdésében a „házi őrizet” szövegrész helyébe „bűnügyi felügyelet”
+        szöveg,
+    - __type__: NumericPoint
+      identifier: '9'
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: ügyész
+        position:
+          act: 2012. évi C. törvény
+          article: '64'
+          paragraph: '2'
+        replacement_text: ügyészség
+      - __type__: TextAmendment
+        original_text: 'ügyész '
+        position:
+          act: 2012. évi C. törvény
+          article: '71'
+          paragraph:
+          - '2'
+          - '3'
+        replacement_text: 'ügyészség '
+      - __type__: TextAmendment
+        original_text: ügyész
+        position:
+          act: 2012. évi C. törvény
+          article: '459'
+          paragraph: '1'
+          point: '9'
+        replacement_text: ügyészség
+      text: 64. § (2) bekezdésében, 71. § (2) és (3) bekezdésében, 459. § (1) bekezdés
+        9. pontjában az „ügyész” szövegrészek helyébe az „ügyészség” szöveg,
+    - __type__: NumericPoint
+      identifier: '10'
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: vádemelés elhalasztásának
+        position:
+          act: 2012. évi C. törvény
+          article: '69'
+          paragraph: '1'
+        replacement_text: feltételes ügyészi felfüggesztés
+      - __type__: TextAmendment
+        original_text: vádemelés elhalasztásának
+        position:
+          act: 2012. évi C. törvény
+          article: '70'
+          paragraph: '1'
+        replacement_text: feltételes ügyészi felfüggesztés
+      - __type__: TextAmendment
+        original_text: vádemelés elhalasztásának
+        position:
+          act: 2012. évi C. törvény
+          article: '119'
+          paragraph: '1'
+        replacement_text: feltételes ügyészi felfüggesztés
+      text: 69. § (1) bekezdésében, 70. § (1) bekezdésében, 119. § (1) bekezdésében
+        a „vádemelés elhalasztásának” szövegrész helyébe a „feltételes ügyészi felfüggesztés”
+        szöveg,
+    - __type__: NumericPoint
+      identifier: '11'
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: vádemelés elhalasztása
+        position:
+          act: 2012. évi C. törvény
+          article: '71'
+          paragraph: '2'
+        replacement_text: feltételes ügyészi felfüggesztés
+      text: 71. § (2) bekezdésében a „vádemelés elhalasztása” szövegrész helyébe a
+        „feltételes ügyészi felfüggesztés” szöveg,
+    - __type__: NumericPoint
+      identifier: '12'
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: 1998. évi XIX. törvény 178/A. § (2) bekezdése
+        position:
+          act: 2012. évi C. törvény
+          article: '97'
+          paragraph: '2'
+        replacement_text: 2017. évi XC. törvény 389. §-a
+      text: 97. § (2) bekezdésében az „1998. évi XIX. törvény 178/A. § (2) bekezdése”
+        szövegrész helyébe a „2017. évi XC. törvény 389. §-a” szöveg,
+    - __type__: NumericPoint
+      identifier: '13'
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: ítéletében
+        position:
+          act: 2012. évi C. törvény
+          article: '102'
+          paragraph: '1'
+        replacement_text: az ügydöntő határozatban
+      - __type__: TextAmendment
+        original_text: ítéletében
+        position:
+          act: 2012. évi C. törvény
+          article: '141'
+          paragraph: '2'
+        replacement_text: az ügydöntő határozatban
+      text: 102. § (1) bekezdésében, 141. § (2) bekezdésében az „ítéletében” szövegrész
+        helyébe az „az ügydöntő határozatban” szöveg,
+    - __type__: NumericPoint
+      identifier: '14'
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: elektronikus hírközlő hálózat útján
+        position:
+          act: 2012. évi C. törvény
+          article: '224'
+          paragraph: '1'
+          point: b
+        replacement_text: elektronikus hírközlő hálózat – ideértve az információs
+          rendszert is – útján
+      text: 224. § (1) bekezdés b) pontjában az „elektronikus hírközlő hálózat útján”
+        szövegrész helyébe a „elektronikus hírközlő hálózat – ideértve az információs
+        rendszert is – útján” szöveg,
+    - __type__: NumericPoint
+      identifier: '15'
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: büntető ügy
+        position:
+          act: 2012. évi C. törvény
+          article: '272'
+          paragraph: '3'
+        replacement_text: büntetőügy
+      text: 272. § (3) bekezdésében a „büntető ügy” szövegrész helyébe a „büntetőügy”
+        szöveg,
+    - __type__: NumericPoint
+      identifier: '16'
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: büntető ügyben
+        position:
+          act: 2012. évi C. törvény
+          article: '272'
+          paragraph: '4'
+        replacement_text: büntetőügyben
+      - __type__: TextAmendment
+        original_text: büntető ügyben
+        position:
+          act: 2012. évi C. törvény
+          article: '276'
+          paragraph: '1'
+        replacement_text: büntetőügyben
+      - __type__: TextAmendment
+        original_text: büntető ügyben
+        position:
+          act: 2012. évi C. törvény
+          article: '278'
+          paragraph: '2'
+        replacement_text: büntetőügyben
+      text: 272. § (4) bekezdésében, 276. § (1) bekezdésében és 278. § (2) bekezdésében
+        a „büntető ügyben” szövegrészek helyébe a „büntetőügyben” szöveg,
+    - __type__: NumericPoint
+      identifier: '17'
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: a következményekre történt figyelmeztetés
+        position:
+          act: 2012. évi C. törvény
+          article: '277'
+        replacement_text: a tanúzási figyelmeztetés
+      text: 277. §-ában az „a következményekre történt figyelmeztetés” szövegrész
+        helyébe az „a tanúzási figyelmeztetés” szöveg,
+    - __type__: NumericPoint
+      identifier: '18'
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: az információs rendszerben tárolt adatok megőrzésére kötelezéssel
+        position:
+          act: 2012. évi C. törvény
+          article: '287'
+          paragraph: '1'
+          point: c
+        replacement_text: az elektronikus adat megőrzésére kötelezéssel
+      text: 287. § (1) bekezdés c) pontjában az „az információs rendszerben tárolt
+        adatok megőrzésére kötelezéssel” szövegrész helyébe az „az elektronikus adat
+        megőrzésére kötelezéssel” szöveg,
+    - __type__: NumericPoint
+      identifier: '19'
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: hozzáférhetetlenné tett adatot
+        position:
+          act: 2012. évi C. törvény
+          article: '287'
+          paragraph: '1'
+          point: d
+        replacement_text: ideiglenesen hozzáférhetetlenné tett elektronikus adatot
+      text: 287. § (1) bekezdés d) pontjában a „hozzáférhetetlenné tett adatot” szövegrész
+        helyébe az „ideiglenesen hozzáférhetetlenné tett elektronikus adatot” szöveg,
+    - __type__: NumericPoint
+      identifier: '20'
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: vádirat benyújtásáig
+        position:
+          act: 2012. évi C. törvény
+          article: '287'
+          paragraph: '3'
+        replacement_text: vádemelés előtt
+      - __type__: TextAmendment
+        original_text: vádirat benyújtásáig
+        position:
+          act: 2012. évi C. törvény
+          article: '288'
+          paragraph: '2'
+        replacement_text: vádemelés előtt
+      - __type__: TextAmendment
+        original_text: vádirat benyújtásáig
+        position:
+          act: 2012. évi C. törvény
+          article: '301'
+          paragraph: '4'
+        replacement_text: vádemelés előtt
+      - __type__: TextAmendment
+        original_text: vádirat benyújtásáig
+        position:
+          act: 2012. évi C. törvény
+          article: '302'
+          paragraph: '4'
+        replacement_text: vádemelés előtt
+      - __type__: TextAmendment
+        original_text: vádirat benyújtásáig
+        position:
+          act: 2012. évi C. törvény
+          article: '303'
+          paragraph: '4'
+        replacement_text: vádemelés előtt
+      - __type__: TextAmendment
+        original_text: vádirat benyújtásáig
+        position:
+          act: 2012. évi C. törvény
+          article: '395'
+          paragraph: '2'
+        replacement_text: vádemelés előtt
+      - __type__: TextAmendment
+        original_text: vádirat benyújtásáig
+        position:
+          act: 2012. évi C. törvény
+          article: '396'
+          paragraph: '8'
+        replacement_text: vádemelés előtt
+      - __type__: TextAmendment
+        original_text: vádirat benyújtásáig
+        position:
+          act: 2012. évi C. törvény
+          article: '405'
+          paragraph: '4'
+        replacement_text: vádemelés előtt
+      text: 287. § (3) bekezdésében, 288. § (2) bekezdésében, 301. § (4) bekezdésében,
+        302. § (4) bekezdésében, 303. § (4) bekezdésében, 395. § (2) bekezdésében,
+        396. § (8) bekezdésében, 405. § (4) bekezdésében a „vádirat benyújtásáig”
+        szövegrész helyébe a „vádemelés előtt” szöveg,
+    - __type__: NumericPoint
+      identifier: '21'
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: ügyészi
+        position:
+          act: 2012. évi C. törvény
+          article: '308'
+          paragraph: '1'
+          point: a
+        replacement_text: ügyészségi
+      text: 308. § (1) bekezdés a) pontjában az „ügyészi” szövegrész helyébe az „ügyészségi”
+        szöveg,
+    - __type__: NumericPoint
+      identifier: '22'
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: büntető ügyekben
+        position:
+          act: 2012. évi C. törvény
+          article: '420'
+          paragraph: '4'
+        replacement_text: büntetőügyekben
+      - __type__: TextAmendment
+        original_text: büntető ügyekben
+        position:
+          act: 2012. évi C. törvény
+          article: '424'
+          paragraph: '2'
+        replacement_text: büntetőügyekben
+      text: 420. § (4) bekezdésében és 424. § (2) bekezdésében a „büntető ügyekben”
+        szövegrész helyébe a „büntetőügyekben” szöveg,
+    - __type__: NumericPoint
+      identifier: '23'
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: alkalmazásával megfigyeli
+        position:
+          act: 2012. évi C. törvény
+          article: '422'
+          paragraph: '1'
+          point: b
+        replacement_text: alkalmazásával titokban megfigyeli
+      text: 422. § (1) bekezdés b) pontjában az „alkalmazásával megfigyeli” szövegrész
+        helyébe az „alkalmazásával titokban megfigyeli” szöveg és
+    - __type__: NumericPoint
+      identifier: '24'
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: közlést tartalmazó zárt küldeményét felbontja
+        position:
+          act: 2012. évi C. törvény
+          article: '422'
+          paragraph: '1'
+          point: c
+        replacement_text: postai küldeményét vagy egyéb zárt küldeményét titokban
+          felbontja
+      text: 422. § (1) bekezdés c) pontjában a „közlést tartalmazó zárt küldeményét
+        felbontja” szövegrész helyébe a „postai küldeményét vagy egyéb zárt küldeményét
+        titokban felbontja” szöveg
+    intro: A Btk.
+    wrap_up: lép.
+  identifier: '342'
+- __type__: Article
+  children:
+  - children:
+    - __type__: AlphabeticPoint
+      identifier: a
+      semantic_data:
+      - __type__: Repeal
+        position:
+          __type__: Reference
+          act: 2012. évi C. törvény
+          article: '459'
+          paragraph: '1'
+          point: '32'
+        text: egyéb
+      text: 459. § (1) bekezdés 32. pontjában az „egyéb” szövegrész,
+    - __type__: AlphabeticPoint
+      identifier: b
+      semantic_data:
+      - __type__: Repeal
+        position:
+          __type__: Reference
+          act: 2012. évi C. törvény
+          article: '83'
+          paragraph: '3'
+      text: 83. § (3) bekezdése és
+    - __type__: AlphabeticPoint
+      identifier: c
+      semantic_data:
+      - __type__: Repeal
+        position:
+          __type__: Reference
+          act: 2012. évi C. törvény
+          article: '84'
+      text: 84. §-a.
+    intro: Hatályát veszti a Btk.
+  identifier: '343'
+- __type__: Article
+  children:
+  - identifier: '1'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2018
+      position: null
+    text: Ez a törvény – a (2) és (3) bekezdésben meghatározott kivétellel – 2018.
+      január 1-jén lép hatályba.
+  - identifier: '2'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 30
+        month: 6
+        year: 2018
+      position:
+        article:
+        - '508'
+        - '524'
+    text: E törvény 508–524. §-a 2018. június 30-án lép hatályba.
+  - identifier: '3'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2018
+      position:
+        article:
+        - '1'
+        - '299'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2018
+      position:
+        article: '301'
+        paragraph: '2'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2018
+      position:
+        article:
+        - '302'
+        - '316'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2018
+      position:
+        article: '317'
+        point:
+        - b
+        - e
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2018
+      position:
+        article:
+        - '318'
+        - '340'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2018
+      position:
+        article:
+        - '342'
+        - '430'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2018
+      position:
+        article:
+        - '432'
+        - '447'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2018
+      position:
+        article:
+        - '449'
+        - '486'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2018
+      position:
+        article: '487'
+        point:
+        - '1'
+        - '12'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2018
+      position:
+        article: '487'
+        point:
+        - '14'
+        - '15'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2018
+      position:
+        article:
+        - '488'
+        - '502'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2018
+      position:
+        article: '503'
+        paragraph: '2'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2018
+      position:
+        article:
+        - '504'
+        - '506'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2018
+      position:
+        article:
+        - '525'
+        - '530'
+    text: E törvény 1–299. §-a, 301. § (2) bekezdése, 302–316. §-a, 317. § b)–e) pontja,
+      318–340. §-a, 342–430. §-a, 432–447. §-a, 449–486. §-a, 487. § 1–12. pontja
+      és 14–15. pontja, 488–502. §-a, 503. § (2) bekezdése, 504–506. §-a és 525–530.
+      §-a 2018. július 1-jén lép hatályba.
+  identifier: '531'
+identifier: 2017. évi CXCVII. törvény
+preamble: ''
+publication_date:
+  day: 19
+  month: 12
+  year: 2017
+subject: a büntetőeljárásról szóló 2017. évi XC. törvény hatálybalépésével összefüggő
+  egyes törvények módosításáról

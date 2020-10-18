@@ -1,0 +1,621 @@
+children:
+- __type__: Article
+  children:
+  - act_id_abbreviations:
+    - abbreviation: Btk.
+      act: 2012. évi C. törvény
+    children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '2'
+        text: Az erőszakos többszörös visszaesővel szemben az erőszakos többszörös
+          visszaesőkénti minősítést megalapozó, súlyosabban büntetendő személy elleni
+          erőszakos bűncselekmény büntetési tételének felső határa szabadságvesztés
+          esetén a kétszeresére emelkedik. Ha a büntetési tétel így felemelt felső
+          határa a húsz évet meghaladná, vagy a törvény szerint a bűncselekmény életfogytig
+          tartó szabadságvesztéssel is büntethető, az elkövetővel szemben életfogytig
+          tartó szabadságvesztést kell kiszabni. Halmazati büntetés esetén a 81. §
+          (3) bekezdése szerinti büntetési tételt, tárgyalásról lemondás esetén a
+          83. § (2) bekezdése szerinti büntetési tételt kell a kétszeresére emelni.
+    intro: 'A Büntető Törvénykönyvről szóló 2012. évi C. törvény (a továbbiakban:
+      Btk.) 90. § (2) bekezdése helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '90'
+        paragraph: '2'
+    wrap_up: ''
+  identifier: '83'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '3'
+        text: Ha a feltételes szabadságra bocsátás lehetősége nem kizárt, annak legkorábbi
+          időpontját a legszigorúbb rendelkezés alapján kell meghatározni. Nem bocsátható
+          feltételes szabadságra az elítélt az összbüntetésből, ha bármelyik szabadságvesztés
+          esetén a feltételes szabadságra bocsátás lehetősége kizárt.
+    intro: 'A Btk. 95. §-a a következő (3) bekezdéssel egészül ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '95'
+        paragraph: '3'
+      pure_insertion: true
+    wrap_up: ''
+  identifier: '84'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '2'
+        text: A büntetőjogi felelősség megállapítására, a kiszabott büntetésre és
+          az alkalmazott intézkedésre vonatkozó adatokat közhiteles hatósági nyilvántartás
+          tartalmazza a törvényben meghatározott időpontig, ezt követően hátrányos
+          jogkövetkezmény az elítélés miatt már nem állapítható meg az elítélttel
+          szemben. A visszaesés és az ahhoz fűződő, e törvényben meghatározott hátrányos
+          jogkövetkezmények a büntetőeljárásról szóló 1998. évi XIX. törvény 178/A.
+          § (2) bekezdése szerint, az újabb bűncselekmény elkövetéséhez legközelebbi
+          időpontban a bűnügyi nyilvántartásból beszerzett adatok alapján akkor is
+          megállapítandók, ha utóbb ezek az adatok törlésre kerültek.
+    intro: 'A Btk. 97. § (2) bekezdése helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '97'
+        paragraph: '2'
+    wrap_up: ''
+  identifier: '85'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Article
+        children:
+        - identifier: '1'
+          text: Aki információs rendszerbe az információs rendszer védelmét biztosító
+            technikai intézkedés megsértésével vagy kijátszásával jogosulatlanul belép,
+            vagy a belépési jogosultsága kereteit túllépve vagy azt megsértve bent
+            marad, vétség miatt két évig terjedő szabadságvesztéssel büntetendő.
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: az információs rendszer működését jogosulatlanul vagy jogosultsága
+              kereteit megsértve akadályozza, vagy
+          - __type__: AlphabeticPoint
+            identifier: b
+            text: információs rendszerben lévő adatot jogosulatlanul vagy jogosultsága
+              kereteit megsértve megváltoztat, töröl vagy hozzáférhetetlenné tesz,
+          identifier: '2'
+          intro: Aki
+          wrap_up: bűntett miatt három évig terjedő szabadságvesztéssel büntetendő.
+        - identifier: '3'
+          text: A büntetés bűntett miatt egy évtől öt évig terjedő szabadságvesztés,
+            ha a (2) bekezdésben meghatározott bűncselekmény jelentős számú információs
+            rendszert érint.
+        - identifier: '4'
+          text: A büntetés két évtől nyolc évig terjedő szabadságvesztés, ha a bűncselekményt
+            közérdekű üzem ellen követik el.
+        - identifier: '5'
+          text: 'E § alkalmazásában adat: információs rendszerben tárolt, kezelt,
+            feldolgozott vagy továbbított tények, információk vagy fogalmak minden
+            olyan formában való megjelenése, amely információs rendszer általi feldolgozásra
+            alkalmas, ideértve azon programot is, amely valamely funkciónak az információs
+            rendszer által való végrehajtását biztosítja.'
+        identifier: '423'
+    intro: 'A Btk. 423. §-a helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '423'
+    wrap_up: ''
+  identifier: '86'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: AlphabeticPoint
+        identifier: f
+        text: 375. §-a és XLIII. Fejezete az információs rendszerek elleni támadásokról
+          és a 2005/222/IB tanácsi kerethatározat felváltásáról szóló, 2013. augusztus
+          12-i 2013/40/EU európai parlamenti és tanácsi irányelvnek,
+      intro: E törvény
+      wrap_up: való megfelelést szolgálja.
+    intro: 'A Btk. 465. § (1) bekezdés f) pontja helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '465'
+        paragraph: '1'
+        point: f
+    wrap_up: ''
+  identifier: '87'
+- __type__: Article
+  children:
+  - semantic_data:
+    - __type__: TextAmendment
+      original_text: a 375. vagy a 423. §-ban
+      position:
+        act: 2012. évi C. törvény
+        article: '424'
+        paragraph: '1'
+      replacement_text: a 375. §-ban, a 422. § (1) bekezdés d) pontjában vagy a 423.
+        §-ban
+    text: A Btk. 424. § (1) bekezdésében az „a 375. vagy a 423. §-ban” szövegrész
+      helyébe „a 375. §-ban, a 422. § (1) bekezdés d) pontjában vagy a 423. §-ban”
+      szöveg lép.
+  identifier: '88'
+- __type__: Article
+  children:
+  - identifier: '1'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 31
+        month: 12
+        year: 2014
+      position: null
+    text: Ez a törvény – a (2)–(5) bekezdésben foglalt kivétellel – 2014. december
+      31-én lép hatályba.
+  - identifier: '2'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2015
+      position:
+        article:
+        - '1'
+        - '5'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2015
+      position:
+        article: '6'
+        paragraph: '1'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2015
+      position:
+        article:
+        - '7'
+        - '8'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2015
+      position:
+        article:
+        - '10'
+        - '47'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2015
+      position:
+        article:
+        - '49'
+        - '53'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2015
+      position:
+        article:
+        - '56'
+        - '59'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2015
+      position:
+        article:
+        - '63'
+        - '65'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2015
+      position:
+        article:
+        - '67'
+        - '71'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2015
+      position:
+        article: '72'
+        point: '2'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2015
+      position:
+        article: '72'
+        point: '4'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2015
+      position:
+        article: '72'
+        point:
+        - '6'
+        - '11'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2015
+      position:
+        article: '72'
+        point:
+        - '13'
+        - '16'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2015
+      position:
+        article: '72'
+        point:
+        - '19'
+        - '26'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2015
+      position:
+        article: '72'
+        point:
+        - '29'
+        - '30'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2015
+      position:
+        article: '73'
+        point: '2'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2015
+      position:
+        article:
+        - '74'
+        - '89'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2015
+      position:
+        article: '91'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2015
+      position:
+        article: '163'
+    text: Az 1–5. §, a 6. § (1) bekezdése, a 7–8. §, a 10–47. §, a 49–53. §, az 56–59.
+      §, a 63–65. §, a 67–71. §, a 72. § 2., 4., 6–11., 13–16., 19–26., 29. és 30.
+      pontja, a 73. § 2. pontja, a 74–89. §, a 91. § és a 163. § 2015. január 1-jén
+      lép hatályba.
+  - identifier: '3'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 4
+        year: 2015
+      position:
+        article: '6'
+        paragraph: '2'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 4
+        year: 2015
+      position:
+        article: '9'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 4
+        year: 2015
+      position:
+        article: '48'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 4
+        year: 2015
+      position:
+        article: '54'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 4
+        year: 2015
+      position:
+        article: '55'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 4
+        year: 2015
+      position:
+        article: '66'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 4
+        year: 2015
+      position:
+        article: '72'
+        point: '1'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 4
+        year: 2015
+      position:
+        article: '72'
+        point: '3'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 4
+        year: 2015
+      position:
+        article: '72'
+        point: '5'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 4
+        year: 2015
+      position:
+        article: '72'
+        point: '12'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 4
+        year: 2015
+      position:
+        article: '72'
+        point:
+        - '17'
+        - '18'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 4
+        year: 2015
+      position:
+        article: '73'
+        point: '1'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 4
+        year: 2015
+      position:
+        article: '73'
+        point:
+        - '3'
+        - '4'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 4
+        year: 2015
+      position:
+        article: '73'
+        point: '6'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 4
+        year: 2015
+      position:
+        article: '90'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 4
+        year: 2015
+      position:
+        article: '113'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 4
+        year: 2015
+      position:
+        article: '117'
+        paragraph: '2'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 4
+        year: 2015
+      position:
+        article: '124'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 4
+        year: 2015
+      position:
+        article: '126'
+        paragraph: '2'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 4
+        year: 2015
+      position:
+        article: '132'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 4
+        year: 2015
+      position:
+        article: '140'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 4
+        year: 2015
+      position:
+        article: '141'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 4
+        year: 2015
+      position:
+        article: '161'
+        paragraph: '15'
+    text: A 6. § (2) bekezdése, a 9. §, a 48. §, az 54. §, az 55. §, a 66. §, a 72.
+      § 1., 3., 5., 12., 17. és 18. pontja, a 73. § 1., 3., 4. és 6. pontja, a 90.
+      §, a 113. §, a 117. § (2) bekezdése, a 124. §, a 126. § (2) bekezdése, a 132.
+      §, a 140. §, a 141. § és a 161. § (15) bekezdése 2015. április 1-jén lép hatályba.
+  - identifier: '4'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2015
+      position:
+        article:
+        - '60'
+        - '62'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2015
+      position:
+        article: '72'
+        point:
+        - '27'
+        - '28'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2015
+      position:
+        article: '73'
+        point: '5'
+    text: A 60–62. §, a 72. § 27. és 28. pontja, és a 73. § 5. pontja 2015. július
+      1-jén lép hatályba.
+  - identifier: '5'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2016
+      position:
+        article: '126'
+        paragraph: '3'
+    text: A 126. § (3) bekezdése 2016. január 1-jén lép hatályba.
+  identifier: '164'
+identifier: 2014. évi LXXII. törvény
+preamble: ''
+publication_date:
+  day: 25
+  month: 11
+  year: 2014
+subject: a büntetések, az intézkedések, egyes kényszerintézkedések és a szabálysértési
+  elzárás végrehajtásáról szóló 2013. évi CCXL. törvény és ehhez kapcsolódóan más
+  törvények módosításáról

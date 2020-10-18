@@ -1,0 +1,53 @@
+children:
+- __type__: Article
+  children:
+  - semantic_data:
+    - __type__: TextAmendment
+      original_text: alkalmazott, továbbá
+      position:
+        act: 2012. évi C. törvény
+        article: '459'
+        paragraph: '1'
+        point: '12'
+        subpoint: i
+      replacement_text: alkalmazott, a szakképzésről szóló törvényben meghatározott
+        esetben az oktató, továbbá
+    text: A Büntető Törvénykönyvről szóló 2012. évi C. törvény 459. § (1) bekezdés
+      12. pont i) alpontjában az „alkalmazott, továbbá” szövegrész helyébe az „alkalmazott,
+      a szakképzésről szóló törvényben meghatározott esetben az oktató, továbbá” szöveg
+      lép.
+  identifier: '86'
+- __type__: Article
+  children:
+  - identifier: '1'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position: null
+    text: Ez a törvény – a (2) bekezdésben meghatározott kivétellel – 2020. január
+      1-jén lép hatályba.
+  - identifier: '2'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2021
+      position:
+        article: '72'
+        paragraph: '2'
+    text: A 72. § (2) bekezdése 2021. január 1-jén lép hatályba.
+  identifier: '116'
+identifier: 2019. évi CXII. törvény
+preamble: ''
+publication_date:
+  day: 17
+  month: 12
+  year: 2019
+subject: a szakképzésről szóló 2019. évi LXXX. törvény hatálybalépésével összefüggő
+  módosító és hatályon kívül helyező rendelkezésekről

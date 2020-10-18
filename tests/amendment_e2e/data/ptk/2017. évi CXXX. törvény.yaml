@@ -1,0 +1,149 @@
+children:
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '1'
+        text: Vállalkozások közötti szerződés részévé általános szerződési feltételként
+          váló, a pénztartozás teljesítésének idejét, a késedelmi kamat mértékét,
+          esedékességét a jóhiszeműség és tisztesség követelményének megsértésével
+          egyoldalúan és indokolatlanul a jogosult hátrányára megállapító kikötést
+          – mint tisztességtelen kikötést – a vállalkozások érdekeinek képviseletét
+          ellátó szervezet is megtámadhatja a polgári perrendtartásról szóló törvény
+          közérdekből indított perre vonatkozó rendelkezései alapján.
+    intro: 'A Polgári Törvénykönyvről szóló 2013. évi V. törvény 6:106. § (1) bekezdése
+      helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 6:106
+        paragraph: '1'
+    wrap_up: ''
+  identifier: '109'
+- __type__: Article
+  children:
+  - identifier: '1'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 31
+        month: 12
+        year: 2017
+      position: null
+    text: Ez a törvény – a (2) és (3) bekezdésben foglalt kivétellel – 2017. december
+      31. napján lép hatályba.
+  - identifier: '2'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2018
+      position:
+        article:
+        - '1'
+        - '62'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2018
+      position:
+        article:
+        - '64'
+        - '107'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2018
+      position:
+        article:
+        - '109'
+        - '133'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2018
+      position:
+        article: '136'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2018
+      position:
+        article: '137'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2018
+      position:
+        article: '145'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2018
+      position:
+        article: '146'
+    text: Az 1–62. §, a 64–107. §, a 109–133. §, a 136. §, a 137. §, a 145. § és a
+      146. § 2018. január 1. napján lép hatályba.
+  - identifier: '3'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 2
+        month: 1
+        year: 2018
+      position:
+        article: '63'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 2
+        month: 1
+        year: 2018
+      position:
+        article: '108'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 2
+        month: 1
+        year: 2018
+      position:
+        article: '134'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 2
+        month: 1
+        year: 2018
+      position:
+        article: '135'
+    text: A 63. §, a 108. §, a 134. § és a 135. § 2018. január 2. napján lép hatályba.
+  identifier: '144'
+identifier: 2017. évi CXXX. törvény
+preamble: ''
+publication_date:
+  day: 27
+  month: 10
+  year: 2017
+subject: a polgári perrendtartásról szóló 2016. évi CXXX. törvény hatálybalépésével
+  összefüggő egyes törvények módosításáról

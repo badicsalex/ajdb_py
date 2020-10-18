@@ -1,0 +1,53 @@
+children:
+- __type__: Article
+  children:
+  - semantic_data:
+    - __type__: TextAmendment
+      original_text: vallási tevékenységet végző szervezet
+      position:
+        act: 2012. évi C. törvény
+        article: '459'
+        paragraph: '1'
+        point: '12'
+        subpoint: d
+      replacement_text: vallási egyesület
+    text: A Büntető Törvénykönyvről szóló 2012. évi C. törvény 459. § (1) bekezdés
+      12. pont d) alpontjában a „vallási tevékenységet végző szervezet” szövegrész
+      helyébe a „vallási egyesület” szöveg lép.
+  identifier: '54'
+- __type__: Article
+  children:
+  - identifier: '1'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 4
+        year: 2019
+      position: null
+    text: Ez a törvény – a (2) bekezdésben meghatározott kivétellel – 2019. április
+      15-én lép hatályba.
+  - identifier: '2'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2019
+      position:
+        article:
+        - '6'
+        - '8'
+    text: A 6–8. § 2019. július 1-jén lép hatályba.
+  identifier: '57'
+identifier: 2019. évi XXXVI. törvény
+preamble: ''
+publication_date:
+  day: 11
+  month: 4
+  year: 2019
+subject: a lelkiismereti és vallásszabadság jogáról, valamint az egyházak, vallásfelekezetek
+  és vallási közösségek jogállásáról szóló 2011. évi CCVI. törvény módosításához kapcsolódóan
+  egyes törvények módosításáról

@@ -1,0 +1,381 @@
+children:
+- __type__: Article
+  children:
+  - act_id_abbreviations:
+    - abbreviation: Ptk.
+      act: 2013. évi V. törvény
+    children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '4'
+        text: Az egyesület tagja nem köteles vagyoni hozzájárulást teljesíteni. A
+          tag az egyesület tartozásaiért saját vagyonával nem felel.
+    intro: 'A Polgári Törvénykönyvről szóló 2013. évi V. törvény (a továbbiakban:
+      Ptk.) 3:65. § (4) bekezdése helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 3:65
+        paragraph: '4'
+    wrap_up: ''
+  identifier: '32'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '1'
+        text: A tagnak jogszabályt, az egyesület alapszabályát vagy közgyűlési határozatát
+          súlyosan vagy ismételten sértő magatartása esetén – bármely egyesületi tag
+          vagy egyesületi szerv kezdeményezésére – a taggal szemben kizárási eljárás
+          folytatható le, ha az alapszabály a kizárást lefolytató szervet és a tisztességes
+          eljárást biztosító szabályokat meghatározta.
+    identifier: '1'
+    intro: 'A Ptk. 3:70. § (1) bekezdése helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 3:70
+        paragraph: '1'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '4'
+        text: Semmis az alapszabály olyan rendelkezése, amely az (1)–(3) bekezdésben
+          foglalt szabályoktól eltér.
+    identifier: '2'
+    intro: 'A Ptk. 3:70. §-a a következő (4) bekezdéssel egészül ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 3:70
+        paragraph: '4'
+      pure_insertion: true
+    wrap_up: ''
+  identifier: '33'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Title
+        identifier: '8'
+        title: AZ EGYESÜLET SZERVEI
+      - __type__: Article
+        children:
+        - identifier: '1'
+          text: Az egyesület döntéshozó szerve a közgyűlés.
+        - identifier: '2'
+          text: A tag jogosult a közgyűlésen részt venni, szavazati jogát gyakorolni,
+            a közgyűlés rendjének megfelelően felszólalni, kérdéseket feltenni, javaslatokat
+            és észrevételeket tenni.
+        - identifier: '3'
+          text: A közgyűlés hatáskörébe tartozik az alapszabály módosítása; az alapszabály
+            ettől eltérő rendelkezése semmis.
+        - identifier: '4'
+          text: Ha az alapszabály küldöttgyűlés működését írja elő, meg kell határoznia
+            a küldöttek választásának módját. A küldöttgyűlésre egyebekben a közgyűlés
+            szabályait kell megfelelően alkalmazni.
+        identifier: 3:71
+        title: Közgyűlés, a közgyűlés hatásköre. A küldöttgyűlés
+      - __type__: Article
+        children:
+        - identifier: '1'
+          text: A közgyűlés évente legalább egy alkalommal ülésezik. Az alapszabály
+            négy évnél ritkább ülésezést előíró rendelkezése semmis. A közgyűlési
+            meghívó elküldése és a közgyűlés napja között legalább tizenöt napnak
+            kell eltelnie.
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: határozatképtelenség esetére a megismételt közgyűlés időpontját,
+              helyét és az eltérő határozatképességi szabályokra vonatkozó figyelemfelhívást;
+              és
+          - __type__: AlphabeticPoint
+            identifier: b
+            text: küldöttgyűlés tartása esetén az erre a körülményre történő utalást.
+          identifier: '2'
+          intro: A közgyűlési meghívó az általános tartalmi elemeken túl tartalmazza
+        - identifier: '3'
+          text: A közgyűlés helyszínét elegendő a meghívóban megjelölni akkor is,
+            ha az eltér az egyesület székhelyétől.
+        - identifier: '4'
+          text: A közgyűlés napirendjére tűzött ügyekre vonatkozóan az ügyvezetés
+            a tagnak – kérelmére – köteles felvilágosítást adni.
+        identifier: 3:72
+        title: A közgyűlés összehívása és napirendje
+      - __type__: Article
+        children:
+        - identifier: '1'
+          text: A közgyűlési meghívó kézbesítésétől vagy közzétételétől számított,
+            az alapszabályban meghatározott időn belül a tagok és az egyesület szervei
+            a közgyűlést összehívó szervtől vagy személytől a napirend kiegészítését
+            kérhetik, a kiegészítés indokolásával.
+        - identifier: '2'
+          text: A napirend kiegészítésének tárgyában a közgyűlést összehívó szerv
+            vagy személy jogosult dönteni. Ha a napirend kiegészítése iránti kérelemről
+            a közgyűlést összehívó szerv vagy személy nem dönt vagy azt elutasítja,
+            a közgyűlés a napirend elfogadásáról szóló határozat meghozatalát megelőzően
+            külön dönt a napirend kiegészítésének tárgyában.
+        identifier: 3:73
+        title: A napirend kiegészítése
+      - __type__: Article
+        children:
+        - identifier: '1'
+          text: A közgyűlés nem nyilvános; azon a tagokon és az ügyvezetésen kívül
+            a közgyűlés összehívására jogosult által meghívottak és az alapszabály
+            vagy a közgyűlés határozata alapján tanácskozási joggal rendelkező személyek
+            vehetnek részt.
+        - identifier: '2'
+          text: A tag a közgyűlés ülésén tagsági jogait személyes részvétel helyett
+            elektronikus hírközlő eszközök igénybevételével akkor gyakorolhatja, ha
+            az alapszabály az igénybe vehető elektronikus hírközlő eszközöket, valamint
+            azok alkalmazásának feltételeit és módját úgy határozza meg, hogy a tagok
+            azonosítása és a tagok közötti kölcsönös és korlátozásmentes kommunikáció
+            biztosított legyen.
+        - identifier: '3'
+          text: Ha a közgyűlést nem szabályszerűen hívták össze, az ülést akkor lehet
+            megtartani, ha az ülésen a részvételre jogosultak legalább háromnegyede
+            jelen van, és egyhangúlag hozzájárul az ülés megtartásához.
+        - identifier: '4'
+          text: A szabályszerűen közölt napirenden szereplő kérdésben hozható határozat,
+            kivéve, ha a részvételre jogosultak legalább háromnegyede jelen van és
+            a napirenden nem szereplő kérdés megtárgyalásához egyhangúlag hozzájárul.
+        - identifier: '5'
+          text: A (3) és (4) bekezdésekben foglalt esetek körébe nem eső, nem szabályosan
+            összehívott vagy megtartott közgyűlésen elfogadott és ebből az okból érvénytelen
+            határozat az elfogadásának időpontjára visszamenő hatállyal érvényessé
+            válik, ha a határozatot a közgyűlés napjától számított harminc napon belül
+            valamennyi tag egyhangúlag érvényesnek ismeri el. Semmis az alapszabály
+            olyan rendelkezése, amely az egyhangúságra vonatkozó feltételtől eltér.
+        identifier: 3:74
+        title: A közgyűlés ülésezése
+      - __type__: Article
+        children:
+        - identifier: '1'
+          text: A közgyűlésen megjelent tagokról jelenléti ívet kell készíteni, amelyen
+            fel kell tüntetni a tag, valamint – ha az alapszabály a képviselő útján
+            történő részvételt lehetővé teszi – képviselője nevét és lakóhelyét vagy
+            székhelyét, és – ha a tagokat nem azonos számú szavazat illeti meg – a
+            tagot megillető szavazatok számát. A jelenléti ívet a közgyűlés levezető
+            elnöke és a jegyzőkönyvvezető aláírásával hitelesíti.
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: az egyesület nevét és székhelyét;
+          - __type__: AlphabeticPoint
+            identifier: b
+            text: a közgyűlés helyét és idejét;
+          - __type__: AlphabeticPoint
+            identifier: c
+            text: a közgyűlés levezető elnökének, a jegyzőkönyvvezetőnek, a jegyzőkönyv
+              hitelesítőjének a nevét;
+          - __type__: AlphabeticPoint
+            identifier: d
+            text: a közgyűlésen lezajlott fontosabb eseményeket, az elhangzott indítványokat;
+          - __type__: AlphabeticPoint
+            identifier: e
+            text: a határozati javaslatokat, a leadott szavazatok és ellenszavazatok,
+              valamint a szavazástól tartózkodók számát.
+          identifier: '2'
+          intro: A közgyűlésről jegyzőkönyvet kell készíteni, amely tartalmazza
+        - identifier: '3'
+          text: A jegyzőkönyvet a jegyzőkönyvvezető és a közgyűlés levezető elnöke
+            írja alá, és egy erre megválasztott, jelen lévő tag hitelesíti.
+        - identifier: '4'
+          text: Az egyesület ügyvezetése köteles a közgyűlési jegyzőkönyvet, valamint
+            a jelenléti ívet az egyesület dokumentumai között elhelyezni és megőrizni.
+        - identifier: '5'
+          text: Bármely tag a közgyűlési jegyzőkönyv másolatának vagy a jegyzőkönyv
+            egy részét tartalmazó kivonatának a kiadását kérheti az ügyvezetéstől.
+        identifier: 3:75
+        title: Jelenléti ív. Jegyzőkönyv
+      - __type__: Article
+        children:
+        - identifier: '1'
+          text: Az egyesület alapszabályának módosításához, az egyesület egyesüléséhez
+            és szétválásához a közgyűlés háromnegyedes szótöbbséggel hozott határozata
+            szükséges.
+        - identifier: '2'
+          text: Az egyesület céljának módosításához és az egyesület megszűnéséről
+            szóló közgyűlési döntéshez a szavazati joggal rendelkező tagok háromnegyedes
+            szótöbbséggel hozott határozata szükséges.
+        - identifier: '3'
+          text: Ha a közgyűlés határozatképtelen, a megismételt közgyűlés az eredeti
+            napirenden szereplő ügyekben a megjelent tagok számára tekintet nélkül
+            határozatképes, ha azt az eredeti időpontot legalább három és legfeljebb
+            tizenöt nappal követő időpontra hívják össze.
+        identifier: 3:76
+        title: Határozathozatal, megismételt közgyűlés
+      - __type__: Article
+        children:
+        - text: Az egyesület ügyvezetését az egyesület ügyvezetője vagy az elnökség
+            látja el. Az egyesület vezető tisztségviselői az ügyvezető vagy az elnökség
+            tagjai.
+        identifier: 3:77
+        title: Az ügyvezetés ellátása
+      - __type__: Article
+        children:
+        - identifier: '1'
+          text: Az elnökség három tagból áll. Semmis az alapszabály olyan rendelkezése,
+            amely háromnál kevesebb tagú elnökség felállítását írja elő.
+        - identifier: '2'
+          text: Az elnökség tagjai kötelesek a közgyűlésen részt venni, a közgyűlésen
+            az egyesülettel kapcsolatos kérdésekre válaszolni, az egyesület tevékenységéről
+            és gazdasági helyzetéről beszámolni.
+        - identifier: '3'
+          text: Az elnökség határozatait a jelenlévők egyszerű szótöbbségével hozza.
+            Az alapszabály ennél alacsonyabb határozathozatali arányt előíró rendelkezése
+            semmis.
+        identifier: 3:78
+        title: Elnökség
+      - __type__: Article
+        children:
+        - identifier: '1'
+          text: Ha az alapszabályban vagy a választás során a vezető tisztségviselői
+            megbízás időtartamáról a tagok nem rendelkeznek, a vezető tisztségviselő
+            megbízatása két évre szól.
+        - identifier: '2'
+          text: Az öt évnél hosszabb időre szóló vezető tisztségviselői megbízás az
+            öt évet meghaladó részében semmis.
+        - identifier: '3'
+          text: A vezető tisztségviselőket az egyesület tagjai közül kell választani,
+            az alapszabály felhatalmazása alapján a vezető tisztségviselők legfeljebb
+            egyharmada választható az egyesület tagjain kívüli személyekből.
+        identifier: 3:79
+        title: A vezető tisztségviselői megbízatás
+      - __type__: Article
+        children:
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: az egyesület napi ügyeinek vitele, az ügyvezetés hatáskörébe tartozó
+              ügyekben a döntések meghozatala;
+          - __type__: AlphabeticPoint
+            identifier: b
+            text: a beszámolók előkészítése és azoknak a közgyűlés elé terjesztése;
+          - __type__: AlphabeticPoint
+            identifier: c
+            text: az éves költségvetés elkészítése és annak a közgyűlés elé terjesztése;
+          - __type__: AlphabeticPoint
+            identifier: d
+            text: az egyesületi vagyon kezelése, a vagyon felhasználására és befektetésére
+              vonatkozó, a közgyűlés hatáskörébe nem tartozó döntések meghozatala
+              és végrehajtása;
+          - __type__: AlphabeticPoint
+            identifier: e
+            text: az egyesület jogszabály és az alapszabály szerinti szervei megalakításának
+              és a tisztségviselők megválasztatásának előkészítése;
+          - __type__: AlphabeticPoint
+            identifier: f
+            text: a közgyűlés összehívása, a tagság és az egyesület szerveinek értesítése;
+          - __type__: AlphabeticPoint
+            identifier: g
+            text: az ügyvezető szerv által összehívott közgyűlés napirendi pontjainak
+              meghatározása;
+          - __type__: AlphabeticPoint
+            identifier: h
+            text: részvétel a közgyűlésen és válaszadás az egyesülettel kapcsolatos
+              kérdésekre;
+          - __type__: AlphabeticPoint
+            identifier: i
+            text: a tagság nyilvántartása;
+          - __type__: AlphabeticPoint
+            identifier: j
+            text: az egyesület határozatainak, szervezeti okiratainak és egyéb könyveinek
+              vezetése;
+          - __type__: AlphabeticPoint
+            identifier: k
+            text: az egyesület működésével kapcsolatos iratok megőrzése;
+          - __type__: AlphabeticPoint
+            identifier: l
+            text: az egyesületet érintő megszűnési ok fennállásának mindenkori vizsgálata
+              és annak bekövetkezte esetén az e törvényben előírt intézkedések megtétele;
+              és
+          - __type__: AlphabeticPoint
+            identifier: m
+            text: az alapszabály felhatalmazása alapján a tag felvételéről való döntés.
+          intro: Az ügyvezetés feladatkörébe tartozik
+        identifier: 3:80
+        title: Az ügyvezetés feladatai
+      - __type__: Article
+        children:
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: az egyesület vagyona az esedékes tartozásokat nem fedezi;
+          - __type__: AlphabeticPoint
+            identifier: b
+            text: az egyesület előreláthatólag nem lesz képes a tartozásokat esedékességkor
+              teljesíteni; vagy
+          - __type__: AlphabeticPoint
+            identifier: c
+            text: az egyesület céljainak elérése veszélybe került.
+          identifier: '1'
+          intro: Az ügyvezető szerv köteles a közgyűlést összehívni a szükséges intézkedések
+            megtétele céljából, ha
+        - identifier: '2'
+          text: Az (1) bekezdés alapján összehívott közgyűlésen a tagok kötelesek
+            az összehívásra okot adó körülmény megszüntetése érdekében intézkedést
+            tenni vagy az egyesület megszüntetéséről dönteni.
+        - identifier: '3'
+          text: Semmis az alapszabály olyan rendelkezése, amely az (1) és a (2) bekezdésben
+            foglalt szabályoknál az egyesületre nézve enyhébb követelményeket ír elő.
+        identifier: 3:81
+        title: A közgyűlés összehívása
+      - __type__: Article
+        children:
+        - identifier: '1'
+          text: Kötelező felügyelőbizottságot létrehozni, ha a tagok több mint fele
+            nem természetes személy, vagy ha a tagság létszáma a száz főt meghaladja.
+            Az alapszabály ettől eltérő rendelkezése semmis
+        - identifier: '2'
+          text: A felügyelőbizottság feladata az egyesületi szervek, valamint a jogszabályok,
+            az alapszabály és az egyesületi határozatok végrehajtásának, betartásának
+            ellenőrzése.
+        identifier: 3:82
+        title: A felügyelőbizottság létrehozásának kötelező esetei
+    intro: 'A Ptk. Harmadik Könyv VIII. Címének helyébe a következő cím lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: StructuralReference
+        act: 2013. évi V. törvény
+        book: '3'
+        title: '8'
+    wrap_up: ''
+  identifier: '34'
+- __type__: Article
+  children:
+  - identifier: '1'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2017
+      position: null
+    text: Ez a törvény – a (2) bekezdésben foglalt kivétellel – 2017. január 1. napján
+      lép hatályba.
+  - identifier: '2'
+    text: E törvény 4–31. §-ai 2017. március 1. napján lépnek hatályba.
+  identifier: '37'
+identifier: 2016. évi CLXXIX. törvény
+preamble: ''
+publication_date:
+  day: 20
+  month: 12
+  year: 2016
+subject: a civil szervezetek és a cégek nyilvántartásával összefüggő eljárások módosításáról
+  és gyorsításáról

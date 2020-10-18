@@ -1,0 +1,491 @@
+children:
+- __type__: Article
+  children:
+  - act_id_abbreviations:
+    - abbreviation: Btk.
+      act: 2012. évi C. törvény
+    children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '2'
+        text: A 184–184/C. § alkalmazásában az új pszichoaktív anyag csekély mennyiségű,
+          ha annak tiszta hatóanyag-tartalma a 2 gramm mennyiséget nem haladja meg.
+          A só formában előforduló vegyületek esetén tiszta hatóanyag-tartalom alatt
+          a bázis formában megadott hatóanyag-tartalmat kell érteni.
+    intro: 'A Büntető Törvénykönyvről szóló 2012. évi C. törvény (a továbbiakban:
+      Btk.) 184/D. § (2) bekezdése helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: 184/D
+        paragraph: '2'
+    wrap_up: ''
+  identifier: '58'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        children:
+        - __type__: AlphabeticPoint
+          identifier: a
+          text: az (1) bekezdés a) pontjában meghatározott célból jelentős anyagi
+            javakat kerít hatalmába, és azok sértetlenül hagyását vagy visszaadását
+            állami szervhez vagy nemzetközi szervezethez intézett követelés teljesítésétől
+            teszi függővé, vagy
+        - __type__: AlphabeticPoint
+          identifier: b
+          text: terrorista csoportot szervez.
+        identifier: '2'
+        intro: Az (1) bekezdés szerint büntetendő, aki
+    intro: 'A Btk. 314. § (2) bekezdése helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '314'
+        paragraph: '2'
+    wrap_up: ''
+  identifier: '59'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Article
+        children:
+        - text: Aki terrorcselekmény elkövetésével fenyeget, bűntett miatt két évtől
+            nyolc évig terjedő szabadságvesztéssel büntetendő.
+        identifier: '316'
+    intro: 'A Btk. 316. §-a helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '316'
+    wrap_up: ''
+  identifier: '60'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Article
+        children:
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: a 314. § (1) vagy (2) bekezdésében meghatározott bűntett elkövetése
+              vagy az elkövetésére történő felhívás, ajánlkozás, vállalkozás, a közös
+              elkövetésben megállapodás, vagy az elkövetés elősegítése céljából az
+              ehhez szükséges vagy ezt könnyítő feltételek biztosítása, illetve
+          - __type__: AlphabeticPoint
+            identifier: b
+            text: terrorista csoporthoz csatlakozás
+          identifier: '1'
+          intro: Aki
+          wrap_up: céljából Magyarország területére beutazik, onnan kiutazik vagy
+            azon átutazik, bűntett miatt két évtől nyolc évig terjedő szabadságvesztéssel
+            büntetendő.
+        - identifier: '2'
+          text: Az (1) bekezdés szerint büntetendő, aki az ott meghatározott utazást
+            szervezi, vagy az ilyen utazás támogatása céljából anyagi eszközt szolgáltat
+            vagy gyűjt.
+        identifier: 316/A
+    intro: 'A Btk. Terrorcselekmény alcíme a következő 316/A. §-sal egészül ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: 316/A
+      pure_insertion: true
+    wrap_up: ''
+  identifier: '61'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Article
+        children:
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: terrorcselekmény feltételeinek biztosításához anyagi eszközt szolgáltat
+              vagy gyűjt,
+          - __type__: AlphabeticPoint
+            identifier: b
+            text: terrorcselekmény elkövetésére készülő személyt, illetve terrorcselekmény
+              elkövetőjét, vagy e személyekre tekintettel más személyt anyagi eszközzel
+              támogat, vagy
+          - __type__: AlphabeticPoint
+            identifier: c
+            text: a b) pontban meghatározott személyek támogatása céljából anyagi
+              eszközt szolgáltat vagy gyűjt,
+          identifier: '1'
+          intro: Aki
+          wrap_up: bűntett miatt két évtől nyolc évig terjedő szabadságvesztéssel
+            büntetendő.
+        - identifier: '2'
+          text: Aki az (1) bekezdésben meghatározott bűncselekményt terrorcselekmény
+            terrorista csoportban történő elkövetése vagy terrorista csoport tagja
+            érdekében valósítja meg, vagy a terrorista csoport tevékenységét egyéb
+            módon támogatja, vagy a terrorista csoport ilyen támogatása céljából anyagi
+            eszközt szolgáltat vagy gyűjt, öt évtől tíz évig terjedő szabadságvesztéssel
+            büntetendő.
+        identifier: '318'
+    identifier: '1'
+    intro: 'A Btk. 318. §-a helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '318'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Article
+        children:
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: terror jellegű bűncselekmény feltételeinek biztosításához anyagi
+              eszközt szolgáltat vagy gyűjt,
+          - __type__: AlphabeticPoint
+            identifier: b
+            text: terror jellegű bűncselekmény elkövetésére készülő személyt, illetve
+              terror jellegű bűncselekmény elkövetőjét, vagy e személyekre tekintettel
+              más személyt anyagi eszközökkel támogat, vagy
+          - __type__: AlphabeticPoint
+            identifier: c
+            text: a b) pontban meghatározott személyek támogatása céljából anyagi
+              eszközt szolgáltat vagy gyűjt,
+          identifier: '1'
+          intro: Aki
+          wrap_up: bűntett miatt három évig terjedő szabadságvesztéssel büntetendő.
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: az emberölés [160. § (1) bekezdés, 160. § (2) bekezdés, ha a cselekmény
+              a nemzetközi polgári repülést kiszolgáló repülőtéren vagy repülésben
+              levő légijármű fedélzetén vagy tengeren hajózó hajón tartózkodó személy,
+              vagy nemzetközileg védett személy ellen irányul],
+          - __type__: AlphabeticPoint
+            identifier: b
+            text: a testi sértés (164. §, ha a cselekmény a nemzetközi polgári repülést
+              kiszolgáló repülőtéren vagy repülésben levő légijármű fedélzetén vagy
+              tengeren hajózó hajón tartózkodó személy vagy nemzetközileg védett személy
+              ellen irányul),
+          - __type__: AlphabeticPoint
+            identifier: c
+            text: az emberrablás [190. § (1)–(4) bekezdés],
+          - __type__: AlphabeticPoint
+            identifier: d
+            text: a közlekedés biztonsága elleni bűncselekmény (232. §, ha a cselekmény
+              légi jármű vagy tengeren hajózó hajó ellen irányul).
+          - __type__: AlphabeticPoint
+            identifier: e
+            text: a radioaktív anyaggal visszaélés (250. §),
+          - __type__: AlphabeticPoint
+            identifier: f
+            text: a rombolás (257. §),
+          - __type__: AlphabeticPoint
+            identifier: g
+            text: a nemzetközileg védett személy elleni erőszak (313. §),
+          - __type__: AlphabeticPoint
+            identifier: h
+            text: a jármű hatalomba kerítése (320. §),
+          - __type__: AlphabeticPoint
+            identifier: i
+            text: a közveszély okozása [322. § (1)–(3) bekezdés],
+          - __type__: AlphabeticPoint
+            identifier: j
+            text: a közérdekű üzem működésének megzavarása (323. §),
+          - __type__: AlphabeticPoint
+            identifier: k
+            text: a robbanóanyaggal vagy robbantószerrel visszaélés (324. §, ha a
+              cselekményt közérdekű üzem, illetve középület vagy építmény területén
+              követik el),
+          - __type__: AlphabeticPoint
+            identifier: l
+            text: a lőfegyverrel vagy lőszerrel visszaélés (325. §, ha a cselekményt
+              közérdekű üzem, illetve középület vagy építmény területén követik el).
+          identifier: '2'
+          intro: 'Az (1) bekezdés vonatkozásában terror jellegű bűncselekmény:'
+        identifier: 318/A
+      - __type__: Article
+        children:
+        - text: A 318. § és a 318/A. § alkalmazásában anyagi eszközön a terrorizmus
+            leküzdése érdekében egyes személyekkel és szervezetekkel szemben hozott
+            különleges korlátozó intézkedésekről szóló, 2001. december 27-i 2580/2001/EK
+            tanácsi rendelet 1. cikk 1. pontjában meghatározott eszközöket, jogi dokumentumokat
+            és okiratokat kell érteni.
+        identifier: 318/B
+    identifier: '2'
+    intro: 'A Btk. Terrorizmus finanszírozása alcíme a következő 318/A. és 318/B.
+      §-sal egészül ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article:
+        - 318/A
+        - 318/B
+      pure_insertion: true
+    wrap_up: ''
+  identifier: '62'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Article
+        children:
+        - text: A 314–315. §, a 316/A. § és a 318. § alkalmazásában terrorista csoport
+            a három vagy több személyből álló, hosszabb időre szervezett, összehangoltan
+            működő csoport, amelynek célja terrorcselekmény elkövetése.
+        identifier: '319'
+    intro: 'A Btk. 319. §-a helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '319'
+    wrap_up: ''
+  identifier: '63'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: NumericPoint
+        identifier: '32'
+        text: 'nemzetközileg védett személy: az a külföldi hivatalos személy, aki
+          a rá vonatkozó nemzetközi szerződés alapján nemzetközi jogon alapuló egyéb
+          mentességet élvez.'
+      intro: E törvény alkalmazásában
+    intro: 'A Btk. 459. § (1) bekezdése a következő 32. ponttal egészül ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '459'
+        paragraph: '1'
+        point: '32'
+      pure_insertion: true
+    wrap_up: ''
+  identifier: '64'
+- __type__: Article
+  children:
+  - semantic_data:
+    - __type__: Repeal
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '313'
+        paragraph: '4'
+    text: Hatályát veszti a Btk. 313. § (4) bekezdése.
+  identifier: '65'
+- __type__: Article
+  children:
+  - children:
+    - __type__: AlphabeticPoint
+      identifier: a
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: '[314. § (1)–(2) bekezdés, 315–316. §]'
+        position:
+          act: 2012. évi C. törvény
+          article: '37'
+          paragraph: '3'
+          point: a
+          subpoint: ac
+        replacement_text: '[314. § (1)–(2) bekezdés, 315–316/A. §]'
+      - __type__: TextAmendment
+        original_text: '[318. § (1)–(2) bekezdés]'
+        position:
+          act: 2012. évi C. törvény
+          article: '37'
+          paragraph: '3'
+          point: a
+          subpoint: ac
+        replacement_text: '[318. § és 318/A. §]'
+      text: 37. § (3) bekezdés a) pont ac) alpontjában a „[314. § (1)–(2) bekezdés,
+        315–316. §]” szövegrész helyébe a „[314. § (1)–(2) bekezdés, 315–316/A. §]”
+        szöveg, a „[318. § (1)–(2) bekezdés]” szövegrész helyébe a „[318. § és 318/A.
+        §]” szöveg,
+    - __type__: AlphabeticPoint
+      identifier: b
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: '[314. §, 315. § (1)–(2) bekezdés és 316. §]'
+        position:
+          act: 2012. évi C. törvény
+          article: 74/A
+          paragraph: '2'
+          point: h
+        replacement_text: '[314. §, 315. § (1)–(2) bekezdés, 316. § és 316/A. §]'
+      - __type__: TextAmendment
+        original_text: '[318. § (1)–(2) bekezdés]'
+        position:
+          act: 2012. évi C. törvény
+          article: 74/A
+          paragraph: '2'
+          point: h
+        replacement_text: '[318. § és 318/A. §]'
+      text: 74/A. § (2) bekezdés h) pontjában a „[314. §, 315. § (1)–(2) bekezdés
+        és 316. §]” szövegrész helyébe a „[314. §, 315. § (1)–(2) bekezdés, 316. §
+        és 316/A. §]” szöveg, a „[318. § (1)–(2) bekezdés]” szövegrész helyébe a „[318.
+        § és 318/A. §]” szöveg,
+    - __type__: AlphabeticPoint
+      identifier: c
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: '[318. § (1)–(2) bekezdés]'
+        position:
+          act: 2012. évi C. törvény
+          article: '282'
+          paragraph: '3'
+          point: b
+        replacement_text: '[318. § és 318/A. §]'
+      text: 282. § (3) bekezdés b) pontjában a „[318. § (1)–(2) bekezdés]” szövegrész
+        helyébe a „[318. § és 318/A. §]” szöveg
+    - __type__: AlphabeticPoint
+      identifier: d
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: bűncselekményének
+        position:
+          act: 2012. évi C. törvény
+          article: '399'
+          paragraph: '3'
+        replacement_text: büntetendő cselekményének
+      text: 399. § (3) bekezdésében a „bűncselekményének” szövegrész helyébe a „büntetendő
+        cselekményének” szöveg,
+    - __type__: AlphabeticPoint
+      identifier: e
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: bűncselekményből
+        position:
+          act: 2012. évi C. törvény
+          article: '400'
+          paragraph: '1'
+        replacement_text: büntetendő cselekményből
+      text: 400. § (1) bekezdésében a „bűncselekményből” szövegrész helyébe a „büntetendő
+        cselekményből” szöveg
+    intro: A Btk.
+    wrap_up: lép.
+  identifier: '66'
+- __type__: Article
+  children:
+  - identifier: '1'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: DaysAfterPublication
+        days: 8
+      position: null
+    text: Ez a törvény – a (2)–(5) bekezdésben meghatározott kivétellel – a kihirdetését
+      követő nyolcadik napon lép hatályba.
+  - identifier: '2'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2018
+      position:
+        article:
+        - '1'
+        - '2'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2018
+      position:
+        article:
+        - '4'
+        - '37'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2018
+      position:
+        article:
+        - '50'
+        - '56'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2018
+      position:
+        article:
+        - '59'
+        - '74'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2018
+      position:
+        article: '76'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2018
+      position:
+        article: '78'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2018
+      position:
+        article:
+        - '80'
+        - '85'
+    text: Az 1–2. §, a 4–37. §, az 50–56. §, az 59–74. §, a 76. §, a 78. § és a 80–85.
+      § 2018. január 1-jén lép hatályba.
+  - identifier: '3'
+    text: A 86. § (2) bekezdése a Varsói Egyezmény 53. cikk 6. bekezdés második mondatában
+      meghatározott időpontban lép hatályba.
+  - identifier: '4'
+    text: A 86. § (2) bekezdése hatálybalépésének és a Fenntartás visszavonása hatálybalépésének
+      naptári napját a külpolitikáért felelős miniszter annak ismertté válását követően
+      a Magyar Közlönyben haladéktalanul közzétett közleményével állapítja meg.
+  - identifier: '5'
+    text: A 86. § (3) bekezdése a 86. § (2) bekezdése hatálybalépését követő napon
+      lép hatályba.
+  identifier: '87'
+identifier: 2017. évi XXXIX. törvény
+preamble: ''
+publication_date:
+  day: 15
+  month: 5
+  year: 2017
+subject: az európai uniós és a nemzetközi bűnügyi együttműködést szabályozó törvények,
+  és ehhez kapcsolódóan más törvények jogharmonizációs célú módosításáról

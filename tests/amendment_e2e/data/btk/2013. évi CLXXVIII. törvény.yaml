@@ -1,0 +1,88 @@
+children:
+- __type__: Article
+  children:
+  - act_id_abbreviations:
+    - abbreviation: Btk.
+      act: 2012. évi C. törvény
+    children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Subtitle
+        identifier: ''
+        title: Becsület csorbítására alkalmas hamis hang- vagy képfelvétel készítése
+      - __type__: Article
+        children:
+        - identifier: '1'
+          text: Aki abból a célból, hogy más vagy mások becsületét csorbítsa, hamis,
+            hamisított vagy valótlan tartalmú hang- vagy képfelvételt készít, ha más
+            bűncselekmény nem valósul meg, vétség miatt egy évig terjedő szabadságvesztéssel
+            büntetendő.
+        identifier: 226/A
+    identifier: '1'
+    intro: 'A Büntető Törvénykönyvről szóló 2012. évi C. törvény (a továbbiakban:
+      Btk.) a következő 226/A. §-sal és az azt megelőző alcímmel egészül ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: StructuralReference
+        act: 2012. évi C. törvény
+        special:
+          article_id: 226/A
+          position: BEFORE_WITH_ARTICLE
+      pure_insertion: true
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Subtitle
+        identifier: ''
+        title: Becsület csorbítására alkalmas hamis hang- vagy képfelvétel nyilvánosságra
+          hozatala
+      - __type__: Article
+        children:
+        - identifier: '1'
+          text: Aki abból a célból, hogy más vagy mások becsületét csorbítsa, hamis,
+            hamisított vagy valótlan tartalmú hang- vagy képfelvételt hozzáférhetővé
+            tesz, vétség miatt két évig terjedő szabadságvesztéssel büntetendő.
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: nagy nyilvánosság előtt, vagy
+          - __type__: AlphabeticPoint
+            identifier: b
+            text: jelentős érdeksérelmet okozva
+          identifier: '2'
+          intro: A büntetés három évig terjedő szabadságvesztés, ha a bűncselekményt
+          wrap_up: követik el.
+        identifier: 226/B
+    identifier: '2'
+    intro: 'A Btk. a következő 226/B. §-sal és az azt megelőző alcímmel egészül ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: StructuralReference
+        act: 2012. évi C. törvény
+        special:
+          article_id: 226/B
+          position: BEFORE_WITH_ARTICLE
+      pure_insertion: true
+    wrap_up: ''
+  identifier: '1'
+- __type__: Article
+  children:
+  - semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: DaysAfterPublication
+        days: 8
+      position: null
+    text: E törvény a kihirdetését követő nyolcadik napon lép hatályba.
+  identifier: '2'
+identifier: 2013. évi CLXXVIII. törvény
+preamble: ''
+publication_date:
+  day: 8
+  month: 11
+  year: 2013
+subject: az emberi méltóság védelme és a bizonyítékok meghamisításának megakadályozása
+  érdekében a Büntető Törvénykönyvről szóló 2012. évi C. törvény módosításáról

@@ -1,0 +1,623 @@
+children:
+- __type__: Article
+  children:
+  - act_id_abbreviations:
+    - abbreviation: Btk.
+      act: 2012. évi C. törvény
+    children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: AlphabeticPoint
+        identifier: c
+        text: életfogytig tartó szabadságvesztés mellett pénzbüntetés.
+      intro: Nem szabható ki
+    intro: 'A Büntető Törvénykönyvről szóló 2012. évi C. törvény (a továbbiakban:
+      Btk.) 33. § (6) bekezdése a következő c) ponttal egészül ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '33'
+        paragraph: '6'
+        point: c
+      pure_insertion: true
+    wrap_up: ''
+  identifier: '51'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Article
+        children:
+        - identifier: '1'
+          text: A szabálysértési eljárásban kiszabott és végrehajtott elzárás és közérdekű
+            munka teljes időtartamát, valamint a pénzbírságot be kell számítani –
+            a szabálysértésekről, a szabálysértési eljárásról és a szabálysértési
+            nyilvántartási rendszerről szóló 2012. évi II. törvény 127. § (1) bekezdés
+            e) pontja szerint lefolytatott perújítási eljárást követően, a perújítással
+            érintett cselekmény miatt – a büntetőeljárásban kiszabott szabadságvesztésbe,
+            elzárásba, közérdekű munkába, pénzbüntetésbe és javítóintézeti nevelésbe.
+        - identifier: '2'
+          text: A beszámításnál egynapi szabálysértési elzárás egynapi szabadságvesztésnek,
+            illetve elzárásnak, négy óra közérdekű munkának, egynapi tétel pénzbüntetésnek,
+            valamint egynapi javítóintézeti nevelésnek felel meg.
+        - identifier: '3'
+          text: A szabálysértési pénzbírság ötezer forintonként egynapi szabadságvesztésnek,
+            illetve elzárásnak, négy óra közérdekű munkának, a pénzbüntetés azonos
+            értékének, illetve egynapi javítóintézeti nevelésnek felel meg.
+        - identifier: '4'
+          text: A szabálysértési eljárásban kiszabott közérdekű munka a közérdekű
+            munka azonos mértékének, továbbá a szabálysértési eljárásban kiszabott
+            közérdekű munka hat óránként egynapi szabadságvesztésnek, illetve elzárásnak,
+            egynapi tétel pénzbüntetésnek, valamint egynapi javítóintézeti nevelésnek
+            felel meg.
+        identifier: 92/A
+    intro: 'A Btk. 92/A. §-a helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: 92/A
+    wrap_up: ''
+  identifier: '52'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Subtitle
+        identifier: ''
+        title: A már végrehajtott büntetés vagy intézkedés beszámítására vonatkozó
+          szabályok
+      - __type__: Article
+        children:
+        - identifier: '1'
+          text: Ha a perújítás, a felülvizsgálat, a törvényesség érdekében bejelentett
+            jogorvoslat, vagy a megismételt eljárás eredményeként hozott ítélet az
+            alapügyben hozott határozatot megváltoztatatja, az alapügyben kiszabott
+            és végrehajtott büntetést vagy intézkedést be kell számítani. Ha a büntetés
+            vagy az intézkedés neme eltér, a beszámításra a (2) bekezdésben foglaltak
+            az irányadók.
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: egynapi szabadságvesztés egynapi elzárásnak, négy óra közérdekű
+              munkának, egynapi tétel pénzbüntetésnek, hat óra jóvátételi munkának
+              vagy egynapi javítóintézeti nevelésnek,
+          - __type__: AlphabeticPoint
+            identifier: b
+            text: egynapi elzárás egynapi szabadságvesztésnek, négy óra közérdekű
+              munkának, egynapi tétel pénzbüntetésnek, hat óra jóvátételi munkának
+              vagy egynapi javítóintézeti nevelésnek,
+          - __type__: AlphabeticPoint
+            identifier: c
+            text: négy óra közérdekű munka egynapi szabadságvesztésnek, egynapi elzárásnak,
+              egynapi tétel pénzbüntetésnek, hat óra jóvátételi munkának vagy egynapi
+              javítóintézeti nevelésnek,
+          - __type__: AlphabeticPoint
+            identifier: d
+            text: egynapi tétel pénzbüntetés egynapi szabadságvesztésnek, egynapi
+              elzárásnak, négy óra közérdekű munkának, hat óra jóvátételi munkának
+              vagy egynapi javítóintézeti nevelésnek,
+          - __type__: AlphabeticPoint
+            identifier: e
+            text: egynapi javítóintézeti nevelés egynapi szabadságvesztésnek, egynapi
+              elzárásnak, négy óra közérdekű munkának, egynapi tétel pénzbüntetésnek
+              vagy hat óra jóvátételi munkának,
+          - __type__: AlphabeticPoint
+            identifier: f
+            text: hat óra jóvátételi munka egynapi szabadságvesztésnek, egynapi elzárásnak,
+              négy óra közérdekű munkának, egynapi tétel pénzbüntetésnek vagy egynapi
+              javítóintézeti nevelésnek,
+          identifier: '2'
+          intro: A beszámításnál
+          wrap_up: felel meg.
+        identifier: 92/B
+    intro: 'A Btk. IX. Fejezete a 92/A. §-t követően a következő alcímmel egészül
+      ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: StructuralReference
+        act: 2012. évi C. törvény
+        special:
+          article_id: 92/A
+          position: AFTER
+      pure_insertion: true
+    wrap_up: ''
+  identifier: '53'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: 4a
+        text: Aki az (1)–(4) bekezdésben meghatározott egészségügyi termék hamisítására
+          irányuló előkészületet követ el, vétség miatt egy évig terjedő szabadságvesztéssel
+          büntetendő.
+    intro: 'A Btk. 186. §-a a következő (4a) bekezdéssel egészül ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '186'
+        paragraph: 4a
+      pure_insertion: true
+    wrap_up: ''
+  identifier: '54'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '1'
+        text: Aki olyan kihívóan közösségellenes vagy erőszakos magatartást tanúsít,
+          amely a hatóság eljárását megzavarja, akadályozza vagy meghiúsítja, ha súlyosabb
+          bűncselekmény nem valósul meg, vétség miatt két évig terjedő szabadságvesztéssel
+          büntetendő.
+      - __type__: Paragraph
+        identifier: '2'
+        text: A büntetés bűntett miatt három évig terjedő szabadságvesztés, ha az
+          (1) bekezdésben meghatározott bűncselekményt bírósági eljárásban követik
+          el.
+    intro: 'A Btk. 279. § (1) és (2) bekezdése helyébe a következő rendelkezések lépnek:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '279'
+        paragraph:
+        - '1'
+        - '2'
+    wrap_up: ''
+  identifier: '55'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '8'
+        text: Korlátlanul enyhíthető annak a büntetése, aki az (1)–(6) bekezdésében
+          meghatározott költségvetési csalással okozott vagyoni hátrányt a vádirat
+          benyújtásáig megtéríti. Ez a rendelkezés nem alkalmazható, ha a bűncselekményt
+          bűnszövetségben vagy különös visszaesőként követik el.
+    identifier: '1'
+    intro: 'A Btk. 396. § (8) bekezdése helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '396'
+        paragraph: '8'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: AlphabeticPoint
+        identifier: c
+        text: a különös visszaesés szempontjából hasonló jellegű bűncselekmény a költségvetést
+          károsító bűncselekmény.
+      intro: E § alkalmazásában
+    identifier: '2'
+    intro: 'A Btk. 396. § (9) bekezdése a következő c) ponttal egészül ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '396'
+        paragraph: '9'
+        point: c
+      pure_insertion: true
+    wrap_up: ''
+  identifier: '56'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Article
+        children:
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: pénzügyi szolgáltatási vagy kiegészítő pénzügyi szolgáltatási,
+          - __type__: AlphabeticPoint
+            identifier: b
+            text: befektetési szolgáltatási, illetve befektetési szolgáltatási tevékenységet
+              kiegészítő szolgáltatási, árutőzsdei szolgáltatási, befektetési alapkezelési,
+              kockázati tőkealap-kezelési, tőzsdei, központi értéktári vagy központi
+              szerződő fél,
+          - __type__: AlphabeticPoint
+            identifier: c
+            text: biztosítási, viszontbiztosítási,
+          - __type__: AlphabeticPoint
+            identifier: d
+            text: önkéntes kölcsönös biztosító pénztári, magánnyugdíjpénztári vagy
+              foglalkoztatói nyugdíj-szolgáltatási
+          identifier: '1'
+          intro: Aki törvényben előírt engedély nélkül
+          wrap_up: tevékenységet végez, bűntett miatt három évig terjedő szabadságvesztéssel
+            büntetendő.
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: engedély nélkül közvetítői tevékenységet végez,
+          - __type__: AlphabeticPoint
+            identifier: b
+            text: nyilvántartásba vétel, illetve bejelentés hiányában közvetítői tevékenységet
+              végez oly módon, hogy annak megtörténte ellenőrzését elmulasztotta,
+          identifier: '2'
+          intro: Aki az (1) bekezdés a)–c) pontjában megjelölt valamely tevékenységhez
+            kapcsolódóan törvényben előírt
+          wrap_up: vétség miatt két évig terjedő szabadságvesztéssel büntetendő.
+        identifier: '408'
+    intro: 'A Btk. 408. §-a helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '408'
+    wrap_up: ''
+  identifier: '57'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        children:
+        - __type__: AlphabeticPoint
+          identifier: a
+          text: nyilvános vagy a közönség részére nyitva álló helyen kívül más helyiséget
+            vagy területet, továbbá – a közösségi közlekedési eszköz kivételével –
+            járművet titokban átkutat,
+        - __type__: AlphabeticPoint
+          identifier: b
+          text: nyilvános vagy a közönség részére nyitva álló helyen kívül más helyiségben
+            vagy területen, továbbá – a közösségi közlekedési eszköz kivételével –
+            járművön történteket titokban technikai eszköz alkalmazásával megfigyeli
+            vagy rögzíti.
+        identifier: 1a
+        intro: Az (1) bekezdés szerint büntetendő, aki személyes adat, magántitok,
+          gazdasági titok vagy üzleti titok jogosulatlan megismerése céljából
+    intro: 'A Btk. 422. §-a a következő (1a) bekezdéssel egészül ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '422'
+        paragraph: 1a
+      pure_insertion: true
+    wrap_up: ''
+  identifier: '58'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: AlphabeticPoint
+        identifier: l
+        text: 219. §-a a személyes adatoknak az illetékes hatóságok által a bűncselekmények
+          megelőzése, nyomozása, felderítése, a vádeljárás lefolytatása vagy büntetőjogi
+          szankciók végrehajtása céljából végzett kezelése tekintetében a természetes
+          személyek védelméről és az ilyen adatok szabad áramlásáról, valamint a 2008/977/IB
+          tanácsi kerethatározat hatályon kívül helyezéséről szóló, 2016. április
+          27-i (EU) 2016/680 európai parlamenti és tanácsi irányelvnek,
+      - __type__: AlphabeticPoint
+        identifier: m
+        text: 3., 10., 12., 14., 31., 63., 72–77., 80., 314–318/A., 319. és 331. §-a
+          a terrorizmus elleni küzdelemről, a 2002/475/IB tanácsi kerethatározat felváltásáról,
+          valamint a 2005/671/IB tanácsi határozat módosításáról szóló, 2017. március
+          15-i (EU) 2017/541 európai parlamenti és tanácsi irányelvnek
+      intro: E törvény
+      wrap_up: való megfelelést szolgálja.
+    identifier: '1'
+    intro: 'A Btk. 465. § (1) bekezdése a következő l) és m) ponttal egészül ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '465'
+        paragraph: '1'
+        point:
+        - l
+        - m
+      pure_insertion: true
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: AlphabeticPoint
+        identifier: d
+        text: 219. §-a a természetes személyeknek a személyes adatok kezelése tekintetében
+          történő védelméről és az ilyen adatok szabad áramlásáról, valamint a 95/46/EK
+          irányelv hatályon kívül helyezéséről szóló, 2016. április 27-i (EU) 2016/679
+          európai parlamenti és tanácsi rendelet (általános adatvédelmi rendelet)
+          végrehajtásához szükséges rendelkezéseket állapít meg.
+      intro: E törvény
+    identifier: '2'
+    intro: 'A Btk. 465. § (2) bekezdése a következő d) ponttal egészül ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '465'
+        paragraph: '2'
+        point: d
+      pure_insertion: true
+    wrap_up: ''
+  identifier: '59'
+- __type__: Article
+  children:
+  - children:
+    - __type__: AlphabeticPoint
+      identifier: a
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: személyes adatok védelméről vagy kezeléséről szóló törvényi
+          rendelkezések
+        position:
+          act: 2012. évi C. törvény
+          article: '219'
+          paragraph: '1'
+        replacement_text: személyes adatok védelméről vagy kezeléséről szóló törvényi
+          vagy az Európai Unió kötelező jogi aktusában meghatározott rendelkezések
+      text: 219. § (1) bekezdésében a „személyes adatok védelméről vagy kezeléséről
+        szóló törvényi rendelkezések” szövegrész helyébe a „személyes adatok védelméről
+        vagy kezeléséről szóló törvényi vagy az Európai Unió kötelező jogi aktusában
+        meghatározott rendelkezések” szöveg,
+    - __type__: AlphabeticPoint
+      identifier: b
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: személyes adatok védelméről vagy kezeléséről szóló törvényi
+          rendelkezések
+        position:
+          act: 2012. évi C. törvény
+          article: '219'
+          paragraph: '2'
+        replacement_text: személyes adatok védelméről vagy kezeléséről szóló törvényi
+          vagy az Európai Unió kötelező jogi aktusában meghatározott rendelkezések
+      - __type__: TextAmendment
+        original_text: érintett tájékoztatására vonatkozó kötelezettségének
+        position:
+          act: 2012. évi C. törvény
+          article: '219'
+          paragraph: '2'
+        replacement_text: érintett hozzáféréshez való jogának gyakorlása érdekében
+          szükséges tájékoztatására vonatkozó kötelezettségének
+      text: 219. § (2) bekezdésében a „személyes adatok védelméről vagy kezeléséről
+        szóló törvényi rendelkezések” szövegrész helyébe a „személyes adatok védelméről
+        vagy kezeléséről szóló törvényi vagy az Európai Unió kötelező jogi aktusában
+        meghatározott rendelkezések” szöveg, és az „érintett tájékoztatására vonatkozó
+        kötelezettségének” szövegrész helyébe az „érintett hozzáféréshez való jogának
+        gyakorlása érdekében szükséges tájékoztatására vonatkozó kötelezettségének”
+        szöveg,
+    - __type__: AlphabeticPoint
+      identifier: c
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: különleges adatra
+        position:
+          act: 2012. évi C. törvény
+          article: '219'
+          paragraph: '3'
+        replacement_text: különleges adatra vagy bűnügyi személyes adatra
+      text: 219. § (3) bekezdésében a „különleges adatra” szövegrész helyébe a „különleges
+        adatra vagy bűnügyi személyes adatra” szöveg,
+    - __type__: AlphabeticPoint
+      identifier: d
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: ügyvédi, jogtanácsosi vagy közjegyzői
+        position:
+          act: 2012. évi C. törvény
+          article: '286'
+          paragraph: '1'
+        replacement_text: ügyvédi, szabadalmi ügyvivői vagy közjegyzői
+      text: 286. § (1) bekezdésében az „ügyvédi, jogtanácsosi vagy közjegyzői” szövegrész
+        helyébe az „ügyvédi, szabadalmi ügyvivői vagy közjegyzői” szöveg,
+    - __type__: AlphabeticPoint
+      identifier: e
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: ügyvédi, jogtanácsosi vagy közjegyzői
+        position:
+          act: 2012. évi C. törvény
+          article: '286'
+          paragraph: '2'
+        replacement_text: ügyvédi, szabadalmi ügyvivői vagy közjegyzői
+      text: 286. § (2) bekezdésében az „ügyvédi, jogtanácsosi vagy közjegyzői” szövegrész
+        helyébe az „ügyvédi, szabadalmi ügyvivői vagy közjegyzői” szöveg,
+    - __type__: AlphabeticPoint
+      identifier: f
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: jogtanácsos
+        position:
+          act: 2012. évi C. törvény
+          article: '349'
+          paragraph: '3'
+        replacement_text: kamarai jogtanácsos
+      text: 349. § (3) bekezdésében a „jogtanácsos” szövegrész helyébe a „kamarai
+        jogtanácsos” szöveg,
+    - __type__: AlphabeticPoint
+      identifier: g
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: tőzsdei, elszámolóházi, központi értéktári
+        position:
+          act: 2012. évi C. törvény
+          article: '399'
+          paragraph: '4'
+          point: c
+        replacement_text: tőzsdei, központi értéktári
+      - __type__: TextAmendment
+        original_text: tőzsdei, elszámolóházi, központi értéktári
+        position:
+          act: 2012. évi C. törvény
+          article: '400'
+          paragraph: '2'
+          point: b
+        replacement_text: tőzsdei, központi értéktári
+      - __type__: TextAmendment
+        original_text: tőzsdei, elszámolóházi, központi értéktári
+        position:
+          act: 2012. évi C. törvény
+          article: '402'
+          paragraph: '2'
+        replacement_text: tőzsdei, központi értéktári
+      - __type__: TextAmendment
+        original_text: tőzsdei, elszámolóházi, központi értéktári
+        position:
+          act: 2012. évi C. törvény
+          article: '403'
+          paragraph: '3'
+        replacement_text: tőzsdei, központi értéktári
+      text: 399. § (4) bekezdés c) pontjában, 400. § (2) bekezdés b) pontjában, 402.
+        § (2) bekezdésében és 403. § (3) bekezdésében a „tőzsdei, elszámolóházi, központi
+        értéktári” szövegrész helyébe a „tőzsdei, központi értéktári” szöveg
+    - __type__: AlphabeticPoint
+      identifier: h
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: egyéb helyiségét
+        position:
+          act: 2012. évi C. törvény
+          article: '422'
+          paragraph: '1'
+          point: a
+        replacement_text: ahhoz tartozó egyéb helyiségét
+      text: 422. § (1) bekezdés a) pontjában az „egyéb helyiségét” szövegrész helyébe
+        az „ahhoz tartozó egyéb helyiségét” szöveg,
+    - __type__: AlphabeticPoint
+      identifier: i
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: egyéb helyiségében
+        position:
+          act: 2012. évi C. törvény
+          article: '422'
+          paragraph: '1'
+          point: b
+        replacement_text: ahhoz tartozó egyéb helyiségében
+      text: 422. § (1) bekezdés b) pontjában az „egyéb helyiségében” szövegrész helyébe
+        az „ahhoz tartozó egyéb helyiségében” szöveg
+    intro: A Btk.
+    wrap_up: lép.
+  identifier: '60'
+- __type__: Article
+  children:
+  - identifier: '1'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 31
+        month: 12
+        year: 2017
+      position: null
+    text: Ez a törvény – a (2)–(4) bekezdésben meghatározott kivétellel – 2017. december
+      31. napján lép hatályba.
+  - identifier: '2'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2018
+      position:
+        article:
+        - '1'
+        - '58'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2018
+      position:
+        article: '60'
+        point:
+        - d
+        - g
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2018
+      position:
+        article:
+        - '61'
+        - '105'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2018
+      position:
+        article:
+        - '107'
+        - '122'
+    text: Az 1–58. §, a 60. § d)–g) pontja, a 61–105. § és a 107–122. § 2018. január
+      1-jén lép hatályba.
+  - identifier: '3'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 25
+        month: 5
+        year: 2018
+      position:
+        article: '59'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 25
+        month: 5
+        year: 2018
+      position:
+        article: '60'
+        point:
+        - a
+        - c
+    text: A 59. § és a 60. § a)–c) pontja 2018. május 25-én lép hatályba.
+  - identifier: '4'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2018
+      position:
+        article: '106'
+    text: A 106. § 2018. július 1-jén lép hatályba.
+  identifier: '138'
+identifier: 2017. évi CXLIV. törvény
+preamble: ''
+publication_date:
+  day: 13
+  month: 11
+  year: 2017
+subject: a büntetőeljárásról szóló 1998. évi XIX. törvény, egyes büntető tárgyú törvények,
+  valamint az európai uniós és a nemzetközi bűnügyi együttműködést szabályozó törvények
+  módosításáról

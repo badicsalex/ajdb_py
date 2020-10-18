@@ -1,0 +1,97 @@
+children:
+- __type__: Article
+  children:
+  - children:
+    - __type__: AlphabeticPoint
+      identifier: a
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: gyámhatóság
+        position:
+          act: 2013. évi V. törvény
+          article: 4:183
+          paragraph: '2'
+        replacement_text: bíróság polgári nemperes eljárásban
+      text: 4:183. § (2) bekezdésében a „gyámhatóság” szövegrész helyébe a „bíróság
+        polgári nemperes eljárásban” szöveg,
+    - __type__: AlphabeticPoint
+      identifier: b
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: végrehajtásáról a gyámhatóság gondoskodik
+        position:
+          act: 2013. évi V. törvény
+          article: 4:185
+        replacement_text: végrehajtását a bíróság polgári nemperes eljárásban rendeli
+          el
+      text: 4:185. §-ában a „végrehajtásáról a gyámhatóság gondoskodik” szövegrész
+        helyébe a „végrehajtását a bíróság polgári nemperes eljárásban rendeli el”
+        szöveg
+    intro: A Polgári Törvénykönyvről szóló 2013. évi V. törvény
+    wrap_up: lép.
+  identifier: '169'
+- __type__: Article
+  children:
+  - identifier: '1'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: DaysAfterPublication
+      position: null
+    text: Ez a törvény – a (2)–(6) bekezdésben foglalt kivétellel – a kihirdetését
+      követő napon lép hatályba.
+  - identifier: '2'
+    text: Az 1. alcím, a 4–6. alcím, 8–10. alcím, a 13. alcím, a 16. §, a 17. § a)
+      pontja, a 15–19. alcím, a 23. §, a 25. §, 26. § b), c) és e) pontja, a 21. és
+      22. alcím, 30. § a) pontja, 24. és 25. alcím, a 28. és 29. alcím, a 31. és 32.
+      alcím, a 48. § (1) bekezdés, a 41–43. alcím, a 79. § és 80. §, a 88. §, 89.
+      § (1) bekezdés 1. pontja, 89. § (2) bekezdés 3. és 4. pontja, a 106–108. §,
+      127–131. §, a 132. § (1) bekezdés, 133–137. §, a 139. § (1) bekezdés, a 143.
+      § (2) bekezdés, a 145. §, 146. § (1) bekezdés a), c), d), e) és g) pontja, 146.
+      § (2) bekezdés c) pontja, a 47. alcím, a 150. § (5)–(11) bekezdése, 151–153.
+      §, 154. § c) pontja, 49. alcím, a 158. § és 159. §, 160. § (2) bekezdés a) és
+      c)–e) pontjai, az 51. és 52. alcím, az 54. alcím, az 56. alcím, az 59. alcím,
+      a 61. és 62. alcím, a 175. § és 176. §, 177. § c) és d) pontja, 64. alcím, 179.
+      § (1)–(3) bekezdése, 66–67. alcím, a 196. §, a 69. és 70. alcím, a 211. § és
+      212. §, a 214–220. §, a 236. § és 237. §, 239. § d) pontja, a 72. alcím, a 75–78.
+      alcím, a 255. §, az 1., 5–8. melléklet 2020. január 1. napján lép hatályba.
+  - identifier: '3'
+    text: A 11. alcím, a 39. alcím, az 58. alcím, a 213. §, a 238. § 15. pontja, a
+      74. alcím 2020. március 1. napján lép hatályba.
+  - identifier: '4'
+    text: A 2. és 3. alcím, 7. alcím, 12. alcím, a 15. §, a 17. § b) pontja, a 24.
+      §, 26. § a) és d) pontja, a 27. §, 30. § b) pontja, 26. és 27. alcím, 30. alcím,
+      a 33–38. alcím, a 47. §, a 48. § (3) bekezdése, a 49. §, az 57–78. §, a 81–87.
+      §, a 89. § (1) bekezdés 2. és 3. pontja, 89. § (2) bekezdés 1. és 2. pontja,
+      a 90. §, 92–104. §, a 109–118. §, a 120. § (1) bekezdése, a 121–126. §, a 132.
+      § (2) bekezdés, a 138. §, a 139. § (2) bekezdés, a 141. § és 142. §, a 146.
+      § (1) bekezdés b) és f) pontja, a 147. § (1) és (3) bekezdése, 150. § (1) bekezdése,
+      a 160. § (1) bekezdése és a (2) bekezdés b) pontja, az 53. alcím, az 55. alcím,
+      az 57. alcím, a 60. alcím, 177. § a), b) és e)–f) pontja, a 182–195. §, a 197.
+      §, a 204–207. §, a 209. § és 210. §, 222–235. §, a 238. § 2–14. és 16–18. pontja,
+      239. § c), e) és f) pontja, a 73. alcím, 3. melléklet 2020. április 1. napján
+      lép hatályba.
+  - identifier: '5'
+    text: A 48. § (2) és (4) bekezdése, a 2. és 4. melléklet 2021. január 1-jén lép
+      hatályba.
+  - identifier: '6'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2023
+      position:
+        article: '179'
+        paragraph: '4'
+    text: A 179. § (4) bekezdése 2023. július 1-jén lép hatályba.
+  identifier: '252'
+identifier: 2019. évi CXXVII. törvény
+preamble: ''
+publication_date:
+  day: 19
+  month: 12
+  year: 2019
+subject: az egyes törvényeknek az egyfokú járási hivatali eljárások megteremtésével
+  összefüggő módosításáról

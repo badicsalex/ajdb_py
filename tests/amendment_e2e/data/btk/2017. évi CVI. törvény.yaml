@@ -1,0 +1,40 @@
+children:
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '2'
+        text: A XXVII. Fejezetben meghatározott bűncselekmények büntethetősége tizenkét
+          év elteltével évül el.
+    intro: 'A Büntető Törvénykönyvről szóló 2012. évi C. törvény 26. §-a a következő
+      (2) bekezdéssel egészül ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '26'
+        paragraph: '2'
+      pure_insertion: true
+    wrap_up: ''
+  identifier: '1'
+- __type__: Article
+  children:
+  - semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: DaysAfterPublication
+        days: 3
+      position: null
+    text: Ez a törvény a kihirdetését követő 3. napon lép hatályba.
+  identifier: '2'
+identifier: 2017. évi CVI. törvény
+preamble: ''
+publication_date:
+  day: 25
+  month: 9
+  year: 2017
+subject: a Büntető Törvénykönyvről szóló 2012. évi C. törvény módosítása a korrupciós
+  bűncselekmények elévülési idejének emelése érdekében

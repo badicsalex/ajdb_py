@@ -1,0 +1,81 @@
+children:
+- __type__: Article
+  children:
+  - identifier: '1'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: DaysAfterPublication
+      position: null
+    text: Ez a törvény – a (2) és (3) bekezdésben meghatározott kivételekkel – a kihirdetését
+      követő napon lép hatályba.
+  - identifier: '2'
+    text: Az 1–18. §, a 20–32. §, a 33. § (1) és (3)–(6) bekezdése, a 34–92. §, a
+      93. § (1) és (2) bekezdése, a 94–117. §, a 121. §, a 122. § (1) bekezdése, a
+      123–133. §, a 134. § (1) bekezdése, a 135–138. §, valamint az 1. melléklet 2016.
+      május 1-jén lép hatályba.
+  - identifier: '3'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 5
+        year: 2019
+      position:
+        article: '19'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 5
+        year: 2019
+      position:
+        article: '33'
+        paragraph: '2'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 5
+        year: 2019
+      position:
+        article: '93'
+        paragraph: '3'
+    text: A 19. §, a 33. § (2) bekezdése és a 93. § (3) bekezdése 2019. május 1-jén
+      lép hatályba.
+  identifier: '120'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: AlphabeticPoint
+        identifier: c
+        text: az Európai Unió vámterületén az Uniós Vámkódex létrehozásáról szóló,
+          2013. október 9-i 952/2013/EU európai parlamenti és tanácsi rendelet 4.
+          cikkében meghatározott területet kell érteni.
+      intro: E § alkalmazásában
+    intro: 'A Büntető Törvénykönyvről szóló 2012. évi C. törvény 330. § (4) bekezdés
+      c) pontja helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '330'
+        paragraph: '4'
+        point: c
+    wrap_up: ''
+  identifier: '133'
+identifier: 2016. évi XIII. törvény
+preamble: 'Az Uniós Vámkódex létrehozásáról szóló, 2013. október 9-i 952/2013/EU európai
+  parlamenti és tanácsi rendelet, valamint az ennek végrehajtására kiadott európai
+  uniós jogi aktusok rendelkezéseiből eredő nemzeti feladatok ellátása érdekében,
+  az Európai Unió belső piacának működése, valamint a vámbevételek biztosítása céljából,
+  figyelembe véve az uniós vívmányokat, az Országgyűlés a következő törvényt alkotja:'
+publication_date:
+  day: 11
+  month: 4
+  year: 2016
+subject: az uniós vámjog végrehajtásáról

@@ -1,0 +1,515 @@
+children:
+- __type__: Article
+  children:
+  - act_id_abbreviations:
+    - abbreviation: Btk.
+      act: 2012. évi C. törvény
+    children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Article
+        children:
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: bűnszervezetben való részvétele,
+          - __type__: AlphabeticPoint
+            identifier: b
+            text: a kábítószer forgalomba hozatala, illetve az azzal való kereskedés
+              elkövetésének,
+          - __type__: AlphabeticPoint
+            identifier: c
+            text: az üzletszerűen vagy bűnszövetségben elkövetett embercsempészés
+              elkövetésének
+          identifier: '1'
+          intro: Az ellenkező bizonyításáig vagyonelkobzás alá eső vagyonnak kell
+            tekinteni, és vagyonelkobzást kell elrendelni arra a vagyonra, amelyet
+            az elkövető
+          wrap_up: ideje alatt szerzett.
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: a kábítószer forgalomba hozatala, illetve az azzal való kereskedés
+              [176. § (1)–(4) és (6) bekezdés, 177. § (1) bekezdés b) pont, c) pont
+              cb) alpont és (2)–(3) és (5) bekezdés], kábítószer termesztése, előállítása,
+              az ország területére behozatala, kivitele, átszállítása [178. § (1)–(5)
+              bekezdés és 179. §], a kábítószer készítésének elősegítése [182. § (1)–(4)
+              bekezdés], a kábítószer-prekurzor forgalomba hozatala, szállítása, azzal
+              közvetítői tevékenység végzése [183. § (1) bekezdés a) pont],
+          - __type__: AlphabeticPoint
+            identifier: b
+            text: az új pszichoaktív anyag előállítása, az ország területére behozatala,
+              kivitele, átszállítása, forgalomba hozatala, illetve az azzal való kereskedés
+              [184. § (1)–(3) és (5) bekezdés, 184/A. § (1) bekezdés b) pont és c)
+              pont cb) alpont, (2)–(3) és (5) bekezdés, 184/B. § (1) bekezdés a) pont,
+              (2)–(5) bekezdés, 184/C. § (1) bekezdés a) pont aa) alpont, b) pont
+              ba) alpont, (2)–(5) bekezdés],
+          - __type__: AlphabeticPoint
+            identifier: c
+            text: az emberkereskedelem [192. § (1)–(7) bekezdés], a kényszermunka
+              (193. §),
+          - __type__: AlphabeticPoint
+            identifier: d
+            text: a kerítés (200. §), a prostitúció elősegítése (201. §), a kitartottság
+              (202. §), a gyermekprostitúció kihasználása [203. § (1) és (3)–(4) bekezdés],
+              a gyermekpornográfia [204. § (1) bekezdés b)–c) pont, (2)–(4) bekezdés,
+              (5) bekezdés a) és c) pont és (6) bekezdés],
+          - __type__: AlphabeticPoint
+            identifier: e
+            text: a gyermekmunka (209. §), a harmadik országbeli állampolgár jogellenes
+              foglalkoztatása [356. § (1)–(2) bekezdés],
+          - __type__: AlphabeticPoint
+            identifier: f
+            text: a haszonszerzési célból elkövetett személyes adattal visszaélés
+              [219. § (1) és (3)–(4) bekezdés],
+          - __type__: AlphabeticPoint
+            identifier: g
+            text: a vesztegetés, a vesztegetés elfogadása, a hivatali vesztegetés,
+              a hivatali vesztegetés elfogadása (290–294. §),
+          - __type__: AlphabeticPoint
+            identifier: h
+            text: a terrorcselekmény [314. §, 315. § (1)–(2) bekezdés és 316. §],
+              a terrorizmus finanszírozása [318. § (1)–(2) bekezdés],
+          - __type__: AlphabeticPoint
+            identifier: i
+            text: a bűnszervezetben részvétel [321. § (1) bekezdés],
+          - __type__: AlphabeticPoint
+            identifier: j
+            text: az embercsempészés (353. §)
+          - __type__: AlphabeticPoint
+            identifier: k
+            text: a zsarolás (367. §),
+          - __type__: AlphabeticPoint
+            identifier: l
+            text: a különösen nagy vagy különösen jelentős értékre, bűnszervezetben
+              elkövetett sikkasztás [372. § (5) bekezdés a) pontja és (6) bekezdése],
+              a különösen nagy vagy különösen jelentős kárt okozó, bűnszervezetben
+              elkövetett csalás [373. § (5) bekezdés a) pontja és (6) bekezdése],
+              a különösen nagy vagy különösen jelentős vagyoni hátrányt okozó, bűnszervezetben
+              elkövetett gazdasági csalás [374. § (5) bekezdés a) pontja és (6) bekezdése],
+              a különösen nagy vagy különösen jelentős vagyoni hátrányt okozó, bűnszervezetben
+              elkövetett hűtlen kezelés [376. § (5) bekezdés a) pontja és (6) bekezdése],
+          - __type__: AlphabeticPoint
+            identifier: m
+            text: az információs rendszer felhasználásával elkövetett csalás [375.
+              § (1)–(5) bekezdés],
+          - __type__: AlphabeticPoint
+            identifier: n
+            text: a pénzhamisítás [389. § (1)–(3)], a pénzhamisítás elősegítése (390.
+              §), a készpénz-helyettesítő fizetési eszköz hamisítása [392. § (1)–(2)
+              bekezdés], a készpénz-helyettesítő fizetési eszközzel visszaélés [393.
+              § (1)–(2) bekezdés], a készpénz-helyettesítő fizetési eszköz hamisításának
+              elősegítése (394. §),
+          - __type__: AlphabeticPoint
+            identifier: o
+            text: a bűnszervezetben elkövetett, különösen nagy vagy különösen jelentős
+              vagyoni hátrányt okozó költségvetési csalás [396. § (4)–(5) bekezdés],
+          - __type__: AlphabeticPoint
+            identifier: p
+            text: a pénzmosás (399. §),
+          - __type__: AlphabeticPoint
+            identifier: q
+            text: a bűnszövetségben vagy üzletszerűen elkövetett tiltott adatszerzés
+              [422. § (4) bekezdés b) és c) pont], az információs rendszer védelmét
+              biztosító technikai intézkedés kijátszása [424. § (1) bekezdés]
+          identifier: '2'
+          intro: Az ellenkező bizonyításáig vagyonelkobzás alá eső vagyonnak kell
+            tekinteni, és vagyonelkobzást kell elrendelni arra a vagyonra is, amelyet
+          wrap_up: elkövetője a büntetőeljárás megindítását megelőző öt évben szerzett,
+            ha a vagyon, illetve az elkövető életvitele az igazolható jövedelmi viszonyaihoz,
+            személyi körülményeihez képest különösen aránytalan.
+        - identifier: '3'
+          text: Nem rendelhető el vagyonelkobzás az (1) és (2) bekezdés esetében,
+            ha az elkövető bizonyítja, hogy a vagyon nem bűncselekményből származik.
+        identifier: 74/A
+    identifier: '1'
+    intro: 'A Büntető Törvénykönyvről szóló 2012. évi C. törvény (a továbbiakban:
+      Btk.) a következő 74/A. §-sal egészül ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: 74/A
+      pure_insertion: true
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        children:
+        - __type__: AlphabeticPoint
+          identifier: a
+          text: az ideiglenes kiadatási lakhelyelhagyási tilalom, illetve az ideiglenes
+            átadási lakhelyelhagyási tilalom tartama alatt a számára kijelölt területet,
+            körzetet, vagy
+        - __type__: AlphabeticPoint
+          identifier: b
+          text: az ideiglenes kiadatási házi őrizet, illetve az ideiglenes átadási
+            házi őrizet tartama alatt a számára kijelölt lakást és az ahhoz tartozó
+            bekerített helyet
+        identifier: 2a
+        intro: A (2) bekezdés szerint büntetendő, aki abból a célból, hogy az ellene
+          folytatott kiadatási vagy átadási eljárás alól kivonja magát,
+        wrap_up: a kényszerintézkedés szabályainak megszegésével elhagyja.
+    identifier: '2'
+    intro: 'A Btk. 283. §-a a következő (2a) bekezdéssel egészül ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '283'
+        paragraph: 2a
+      pure_insertion: true
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Article
+        children:
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: a magyar nemzet ellen,
+          - __type__: AlphabeticPoint
+            identifier: b
+            text: valamely nemzeti, etnikai, faji, vallási csoport, illetve annak
+              tagja ellen, vagy
+          - __type__: AlphabeticPoint
+            identifier: c
+            text: a lakosság egyes csoportjai, illetve azok tagjai ellen – különösen
+              fogyatékosságra, nemi identitásra, szexuális irányultságra tekintettel
+              –
+          intro: Aki nagy nyilvánosság előtt
+          wrap_up: erőszakra vagy gyűlöletre uszít, bűntett miatt három évig terjedő
+            szabadságvesztéssel büntetendő.
+        identifier: '332'
+    identifier: '3'
+    intro: 'A Btk. 332. §-a helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '332'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Article
+        children:
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: bennfentes információ felhasználásával saját vagy más nevében a
+              bennfentes információval érintett pénzügyi eszközre vonatkozó ügyletet
+              köt, ügyletkötésre megbízást ad, megbízást visszavon vagy módosít, ajánlatot
+              rögzít, visszavon vagy módosít,
+          - __type__: AlphabeticPoint
+            identifier: b
+            text: a birtokában lévő bennfentes információra tekintettel mást vagy
+              másokat a bennfentes információval érintett pénzügyi eszközre vonatkozó
+              ügylet kötésére, ügyletkötésre vonatkozó megbízás adására, visszavonására
+              vagy módosítására, ajánlat rögzítésére, visszavonására vagy módosítására
+              hív fel, vagy bír rá,
+          identifier: '1'
+          intro: Aki
+          wrap_up: bűntett miatt három évig terjedő szabadságvesztéssel büntetendő.
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: a bűncselekményt hivatalos személyként követik el,
+          - __type__: AlphabeticPoint
+            identifier: b
+            text: a bűncselekményt pénzügyi intézmény, befektetési vállalkozás, árutőzsdei
+              szolgáltató, befektetési alapkezelő, kockázati tőkealap-kezelő, tőzsdei,
+              központi értéktári vagy központi szerződő fél tevékenységet végző szervezet,
+              biztosító, viszontbiztosító vagy független biztosításközvetítő, önkéntes
+              kölcsönös biztosító pénztár, magánnyugdíjpénztár, foglalkoztatói nyugdíjszolgáltató
+              intézmény, vagy szabályozott ingatlanbefektetési társaság tisztségviselőjeként
+              vagy alkalmazottjaként követik el,
+          - __type__: AlphabeticPoint
+            identifier: c
+            text: a bűncselekménnyel érintett ügylet vagy ügyletek, megbízás vagy
+              megbízások, ajánlat vagy ajánlatok abszolút értéke különösen nagy vagy
+              ezt meghaladó értékű.
+          identifier: '2'
+          intro: A büntetés öt évig terjedő szabadságvesztés, ha
+        identifier: '410'
+    identifier: '4'
+    intro: 'A Btk. 410. §-a helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '410'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Subtitle
+        identifier: ''
+        title: Bennfentes információ jogosulatlan közzététele
+      - __type__: Article
+        children:
+        - text: Aki azért, hogy jogtalan előnyt szerezzen vagy jogtalan hátrányt okozzon,
+            bennfentes információt illetéktelen személynek vagy személyeknek átad,
+            vétség miatt két évig terjedő szabadságvesztéssel büntetendő.
+        identifier: 410/A
+    identifier: '5'
+    intro: 'A Btk. a következő alcímmel és 410/A. §-sal egészül ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: StructuralReference
+        act: 2012. évi C. törvény
+        special:
+          article_id: 410/A
+          position: BEFORE_WITH_ARTICLE
+      pure_insertion: true
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Subtitle
+        identifier: ''
+        title: Tiltott piacbefolyásolás
+      - __type__: Article
+        children:
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: olyan ügyletet köt, megbízást ad, visszavon vagy módosít, saját
+              számlás kereskedés során ajánlatot rögzít, visszavon vagy módosít, amely
+              az adott pénzügyi eszköz vagy kapcsolódó azonnali árutőzsdei ügylet
+              keresleti vagy kínálati viszonyairól, árfolyamáról vagy áráról hamis
+              vagy félrevezető jelzéseket ad, azt mesterséges vagy rendellenes szinten
+              rögzíti,
+          - __type__: AlphabeticPoint
+            identifier: b
+            text: pénzügyi eszközre vonatkozó színlelt ügylet kötésével vagy más megtévesztő
+              magatartással a pénzügyi eszköz vagy kapcsolódó azonnali árutőzsdei
+              ügylet árfolyamát vagy árát befolyásolni törekszik,
+          - __type__: AlphabeticPoint
+            identifier: c
+            text: a referenciaérték kiszámítását hamis vagy félrevezető információ
+              közlésével vagy továbbításával, vagy megtévesztő módszer alkalmazásával
+              befolyásolni törekszik,
+          identifier: '1'
+          intro: Aki
+          wrap_up: bűntett miatt három évig terjedő szabadságvesztéssel büntetendő.
+        - identifier: '2'
+          text: Az (1) bekezdés szerint büntetendő, aki haszonszerzés céljából nagy
+            nyilvánosság előtt olyan információt közöl vagy híresztel, amely az adott
+            pénzügyi eszköz vagy kapcsolódó azonnali árutőzsdei ügylet keresleti vagy
+            kínálati viszonyairól, árfolyamáról vagy áráról hamis vagy félrevezető
+            jelzéseket ad, azt mesterséges vagy rendellenes szinten rögzíti.
+        - identifier: '3'
+          text: Az (1) bekezdés szerint büntetendő az is, aki a gazdálkodó szervezet
+            vagyoni helyzetéről vagy vezető állású személyéről e tevékenységével összefüggésben,
+            illetve a gazdálkodó szervezetre vonatkozóan pénzügyi eszközről valótlan
+            adat közlésével vagy híresztelésével, illetve adat elhallgatásával másokat
+            tőkebefektetésre vagy a befektetés emelésére, illetve tőkebefektetés eladására
+            vagy a befektetés csökkentésére rábír.
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: bűnszövetségben,
+          - __type__: AlphabeticPoint
+            identifier: b
+            text: hivatalos személyként,
+          - __type__: AlphabeticPoint
+            identifier: c
+            text: pénzügyi intézmény, befektetési vállalkozás, árutőzsdei szolgáltató,
+              befektetési alapkezelő, kockázati tőkealap-kezelő, tőzsdei, központi
+              értéktári vagy központi szerződő fél tevékenységet végző szervezet,
+              biztosító, viszontbiztosító vagy független biztosításközvetítő, önkéntes
+              kölcsönös biztosító pénztár, magánnyugdíjpénztár, foglalkoztatói nyugdíjszolgáltató
+              intézmény, vagy szabályozott ingatlanbefektetési társaság tisztségviselőjeként
+              vagy alkalmazottjaként
+          identifier: '4'
+          intro: Aki az (1) bekezdésben meghatározott bűncselekményt
+          wrap_up: követi el, öt évig terjedő szabadságvesztéssel büntetendő.
+        - identifier: '5'
+          text: 'Az (1)–(4) bekezdés alkalmazandó a piaci visszaélésekről, valamint
+            a 2003/6/EK európai parlamenti és tanácsi irányelv és a 2003/124/EK, a
+            2003/125/EK és a 2004/72/EK bizottsági irányelv hatályon kívül helyezéséről
+            szóló 2014. április 16-i 596/2014/EU európai parlamenti és tanácsi rendelet
+            (a továbbiakban: 596/2014/EU rendelet) 2. cikk (2) bekezdés a) és b) pontjában
+            meghatározott ügyletekre és eszközökre is, ha az ügylet, a megbízás, az
+            ajánlat vagy a magatartás a pénzügyi eszköz vagy az azonnali árutőzsdei
+            ügylet árára, árfolyamára vagy értékére hatást gyakorol.'
+        identifier: '411'
+    identifier: '6'
+    intro: 'A Btk. 411. §-át megelőző alcím címe és 411. §-a helyébe a következő rendelkezés
+      lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: StructuralReference
+        act: 2012. évi C. törvény
+        special:
+          article_id: '411'
+          position: BEFORE_WITH_ARTICLE
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        children:
+        - __type__: AlphabeticPoint
+          identifier: a
+          text: az 596/2014/EU rendelet 5. cikk (1)–(3) bekezdésében meghatározott
+            eseteket;
+        - __type__: AlphabeticPoint
+          identifier: b
+          text: az 596/2014/EU rendelet 5. cikk (4) és (5) bekezdésében meghatározott
+            eseteket;
+        - __type__: AlphabeticPoint
+          identifier: c
+          text: az 596/2014/EU rendelet 6. cikk (1)–(4) bekezdésében meghatározott
+            eseteket.
+        identifier: '1'
+        intro: A 410–411. § alkalmazásában pénzügyi eszközön a befektetési vállalkozásokról
+          és az árutőzsdei szolgáltatókról, valamint az általuk végezhető tevékenységek
+          szabályairól szóló törvényben meghatározott pénzügyi eszközt kell érteni,
+          feltéve, hogy az megfelel az 596/2014/EU rendelet 2. cikk (1) bekezdésében
+          foglaltaknak, ide nem értve
+    identifier: '7'
+    intro: 'A Btk. 414. § (1) bekezdése helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '414'
+        paragraph: '1'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: AlphabeticPoint
+        identifier: j
+        text: 410–411. §-a és 414. §-a a piaci visszaélések büntetőjogi szankcióiról
+          (piaci visszaélésekről) szóló 2014. április 16-i 2014/57/EU európai parlamenti
+          és tanácsi irányelvnek,
+      - __type__: AlphabeticPoint
+        identifier: k
+        text: 72–76. §-a a bűncselekmény elkövetési eszközeinek és az abból származó
+          jövedelemnek az Európai Unión belüli befagyasztásáról és elkobzásáról szóló
+          2014. április 3-i 2014/42/EU európai parlamenti és tanácsi irányelvnek
+      intro: E törvény
+      wrap_up: való megfelelést szolgálja.
+    identifier: '8'
+    intro: 'A Btk. 465. § (1) bekezdése a következő j) és k) ponttal egészül ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '465'
+        paragraph: '1'
+        point:
+        - j
+        - k
+      pure_insertion: true
+    wrap_up: ''
+  - children:
+    - __type__: AlphabeticPoint
+      identifier: a
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: az (1) bekezdés szerinti vagyonra
+        position:
+          act: 2012. évi C. törvény
+          article: '74'
+          paragraph: '3'
+        replacement_text: az (1) bekezdés vagy a 74/A. § szerinti vagyonra
+      text: 74. § (3) bekezdésében az „az (1) bekezdés szerinti vagyonra” szövegrész
+        helyébe az „az (1) bekezdés vagy a 74/A. § szerinti vagyonra” szöveg,
+    - __type__: AlphabeticPoint
+      identifier: b
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: vagyon
+        position:
+          act: 2012. évi C. törvény
+          article: '75'
+          paragraph: '1'
+          point: a
+        replacement_text: vagyonelkobzás alá eső vagyon
+      text: 75. § (1) bekezdésének a) pontjában a „vagyon” szövegrész helyébe a „vagyonelkobzás
+        alá eső vagyon” szöveg,
+    - __type__: AlphabeticPoint
+      identifier: c
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: 74. § (1) bekezdése alapján vagyonelkobzás alá eső vagyon
+        position:
+          act: 2012. évi C. törvény
+          article: '75'
+          paragraph: '1'
+          point: b
+        replacement_text: vagyonelkobzás alá eső vagyon
+      text: 75. § (1) bekezdésének b) pontjában a „74. § (1) bekezdése alapján vagyonelkobzás
+        alá eső vagyon” szövegrész helyébe a „vagyonelkobzás alá eső vagyon” szöveg
+    identifier: '9'
+    intro: A Btk.
+    wrap_up: lép.
+  identifier: '55'
+- __type__: Article
+  children:
+  - semantic_data:
+    - __type__: Repeal
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '74'
+        paragraph: '1'
+        point:
+        - b
+        - c
+    - __type__: Repeal
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '74'
+        paragraph: '4'
+    - __type__: Repeal
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '74'
+        paragraph: '5'
+        point: c
+    text: Hatályát veszti a Btk. 74. § (1) bekezdés b) és c) pontja, (4) bekezdése
+      és (5) bekezdés c) pontja.
+  identifier: '56'
+- __type__: Article
+  children:
+  - identifier: '1'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: DaysAfterPublication
+        days: 8
+      position: null
+    text: Ez a törvény – a (2) és (3) bekezdésben foglalt kivétellel – a kihirdetését
+      követő nyolcadik napon lép hatályba.
+  - identifier: '2'
+    text: Az 1–41. §, a 43–44. §, a 47. §, a 49–50. §, az 52–53. §, az 57. §, a 59–95.
+      §, a 97. § 1–3. pontja, a 97. § 5–26. pontja, a 99–100. §, és az 1. melléklet
+      2017. január 1-jén lép hatályba.
+  - identifier: '3'
+    text: A 97. § 4. pontja és a 2. melléklet 2017. május 1-jén lép hatályba.
+  identifier: '101'
+identifier: 2016. évi CIII. törvény
+preamble: ''
+publication_date:
+  day: 20
+  month: 10
+  year: 2016
+subject: az európai uniós és a nemzetközi bűnügyi együttműködést szabályozó törvények,
+  valamint egyes büntetőjogi tárgyú törvények jogharmonizációs célú módosításáról

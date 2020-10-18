@@ -1,0 +1,111 @@
+children:
+- __type__: Article
+  children:
+  - semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: DaysAfterPublication
+      position: null
+    text: Ez a törvény a kihirdetését követő napon lép hatályba.
+  identifier: '7'
+- __type__: Article
+  children:
+  - act_id_abbreviations:
+    - abbreviation: Btk.
+      act: 2012. évi C. törvény
+    children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Subtitle
+        identifier: ''
+        title: Járványügyi védekezés akadályozása
+      - __type__: Article
+        children:
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: a zárlati kötelezettség alá tartozó fertőző betegség behurcolásának
+              vagy terjedésének megakadályozása végett elrendelt járványügyi elkülönítés,
+              megfigyelés, zárlat vagy ellenőrzés,
+          - __type__: AlphabeticPoint
+            identifier: b
+            text: járvány idején az elrendelt járványügyi elkülönítés, megfigyelés,
+              zárlat vagy ellenőrzés,
+          - __type__: AlphabeticPoint
+            identifier: c
+            text: a fertőző állatbetegségek vagy növényi zárlati károsítók be- és
+              kihurcolásának, valamint terjedésének megakadályozása vagy előfordulásának
+              felszámolása végett elrendelt növény-egészségügyi vagy állatjárványügyi
+              intézkedés
+          identifier: '1'
+          intro: Aki
+          wrap_up: végrehajtását akadályozza, bűntett miatt három évig terjedő szabadságvesztéssel
+            büntetendő.
+        - identifier: '2'
+          text: A büntetés egy évtől öt évig terjedő szabadságvesztés, ha a bűncselekményt
+            csoportosan követik el.
+        - identifier: '3'
+          text: A büntetés két évtől nyolc évig terjedő szabadságvesztés, ha a bűncselekmény
+            halált okoz.
+        - identifier: '4'
+          text: Aki járványügyi intézkedés akadályozására irányuló előkészületet követ
+            el, egy évig terjedő szabadságvesztéssel büntetendő.
+        identifier: 322/A
+    identifier: '1'
+    intro: 'A Büntető Törvénykönyvről szóló 2012. évi C. törvény (a továbbiakban:
+      Btk.) 322. §-át követően a következő alcím címmel és 322/A. §-sal egészül ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: StructuralReference
+        act: 2012. évi C. törvény
+        special:
+          article_id: 322/A
+          position: BEFORE_WITH_ARTICLE
+      pure_insertion: true
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Article
+        children:
+        - identifier: '1'
+          text: Aki közveszély színhelyén nagy nyilvánosság előtt a közveszéllyel
+            összefüggésben olyan valótlan tényt vagy való tényt oly módon elferdítve
+            állít vagy híresztel, amely a közveszély színhelyén alkalmas az emberek
+            nagyobb csoportjában zavar vagy nyugtalanság keltésére, bűntett miatt
+            három évig terjedő szabadságvesztéssel büntetendő.
+        - identifier: '2'
+          text: Aki különleges jogrend idején nagy nyilvánosság előtt olyan valótlan
+            tényt vagy való tényt oly módon elferdítve állít vagy híresztel, amely
+            alkalmas arra, hogy a védekezés eredményességét akadályozza vagy meghiúsítsa,
+            bűntett miatt egy évtől öt évig terjedő szabadságvesztéssel büntetendő.
+        identifier: '337'
+    identifier: '2'
+    intro: 'A Btk. 337. §-a helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '337'
+    wrap_up: ''
+  identifier: '10'
+identifier: 2020. évi XII. törvény
+preamble: 'Az Országgyűlés annak érdekében, hogy a Kormány a COVID-19 fertőzés okozta
+  tömeges megbetegedést okozó, 2020. évben bekövetkezett humánjárvány megelőzésére,
+  illetve következményeinek elhárítására valamennyi szükséges rendkívüli intézkedést
+  megtehesse, szem előtt tartva különösen annak lehetőségét, hogy az Országgyűlés
+  ülésezése a humánjárvány következtében szünetelhet, annak tudatában, hogy vészterhes
+  időkben felelős döntéseket kell hozni, és hogy az eddig megtett – és a potenciálisan
+  előttünk álló – intézkedések szokatlan és idegen korlátozásnak tűnnek, de ezek betartása,
+  az összefogás és a fegyelmezettség a magyarság legfontosabb erőtartaléka lehet,
+  a közös cselekvés, a nemzeti összefogás, az egészségügyben és a rendfenntartásban
+  dolgozók, illetve valamennyi érintett áldozatos munkája elismerésével, a Kormány
+  veszélyhelyzetben alkotott rendeletei hatályának meghosszabbítására vonatkozó felhatalmazás
+  megadására és kereteinek meghatározására a következő törvényt alkotja:'
+publication_date:
+  day: 30
+  month: 3
+  year: 2020
+subject: a koronavírus elleni védekezésről

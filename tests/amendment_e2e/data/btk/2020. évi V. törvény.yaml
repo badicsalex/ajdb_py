@@ -1,0 +1,502 @@
+children:
+- __type__: Article
+  children:
+  - act_id_abbreviations:
+    - abbreviation: Btk.
+      act: 2012. évi C. törvény
+    children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Subtitle
+        identifier: ''
+        title: Emberkereskedelem és kényszermunka
+      - __type__: Article
+        children:
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: elad, megvásárol, elcserél, ellenszolgáltatásként átad, átvesz,
+              vagy
+          - __type__: AlphabeticPoint
+            identifier: b
+            text: az a) pontban meghatározott cselekmény megvalósítása érdekében szállít,
+              elszállásol, elrejt, vagy másnak megszerez,
+          identifier: '1'
+          intro: Aki mást
+          wrap_up: bűntett miatt egy évtől öt évig terjedő szabadságvesztéssel büntetendő.
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: megtévesztéssel, a sértett nevelésével, felügyeletével, gondozásával,
+              gyógykezelésével kapcsolatos, illetve a sértettel kapcsolatban fennálló
+              egyéb hatalmi vagy befolyási viszonyával visszaélve, vagy a sértett
+              kiszolgáltatott helyzetét kihasználva rábír, vagy
+          - __type__: AlphabeticPoint
+            identifier: b
+            text: erőszakkal vagy fenyegetéssel kényszerít,
+          identifier: '2'
+          intro: Aki mást rendszeres előny szerzése céljából munkavégzésre, munka
+            jellegű tevékenység végzésére, egyéb szolgáltatásra, vagy jogellenes cselekmény
+            folytatására
+          wrap_up: bűntett miatt két évtől nyolc évig terjedő szabadságvesztéssel
+            büntetendő.
+        - identifier: '3'
+          text: Aki mást a (2) bekezdésben meghatározott cselekmény megvalósítása
+            érdekében toboroz, átad, átvesz, elad, megvásárol, elcserél, ellenszolgáltatásként
+            átad vagy átvesz, másnak megszerez, szállít, elszállásol, elrejt, bűntett
+            miatt két évtől nyolc évig terjedő szabadságvesztéssel büntetendő.
+        - identifier: '4'
+          text: Aki a (2) vagy a (3) bekezdésben meghatározott bűncselekményt szexuális
+            cselekmény végzése vagy emberi test tiltott felhasználása érdekében követi
+            el, bűntett miatt öt évtől tíz évig terjedő szabadságvesztéssel büntetendő.
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: tizennyolcadik életévét be nem töltött személy sérelmére,
+          - __type__: AlphabeticPoint
+            identifier: b
+            text: a sértett sanyargatásával,
+          - __type__: AlphabeticPoint
+            identifier: c
+            text: hivatalos személyként, e minőséget felhasználva, vagy
+          - __type__: AlphabeticPoint
+            identifier: d
+            text: több ember sérelmére
+          identifier: '5'
+          intro: A büntetés a (2) vagy a (3) bekezdésben meghatározott bűncselekmény
+            esetén öt évtől tíz évig terjedő szabadságvesztés, a (4) bekezdésben meghatározott
+            bűncselekmény esetén öt évtől tizenöt évig terjedő szabadságvesztés, ha
+            azt
+          wrap_up: követik el.
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: tizenkettedik életévét be nem töltött személy sérelmére, vagy
+          - __type__: AlphabeticPoint
+            identifier: b
+            text: életveszélyt vagy különösen súlyos hátrányt okozva
+          identifier: '6'
+          intro: A büntetés a (2) vagy a (3) bekezdésben meghatározott bűncselekmény
+            esetén öt évtől tizenöt évig terjedő szabadságvesztés, a (4) bekezdésben
+            meghatározott bűncselekmény esetén öt évtől húsz évig vagy életfogytig
+            terjedő szabadságvesztés, ha azt
+          wrap_up: követik el.
+        - identifier: '7'
+          text: Aki emberkereskedelem és kényszermunkára irányuló előkészületet követ
+            el, az (1) bekezdésben meghatározott esetben vétség miatt egy évig, a
+            (2) vagy (3) bekezdésben meghatározott esetben bűntett miatt három évig,
+            a (4) bekezdésben meghatározott esetben egy évtől öt évig terjedő szabadságvesztéssel
+            büntetendő.
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: a (2) bekezdésben meghatározott emberkereskedelem és kényszermunka
+              sértettjének munkáját, munka jellegű tevékenységét, egyéb szolgáltatását
+              vagy jogellenes cselekményét igénybe veszi vagy felhasználja, három
+              évig terjedő szabadságvesztéssel,
+          - __type__: AlphabeticPoint
+            identifier: b
+            text: az a) pontban meghatározott bűncselekményt szexuális cselekmény
+              igénybevételével vagy emberi test tiltott felhasználása érdekében követi
+              el, egy évtől öt évig terjedő szabadságvesztéssel
+          identifier: '8'
+          intro: Aki
+          wrap_up: büntetendő.
+        identifier: '192'
+    intro: 'A Büntető Törvénykönyvről szóló 2012. évi C. törvény (a továbbiakban:
+      Btk.) „Emberkereskedelem” című alcíme helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: StructuralReference
+        act: 2012. évi C. törvény
+        subtitle: Emberkereskedelem
+    wrap_up: ''
+  identifier: '9'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        children:
+        - __type__: AlphabeticPoint
+          identifier: a
+          text: az (1) bekezdésben meghatározott esetben egy évtől öt évig,
+        - __type__: AlphabeticPoint
+          identifier: b
+          text: a (2) bekezdésben meghatározott esetben két évtől nyolc évig,
+        - __type__: AlphabeticPoint
+          identifier: c
+          text: a (3) bekezdésben meghatározott esetben öt évtől tíz évig
+        identifier: 3a
+        intro: Ha az (1)–(3) bekezdésben meghatározott bűncselekményt különös visszaesőként
+          követik el, a büntetés
+        wrap_up: terjedő szabadságvesztés.
+    identifier: '1'
+    intro: 'A Btk. 200. §-a a következő (3a) bekezdéssel egészül ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '200'
+        paragraph: 3a
+      pure_insertion: true
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        children:
+        - __type__: AlphabeticPoint
+          identifier: a
+          text: a (4) bekezdés a) vagy b) pontjában meghatározott kerítés a c) pont
+            szerint is minősül,
+        - __type__: AlphabeticPoint
+          identifier: b
+          text: a (4) bekezdés valamelyik pontjában meghatározott kerítést különös
+            visszaesőként követik el.
+        identifier: '5'
+        intro: A büntetés öt évtől tíz évig terjedő szabadságvesztés, ha
+    identifier: '2'
+    intro: 'A Btk. 200. § (5) bekezdése helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '200'
+        paragraph: '5'
+    wrap_up: ''
+  identifier: '10'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '2'
+        text: Aki az (1) bekezdésben meghatározott bűncselekményt tizennyolcadik életévét
+          be nem töltött személy prostitúciójával összefüggésben követi el, vagy tizennyolcadik
+          életévét be nem töltött személy prostitúciójához segítséget nyújt, két évtől
+          nyolc évig terjedő szabadságvesztéssel büntetendő.
+    identifier: '1'
+    intro: 'A Btk. 201. § (2) bekezdése helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '201'
+        paragraph: '2'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        children:
+        - __type__: AlphabeticPoint
+          identifier: a
+          text: az (1) bekezdésben meghatározott esetben egy évtől öt évig,
+        - __type__: AlphabeticPoint
+          identifier: b
+          text: a (2) bekezdésben meghatározott esetben öt évtől tíz évig,
+        - __type__: AlphabeticPoint
+          identifier: c
+          text: a (3) bekezdésben meghatározott esetben két évtől nyolc évig
+        identifier: '4'
+        intro: Ha a prostitúció elősegítését különös visszaesőként követik el, a büntetés
+        wrap_up: terjedő szabadságvesztés.
+    identifier: '2'
+    intro: 'A Btk. 201. §-a a következő (4) bekezdéssel egészül ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '201'
+        paragraph: '4'
+      pure_insertion: true
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '2'
+        text: Aki tizennyolcadik életévét be nem töltött személlyel való szexuális
+          cselekményért ellenszolgáltatást nyújt, bűntett miatt két évtől nyolc évig
+          terjedő szabadságvesztéssel büntetendő.
+    identifier: '3'
+    intro: 'A Btk. 203. § (2) bekezdése helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '203'
+        paragraph: '2'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '5'
+        text: A büntetés öt évtől tíz évig terjedő szabadságvesztés, ha a gyermekprostitúció
+          kihasználását különös visszaesőként követik el.
+    identifier: '4'
+    intro: 'A Btk. 203. §-a a következő (5) bekezdéssel egészül ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '203'
+        paragraph: '5'
+      pure_insertion: true
+    wrap_up: ''
+  identifier: '11'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Subtitle
+        identifier: ''
+        title: Értelmező rendelkezés
+      - __type__: Article
+        children:
+        - text: A 200. § (3a) bekezdése, a 200. § (5) bekezdés b) pontja, a 201. §
+            (4) bekezdése és a 203. § (5) bekezdése alkalmazásában a különös visszaesés
+            szempontjából hasonló jellegű bűncselekmény az emberkereskedelem és kényszermunka,
+            a kerítés, a prostitúció elősegítése és a gyermekprostitúció kihasználása.
+        identifier: 207/A
+    intro: 'A Btk. a következő alcímmel és 207/A. §-al egészül ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: StructuralReference
+        act: 2012. évi C. törvény
+        special:
+          article_id: 207/A
+          position: BEFORE_WITH_ARTICLE
+      pure_insertion: true
+    wrap_up: ''
+  identifier: '12'
+- __type__: Article
+  children:
+  - children:
+    - __type__: AlphabeticPoint
+      identifier: a
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: emberkereskedelem
+        position:
+          act: 2012. évi C. törvény
+          article: '28'
+          paragraph: 1a
+        replacement_text: emberkereskedelem és kényszermunka
+      - __type__: TextAmendment
+        original_text: emberkereskedelem
+        position:
+          act: 2012. évi C. törvény
+          article: '44'
+          paragraph: '1'
+          point: j
+        replacement_text: emberkereskedelem és kényszermunka
+      - __type__: TextAmendment
+        original_text: emberkereskedelem
+        position:
+          act: 2012. évi C. törvény
+          article: 74/A
+          paragraph: '2'
+          point: c
+        replacement_text: emberkereskedelem és kényszermunka
+      - __type__: TextAmendment
+        original_text: emberkereskedelem
+        position:
+          act: 2012. évi C. törvény
+          article: '459'
+          paragraph: '1'
+          point: '26'
+          subpoint: d
+        replacement_text: emberkereskedelem és kényszermunka
+      text: 28. § (1a) bekezdésében, 44. § (1) bekezdés j) pontjában, 74/A. § (2)
+        bekezdés c) pontjában, 459. § (1) bekezdés 26. pont d) alpontjában az „emberkereskedelem”
+        szövegrész helyébe az „emberkereskedelem és kényszermunka” szöveg,
+    - __type__: AlphabeticPoint
+      identifier: b
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: emberkereskedelem
+        position:
+          act: 2012. évi C. törvény
+          article: '37'
+          paragraph: '3'
+          point: a
+          subpoint: ad
+        replacement_text: emberkereskedelem és kényszermunka
+      - __type__: TextAmendment
+        original_text: 192. § (2)–(6) bekezdés
+        position:
+          act: 2012. évi C. törvény
+          article: '37'
+          paragraph: '3'
+          point: a
+          subpoint: ad
+        replacement_text: 192. § (1)–(6) bekezdés
+      text: 37. § (3) bekezdés a) pont ad) alpontjában az „emberkereskedelem” szövegrész
+        helyébe az „emberkereskedelem és kényszermunka” szöveg és a „192. § (2)–(6)
+        bekezdés” szövegrész helyébe a „192. § (1)–(6) bekezdés” szöveg,
+    - __type__: AlphabeticPoint
+      identifier: c
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: emberkereskedelmet követ el, vagy kényszermunkát végeztet
+        position:
+          act: 2012. évi C. törvény
+          article: '143'
+          paragraph: '1'
+          point: d
+        replacement_text: emberkereskedelem és kényszermunkát követ el
+      text: 143. § (1) bekezdés d) pontjában az „emberkereskedelmet követ el, vagy
+        kényszermunkát végeztet” szövegrész helyébe az „emberkereskedelem és kényszermunkát
+        követ el” szöveg,
+    - __type__: AlphabeticPoint
+      identifier: d
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: az (1) bekezdés szerint büntetendő az is
+        position:
+          act: 2012. évi C. törvény
+          article: '200'
+          paragraph: '2'
+        replacement_text: egy évtől öt évig terjedő szabadságvesztéssel büntetendő
+      text: 200. § (2) bekezdésében az „az (1) bekezdés szerint büntetendő az is”
+        szövegrész helyébe az „egy évtől öt évig terjedő szabadságvesztéssel büntetendő”
+        szöveg,
+    - __type__: AlphabeticPoint
+      identifier: e
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: egy évtől öt évig
+        position:
+          act: 2012. évi C. törvény
+          article: '200'
+          paragraph: '3'
+        replacement_text: két évtől nyolc évig
+      - __type__: TextAmendment
+        original_text: egy évtől öt évig
+        position:
+          act: 2012. évi C. törvény
+          article: '203'
+          paragraph: '3'
+        replacement_text: két évtől nyolc évig
+      text: 200. § (3) bekezdésében és 203. § (3) bekezdésében az „egy évtől öt évig”
+        szövegrész helyébe a „két évtől nyolc évig” szöveg,
+    - __type__: AlphabeticPoint
+      identifier: f
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: három évig terjedő
+        position:
+          act: 2012. évi C. törvény
+          article: '203'
+          paragraph: '1'
+        replacement_text: két évtől nyolc évig terjedő
+      text: 203. § (1) bekezdésében a „három évig terjedő” szövegrész helyébe a „két
+        évtől nyolc évig terjedő” szöveg,
+    - __type__: AlphabeticPoint
+      identifier: g
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: emberkereskedelemmel
+        position:
+          act: 2012. évi C. törvény
+          article: '282'
+          paragraph: '3'
+          point: b
+        replacement_text: emberkereskedelem és kényszermunkával
+      text: 282. § (3) bekezdés b) pontjában az „emberkereskedelemmel” szövegrész
+        helyébe az „emberkereskedelem és kényszermunkával” szöveg
+    intro: A Btk.
+    wrap_up: lép.
+  identifier: '13'
+- __type__: Article
+  children:
+  - children:
+    - __type__: AlphabeticPoint
+      identifier: a
+      semantic_data:
+      - __type__: Repeal
+        position:
+          __type__: Reference
+          act: 2012. évi C. törvény
+          article: 74/A
+          paragraph: '2'
+          point: c
+        text: a kényszermunka (193. §),
+      - __type__: Repeal
+        position:
+          __type__: Reference
+          act: 2012. évi C. törvény
+          article: '459'
+          paragraph: '1'
+          point: '26'
+          subpoint: d
+        text: a kényszermunka (193. §),
+      text: 74/A. § (2) bekezdés c) pontjában és 459. § (1) bekezdés 26. pont d) alpontjában
+        az „a kényszermunka (193. §),” szövegrész,
+    - __type__: AlphabeticPoint
+      identifier: b
+      semantic_data:
+      - __type__: Repeal
+        position:
+          __type__: StructuralReference
+          act: 2012. évi C. törvény
+          subtitle: Kényszermunka
+      text: „Kényszermunka” című alcíme,
+    - __type__: AlphabeticPoint
+      identifier: c
+      semantic_data:
+      - __type__: Repeal
+        position:
+          __type__: Reference
+          act: 2012. évi C. törvény
+          article: '201'
+          paragraph: '1'
+          point: c
+      text: 201. § (1) bekezdés c) pontja,
+    - __type__: AlphabeticPoint
+      identifier: d
+      semantic_data:
+      - __type__: Repeal
+        position:
+          __type__: Reference
+          act: 2012. évi C. törvény
+          article: '356'
+          paragraph: '2'
+          point: b
+      text: 356. § (2) bekezdés b) pontja.
+    intro: Hatályát veszti a Btk.
+  identifier: '14'
+- __type__: Article
+  children:
+  - semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2020
+      position: null
+    text: Ez a törvény 2020. július 1-jén lép hatályba.
+  identifier: '15'
+identifier: 2020. évi V. törvény
+preamble: ''
+publication_date:
+  day: 16
+  month: 3
+  year: 2020
+subject: az emberkereskedelem áldozatainak kizsákmányolása elleni fellépés érdekében
+  szükséges egyes törvények módosításáról

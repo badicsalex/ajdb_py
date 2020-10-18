@@ -1,0 +1,124 @@
+children:
+- __type__: Article
+  children:
+  - children:
+    - __type__: AlphabeticPoint
+      identifier: a
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: tárgyévi adózott eredménye, illetve
+        position:
+          act: 2013. évi V. törvény
+          article: 3:88
+          paragraph: '2'
+        replacement_text: az előző üzleti évi adózott eredménnyel kiegészített
+      text: 3:88. § (2) bekezdésében a „tárgyévi adózott eredménye, illetve” szövegrész
+        helyébe az „az előző üzleti évi adózott eredménnyel kiegészített” szöveg;
+    - __type__: AlphabeticPoint
+      identifier: b
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: a tárgyévi adózott eredményből, illetve a szabad eredménytartalékkal
+          kiegészített tárgyévi adózott eredményből
+        position:
+          act: 2013. évi V. törvény
+          article: 3:184
+          paragraph: '1'
+        replacement_text: az előző üzleti évi adózott eredménnyel kiegészített szabad
+          eredménytartalékból
+      - __type__: TextAmendment
+        original_text: a tárgyévi adózott eredményből, illetve a szabad eredménytartalékkal
+          kiegészített tárgyévi adózott eredményből
+        position:
+          act: 2013. évi V. törvény
+          article: 3:238
+          paragraph: '2'
+        replacement_text: az előző üzleti évi adózott eredménnyel kiegészített szabad
+          eredménytartalékból
+      - __type__: TextAmendment
+        original_text: a tárgyévi adózott eredményből, illetve a szabad eredménytartalékkal
+          kiegészített tárgyévi adózott eredményből
+        position:
+          act: 2013. évi V. törvény
+          article: 3:261
+          paragraph: '1'
+        replacement_text: az előző üzleti évi adózott eredménnyel kiegészített szabad
+          eredménytartalékból
+      text: 3:184. § (1) bekezdésében, a 3:238. § (2) bekezdésében és a 3:261. § (1)
+        bekezdésében az „a tárgyévi adózott eredményből, illetve a szabad eredménytartalékkal
+        kiegészített tárgyévi adózott eredményből” szövegrész helyébe az „az előző
+        üzleti évi adózott eredménnyel kiegészített szabad eredménytartalékból” szöveg;
+    - __type__: AlphabeticPoint
+      identifier: c
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: keletkezett eredménynek a megállapított, illetve a szabad eredménytartalékkal
+          kiegészített
+        position:
+          act: 2013. évi V. törvény
+          article: 3:186
+          paragraph: '1'
+          point: b
+        replacement_text: kimutatott, az előző üzleti évi adózott eredménnyel kiegészített
+          szabad eredménytartalék
+      - __type__: TextAmendment
+        original_text: keletkezett eredménynek a megállapított, illetve a szabad eredménytartalékkal
+          kiegészített
+        position:
+          act: 2013. évi V. törvény
+          article: 3:263
+          paragraph: '1'
+          point: b
+        replacement_text: kimutatott, az előző üzleti évi adózott eredménnyel kiegészített
+          szabad eredménytartalék
+      text: 3:186. § (1) bekezdés b) pontjában és a 3:263. § (1) bekezdés b) pontjában
+        a „keletkezett eredménynek a megállapított, illetve a szabad eredménytartalékkal
+        kiegészített” szövegrész helyébe a „kimutatott, az előző üzleti évi adózott
+        eredménnyel kiegészített szabad eredménytartalék” szöveg
+    intro: A Polgári Törvénykönyvről szóló 2013. évi V. törvény
+    wrap_up: lép.
+  identifier: '50'
+- __type__: Article
+  children:
+  - identifier: '1'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: DaysAfterPublication
+      position: null
+    text: E törvény – a (2)–(3) bekezdésben foglalt kivétellel – a kihirdetését követő
+      napon lép hatályba.
+  - identifier: '2'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 8
+        year: 2015
+      position:
+        article: '61'
+        point: h
+    text: A 61. § h) pontja 2015. augusztus 1-jén lép hatályba.
+  - identifier: '3'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2016
+      position:
+        article:
+        - '45'
+        - '56'
+    text: A 45–56. § 2016. január 1-jén lép hatályba.
+  identifier: '63'
+identifier: 2015. évi CI. törvény
+preamble: ''
+publication_date:
+  day: 3
+  month: 7
+  year: 2015
+subject: a számvitelről szóló 2000. évi C. törvény, valamint egyes pénzügyi tárgyú
+  törvények módosításáról

@@ -1,0 +1,68 @@
+children:
+- __type__: Article
+  children:
+  - semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: DaysAfterPublication
+      position: null
+    text: Ez a törvény kihirdetését követő napon lép hatályba.
+  identifier: '15'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Article
+        children:
+        - identifier: '1'
+          text: A közügyek szabad vitatását biztosító alapjogok gyakorlása a közéleti
+            szereplő személyiségi jogainak védelmét szükséges és arányos mértékben,
+            az emberi méltóság sérelme nélkül korlátozhatja; azonban az nem járhat
+            a magán-és családi életének, valamint otthonának sérelmével.
+        - identifier: '2'
+          text: A közéleti szereplőt a közügyek szabad vitatásának körén kívül eső
+            közléssel vagy magatartással szemben a nem közéleti szereplővel azonos
+            védelem illeti meg.
+        - identifier: '3'
+          text: Nem minősül közügynek a közéleti szereplő magán- vagy családi életével
+            kapcsolatos tevékenység, illetve adat.
+        identifier: '2:44'
+        title: Közéleti szereplő személyiségi jogának védelme
+    intro: 'A Polgári Törvénykönyvről szóló 2013. évi V. törvény 2:44. §-a helyébe
+      a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: '2:44'
+    wrap_up: ''
+  identifier: '16'
+identifier: 2018. évi LIII. törvény
+preamble: 'A magánélet, a családi élet, az otthon és a kapcsolattartás tiszteletben
+  tartásához fűződő jog együttesen az ember veleszületett méltóságából ered, amely
+  mindenkit megillet. A magánélethez való jog az emberi lét és önazonosság kiteljesedéséhez
+  elengedhetetlen, hiszen az az emberi személyiség érinthetetlen tartományát határolja
+  körül. Magánélethez való jog minden embert megillet, és azt a közügyek szabad vitatása
+  során is tiszteletben kell tartani, erre figyelemmel a közéleti ügyek szabad megvitatása
+  sem járhat a magán- és családi élet, valamint az otthon sérelmével. Az Alaptörvénnyel
+  összhangban a közéleti szereplőt is megilleti a magánélet védelme és az otthon nyugalma.
+  A törvény kimondja, hogy közéleti szereplő tűrni csak közéleti tevékenységével összefüggésében
+  köteles. Az infokommunikáció korszerű eszközei a kapcsolattartás napi formáit is
+  megváltoztatták, így a magánélet védelme kiterjed a fizikai és az interneten megvalósuló
+  zaklatásra egyaránt. Az egyén méltóságát és magánélethez fűződő jogát biztosítani
+  kell a közösségi médiatérben is. Ezért a törvényalkotó szándéka garantálja az egyén
+  számára a privátszféra biztonságát a magáncéllal megosztott és közzétett tartalmak
+  tekintetében is. Az Alaptörvény hetedik módosításával kiegészített VI. cikkére és
+  az alapvető jogok korlátozhatóságának Alaptörvényben meghatározott általános kereteire,
+  valamint az Alkotmánybíróság gyakorlatára figyelemmel, az Országgyűlés a magánélethez
+  való jog hatékony biztosítása céljából, továbbá annak érdekében, hogy a jogalkalmazás
+  figyelmét felhívja a magánélethez való jogot érintő aktuális kihívásokra, egyben
+  annak okán, hogy a jogvitákban érvényesíthető legyen a magánélethez való jog fokozott
+  védelme, a következő törvényt alkotja:'
+publication_date:
+  day: 31
+  month: 7
+  year: 2018
+subject: a magánélet védelméről

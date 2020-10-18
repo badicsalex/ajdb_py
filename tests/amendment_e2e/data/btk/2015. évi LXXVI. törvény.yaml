@@ -1,0 +1,913 @@
+children:
+- __type__: Article
+  children:
+  - act_id_abbreviations:
+    - abbreviation: Btk.
+      act: 2012. évi C. törvény
+    children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '4'
+        text: Ha ennek feltételei az adott bűncselekmény vonatkozásában fennállnak,
+          a bűnhalmazatban lévő bűncselekmény büntetési tételét a különös, a többszörös
+          és az erőszakos többszörös visszaesőkre, továbbá a bűnszervezetben történő
+          elkövetésre vonatkozó rendelkezések alapján, a (2) és (3) bekezdés alkalmazását
+          megelőzően kell megállapítani.
+    intro: 'A Büntető Törvénykönyvről szóló 2012. évi C. törvény (a továbbiakban:
+      Btk.) 81. §-a a következő (4) bekezdéssel egészül ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '81'
+        paragraph: '4'
+      pure_insertion: true
+    wrap_up: ''
+  identifier: '19'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '1'
+        text: A különös és a többszörös visszaesővel szemben az újabb bűncselekmény
+          büntetési tételének felső határa szabadságvesztés esetén a felével emelkedik,
+          de nem haladhatja meg a huszonöt évet. Tárgyalásról lemondás esetén a 83.
+          § (2) bekezdése szerinti büntetési tételt kell a felével emelni.
+    intro: 'A Btk. 89. § (1) bekezdése helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '89'
+        paragraph: '1'
+    wrap_up: ''
+  identifier: '20'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '2'
+        text: Az erőszakos többszörös visszaesővel szemben az erőszakos többszörös
+          visszaesőkénti minősítést megalapozó bűncselekmény büntetési tételének felső
+          határa szabadságvesztés esetén a kétszeresére emelkedik. Ha a büntetési
+          tétel így felemelt felső határa a húsz évet meghaladná, vagy a törvény szerint
+          a bűncselekmény életfogytig tartó szabadságvesztéssel is büntethető, az
+          elkövetővel szemben életfogytig tartó szabadságvesztést kell kiszabni. Tárgyalásról
+          lemondás esetén a 83. § (2) bekezdése szerinti büntetési tételt kell a kétszeresére
+          emelni.
+    intro: 'A Btk. 90. § (2) bekezdése helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '90'
+        paragraph: '2'
+    wrap_up: ''
+  identifier: '21'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '1'
+        text: Azzal szemben, aki a szándékos bűncselekményt bűnszervezetben követte
+          el, a bűncselekmény büntetési tételének felső határa a kétszeresére emelkedik,
+          de a huszonöt évet nem haladhatja meg. Tárgyalásról lemondás esetén a 83.
+          § (2) bekezdése szerinti büntetési tételt kell alapul venni.
+    intro: 'A Btk. 91. § (1) bekezdése helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '91'
+        paragraph: '1'
+    wrap_up: ''
+  identifier: '22'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Article
+        children:
+        - identifier: '1'
+          text: Végrehajtandó szabadságvesztés esetén a bíróság az elítéltet kérelemre
+            utólag mentesítésben részesítheti, ha erre érdemes, és a szabadságvesztés
+            kitöltésétől vagy végrehajthatósága megszűnésétől a 100. § (1) bekezdés
+            f)–i) pontjában meghatározott idő fele már eltelt.
+        - identifier: '2'
+          text: Felfüggesztett szabadságvesztés esetén a bíróság az elítéltet kérelemre
+            utólag mentesítésben részesítheti, ha erre érdemes, és a próbaidő fele
+            része, de legalább egy év már eltelt.
+        - identifier: '3'
+          text: Az érdemesség elbírálásánál figyelembe kell venni az elítéltnek a
+            büntetés kitöltése, felfüggesztett szabadságvesztés esetén az ítélet jogerőre
+            emelkedése óta folytatott életmódját, továbbá azt, hogy – ha erre módja
+            volt – jóvátette-e a bűncselekménnyel okozott sérelmet.
+        - identifier: '4'
+          text: Felfüggesztett szabadságvesztés esetén az utólagos mentesítés hatályát
+            veszti, ha a felfüggesztett szabadságvesztés végrehajtását elrendelik.
+        identifier: '101'
+    intro: 'A Btk. 101. §-a helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '101'
+    wrap_up: ''
+  identifier: '23'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: 1a
+        text: A várakozási idő meghosszabbítása esetén a rendőrség, az Országgyűlési
+          Őrség, a büntetés-végrehajtási szervezet, a hivatásos katasztrófavédelmi
+          szerv és a polgári nemzetbiztonsági szolgálatok hivatásos állományú tagja
+          esetében a soron következő fizetési fokozatba előresorolásra előírt várakozási
+          idő meghosszabbodik. A meghosszabbítást években kell meghatározni, annak
+          tartama nem haladhatja meg a fizetési fokozathoz rendelt várakozási idő
+          felét.
+    intro: 'A Btk. 140. §-a a következő (1a) bekezdéssel egészül ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '140'
+        paragraph: 1a
+      pure_insertion: true
+    wrap_up: ''
+  identifier: '24'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '2'
+        text: Aki abból a célból, hogy az ellene folytatott büntetőeljárás alól kivonja
+          magát, a lakhelyelhagyási tilalom tartama alatt a számára kijelölt területet,
+          körzetet vagy a házi őrizet tartama alatt a kijelölt lakást és az ahhoz
+          tartozó bekerített helyet a kényszerintézkedés szabályainak megszegésével
+          elhagyja, vétség miatt két évig terjedő szabadságvesztéssel büntetendő.
+    intro: 'A Btk. 283. § (2) bekezdése helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '283'
+        paragraph: '2'
+    wrap_up: ''
+  identifier: '25'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: 3a
+        text: A büntetés egy évig terjedő szabadságvesztés, ha az elítélt a reintegrációs
+          őrizet tartama alatt a számára kijelölt lakást és az ahhoz tartozó bekerített
+          helyet vagy a számára meghatározott napirend szerinti tartózkodási helyet
+          a reintegrációs őrizet szabályainak megszegésével abból a célból hagyja
+          el, hogy a szabadságvesztés végrehajtása alól kivonja magát.
+    intro: 'A Btk. 283. §-a a következő (3a) bekezdéssel egészül ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '283'
+        paragraph: 3a
+      pure_insertion: true
+    wrap_up: ''
+  identifier: '26'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: 1a
+        text: Az (1) bekezdés szerint büntetendő, aki magát hivatalos személynek kiadó
+          személy részére vagy rá tekintettel másnak jogtalan előnyt ad vagy ígér.
+    identifier: '1'
+    intro: 'A Btk. 298. §-a a következő (1a ) bekezdéssel egészül ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '298'
+        paragraph: 1a
+      pure_insertion: true
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '3'
+        text: Az (1) bekezdés szerint büntetendő, aki az (1) és (1a) bekezdésben meghatározott
+          bűncselekményt külföldi hivatalos személlyel kapcsolatban követi el.
+    identifier: '2'
+    intro: 'A Btk. 298. § (3) bekezdése helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '298'
+        paragraph: '3'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '4'
+        text: A büntetés korlátlanul enyhíthető – különös méltánylást érdemlő esetben
+          mellőzhető – az (1)–(2) bekezdésben meghatározott bűncselekmény elkövetőjével
+          szemben, ha a bűncselekményt, mielőtt az a hatóság tudomására jutott volna,
+          a hatóságnak bejelenti, és az elkövetés körülményeit feltárja.
+    identifier: '3'
+    intro: 'A Btk. 298. §-a a következő (4) bekezdéssel egészül ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '298'
+        paragraph: '4'
+      pure_insertion: true
+    wrap_up: ''
+  identifier: '27'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Article
+        children:
+        - identifier: '1'
+          text: Aki arra hivatkozással, hogy hivatalos személyt befolyásol, a maga
+            vagy más számára jogtalan előnyt kér, a jogtalan előnyt vagy ennek ígéretét
+            elfogadja, illetve a rá tekintettel harmadik személynek adott vagy ígért
+            jogtalan előny kérőjével vagy elfogadójával egyetért, bűntett miatt egy
+            évtől öt évig terjedő szabadságvesztéssel büntetendő.
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: azt állítja vagy azt a látszatot kelti, hogy hivatalos személyt
+              veszteget,
+          - __type__: AlphabeticPoint
+            identifier: b
+            text: hivatalos személynek adja ki magát, vagy
+          - __type__: AlphabeticPoint
+            identifier: c
+            text: a bűncselekményt üzletszerűen követi el.
+          identifier: '2'
+          intro: A büntetés két évtől nyolc évig terjedő szabadságvesztés, ha az elkövető
+        - identifier: '3'
+          text: Aki az (1) bekezdésében meghatározott bűncselekményt gazdálkodó szervezet
+            részére vagy érdekében tevékenységet végző személlyel kapcsolatban követi
+            el, vétség miatt két évig terjedő szabadságvesztéssel büntetendő.
+        - identifier: '4'
+          text: A büntetés bűntett miatt három évig terjedő szabadságvesztés, ha a
+            (3) bekezdésben meghatározott bűncselekményt gazdálkodó szervezet részére
+            vagy érdekében tevékenységet végző, önálló intézkedésre jogosult személlyel
+            kapcsolatban követik el.
+        - identifier: '5'
+          text: Az (1) és (2) bekezdés szerint büntetendő, aki az ott meghatározott
+            bűncselekményt külföldi hivatalos személlyel kapcsolatban követi el.
+        - identifier: '6'
+          text: A büntetés korlátlanul enyhíthető – különös méltánylást érdemlő esetben
+            mellőzhető – az (1) és (3) bekezdésben meghatározott bűncselekmény elkövetőjével
+            szemben, ha a bűncselekményt, mielőtt az a hatóság tudomására jutott volna,
+            a hatóságnak bejelenti, a kapott jogtalan vagyoni előnyt vagy annak ellenértékét
+            a hatóságnak átadja, és az elkövetés körülményeit feltárja.
+        identifier: '299'
+    intro: 'A Btk. 299. §-a helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '299'
+    wrap_up: ''
+  identifier: '28'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Subtitle
+        identifier: ''
+        title: Korrupciós bűncselekmény feljelentésének elmulasztása
+    intro: 'A Btk. a 300. §-t megelőzően a következő alcímmel egészül ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: StructuralReference
+        act: 2012. évi C. törvény
+        special:
+          article_id: '300'
+          position: BEFORE_WITHOUT_ARTICLE
+      pure_insertion: true
+    wrap_up: ''
+  identifier: '29'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Article
+        children:
+        - identifier: '1'
+          text: Az a hivatalos személy, aki e minőségében hitelt érdemlő tudomást
+            szerez arról, hogy még le nem leplezett vesztegetést, vesztegetés elfogadását,
+            hivatali vesztegetést, hivatali vesztegetés elfogadását, vesztegetést
+            bírósági vagy hatósági eljárásban, vesztegetés elfogadását bírósági vagy
+            hatósági eljárásban, befolyás vásárlását vagy befolyással üzérkedést követtek
+            el, és erről a hatóságnak, mihelyt teheti, nem tesz feljelentést, bűntett
+            miatt három évig terjedő szabadságvesztéssel büntetendő.
+        - identifier: '2'
+          text: Korrupciós bűncselekmény feljelentésének elmulasztása miatt az elkövető
+            hozzátartozója nem büntethető.
+        identifier: '300'
+    intro: 'A Btk. 300. §-a helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '300'
+    wrap_up: ''
+  identifier: '30'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Subtitle
+        identifier: ''
+        title: Értelmező rendelkezés
+      - __type__: Article
+        children:
+        - identifier: '1'
+          text: E fejezet alkalmazásában kötelességszegés a kötelességnek előny adásához
+            kötött teljesítése is.
+        - identifier: '2'
+          text: A 290. § és a 291. § alkalmazásában külföldi gazdálkodó szervezet
+            az a szervezet, amely a személyes joga szerint jogi személyiséggel rendelkezik
+            és az adott szervezeti formában gazdasági tevékenység végzésére jogosult.
+        identifier: 300/A
+    intro: 'A Btk. XXVII. Fejezete a következő alcímmel és 300/A. §-sal egészül ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: StructuralReference
+        act: 2012. évi C. törvény
+        special:
+          article_id: 300/A
+          position: BEFORE_WITH_ARTICLE
+      pure_insertion: true
+    wrap_up: ''
+  identifier: '31'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Article
+        children:
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: tiltott szerencsejátékot rendszeresen szervez,
+          - __type__: AlphabeticPoint
+            identifier: b
+            text: tiltott szerencsejáték rendszeres szervezéséhez helyiséget vagy
+              eszközt bocsát rendelkezésre, vagy
+          - __type__: AlphabeticPoint
+            identifier: c
+            text: tiltott szerencsejátékban való részvételre nagy nyilvánosság előtt
+              felhív,
+          intro: Aki
+          wrap_up: bűntett miatt három évig terjedő szabadságvesztéssel büntetendő.
+        identifier: '360'
+    intro: 'A Btk. 360. §-a helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '360'
+    wrap_up: ''
+  identifier: '32'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: 3a
+        text: Ahol e törvény rendfokozatot említ, azon a Magyar Honvédség tényleges
+          állományú tagja esetében a viselt rendfokozatot, a rendőrség, az Országgyűlési
+          Őrség, a büntetés-végrehajtási szervezet, a hivatásos katasztrófavédelmi
+          szerv és a polgári nemzetbiztonsági szolgálatok hivatásos állományú tagja
+          esetében a betöltött szolgálati beosztás besorolása és fizetési fokozata
+          alapján meghatározott rendfokozatot kell érteni.
+    intro: 'A Btk. 459. §-a a következő (3a) bekezdéssel egészül ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '459'
+        paragraph: 3a
+      pure_insertion: true
+    wrap_up: ''
+  identifier: '33'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        children:
+        - __type__: AlphabeticPoint
+          identifier: a
+          text: ugyanolyan tulajdon elleni szabálysértés esetén a dolog értéke, az
+            okozott kár, illetve az okozott vagyoni hátrány a (2) bekezdés a)–c) pontjában
+            meghatározott összeget,
+        - __type__: AlphabeticPoint
+          identifier: b
+          text: szerzői vagy szerzői joghoz kapcsolódó jogok megsértése esetén az
+            üreshordozó díj, illetve a reprográfiai díj a (2) bekezdés d) pontjában
+            meghatározott összeget,
+        - __type__: AlphabeticPoint
+          identifier: c
+          text: iparjogvédelmi jogok megsértése esetén a vagyoni hátrány a (2) bekezdés
+            e) pontjában meghatározott összeget,
+        - __type__: AlphabeticPoint
+          identifier: d
+          text: rossz minőségű termék forgalomba hozatala vagy a versenytárs utánzása
+            esetén a termék, illetve áru értéke a (2) bekezdés f) pontjában meghatározott
+            összeget,
+        - __type__: AlphabeticPoint
+          identifier: e
+          text: vámszabálysértés esetén a vagyoni hátrány a (3) bekezdésben meghatározott
+            összeget
+        identifier: '4'
+        intro: Bűncselekmény valósul meg, ha az ugyanazon elkövető által, egy éven
+          belül elkövetett és együttesen elbírált
+        wrap_up: érték-egybefoglalás folytán meghaladja.
+      - __type__: Paragraph
+        identifier: '5'
+        text: Bűncselekmény valósul meg ugyanazon elkövető által elkövetett és együttesen
+          elbírált szerzői vagy szerzői joghoz kapcsolódó jogok megsértése szabálysértés
+          esetén, ha az egyes cselekményekkel más vagy mások, a szerzői jogról szóló
+          törvény alapján fennálló szerzői vagy ahhoz kapcsolódó jogát vagy jogait
+          a (2) bekezdés d) pontjában meghatározott összeget meghaladó vagyoni hátrányt
+          okozva sértik meg.
+    intro: 'A Btk. 462. §-a a következő (4) és (5) bekezdéssel egészül ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '462'
+        paragraph:
+        - '4'
+        - '5'
+      pure_insertion: true
+    wrap_up: ''
+  identifier: '34'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '3'
+        text: E törvény 216. § (1) és (4) bekezdése, valamint 332. és 333. §-a a rasszizmus
+          és az idegengyűlölet egyes formái és megnyilvánulásai elleni, büntetőjogi
+          eszközökkel történő küzdelemről szóló, 2008. november 28-i 2008/913/IB tanácsi
+          kerethatározat 1. cikkének való megfelelést szolgálja.
+    intro: 'A Btk. 465. §-a a következő (3) bekezdéssel egészül ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '465'
+        paragraph: '3'
+      pure_insertion: true
+    wrap_up: ''
+  identifier: '35'
+- __type__: Article
+  children:
+  - children:
+    - __type__: AlphabeticPoint
+      identifier: a
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: a kétévi
+        position:
+          act: 2012. évi C. törvény
+          article: '37'
+          paragraph: '3'
+          point: b
+        replacement_text: a szabadságvesztés kétévi
+      text: 37. § (3) bekezdés b) pontjában az „a kétévi” szövegrész helyébe az „a
+        szabadságvesztés kétévi”,
+    - __type__: AlphabeticPoint
+      identifier: b
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: kizárja
+        position:
+          act: 2012. évi C. törvény
+          article: '61'
+          paragraph: '3'
+        replacement_text: kizárja, valamint címzetes rendfokozatát
+      text: 61. § (3) bekezdésében a „kizárja” szövegrész helyébe a „kizárja, valamint
+        címzetes rendfokozatát”,
+    - __type__: AlphabeticPoint
+      identifier: c
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: bíróság
+        position:
+          act: 2012. évi C. törvény
+          article: '102'
+          paragraph: '1'
+        replacement_text: bíróság ítéletében
+      - __type__: TextAmendment
+        original_text: bíróság
+        position:
+          act: 2012. évi C. törvény
+          article: '141'
+          paragraph: '2'
+        replacement_text: bíróság ítéletében
+      text: 102. § (1) bekezdésében és 141. § (2) bekezdésében a „bíróság” szövegrész
+        helyébe a „bíróság ítéletében”,
+    - __type__: AlphabeticPoint
+      identifier: d
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: rendfokozatát
+        position:
+          act: 2012. évi C. törvény
+          article: '137'
+          paragraph: '1'
+        replacement_text: rendfokozatát és címzetes rendfokozatát
+      text: 137. § (1) bekezdésében a „rendfokozatát” szövegrész helyébe a „rendfokozatát
+        és címzetes rendfokozatát”,
+    - __type__: AlphabeticPoint
+      identifier: e
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: a katonának a
+        position:
+          act: 2012. évi C. törvény
+          article: '140'
+          paragraph: '1'
+        replacement_text: a Magyar Honvédség tényleges állományú tagjának a
+      text: 140. § (1) bekezdésében az „a katonának a” szövegrész helyébe az „a Magyar
+        Honvédség tényleges állományú tagjának a”,
+    - __type__: AlphabeticPoint
+      identifier: f
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: az előléptetést hosszabb
+        position:
+          act: 2012. évi C. törvény
+          article: '140'
+          paragraph: '2'
+        replacement_text: az előléptetést vagy az előresorolást hosszabb
+      text: 140. § (2) bekezdésében az „az előléptetést hosszabb” szövegrész helyébe
+        az „az előléptetést vagy az előresorolást hosszabb”,
+    - __type__: AlphabeticPoint
+      identifier: g
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: Ha bűncselekményt
+        position:
+          act: 2012. évi C. törvény
+          article: '179'
+          paragraph: '6'
+        replacement_text: Ha a bűncselekményt
+      text: 179. § (6) bekezdésében a „Ha bűncselekményt” szövegrész helyébe a „Ha
+        a bűncselekményt”,
+    - __type__: AlphabeticPoint
+      identifier: h
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: büntetés három
+        position:
+          act: 2012. évi C. törvény
+          article: 226/B
+          paragraph: '2'
+        replacement_text: büntetés bűntett miatt három
+      text: 226/B. § (2) bekezdésében a „büntetés három” szövegrész helyébe a „büntetés
+        bűntett miatt három”,
+    - __type__: AlphabeticPoint
+      identifier: i
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: három évig
+        position:
+          act: 2012. évi C. törvény
+          article: '265'
+          paragraph: '5'
+        replacement_text: bűntett miatt három évig
+      text: 265. § (5) bekezdésében a „három évig” szövegrész helyébe a „bűntett miatt
+        három évig”,
+    - __type__: AlphabeticPoint
+      identifier: j
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: előnnyel
+        position:
+          act: 2012. évi C. törvény
+          article: '293'
+          paragraph: '1'
+        replacement_text: jogtalan előnnyel
+      text: 293. § (1) bekezdésében az „előnnyel” szövegrész helyébe a „jogtalan előnnyel”,
+    - __type__: AlphabeticPoint
+      identifier: k
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: az előnyt
+        position:
+          act: 2012. évi C. törvény
+          article: '293'
+          paragraph: '2'
+        replacement_text: a jogtalan előnyt
+      text: 293. § (2) bekezdésében az „az előnyt” szövegrész helyébe az „a jogtalan
+        előnyt”,
+    - __type__: AlphabeticPoint
+      identifier: l
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: (1)–(2)
+        position:
+          act: 2012. évi C. törvény
+          article: '293'
+          paragraph: '3'
+        replacement_text: (1) és (2)
+      - __type__: TextAmendment
+        original_text: (1)–(2)
+        position:
+          act: 2012. évi C. törvény
+          article: '295'
+          paragraph: '3'
+        replacement_text: (1) és (2)
+      - __type__: TextAmendment
+        original_text: (1)–(2)
+        position:
+          act: 2012. évi C. törvény
+          article: '296'
+          paragraph: '3'
+        replacement_text: (1) és (2)
+      text: 293. § (3) bekezdésében, 295. § (3) bekezdésében és 296. § (3) bekezdésében
+        az „(1)–(2)” szövegrész helyébe az „(1) és (2)”,
+    - __type__: AlphabeticPoint
+      identifier: m
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: előnyt kér, az előnyt
+        position:
+          act: 2012. évi C. törvény
+          article: '294'
+          paragraph: '1'
+        replacement_text: jogtalan előnyt kér, a jogtalan előnyt
+      - __type__: TextAmendment
+        original_text: előny kérőjével
+        position:
+          act: 2012. évi C. törvény
+          article: '294'
+          paragraph: '1'
+        replacement_text: jogtalan előny kérőjével
+      - __type__: TextAmendment
+        original_text: előnyt kér, az előnyt
+        position:
+          act: 2012. évi C. törvény
+          article: '296'
+          paragraph: '1'
+        replacement_text: jogtalan előnyt kér, a jogtalan előnyt
+      - __type__: TextAmendment
+        original_text: előny kérőjével
+        position:
+          act: 2012. évi C. törvény
+          article: '296'
+          paragraph: '1'
+        replacement_text: jogtalan előny kérőjével
+      text: 294. § (1) bekezdésében és 296. § (1) bekezdésében az „előnyt kér, az
+        előnyt” szövegrész helyébe a „jogtalan előnyt kér, a jogtalan előnyt”, az
+        „előny kérőjével” szövegrész helyébe a „jogtalan előny kérőjével”,
+    - __type__: AlphabeticPoint
+      identifier: n
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: az előnyért
+        position:
+          act: 2012. évi C. törvény
+          article: '294'
+          paragraph: '3'
+          point: a
+        replacement_text: a jogtalan előnyért
+      text: 294. § (3) bekezdés a) pontjában az „az előnyért” szövegrész helyébe az
+        „a jogtalan előnyért”,
+    - __type__: AlphabeticPoint
+      identifier: o
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: előnyt
+        position:
+          act: 2012. évi C. törvény
+          article: '295'
+          paragraph: '1'
+        replacement_text: jogtalan előnyt
+      - __type__: TextAmendment
+        original_text: előnyt
+        position:
+          act: 2012. évi C. törvény
+          article: '298'
+          paragraph: '1'
+          point: b
+        replacement_text: jogtalan előnyt
+      text: 295. § (1) bekezdésében és 298. § (1) bekezdés b) pontjában az „előnyt”
+        szövegrész helyébe a „jogtalan előnyt”,
+    - __type__: AlphabeticPoint
+      identifier: p
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: '[423. § (1)–(3) bekezdés]'
+        position:
+          act: 2012. évi C. törvény
+          article: '314'
+          paragraph: '4'
+          point: i
+        replacement_text: '[423. § (1)–(4) bekezdés]'
+      text: 314. § (4) bekezdés i) pontjában a „[423. § (1)–(3) bekezdés]” szövegrész
+        helyébe a „[423. § (1)–(4) bekezdés]”,
+    - __type__: AlphabeticPoint
+      identifier: q
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: három évig
+        position:
+          act: 2012. évi C. törvény
+          article: '325'
+          paragraph: '5'
+        replacement_text: bűntett miatt három évig
+      text: 325. § (5) bekezdésében a „három évig” szövegrész helyébe a „bűntett miatt
+        három évig”
+    intro: A Btk.
+    wrap_up: szöveg lép.
+  identifier: '36'
+- __type__: Article
+  children:
+  - children:
+    - __type__: AlphabeticPoint
+      identifier: a
+      semantic_data:
+      - __type__: Repeal
+        position:
+          __type__: Reference
+          act: 2012. évi C. törvény
+          article: '41'
+          paragraph: '1'
+        text: a 81. § (4) bekezdése és
+      text: 41. § (1) bekezdésében az „a 81. § (4) bekezdése és” szövegrész,
+    - __type__: AlphabeticPoint
+      identifier: b
+      semantic_data:
+      - __type__: Repeal
+        position:
+          __type__: Reference
+          act: 2012. évi C. törvény
+          article: '72'
+          paragraph: '4'
+          point: b
+        text: ha
+      - __type__: Repeal
+        position:
+          __type__: Reference
+          act: 2012. évi C. törvény
+          article: '75'
+          paragraph: '2'
+          point: b
+        text: ha
+      text: 72. § (4) bekezdés b) pontjában és 75. § (2) bekezdés b) pontjában a „ha”
+        szövegrész,
+    - __type__: AlphabeticPoint
+      identifier: c
+      semantic_data:
+      - __type__: Repeal
+        position:
+          __type__: Reference
+          act: 2012. évi C. törvény
+          article: '100'
+          paragraph: '3'
+        text: illetve hatályát veszti,
+      text: 100. § (3) bekezdésében az „illetve hatályát veszti, ” szövegrész,
+    - __type__: AlphabeticPoint
+      identifier: d
+      semantic_data:
+      - __type__: Repeal
+        position:
+          __type__: Reference
+          act: 2012. évi C. törvény
+          article: '123'
+          paragraph: '2'
+        text: a 81. § (4) bekezdése vagy
+      text: 123. § (2) bekezdésében az „a 81. § (4) bekezdése vagy ” szövegrész,
+    - __type__: AlphabeticPoint
+      identifier: e
+      semantic_data:
+      - __type__: Repeal
+        position:
+          __type__: StructuralReference
+          act: 2012. évi C. törvény
+          special:
+            article_id: '292'
+            position: BEFORE_WITHOUT_ARTICLE
+      text: 292. §-át megelőző alcím,
+    - __type__: AlphabeticPoint
+      identifier: f
+      semantic_data:
+      - __type__: Repeal
+        position:
+          __type__: Reference
+          act: 2012. évi C. törvény
+          article: '292'
+      text: 292. §-a,
+    - __type__: AlphabeticPoint
+      identifier: g
+      semantic_data:
+      - __type__: Repeal
+        position:
+          __type__: StructuralReference
+          act: 2012. évi C. törvény
+          special:
+            article_id: '297'
+            position: BEFORE_WITHOUT_ARTICLE
+      text: 297. §-át megelőző alcím,
+    - __type__: AlphabeticPoint
+      identifier: h
+      semantic_data:
+      - __type__: Repeal
+        position:
+          __type__: Reference
+          act: 2012. évi C. törvény
+          article: '297'
+      text: 297. §-a,
+    - __type__: AlphabeticPoint
+      identifier: i
+      semantic_data:
+      - __type__: Repeal
+        position:
+          __type__: Reference
+          act: 2012. évi C. törvény
+          article: '298'
+          paragraph: '2'
+        text: ', illetve egyesület'
+      text: 298. § (2) bekezdésében az „, illetve egyesület” szövegrész.
+    intro: Hatályát veszti a Btk.
+  identifier: '37'
+- __type__: Article
+  children:
+  - semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2015
+      position: null
+    text: Ez a törvény 2015. július 1-jén lép hatályba.
+  identifier: '67'
+identifier: 2015. évi LXXVI. törvény
+preamble: ''
+publication_date:
+  day: 18
+  month: 6
+  year: 2015
+subject: egyes büntetőjogi tárgyú törvények módosításáról

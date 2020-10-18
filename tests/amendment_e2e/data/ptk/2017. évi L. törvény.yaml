@@ -1,0 +1,140 @@
+children:
+- __type__: Article
+  children:
+  - children:
+    - __type__: AlphabeticPoint
+      identifier: a
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: jogerős hatósági engedély
+        position:
+          act: 2013. évi V. törvény
+          article: 3:97
+          paragraph: '1'
+        replacement_text: véglegessé vált hatósági engedély
+      text: 3:97. § (1) bekezdésében a „jogerős hatósági engedély” szövegrész helyébe
+        a „véglegessé vált hatósági engedély” szöveg,
+    - __type__: AlphabeticPoint
+      identifier: b
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: jogerős engedély
+        position:
+          act: 2013. évi V. törvény
+          article: 3:100
+          paragraph: '2'
+        replacement_text: véglegessé vált engedély
+      - __type__: TextAmendment
+        original_text: jogerős engedély
+        position:
+          act: 2013. évi V. törvény
+          article: 3:329
+          paragraph: '1'
+        replacement_text: véglegessé vált engedély
+      text: 3:100. § (2) bekezdésében és 3:329. § (1) bekezdésében a „jogerős engedély”
+        szövegrész helyébe a „véglegessé vált engedély” szöveg,
+    - __type__: AlphabeticPoint
+      identifier: c
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: örökbefogadást engedélyező határozat jogerőre emelkedésével
+        position:
+          act: 2013. évi V. törvény
+          article: 4:131
+          paragraph: '1'
+        replacement_text: örökbefogadást engedélyező határozat véglegessé válásával
+      text: 4:131. § (1) bekezdésében az „örökbefogadást engedélyező határozat jogerőre
+        emelkedésével” szövegrész helyébe az „örökbefogadást engedélyező határozat
+        véglegessé válásával” szöveg,
+    - __type__: AlphabeticPoint
+      identifier: d
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: örökbefogadást engedélyező határozat jogerőre emelkedésétől
+        position:
+          act: 2013. évi V. törvény
+          article: 4:131
+          paragraph: '2'
+        replacement_text: örökbefogadást engedélyező határozat véglegessé válásától
+      text: 4:131. § (2) bekezdésében az „örökbefogadást engedélyező határozat jogerőre
+        emelkedésétől” szövegrész helyébe az „örökbefogadást engedélyező határozat
+        véglegessé válásától” szöveg,
+    - __type__: AlphabeticPoint
+      identifier: e
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: gyámhatósági határozat jogerőre emelkedésével
+        position:
+          act: 2013. évi V. törvény
+          article: 4:138
+          paragraph: '3'
+        replacement_text: gyámhatósági határozat véglegessé válásával
+      text: 4:138. § (3) bekezdésében a „gyámhatósági határozat jogerőre emelkedésével”
+        szövegrész helyébe a „gyámhatósági határozat véglegessé válásával” szöveg,
+    - __type__: AlphabeticPoint
+      identifier: f
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: lefoglalt
+        position:
+          act: 2013. évi V. törvény
+          article: '5:58'
+          paragraph: '2'
+        replacement_text: lefoglalt vagy zár alá vett
+      text: 5:58. § (2) bekezdésében a „lefoglalt” szövegrész helyébe a „lefoglalt
+        vagy zár alá vett” szöveg,
+    - __type__: AlphabeticPoint
+      identifier: g
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: jogosult személyét igazoló jogerős határozat
+        position:
+          act: 2013. évi V. törvény
+          article: '6:55'
+          paragraph: '2'
+        replacement_text: jogosult személyét igazoló jogerős vagy véglegessé vált
+          határozat
+      text: 6:55. § (2) bekezdésében a „jogosult személyét igazoló jogerős határozat”
+        szövegrész helyébe a „jogosult személyét igazoló jogerős vagy véglegessé vált
+        határozat” szöveg,
+    - __type__: AlphabeticPoint
+      identifier: h
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: a közigazgatási határozat bírósági felülvizsgálata iránti eljárásban
+        position:
+          act: 2013. évi V. törvény
+          article: 6:548
+          paragraph: '1'
+        replacement_text: közigazgatási perben
+      text: 6:548. § (1) bekezdésében az „a közigazgatási határozat bírósági felülvizsgálata
+        iránti eljárásban” szövegrész helyébe a „közigazgatási perben” szöveg
+    intro: A Polgári Törvénykönyvről szóló 2013. évi V. törvény
+    wrap_up: lép.
+  identifier: '438'
+- __type__: Article
+  children:
+  - identifier: '1'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: DaysAfterPublication
+      position: null
+    text: E törvény – a (2) és (3) bekezdésben foglalt kivétellel – a kihirdetését
+      követő napon lép hatályba.
+  - identifier: '2'
+    text: A 236., 237., 240. és 242. alcím 2017. december 31-én lép hatályba.
+  - identifier: '3'
+    text: Az 1–390. §, a 391. § (1)–(8) bekezdése, a 392–517. §, a 241. alcím, az
+      1. melléklet és a 2. melléklet 2018. január 1-jén lép hatályba.
+  - identifier: '4'
+    text: E törvény 2018. január 2-án hatályát veszti.
+  identifier: '528'
+identifier: 2017. évi L. törvény
+preamble: ''
+publication_date:
+  day: 25
+  month: 5
+  year: 2017
+subject: az általános közigazgatási rendtartásról szóló törvény és a közigazgatási
+  perrendtartásról szóló törvény hatálybalépésével összefüggő egyes törvények módosításáról

@@ -1,0 +1,1229 @@
+children:
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '2'
+        text: Nem bűnhalmazat, hanem folytatólagosan elkövetett bűncselekmény az,
+          ha az elkövető ugyanolyan bűncselekményt, egységes elhatározással, azonos
+          sértett sérelmére, rövid időközönként többször követ el.
+    identifier: '1'
+    intro: 'A Btk. 6. § (2) bekezdése a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '6'
+        paragraph: '2'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '3'
+        text: Ha a (2) bekezdésben meghatározott esetben az előkészület már önmagában
+          is megvalósít más bűncselekményt, az elkövető e bűncselekmény miatt büntethető.
+    identifier: '2'
+    intro: 'A Btk. 11. § (3) bekezdése a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '11'
+        paragraph: '3'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '7'
+        text: Nem bocsátható feltételes szabadságra az elítélt, ha ismételten életfogytig
+          tartó szabadságvesztésre ítélik. Ha a korábbi életfogytig tartó szabadságvesztést
+          még nem hajtották végre, az ismételten kiszabott életfogytig tartó szabadságvesztés
+          nem hajtható végre.
+    identifier: '3'
+    intro: 'A Btk. 45. § (7) bekezdése a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '45'
+        paragraph: '7'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '2'
+        text: A közérdekű munkát az elítélt, ha törvény eltérően nem rendelkezik,
+          hetente legalább egy napon – a heti pihenőnapon vagy a szabadidejében –,
+          díjazás nélkül végzi.
+    identifier: '4'
+    intro: 'A Btk. 47. § (2) bekezdése a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '47'
+        paragraph: '2'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '2'
+        text: A járművezetéstől eltiltás tartamába be kell számítani azt az időt,
+          amelynek tartamára az elkövető vezetői engedélyét – a járművezetéstől eltiltásra
+          ítélését megelőzően – a bűncselekménnyel összefüggésben a helyszínen elvették,
+          vagy azt a hatóságnál leadta.
+    identifier: '5'
+    intro: 'A Btk. 56. § (2) bekezdése a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '56'
+        paragraph: '2'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '2'
+        text: Ha az elkövető a jóvátételi munka elvégzését nem igazolja, vagy a pártfogó
+          felügyelet szabályait súlyosan megszegi, a bíróság büntetést szab ki. Ha
+          az elkövető a jóvátételi munka elvégzését egészségügyi okból nem tudja igazolni,
+          a jóvátételi munka elvégzése igazolásának határideje egy alkalommal legfeljebb
+          egy évvel meghosszabbítható.
+    identifier: '6'
+    intro: 'A Btk. 68. § (2) bekezdése a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '68'
+        paragraph: '2'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        children:
+        - __type__: AlphabeticPoint
+          identifier: a
+          text: az elkövető gyermekkor, kóros elmeállapot vagy törvényben meghatározott
+            büntethetőséget megszüntető ok miatt nem büntethető,
+        - __type__: AlphabeticPoint
+          identifier: b
+          text: ha az elkövetőt megrovásban részesítették,
+        - __type__: AlphabeticPoint
+          identifier: c
+          text: az a kölcsönzött kulturális javak különleges védelméről szóló törvényben
+            meghatározott különleges védelem időtartama alatt nem hajtható végre.
+        identifier: '4'
+        intro: Az elkobzást akkor is el kell rendelni, ha
+    identifier: '7'
+    intro: 'A Btk. 72. § (4) bekezdése a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '72'
+        paragraph: '4'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        children:
+        - __type__: AlphabeticPoint
+          identifier: a
+          text: az elkövető gyermekkor, kóros elmeállapot vagy törvényben meghatározott
+            büntethetőséget megszüntető ok miatt nem büntethető,
+        - __type__: AlphabeticPoint
+          identifier: b
+          text: ha az elkövetőt megrovásban részesítették,
+        - __type__: AlphabeticPoint
+          identifier: c
+          text: az a kölcsönzött kulturális javak különleges védelméről szóló törvényben
+            meghatározott különleges védelem időtartama alatt nem hajtható végre.
+        identifier: '2'
+        intro: A vagyonelkobzást akkor is el kell rendelni, ha
+    identifier: '8'
+    intro: 'A Btk. 75. § (2) bekezdése a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '75'
+        paragraph: '2'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Article
+        children:
+        - identifier: '1'
+          text: Fiatalkorúval szemben pénzbüntetést akkor lehet kiszabni, ha önálló
+            keresete, jövedelme vagy megfelelő vagyona van.
+        - identifier: '2'
+          text: Fiatalkorú esetén a pénzbüntetés legkisebb mértéke tizenöt, legnagyobb
+            mértéke kétszázötven napi tétel, az egynapi tétel összegét legalább ötszáz,
+            legfeljebb ötvenezer forintban kell meghatározni.
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: ha a 112. § lehetővé teszi, közérdekű munkára vagy
+          - __type__: AlphabeticPoint
+            identifier: b
+            text: szabadságvesztésre
+          identifier: '3'
+          intro: Fiatalkorú esetén a pénzbüntetést behajthatatlansága esetén
+          wrap_up: kell átváltoztatni.
+        - identifier: '4'
+          text: A pénzbüntetés helyébe lépő közérdekű munkát úgy kell megállapítani,
+            hogy egy napi tétel helyébe két óra közérdekű munka lép. Egyebekben a
+            pénzbüntetés helyébe lépő közérdekű munkára a 47. §-ban foglaltak irányadóak
+            azzal, hogy annak tartama eltérhet a 47. § (1) bekezdésében meghatározottaktól.
+        - identifier: '5'
+          text: Ha a fiatalkorú a munkakötelezettségének önként nem tesz eleget, a
+            közérdekű munkát vagy annak hátralévő részét szabadságvesztésre kell átváltoztatni.
+            Egyebekben a 48. §-ban foglaltak irányadóak.
+        identifier: '113'
+    identifier: '9'
+    intro: 'A Btk. 113. §-a a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '113'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '1'
+        text: E törvény alkalmazásában katona a Magyar Honvédség tényleges állományú,
+          a rendőrség, az Országgyűlési Őrség, a büntetés-végrehajtási szervezet,
+          a hivatásos katasztrófavédelmi szerv, a polgári nemzetbiztonsági szolgálatok,
+          valamint a Nemzeti Adó- és Vámhivatal hivatásos állományú tagja.
+    identifier: '10'
+    intro: 'A Btk. 127. § (1) bekezdése a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '127'
+        paragraph: '1'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '3'
+        text: A 127. § (1) bekezdés a) pontjában meghatározott katonák esetében az
+          (1) és (2) bekezdés szerinti várakozási időn kötelező várakozási időt kell
+          érteni.
+    identifier: '11'
+    intro: 'A Btk. 140. §-a a következő (3) bekezdéssel kiegészülve lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '140'
+        paragraph: '3'
+      pure_insertion: true
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '1'
+        text: Aki tizennyolcadik életévét be nem töltött személy prostitúciójából
+          haszonszerzésre törekszik, bűntett miatt három évig terjedő szabadságvesztéssel
+          büntetendő.
+    identifier: '12'
+    intro: 'A Btk. 203. § (1) bekezdése a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '203'
+        paragraph: '1'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '3'
+        text: Aki részben vagy egészben tizennyolcadik életévét be nem töltött, prostitúciót
+          folytató személlyel tartatja ki magát, egy évtől öt évig terjedő szabadságvesztéssel
+          büntetendő.
+    identifier: '13'
+    intro: 'A Btk. 203. § (3) bekezdése a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '203'
+        paragraph: '3'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: AlphabeticPoint
+        identifier: c
+        text: forgalomba hoz, azzal kereskedik, illetve ilyen felvételt a nagy nyilvánosság
+          számára hozzáférhetővé tesz, két évtől nyolc évig
+      intro: Aki tizennyolcadik életévét be nem töltött személyről vagy személyekről
+        pornográf felvételt
+      wrap_up: terjedő szabadságvesztéssel büntetendő.
+    identifier: '14'
+    intro: 'A Btk. 204. § (1) bekezdés c) pontja a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '204'
+        paragraph: '1'
+        point: c
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: AlphabeticPoint
+        identifier: b
+        text: olyan pornográf műsoron vesz részt, amelyben tizennyolcadik életévét
+          be nem töltött személy szerepel vagy ilyen személyek szerepelnek,
+      intro: Három évig terjedő szabadságvesztéssel büntetendő, aki
+    identifier: '15'
+    intro: 'A Btk. 204. § (5) bekezdés b) pontja a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '204'
+        paragraph: '5'
+        point: b
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '2'
+        text: A büntetés egy évtől öt évig terjedő szabadságvesztés, ha az (1) bekezdésben
+          meghatározott bűncselekményt a hulladékról szóló törvény szerinti veszélyes
+          hulladékra követik el.
+    identifier: '16'
+    intro: 'A Btk. 248. § (2) bekezdése a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '248'
+        paragraph: '2'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        children:
+        - __type__: AlphabeticPoint
+          identifier: a
+          text: 'hulladék: mindaz, amit a hulladékról szóló törvény hulladéknak minősít,
+            ha alkalmas az emberi élet, testi épség, egészség, a föld, a víz, a levegő
+            vagy azok összetevői, illetve élő szervezet egyedének veszélyeztetésére;'
+        - __type__: AlphabeticPoint
+          identifier: b
+          text: 'hulladékgazdálkodási tevékenység: a hulladéknak a hulladékról szóló
+            törvényben meghatározott gyűjtése, begyűjtése, szállítása – ideértve az
+            országba történő behozatalt, onnan történő kivitelt, valamint az azon
+            történő átszállítást – , előkezelése, tárolása, hasznosítása, ártalmatlanítása.'
+        identifier: '4'
+        intro: E § alkalmazásában
+    identifier: '17'
+    intro: 'A Btk. 248. § (4) bekezdése a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '248'
+        paragraph: '4'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '1'
+        text: Aki a 314. § (1) vagy (2) bekezdésében meghatározott bűntett elkövetésére
+          felhív, ajánlkozik, vállalkozik, a közös elkövetésben megállapodik, vagy
+          az elkövetés elősegítése céljából az ehhez szükséges vagy ezt könnyítő feltételeket
+          biztosítja, bűntett miatt két évtől nyolc évig terjedő szabadságvesztéssel
+          büntetendő.
+      - __type__: Paragraph
+        identifier: '2'
+        text: Aki az (1) bekezdésben meghatározott cselekményeket a 314. § (1) vagy
+          (2) bekezdésében meghatározott bűntettnek terrorista csoportban történő
+          elkövetése érdekében valósítja meg, öt évtől tíz évig terjedő szabadságvesztéssel
+          büntetendő.
+    identifier: '18'
+    intro: 'A Btk. 315. § (1)–(2) bekezdése a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '315'
+        paragraph:
+        - '1'
+        - '2'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Article
+        children:
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: mástól, annak beleegyezése nélkül jogtalanul megszerez,
+          - __type__: AlphabeticPoint
+            identifier: b
+            text: jogtalanul megsemmisít, megrongál, vagy
+          - __type__: AlphabeticPoint
+            identifier: c
+            text: mástól jogtalanul elvesz, vagy a jogosult elől jogtalanul eltitkol,
+          identifier: '1'
+          intro: Aki egy vagy több olyan közokiratot, amely nem vagy nem kizárólag
+            a sajátja,
+          wrap_up: vétség miatt két évig terjedő szabadságvesztéssel büntetendő.
+        - identifier: '2'
+          text: Ha más bűncselekmény nem valósul meg, az (1) bekezdés szerint büntetendő,
+            aki jogtalan haszonszerzés céljából közokiratot átad vagy átvesz.
+        - identifier: '3'
+          text: Aki az (1) bekezdésben meghatározott bűncselekményt magánokiratra
+            azért követi el, hogy jogtalan előnyt szerezzen vagy jogtalan hátrányt
+            okozzon, egy évig terjedő szabadságvesztéssel büntetendő.
+        identifier: '346'
+    identifier: '19'
+    intro: 'A Btk. 346. §-a a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '346'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Article
+        children:
+        - identifier: '1'
+          text: Aki idegen dolgot mástól azért vesz el, hogy azt jogtalanul eltulajdonítsa,
+            lopást követ el.
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: a lopást kisebb értékre vagy
+          - __type__: AlphabeticPoint
+            children:
+            - __type__: AlphabeticSubpoint
+              identifier: ba
+              text: bűnszövetségben,
+            - __type__: AlphabeticSubpoint
+              identifier: bb
+              text: közveszély színhelyén,
+            - __type__: AlphabeticSubpoint
+              identifier: bc
+              text: üzletszerűen,
+            - __type__: AlphabeticSubpoint
+              identifier: bd
+              text: dolog elleni erőszakkal – ideértve azt is, ha a dolog eltulajdonításának
+                megakadályozására szolgáló eszközt állagsérelem okozása nélkül eltávolítják,
+                vagy a dolog eltulajdonításának megakadályozására alkalmatlanná teszik
+                –,
+            - __type__: AlphabeticSubpoint
+              identifier: be
+              text: zsebtolvajlás útján,
+            - __type__: AlphabeticSubpoint
+              identifier: bf
+              text: egy vagy több közokirat, magánokirat vagy készpénz-helyettesítő
+                fizetési eszköz egyidejű elvételével,
+            - __type__: AlphabeticSubpoint
+              identifier: bg
+              text: helyiségbe vagy ehhez tartozó bekerített helyre megtévesztéssel,
+                vagy a jogosult, illetve a használó tudta és beleegyezése nélkül bemenve,
+            - __type__: AlphabeticSubpoint
+              identifier: bh
+              text: hamis vagy lopott kulcs használatával,
+            - __type__: AlphabeticSubpoint
+              identifier: bi
+              text: lakást vagy hasonló helyiséget az elkövetővel közösen használó
+                sérelmére, vagy
+            - __type__: AlphabeticSubpoint
+              identifier: bj
+              text: erdőben jogellenes fakivágással
+            identifier: b
+            intro: a szabálysértési értékre elkövetett lopást
+          identifier: '2'
+          intro: A büntetés vétség miatt két évig terjedő szabadságvesztés, ha
+          wrap_up: követik el.
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: a lopást nagyobb értékre vagy
+          - __type__: AlphabeticPoint
+            children:
+            - __type__: AlphabeticSubpoint
+              identifier: ba
+              text: a (2) bekezdés ba)–bf) pontjában meghatározott valamely módon,
+            - __type__: AlphabeticSubpoint
+              identifier: bb
+              text: védett kulturális javak körébe tartozó tárgyra vagy régészeti
+                leletre,
+            - __type__: AlphabeticSubpoint
+              identifier: bc
+              text: vallási tisztelet tárgyára,
+            - __type__: AlphabeticSubpoint
+              identifier: bd
+              text: holttesten lévő tárgyra, illetve temetőben vagy temetkezési emlékhelyen
+                a halott emlékére rendelt tárgyra,
+            - __type__: AlphabeticSubpoint
+              identifier: be
+              text: nemesfémre
+            identifier: b
+            intro: a kisebb értékre elkövetett lopást
+          identifier: '3'
+          intro: A büntetés bűntett miatt három évig terjedő szabadságvesztés, ha
+          wrap_up: követik el.
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: a lopást jelentős értékre vagy
+          - __type__: AlphabeticPoint
+            identifier: b
+            text: a nagyobb értékre elkövetett lopást a (2) bekezdés ba)–bf) pontjában
+              meghatározott valamely módon
+          identifier: '4'
+          intro: A büntetés egy évtől öt évig terjedő szabadságvesztés, ha
+          wrap_up: követik el.
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: a lopást különösen nagy értékre vagy
+          - __type__: AlphabeticPoint
+            identifier: b
+            text: a jelentős értékre elkövetett lopást a (2) bekezdés ba)–bf) pontjában
+              meghatározott valamely módon
+          identifier: '5'
+          intro: A büntetés két évtől nyolc évig terjedő szabadságvesztés, ha
+          wrap_up: követik el.
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: a lopást különösen jelentős értékre vagy
+          - __type__: AlphabeticPoint
+            identifier: b
+            text: a különösen nagy értékre elkövetett lopást a (2) bekezdés ba)–bf)
+              pontjában meghatározott valamely módon
+          identifier: '6'
+          intro: A büntetés öt évtől tíz évig terjedő szabadságvesztés, ha
+          wrap_up: követik el.
+        identifier: '370'
+    identifier: '20'
+    intro: 'A Btk. 370. §-a a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '370'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        children:
+        - __type__: AlphabeticPoint
+          identifier: a
+          text: egy vagy több olyan készpénz-helyettesítő fizetési eszközt, amely
+            nem vagy nem kizárólag a sajátja, vagy amelynek a használatára nem vagy
+            nem kizárólagosan jogosult, mástól, annak beleegyezése nélkül, jogtalanul
+            elvesz vagy megszerez,
+        - __type__: AlphabeticPoint
+          identifier: b
+          text: hamis vagy meghamisított, az a) pontban meghatározott módon elvett
+            vagy megszerzett készpénz-helyettesítő fizetési eszközt, vagy az elektronikus
+            készpénz-helyettesítő fizetési eszközön tárolt adatokat vagy az ahhoz
+            kapcsolódó biztonsági elemeket átad, megszerez, az ország területére behoz,
+            onnan kivisz, vagy azon átszállít,
+        identifier: '1'
+        intro: Aki
+        wrap_up: vétség miatt egy évig terjedő szabadságvesztéssel büntetendő.
+    identifier: '21'
+    intro: 'A Btk. 393. § (1) bekezdése a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '393'
+        paragraph: '1'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Subtitle
+        identifier: ''
+        title: Feljelentés elmulasztása a felszámolási eljárásban
+      - __type__: Article
+        children:
+        - text: Az a felszámoló, aki a felszámolási eljárás során hitelt érdemlő tudomást
+            szerez a számvitel rendjének megsértése (403. §) vagy csődbűncselekmény
+            (404. §) elkövetéséről, és erről a hatóságnak, mihelyt teheti, nem tesz
+            jelentést, vétség miatt egy évig terjedő szabadságvesztéssel büntetendő.
+        identifier: 404/A
+    identifier: '22'
+    intro: 'A Btk. a 404. §-t követően a következő alcímmel és 404/A. §-sal kiegészülve
+      lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: StructuralReference
+        act: 2012. évi C. törvény
+        special:
+          article_id: 404/A
+          position: BEFORE_WITH_ARTICLE
+      pure_insertion: true
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: AlphabeticPoint
+        identifier: f
+        text: a rossz minőségű termék forgalomba hozatalát vagy a versenytárs utánzását
+          százezer forintot meg nem haladó értékre
+      intro: Nem bűncselekmény, hanem szabálysértés valósul meg, ha
+      wrap_up: követik el.
+    identifier: '23'
+    intro: 'A Btk. 462. § (2) bekezdés f) pontja a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '462'
+        paragraph: '2'
+        point: f
+    wrap_up: ''
+  - identifier: '24'
+    semantic_data:
+    - __type__: Repeal
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '45'
+        paragraph: '8'
+    text: Nem lép hatályba a Btk. 45. § (8) bekezdése.
+  identifier: '318'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: AlphabeticSubpoint
+        identifier: b
+        text: az országgyűlési képviselő, a nemzetiségi szószóló és a Magyarországon
+          megválasztott európai parlamenti képviselő,
+      intro: 'hivatalos személy:'
+    intro: 'A Btk. 459. § (1) bekezdés 11. pont b) alpontja helyébe a következő rendelkezés
+      lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '459'
+        paragraph: '1'
+        point: '11'
+        subpoint: b
+    wrap_up: ''
+  identifier: '319'
+- __type__: Article
+  children:
+  - identifier: '1'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2013
+      position: null
+    text: Ez a törvény – a (2)–(7) bekezdésben foglalt kivételekkel – 2013. január
+      1-jén lép hatályba.
+  - identifier: '2'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 2
+        month: 1
+        year: 2013
+      position:
+        article: '180'
+        paragraph: '1'
+        point: a
+    text: A 180. § (1) bekezdés a) pontja 2013. január 2-án lép hatályba.
+  - identifier: '3'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 2
+        year: 2013
+      position:
+        article: '36'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 2
+        year: 2013
+      position:
+        article: '197'
+        paragraph: '3'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 2
+        year: 2013
+      position:
+        article: '200'
+        paragraph: '4'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 2
+        year: 2013
+      position:
+        article: '205'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 2
+        year: 2013
+      position:
+        article:
+        - '218'
+        - '219'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 2
+        year: 2013
+      position:
+        article: '221'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 2
+        year: 2013
+      position:
+        article:
+        - '225'
+        - '227'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 2
+        year: 2013
+      position:
+        article: '229'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 2
+        year: 2013
+      position:
+        article: '231'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 2
+        year: 2013
+      position:
+        article: '233'
+        paragraph: '1'
+        point: a
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 2
+        year: 2013
+      position:
+        article: '233'
+        paragraph: '1'
+        point: c
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 2
+        year: 2013
+      position:
+        article: '233'
+        paragraph: '2'
+        point: d
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 2
+        year: 2013
+      position:
+        article: '233'
+        paragraph: '2'
+        point: f
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 2
+        year: 2013
+      position:
+        article: '256'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 2
+        year: 2013
+      position:
+        article: '314'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 2
+        year: 2013
+      position:
+        article: '318'
+    text: A 36. §, a 197. § (3) bekezdése, a 200. § (4) bekezdése, a 205. §, a 218–219.
+      §, a 221. §, a 225–227. §, a 229. §, a 231. §, a 233. § (1) bekezdés a) és c)
+      pontja, (2) bekezdés d) és f) pontja, a 256. §, a 314. § és a 318. § 2013. február
+      1-jén lép hatályba.
+  - identifier: '4'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2013
+      position:
+        article:
+        - '1'
+        - '35'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2013
+      position:
+        article:
+        - '37'
+        - '151'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2013
+      position:
+        article:
+        - '153'
+        - '176'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2013
+      position:
+        article: '177'
+        paragraph: '3'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2013
+      position:
+        article:
+        - '178'
+        - '179'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2013
+      position:
+        article: '180'
+        paragraph: '1'
+        point:
+        - b
+        - d
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2013
+      position:
+        article: '180'
+        paragraph: '2'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2013
+      position:
+        article:
+        - '181'
+        - '196'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2013
+      position:
+        article: '197'
+        paragraph:
+        - '1'
+        - '2'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2013
+      position:
+        article: '197'
+        paragraph:
+        - '4'
+        - '5'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2013
+      position:
+        article:
+        - '198'
+        - '199'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2013
+      position:
+        article: '200'
+        paragraph:
+        - '1'
+        - '3'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2013
+      position:
+        article: '200'
+        paragraph:
+        - '5'
+        - '6'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2013
+      position:
+        article:
+        - '201'
+        - '204'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2013
+      position:
+        article:
+        - '206'
+        - '208'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2013
+      position:
+        article: '212'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2013
+      position:
+        article:
+        - '214'
+        - '217'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2013
+      position:
+        article: '220'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2013
+      position:
+        article:
+        - '222'
+        - '224'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2013
+      position:
+        article: '228'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2013
+      position:
+        article: '230'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2013
+      position:
+        article: '232'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2013
+      position:
+        article: '233'
+        paragraph: '1'
+        point: b
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2013
+      position:
+        article: '233'
+        paragraph: '2'
+        point:
+        - a
+        - c
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2013
+      position:
+        article: '233'
+        paragraph: '2'
+        point: e
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2013
+      position:
+        article:
+        - '235'
+        - '255'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2013
+      position:
+        article:
+        - '257'
+        - '260'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2013
+      position:
+        article: '261'
+        paragraph:
+        - '2'
+        - '5'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2013
+      position:
+        article: '261'
+        paragraph: '6'
+        point:
+        - b
+        - d
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2013
+      position:
+        article:
+        - '262'
+        - '290'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2013
+      position:
+        article: '291'
+        paragraph:
+        - '1'
+        - '2'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2013
+      position:
+        article: '291'
+        paragraph:
+        - '4'
+        - '10'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2013
+      position:
+        article:
+        - '292'
+        - '313'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2013
+      position:
+        article:
+        - '315'
+        - '317'
+    text: Az 1–35. §, a 37–151. §, a 153–176. §, a 177. § (3) bekezdése, 178–179.
+      §, a 180. § (1) bekezdés b)–d) pontja, a 180. § (2) bekezdése, a 181–196. §,
+      a 197. § (1)–(2) és (4)–(5) bekezdése, a 198–199. §, a 200. § (1)–(3) és (5)–(6)
+      bekezdése, a 201–204. §, a 206–208. §, a 212. §, a 214–217. §, a 220. §, a 222–224.
+      §, a 228. §, a 230. §, a 232. §, a 233. § (1) bekezdés b) pontja és (2) bekezdés
+      a)–c) és e) pontja, a 235–255. §, a 257–260. §, a 261. § (2)–(5) bekezdése és
+      (6) bekezdés b)–d) pontja, a 262–290. §, a 291. § (1), (2), és (4)–(10) bekezdése,
+      a 292–313. § és a 315–317. § 2013. július 1-jén lép hatályba.
+  - identifier: '5'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 2
+        month: 7
+        year: 2013
+      position:
+        article: '291'
+        paragraph: '3'
+    text: A 291. § (3) bekezdése 2013. július 2-án lép hatályba.
+  - identifier: '6'
+    text: A 234. § a Schengeni Információs Rendszer második generációjának (SIS II)
+      létrehozásáról, működtetéséről és használatáról szóló, 2006. december 20-i,
+      1987/2006/EK európai parlamenti és tanácsi rendelet 55. cikk (2) bekezdésében
+      meghatározott eljárás keretében, a SIS II alkalmazhatóságáról szóló tanácsi
+      határozatban foglalt napon lép hatályba.
+  - identifier: '7'
+    text: A 319. § az országgyűlési képviselők következő általános választását követően
+      megalakuló Országgyűlés alakuló ülésének napján lép hatályba.
+  - identifier: '8'
+    text: A (6) bekezdésben meghatározott naptári napot a rendészetért felelős miniszter
+      határozatával közzéteszi a Magyar Közlönyben.
+  identifier: '320'
+identifier: 2012. évi CCXXIII. törvény
+preamble: ''
+publication_date:
+  day: 28
+  month: 12
+  year: 2012
+subject: a Büntető Törvénykönyvről szóló 2012. évi C. törvény hatálybalépéséhez kapcsolódó
+  átmeneti rendelkezésekről és egyes törvények módosításáról

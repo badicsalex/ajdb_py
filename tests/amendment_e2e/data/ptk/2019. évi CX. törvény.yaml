@@ -1,0 +1,1259 @@
+children:
+- __type__: Article
+  children:
+  - act_id_abbreviations:
+    - abbreviation: Ptk.
+      act: 2013. évi V. törvény
+    children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '1'
+        text: Az eljáró hatóság eseti gondnokot rendel, ha a gondnok jogszabály vagy
+          a gyámhatóság rendelkezése folytán, érdekellentét vagy más tényleges akadály
+          miatt nem járhat el.
+    identifier: '1'
+    intro: 'A Polgári Törvénykönyvről szóló 2013. évi V. törvény (a továbbiakban:
+      Ptk.) 6:20. § (1) bekezdése helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: '6:20'
+        paragraph: '1'
+    wrap_up: ''
+  - identifier: '2'
+    semantic_data:
+    - __type__: TextAmendment
+      original_text: A gyámhatóság
+      position:
+        act: 2013. évi V. törvény
+        article: '6:20'
+        paragraph: '5'
+      replacement_text: Az eljáró hatóság
+    text: A Ptk. 6:20. § (5) bekezdésében az „A gyámhatóság” szövegrész helyébe az
+      „Az eljáró hatóság” szöveg lép.
+  - children:
+    - __type__: AlphabeticPoint
+      identifier: a
+      semantic_data:
+      - __type__: Repeal
+        position:
+          __type__: Reference
+          act: 2013. évi V. törvény
+          article: '2:25'
+        text: A határozat ellen nincs helye fellebbezésnek.
+      text: 2:25. §-ában az „A határozat ellen nincs helye fellebbezésnek.” szövegrész,
+    - __type__: AlphabeticPoint
+      identifier: b
+      semantic_data:
+      - __type__: Repeal
+        position:
+          __type__: Reference
+          act: 2013. évi V. törvény
+          article: '2:26'
+          paragraph: '1'
+        text: Az ideiglenes gondnokot kirendelő határozat ellen nincs helye fellebbezésnek.
+      text: 2:26. § (1) bekezdésében az „Az ideiglenes gondnokot kirendelő határozat
+        ellen nincs helye fellebbezésnek.” szövegrész.
+    identifier: '3'
+    intro: Hatályát veszti a Ptk.
+  identifier: '84'
+- __type__: Article
+  children:
+  - identifier: '1'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: DaysAfterPublication
+      position: null
+    text: Ez a törvény – a (2)–(9) bekezdésben foglalt kivétellel – a kihirdetését
+      követő napon lép hatályba.
+  - identifier: '2'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '2'
+        paragraph: '2'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '2'
+        paragraph: '4'
+        point: a
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '2'
+        paragraph: '4'
+        point:
+        - c
+        - f
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '4'
+        paragraph: '1'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article:
+        - '7'
+        - '8'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '9'
+        paragraph: '1'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '10'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '12'
+        paragraph:
+        - '3'
+        - '4'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '12'
+        paragraph: '5'
+        point: a
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '13'
+        paragraph:
+        - '1'
+        - '2'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '13'
+        paragraph: '4'
+        point: a
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '13'
+        paragraph: '5'
+        point:
+        - a
+        - c
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '13'
+        paragraph: '5'
+        point: f
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '13'
+        paragraph: '5'
+        point: h
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '15'
+        paragraph:
+        - '1'
+        - '6'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '15'
+        paragraph: '7'
+        point: a
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '16'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '17'
+        paragraph: '1'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '19'
+        paragraph:
+        - '1'
+        - '2'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '20'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '22'
+        paragraph:
+        - '1'
+        - '5'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '22'
+        paragraph: '6'
+        point: b
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '23'
+        paragraph:
+        - '2'
+        - '5'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '28'
+        paragraph:
+        - '1'
+        - '2'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '28'
+        paragraph:
+        - '4'
+        - '5'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '28'
+        paragraph: '8'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '28'
+        paragraph: '9'
+        point: d
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '29'
+        paragraph: '2'
+        point: a
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '29'
+        paragraph: '2'
+        point: c
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '31'
+        paragraph: '1'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '31'
+        paragraph: '4'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '31'
+        paragraph: '6'
+        point: e
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '32'
+        paragraph: '3'
+        point: a
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '33'
+        paragraph:
+        - '2'
+        - '3'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '34'
+        paragraph: '4'
+        point:
+        - h
+        - i
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '35'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '39'
+        paragraph: '2'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '40'
+        paragraph:
+        - '1'
+        - '2'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '41'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '42'
+        paragraph: '2'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article:
+        - '43'
+        - '44'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '45'
+        paragraph:
+        - '1'
+        - '3'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '47'
+        paragraph: '4'
+        point: a
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '48'
+        paragraph:
+        - '1'
+        - '3'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '48'
+        paragraph: '4'
+        point: a
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '51'
+        paragraph: '1'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '52'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '54'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '57'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '58'
+        paragraph: '1'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '59'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '60'
+        paragraph:
+        - '2'
+        - '6'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '60'
+        paragraph: '8'
+        point:
+        - a
+        - b
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '61'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '63'
+        paragraph: '1'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '63'
+        paragraph: '3'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '63'
+        paragraph: '5'
+        point:
+        - a
+        - b
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '64'
+        paragraph:
+        - '1'
+        - '2'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '64'
+        paragraph: '4'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '65'
+        paragraph: '2'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '66'
+        paragraph: '1'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '67'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '68'
+        paragraph: '7'
+        point: d
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '68'
+        paragraph: '8'
+        point:
+        - a
+        - d
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '68'
+        paragraph: '8'
+        point: f
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '68'
+        paragraph: '8'
+        point:
+        - h
+        - k
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '69'
+        paragraph:
+        - '2'
+        - '3'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '69'
+        paragraph:
+        - '6'
+        - '7'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '71'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '72'
+        paragraph:
+        - '2'
+        - '3'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '73'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '75'
+        paragraph:
+        - '1'
+        - '5'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '76'
+        paragraph:
+        - '1'
+        - '6'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '77'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '79'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '83'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '85'
+        paragraph: '1'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '86'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '88'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '89'
+        paragraph: '1'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article:
+        - '90'
+        - '91'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '94'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '95'
+        paragraph: '1'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2020
+      position:
+        article: '98'
+        paragraph: '2'
+    text: A 2. § (2) bekezdése, (4) bekezdés a) és c)–f) pontja; a 4. § (1) bekezdése;
+      a 7–8. §; a 9. § (1) bekezdése; a 10. §; a 12. § (3)–(4) bekezdése, (5) bekezdés
+      a) pontja; a 13. § (1)–(2) bekezdése, (4) bekezdés a) pontja, (5) bekezdés a)–c),
+      f) és h) pontja; a 15. § (1)–(6) bekezdése, (7) bekezdés a) pontja; a 16. §;
+      a 17. § (1) bekezdése; a 19. § (1)–(2) bekezdése; a 20. §; a 22. § (1)–(5) bekezdése,
+      (6) bekezdés b) pontja; a 23. § (2)–(5) bekezdése; a 28. § (1)–(2) és (4)–(5)
+      bekezdése, (8) bekezdése, (9) bekezdés d) pontja; a 29. § (2) bekezdés a) és
+      c) pontja; a 31. § (1) és (4) bekezdése, (6) bekezdés e) pontja; a 32. § (3)
+      bekezdés a) pontja; a 33. § (2)–(3) bekezdése; a 34. § (4) bekezdés h)–i) pontja;
+      a 35. §; a 39. § (2) bekezdése; a 40. § (1)–(2) bekezdése; a 41. §; a 42. §
+      (2) bekezdése; a 43–44. §; a 45. § (1)–(3) bekezdése; a 47. § (4) bekezdés a)
+      pontja; a 48. § (1)–(3) bekezdése, (4) bekezdés a) pontja; az 51. § (1) bekezdése;
+      az 52. §; az 54. §; az 57. §; az 58. § (1) bekezdése; az 59. §; a 60. § (2)–(6)
+      bekezdése és (8) bekezdés a)–b) pontja; a 61. §; a 63. § (1), (3) bekezdése
+      és (5) bekezdés a)–b) pontja; a 64. § (1)–(2) és (4) bekezdése; a 65. § (2)
+      bekezdése; a 66. § (1) bekezdése; a 67. §; a 68. § (7) bekezdés d) pontja, (8)
+      bekezdés a)–d), f) és h)–k) pontja; a 69. § (2)–(3) és (6)–(7) bekezdése; a
+      71. §; a 72. § (2)–(3) bekezdése; a 73. §; a 75. § (1)–(5) bekezdése; a 76.
+      § (1)–(6) bekezdése; a 77. §; a 79. §; a 83. §; a 85. § (1) bekezdése; a 86.
+      §; a 88. §; a 89. § (1) bekezdése; a 90–91. §; a 94. §, a 95. § (1) bekezdése;
+      a 98. § (2) bekezdése 2020. január 1-jén lép hatályba.
+  - identifier: '3'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 2
+        month: 1
+        year: 2020
+      position:
+        article: '60'
+        paragraph: '1'
+    text: A 60. § (1) bekezdése 2020. január 2-án lép hatályba.
+  - identifier: '4'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 2
+        year: 2020
+      position:
+        article: '64'
+        paragraph: '3'
+    text: A 64. § (3) bekezdése 2020. február 1-jén lép hatályba.
+  - identifier: '5'
+    text: A 2. § (1), (3) bekezdése, (4) bekezdés b) pontja és (5) bekezdése; a 3.
+      §; a 4. § (3) bekezdése; az 5–6. §; a 11. §; a 12. § (1) bekezdése, (5) bekezdés
+      b) pontja, (6) bekezdése; a 13. § (3) bekezdése, (4) bekezdés b) pontja, (5)
+      bekezdés d)–e) és g) pontja; a 14. §; a 15. § (7) bekezdés b) pontja; a 17.
+      § (2)–(3) bekezdése; a 18. §; a 19. § (3) bekezdése; a 22. § (6) bekezdés a)
+      és c) pontja; a 23. § (1) bekezdése; a 24–27. §; a 28. § (3), (6) bekezdése
+      és (9) bekezdés a)–c) pontja; a 29. § (2) bekezdés b) pontja és (3) bekezdése;
+      a 30. §; a 31. § (5) bekezdése és (6) bekezdés a–d) pontja; a 32. § (1) bekezdése
+      és (3) bekezdés b)–d) pontja; a 34. § (1), (3) bekezdése és (4) bekezdés a)–g)
+      pontja; a 36–38. §; a 39. § (1) bekezdése; a 40. § (5) bekezdése; a 45. § (4)
+      bekezdése; a 46. §; a 47. § (4) bekezdés b) pontja; a 48. § (4) bekezdés b)
+      pontja; a 49–50. §; az 51. § (2) bekezdése; az 53. §; az 55. § (3) bekezdése;
+      az 56. §; az 58. § (2)–(3) bekezdése; a 60. § (7) bekezdése és (8) bekezdés
+      c) pontja; a 62. §; a 63. § (4) bekezdése és (5) bekezdés c)–g) pontja; a 66.
+      § (2) bekezdése; a 69. § (1) bekezdése; a 72. § (1) bekezdése; a 74. §; a 75.
+      § (6) bekezdése; a 76. § (9) bekezdése; a 78. §; a 80. §; a 81. § (2) bekezdése;
+      a 82. §; a 84. § (3) bekezdése; a 85. § (2) bekezdése; a 89. § (2) bekezdése;
+      a 92. §; a 98. § (1) és (3) bekezdése; a 101. § (1) bekezdése; valamint az 1.
+      melléklet 2020. március 1-jén lép hatályba.
+  - identifier: '6'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 31
+        month: 3
+        year: 2020
+      position:
+        article: '70'
+    text: A 70. § 2020. március 31-én lép hatályba.
+  - identifier: '7'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2020
+      position:
+        article: '68'
+        paragraph:
+        - '1'
+        - '4'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2020
+      position:
+        article: '68'
+        paragraph: '7'
+        point:
+        - a
+        - c
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2020
+      position:
+        article: '68'
+        paragraph: '7'
+        point:
+        - e
+        - f
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2020
+      position:
+        article: '68'
+        paragraph: '8'
+        point: e
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2020
+      position:
+        article: '68'
+        paragraph: '8'
+        point: g
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2020
+      position:
+        article: '95'
+        paragraph: '2'
+    text: A 68. § (1)–(4) bekezdése, (7) bekezdés a)–c) és e)–f) pontja, (8) bekezdés
+      e) és g) pontja, a 95. § (2) bekezdése 2020. július 1-jén lép hatályba.
+  - identifier: '8'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 9
+        year: 2020
+      position:
+        article: '9'
+        paragraph:
+        - '3'
+        - '4'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 9
+        year: 2020
+      position:
+        article: '93'
+    text: A 9. § (3) és (4) bekezdése; a 93. § 2020. szeptember 1-jén lép hatályba.
+  - identifier: '9'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2021
+      position:
+        article: '4'
+        paragraph: '2'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2021
+      position:
+        article: '9'
+        paragraph: '2'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2021
+      position:
+        article: '12'
+        paragraph: '2'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2021
+      position:
+        article: '21'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2021
+      position:
+        article: '28'
+        paragraph: '7'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2021
+      position:
+        article: '29'
+        paragraph: '1'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2021
+      position:
+        article: '31'
+        paragraph:
+        - '2'
+        - '3'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2021
+      position:
+        article: '32'
+        paragraph: '2'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2021
+      position:
+        article: '34'
+        paragraph: '2'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2021
+      position:
+        article: '40'
+        paragraph:
+        - '3'
+        - '4'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2021
+      position:
+        article: '42'
+        paragraph: '1'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2021
+      position:
+        article: '47'
+        paragraph: '2'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2021
+      position:
+        article: '63'
+        paragraph: '2'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2021
+      position:
+        article: '65'
+        paragraph: '1'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2021
+      position:
+        article: '69'
+        paragraph:
+        - '4'
+        - '5'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2021
+      position:
+        article: '76'
+        paragraph:
+        - '7'
+        - '8'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2021
+      position:
+        article: '81'
+        paragraph: '1'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2021
+      position:
+        article: '84'
+        paragraph:
+        - '1'
+        - '2'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2021
+      position:
+        article: '87'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2021
+      position:
+        article: '96'
+    text: A 4. § (2) bekezdése; a 9. § (2) bekezdése; a 12. § (2) bekezdése; a 21.
+      §; a 28. § (7) bekezdése; a 29. § (1) bekezdése; a 31. § (2)–(3) bekezdése;
+      a 32. § (2) bekezdése; a 34. § (2) bekezdése; a 40. § (3)–(4) bekezdése; a 42.
+      § (1) bekezdése; a 47. § (2) bekezdése; a 63. § (2) bekezdése; a 65. § (1) bekezdése;
+      a 69. § (4)–(5) bekezdése; a 76. § (7)–(8) bekezdése; a 81. § (1) bekezdése;
+      a 84. § (1)–(2) bekezdése; a 87. §; a 96. § 2021. január 1-jén lép hatályba.
+  identifier: '100'
+identifier: 2019. évi CX. törvény
+preamble: ''
+publication_date:
+  day: 17
+  month: 12
+  year: 2019
+subject: a fővárosi és megyei kormányhivatalok működésének egyszerűsítése érdekében
+  egyes törvények módosításáról

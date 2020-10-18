@@ -1,0 +1,76 @@
+children:
+- __type__: Article
+  children:
+  - act_id_abbreviations:
+    - abbreviation: Btk.
+      act: 2012. évi C. törvény
+    children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: AlphabeticPoint
+        children:
+        - __type__: AlphabeticSubpoint
+          identifier: aa
+          text: az (1) bekezdésben meghatározott módon,
+        - __type__: AlphabeticSubpoint
+          identifier: ab
+          text: a (3) bekezdés b) pontjában meghatározott sértett sérelmére, vagy
+        - __type__: AlphabeticSubpoint
+          identifier: ac
+          text: a (3) bekezdés c) pontjában meghatározott módon
+        identifier: a
+        intro: aki a (2) bekezdésben meghatározott bűncselekményt
+        wrap_up: követi el, vagy
+      intro: Öt évtől tizenöt évig terjedő szabadságvesztéssel büntetendő,
+    identifier: '1'
+    intro: 'A Büntető Törvénykönyvről szóló 2012. évi C. törvény (a továbbiakban:
+      Btk.) 197. § (4) bekezdés a) pontja helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '197'
+        paragraph: '4'
+        point: a
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: 4a
+        text: A büntetés öt évtől húsz évig terjedő szabadságvesztés, ha a (4) bekezdés
+          a) pont aa) alpontjában meghatározott bűncselekmény a (4) bekezdés a) pont
+          ab) vagy ac) alpontja szerint is minősül.
+    identifier: '2'
+    intro: 'A Btk. 197. §-a a következő (4a) bekezdéssel egészül ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '197'
+        paragraph: 4a
+      pure_insertion: true
+    wrap_up: ''
+  identifier: '1'
+- __type__: Article
+  children:
+  - semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2018
+      position: null
+    text: Ez a törvény 2018. január 1-jén lép hatályba.
+  identifier: '2'
+identifier: 2017. évi CLXXVII. törvény
+preamble: ''
+publication_date:
+  day: 11
+  month: 12
+  year: 2017
+subject: a tizenkettedik életévüket be nem töltött gyermekek sérelmére elkövetett
+  szexuális erőszakkal szembeni fokozottabb büntetőjogi védelemről

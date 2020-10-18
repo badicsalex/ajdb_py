@@ -1,0 +1,130 @@
+children:
+- __type__: Article
+  children:
+  - semantic_data:
+    - __type__: TextAmendment
+      original_text: kormányhivatal
+      position:
+        act: 2013. évi V. törvény
+        article: 6:105
+        paragraph: '1'
+        point: b
+      replacement_text: kormányzati főhivatal
+    text: A Polgári Törvénykönyvről szóló 2013. évi V. törvény 6:105. § (1) bekezdés
+      b) pontjában a „kormányhivatal” szövegrész helyébe a „kormányzati főhivatal”
+      szöveg lép.
+  identifier: '194'
+- __type__: Article
+  children:
+  - identifier: '1'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: DaysAfterPublication
+      position: null
+    text: Ez a törvény – a (2)–(5) bekezdésben foglalt kivétellel – a kihirdetését
+      követő napon lép hatályba.
+  - identifier: '2'
+    text: Az 1–11. §, a 12. § (2) bekezdése, a 13–15. §, a 16. § (2) bekezdése, a
+      17–83. §, 86–89. §, a 91–96. §, a 98–140. §, a 147–163. §, a 165–171. §, a 172.
+      § c)–e) pontja, a 173–228. §, a 230–239. § és az 1–4. melléklet 2020. január
+      1-jén lép hatályba.
+  - identifier: '3'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 27
+        month: 2
+        year: 2020
+      position:
+        article: '84'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 27
+        month: 2
+        year: 2020
+      position:
+        article: '85'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 27
+        month: 2
+        year: 2020
+      position:
+        article: '90'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 27
+        month: 2
+        year: 2020
+      position:
+        article: '97'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 27
+        month: 2
+        year: 2020
+      position:
+        article:
+        - '141'
+        - '146'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 27
+        month: 2
+        year: 2020
+      position:
+        article: '172'
+        point:
+        - a
+        - b
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 27
+        month: 2
+        year: 2020
+      position:
+        article: '229'
+    text: A 84. §, a 85. §, a 90. §, a 97. §, a 141–146. §, a 172. § a) és b) pontja
+      és a 229. § 2020. február 27-én lép hatályba.
+  - identifier: '4'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 3
+        year: 2020
+      position:
+        article: '12'
+        paragraph: '1'
+    text: A 12. § (1) bekezdése 2020. március 1-jén lép hatályba.
+  - identifier: '5'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 6
+        year: 2020
+      position:
+        article: '16'
+        paragraph: '1'
+    text: A 16. § (1) bekezdése 2020. június 1-jén lép hatályba.
+  identifier: '240'
+identifier: 2019. évi CIX. törvény
+preamble: ''
+publication_date:
+  day: 17
+  month: 12
+  year: 2019
+subject: a kormányzati igazgatásról szóló 2018. évi CXXV. törvény, valamint egyes
+  törvényeknek a kormányzati igazgatásról szóló 2018. évi CXXV. törvénnyel kapcsolatos
+  módosításáról

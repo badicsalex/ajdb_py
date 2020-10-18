@@ -1,0 +1,154 @@
+children:
+- __type__: Article
+  children:
+  - act_id_abbreviations:
+    - abbreviation: Btk.
+      act: 2012. évi C. törvény
+    children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Article
+        children:
+        - text: Nem büntethető, aki a büntetendő cselekmény elkövetésekor a tizennegyedik
+            életévét nem töltötte be, kivéve az emberölés [160. § (1)–(2) bekezdés],
+            az erős felindulásban elkövetett emberölés (161. §), a testi sértés [164.
+            § (8) bekezdés], a terrorcselekmény [314. § (1)–(4) bekezdés], a rablás
+            [365. § (1)–(4) bekezdés] és a kifosztás [366. § (2)–(3) bekezdés] elkövetőjét,
+            ha a bűncselekmény elkövetésekor a tizenkettedik életévét betöltötte,
+            és az elkövetéskor rendelkezett a bűncselekmény következményeinek felismeréséhez
+            szükséges belátással.
+        identifier: '16'
+    intro: 'A Büntető Törvénykönyvről szóló 2012. évi C. törvény (a továbbiakban:
+      Btk.) 16. §-a helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '16'
+    wrap_up: ''
+  identifier: '61'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        children:
+        - __type__: AlphabeticPoint
+          identifier: a
+          text: jelentős anyagi javakat kerít hatalmába, és azok sértetlenül hagyását
+            vagy visszaadását állami szervhez vagy nemzetközi szervezethez intézett
+            követelés teljesítésétől teszi függővé, vagy
+        - __type__: AlphabeticPoint
+          identifier: b
+          text: terrorista csoportot szervez.
+        identifier: '2'
+        intro: Az (1) bekezdés szerint büntetendő, aki az a) pontban meghatározott
+          célból
+    intro: 'A Btk. 314. § (2) bekezdése helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '314'
+        paragraph: '2'
+    wrap_up: ''
+  identifier: '62'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Article
+        children:
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: terrorcselekmény elkövetésével fenyeget, vagy
+          - __type__: AlphabeticPoint
+            identifier: b
+            text: terrorista csoporthoz csatlakozás céljából Magyarország területéről
+              kiutazik vagy azon átutazik,
+          intro: Aki
+          wrap_up: bűntett miatt két évtől nyolc évig terjedő szabadságvesztéssel
+            büntetendő.
+        identifier: '316'
+    intro: 'A Btk. 316. §-a helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '316'
+    wrap_up: ''
+  identifier: '63'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Article
+        children:
+        - identifier: '1'
+          text: Aki nagy nyilvánosság előtt háborúra uszít, vagy egyébként háborús
+            hírverést folytat, bűntett miatt egy évtől öt évig terjedő szabadságvesztéssel
+            büntetendő.
+        - identifier: '2'
+          text: Az (1) bekezdés szerint büntetendő, ha súlyosabb bűncselekmény nem
+            valósul meg, aki nagy nyilvánosság előtt a terrorizmus támogatására uszít,
+            vagy egyébként a terrorizmust támogató hírverést folytat.
+        identifier: '331'
+    intro: 'A Btk. 331. §-a helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '331'
+    wrap_up: ''
+  identifier: '64'
+- __type__: Article
+  children:
+  - identifier: '1'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: DaysAfterPublication
+        days: 30
+      position: null
+    text: Ez a törvény – a (2) bekezdésben foglalt kivétellel – a kihirdetését követő
+      30. napon lép hatályba.
+  - identifier: '2'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2017
+      position:
+        article: '31'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2017
+      position:
+        article: '32'
+    text: A 31. § és a 32. § 2017. január 1-jén lép hatályba.
+  - identifier: '3'
+    text: E törvény 23. §, 24. §, 45. és 46. §-ainak a műszaki szabályokkal és az
+      információs társadalom szolgáltatásaira vonatkozó szabályokkal kapcsolatos információszolgáltatási
+      eljárás megállapításáról szóló, 2015. szeptember 9-i 2015/1535/EU európai parlamenti
+      és tanácsi irányelv 5–7. cikke szerinti előzetes bejelentése megtörtént..
+  identifier: '73'
+identifier: 2016. évi LXIX. törvény
+preamble: ''
+publication_date:
+  day: 17
+  month: 6
+  year: 2016
+subject: a terrorizmus elleni fellépéssel összefüggő egyes törvények módosításáról

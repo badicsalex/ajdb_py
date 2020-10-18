@@ -1,0 +1,69 @@
+children:
+- __type__: Article
+  children:
+  - semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: DaysAfterPublication
+        days: 8
+      position: null
+    text: Ez a törvény a kihirdetését követő nyolcadik napon lép hatályba.
+  identifier: '16'
+- __type__: Article
+  children:
+  - act_id_abbreviations:
+    - abbreviation: Ptk.
+      act: 2013. évi V. törvény
+    children:
+    - __type__: AlphabeticPoint
+      act_id_abbreviations:
+      - abbreviation: Ptk.
+        act: 2013. évi V. törvény
+      identifier: a
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: a levéltitok, a hivatásbeli titok és az üzleti titok oltalmára
+        position:
+          act: 2013. évi V. törvény
+          article: '2:46'
+          paragraph: '1'
+        replacement_text: a levéltitok és hivatásbeli titok oltalmára
+      text: 2:46. § (1) bekezdésében az „a levéltitok, a hivatásbeli titok és az üzleti
+        titok oltalmára” szövegrész helyébe az „a levéltitok és hivatásbeli titok
+        oltalmára” szöveg,
+    - __type__: AlphabeticPoint
+      act_id_abbreviations:
+      - abbreviation: Ptk.
+        act: 2013. évi V. törvény
+      identifier: b
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: a szerzői jogról és az iparjogvédelemről
+        position:
+          act: 2013. évi V. törvény
+          article: '2:55'
+        replacement_text: a szerzői jogról és az iparjogvédelemről, valamint az üzleti
+          titok védelméről
+      text: 2:55. §-ában az „a szerzői jogról és az iparjogvédelemről” szövegrész
+        helyébe az „a szerzői jogról és az iparjogvédelemről, valamint az üzleti titok
+        védelméről” szöveg
+    identifier: '1'
+    intro: 'A Polgári Törvénykönyvről szóló 2013. évi V. törvény (a továbbiakban:
+      Ptk.)'
+    wrap_up: lép.
+  - identifier: '2'
+    semantic_data:
+    - __type__: Repeal
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: '2:47'
+    text: Hatályát veszti a Ptk. 2:47. §-a.
+  identifier: '35'
+identifier: 2018. évi LIV. törvény
+preamble: ''
+publication_date:
+  day: 31
+  month: 7
+  year: 2018
+subject: az üzleti titok védelméről

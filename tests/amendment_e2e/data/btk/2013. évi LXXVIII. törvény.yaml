@@ -1,0 +1,581 @@
+children:
+- __type__: Article
+  children:
+  - act_id_abbreviations:
+    - abbreviation: Btk.
+      act: 2012. évi C. törvény
+    children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '1'
+        text: E törvény alkalmazásában katona a Magyar Honvédség tényleges állományú,
+          a rendőrség, az Országgyűlési Őrség, a büntetés-végrehajtási szervezet,
+          a hivatásos katasztrófavédelmi szerv, valamint a polgári nemzetbiztonsági
+          szolgálatok hivatásos állományú tagja.
+    identifier: '1'
+    intro: 'A Büntető Törvénykönyvről szóló 2012. évi C. törvény (a továbbiakban:
+      Btk.) 127. § (1) bekezdése a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '127'
+        paragraph: '1'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '3'
+        text: A Magyar Honvédség tényleges állományú tagja esetében az (1) és (2)
+          bekezdésben meghatározott várakozási időn kötelező várakozási időt kell
+          érteni.
+    identifier: '2'
+    intro: 'A Btk. 140. §-a a következő (3) bekezdéssel kiegészülve lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '140'
+        paragraph: '3'
+      pure_insertion: true
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Article
+        children:
+        - identifier: '1'
+          text: A törvény erejénél fogva áll be a mentesítés a lefokozás és a szolgálati
+            viszony megszüntetése esetén az ítélet jogerőre emelkedésének napján.
+        - identifier: '2'
+          text: A bíróság az elítéltet a büntetett előélethez fűződő hátrányok alól
+            előzetes mentesítésben részesítheti, ha a szabadságvesztést katonai fogdában
+            rendeli végrehajtani. Ez a mentesítés a büntetés kiállásának, illetve
+            végrehajthatósága megszűnésének napján áll be.
+        - identifier: '3'
+          text: Katonai mellékbüntetés alkalmazása az elítélt mentesítését nem akadályozza.
+        identifier: '141'
+    identifier: '3'
+    intro: 'A Btk. 141. §-a a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '141'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '6'
+        text: 'E § alkalmazásában tiltott teljesítményfokozó szer: minden olyan szer,
+          amely hatóanyagára tekintettel az anabolikus szerek, peptid hormonok, növekedési
+          faktorok és rokonvegyületeik, hormon antagonisták és modulátorok közé tartozik,
+          és nevesítve szerepel a sportbeli dopping elleni nemzetközi egyezmény I.
+          mellékletének kihirdetéséről szóló kormányrendeletben.'
+    identifier: '4'
+    intro: 'A Btk. 185. § (6) bekezdése a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '185'
+        paragraph: '6'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Subtitle
+        identifier: ''
+        title: Kapcsolati erőszak
+      - __type__: Article
+        children:
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: az emberi méltóságot súlyosan sértő, megalázó és erőszakos magatartást
+              tanúsít,
+          - __type__: AlphabeticPoint
+            identifier: b
+            text: a közös gazdálkodás körébe vagy közös vagyonba tartozó anyagi javakat
+              von el és ezzel a sértettet súlyos nélkülözésnek tesz ki,
+          identifier: '1'
+          intro: Aki gyermekének szülője, továbbá az elkövetéskor vagy korábban vele
+            közös háztartásban vagy egy lakásban élő hozzátartozója, volt házastársa,
+            volt élettársa, gondnoka, gondnokoltja, gyámja vagy gyámoltja sérelmére
+            rendszeresen
+          wrap_up: ha súlyosabb bűncselekmény nem valósul meg, vétség miatt két évig
+            terjedő szabadságvesztéssel büntetendő.
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: a 164. § (2) bekezdése szerinti testi sértést vagy a 227. § (2)
+              bekezdése szerinti becsületsértést, bűntett miatt három évig,
+          - __type__: AlphabeticPoint
+            identifier: b
+            text: a 164. § (3) és (4) bekezdése szerinti testi sértést, a 194. § (1)
+              bekezdése szerinti személyi szabadság megsértését vagy kényszerítést,
+              egy évtől öt évig
+          identifier: '2'
+          intro: Aki az (1) bekezdésben meghatározott személy sérelmére rendszeresen
+            követ el
+          wrap_up: terjedő szabadságvesztéssel büntetendő.
+        - identifier: '3'
+          text: Kapcsolati erőszak elkövetőjével szemben kitiltásnak is helye van.
+        - identifier: '4'
+          text: Az (1) bekezdésben meghatározott bűncselekmény csak magánindítványra
+            büntethető.
+        identifier: 212/A
+    identifier: '5'
+    intro: 'A Btk. XX. Fejezete a következő alcímmel és 212/A. §-sal kiegészülve lép
+      hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: StructuralReference
+        act: 2012. évi C. törvény
+        special:
+          article_id: 212/A
+          position: BEFORE_WITH_ARTICLE
+      pure_insertion: true
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '3'
+        text: A büntetés két évig terjedő szabadságvesztés, ha a személyes adattal
+          visszaélést különleges adatra követik el.
+    identifier: '6'
+    intro: 'A Btk. 219. § (3) bekezdése a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '219'
+        paragraph: '3'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        children:
+        - __type__: AlphabeticPoint
+          identifier: a
+          text: 'pénzeszközön az Iránnal szembeni korlátozó intézkedésekről és a 961/2010/EU
+            rendelet hatályon kívül helyezéséről szóló 2012. március 23-i 267/2012/EU
+            tanácsi rendelet (e bekezdés alkalmazásában a továbbiakban: 267/2012/EU
+            rendelet) 1. cikk l) pontjában meghatározott eszközöket,'
+        - __type__: AlphabeticPoint
+          identifier: b
+          text: pénzeszközök zárolásán a 267/2012/EU rendelet 1. cikk k) pontjában
+            meghatározottakat,
+        - __type__: AlphabeticPoint
+          identifier: c
+          text: gazdasági forráson a 267/2012/EU rendelet 1. cikk h) pontjában meghatározott
+            eszközöket,
+        - __type__: AlphabeticPoint
+          identifier: d
+          text: gazdasági források zárolásán a 267/2012/EU rendelet 1. cikk j) pontjában
+            meghatározott eszközöket,
+        - __type__: AlphabeticPoint
+          identifier: e
+          text: 'a halálbüntetés, a kínzás vagy más kegyetlen, embertelen vagy megalázó
+            bánásmód vagy büntetés során alkalmazható árun egyes, a halálbüntetés,
+            a kínzás vagy más kegyetlen, embertelen vagy megalázó bánásmód vagy büntetés
+            során alkalmazható áruk kereskedelméről szóló 2005. június 27-i 1236/2005/EK
+            tanácsi rendelet (e fejezet alkalmazásában a továbbiakban: 1236/2005/EK
+            rendelet) II. mellékletében meghatározott árut'
+        identifier: '5'
+        intro: E § alkalmazásában – ha a nemzetközi jogi kötelezettség alapján a kötelezettséget,
+          illetve tilalmat kihirdető jogszabály eltérően nem rendelkezik –
+        wrap_up: kell érteni.
+    identifier: '7'
+    intro: 'A Btk. 327. § (5) bekezdése a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '327'
+        paragraph: '5'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: AlphabeticSubpoint
+        identifier: da
+        text: a vagyon elleni erőszakos,
+      intro: 'E fejezet alkalmazásában a különös visszaesés szempontjából hasonló
+        jellegű bűncselekmény:'
+      wrap_up: bűncselekmény.
+    identifier: '8'
+    intro: 'A Btk. 383. § d) pont da) alpontja a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '383'
+        point: d
+        subpoint: da
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Subtitle
+        identifier: ''
+        title: Értelmező rendelkezés
+      - __type__: Article
+        children:
+        - text: E fejezet alkalmazásában a különös visszaesés szempontjából hasonló
+            jellegű bűncselekmény a vagyon elleni bűncselekmény.
+        identifier: 388/A
+    identifier: '9'
+    intro: 'A Btk. XXXVII. Fejezete a következő alcímmel és 388/A. §-sal kiegészülve
+      lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: StructuralReference
+        act: 2012. évi C. törvény
+        special:
+          article_id: 388/A
+          position: BEFORE_WITH_ARTICLE
+      pure_insertion: true
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: AlphabeticPoint
+        identifier: a
+        text: a megbízható és valós képet lényegesen befolyásoló hibát idéz elő, vagy
+      intro: Aki a számvitelről szóló törvényben vagy a felhatalmazásán alapuló jogszabályokban
+        előírt bizonylati rendet megsérti vagy könyvvezetési, beszámoló készítési
+        kötelezettségét megszegi, és ezzel
+      wrap_up: bűntett miatt három évig terjedő szabadságvesztéssel büntetendő.
+    identifier: '10'
+    intro: 'A Btk. 403. § (1) bekezdés a) pontja a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '403'
+        paragraph: '1'
+        point: a
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '4'
+        text: E § alkalmazásában a megbízható és valós képet lényegesen befolyásoló
+          a hiba, ha egy adott üzleti évet érintően feltárt hibák és hibahatások –
+          eredményt, saját tőkét növelő-csökkentő – értékének együttes, előjeltől
+          független összege meghaladja a hiba elkövetésének üzleti évére vonatkozó
+          számviteli beszámolóban kimutatott nettó árbevétel húsz százalékát és mérlegfőösszeg
+          húsz százalékát is. Minden esetben megbízható és valós képet lényegesen
+          befolyásoló a hiba, ha egy adott üzleti évet érintően feltárt hibák és hibahatások
+          – eredményt, saját tőkét növelő-csökkentő – értékének együttes, előjeltől
+          független összege meghaladja az ötszázmillió forintot.
+    identifier: '11'
+    intro: 'A Btk. 403. §-a a következő (4) bekezdéssel kiegészülve lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '403'
+        paragraph: '4'
+      pure_insertion: true
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '2'
+        text: A polgári védelmi kötelezettség megszegése az (1) bekezdésben meghatározottakon
+          kívül szükségállapotban és veszélyhelyzetben, a szolgáltatási kötelezettség
+          megszegése veszélyhelyzetben is elkövethető.
+    identifier: '12'
+    intro: 'A Btk. 433. § (2) bekezdése a következő szöveggel lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '433'
+        paragraph: '2'
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: AlphabeticSubpoint
+        identifier: j
+        text: a Magyar Honvédség állományilletékes parancsnoka, és az úszólétesítmény
+          vagy a légi jármű parancsnoka, ha a nyomozó hatóságra vonatkozó rendelkezések
+          alkalmazására jogosult,
+      intro: 'E törvény alkalmazásában hivatalos személy:'
+    identifier: '13'
+    intro: 'A Btk. 459. § (1) bekezdés 11. pont j) alpontja a következő szöveggel
+      lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '459'
+        paragraph: '1'
+        point: '11'
+        subpoint: j
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: NumericSubpoint
+        identifier: '26'
+        text: az Iránnal szembeni korlátozó intézkedésekről és a 961/2010/EU rendelet
+          hatályon kívül helyezéséről szóló 2012. március 23-i 267/2012/EU tanácsi
+          rendelet 47. cikkének,
+      intro: E törvény 327. §-a
+      wrap_up: végrehajtásához szükséges rendelkezéseket állapít meg.
+    identifier: '14'
+    intro: 'A Btk. 465. § (2) bekezdés b) pont 26. alpontja a következő szöveggel
+      lép hatályba:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '465'
+        paragraph: '2'
+        point: b
+        subpoint: '26'
+    wrap_up: ''
+  identifier: '19'
+- __type__: Article
+  children:
+  - identifier: '1'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 29
+        month: 6
+        year: 2013
+      position: null
+    text: Ez a törvény – a (2)–(5) bekezdésben meghatározott kivétellel – 2013. június
+      29-én lép hatályba.
+  - identifier: '2'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 30
+        month: 6
+        year: 2013
+      position:
+        article: '19'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 30
+        month: 6
+        year: 2013
+      position:
+        article: '21'
+    text: A 19. § és a 21. § 2013. június 30-án lép hatályba.
+  - identifier: '3'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2013
+      position:
+        article: '1'
+        paragraph: '11'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2013
+      position:
+        article:
+        - '4'
+        - '12'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2013
+      position:
+        article: '13'
+        paragraph:
+        - '1'
+        - '3'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2013
+      position:
+        article: '13'
+        paragraph: '6'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2013
+      position:
+        article: '14'
+        paragraph: '1'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2013
+      position:
+        article: '14'
+        paragraph: '3'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2013
+      position:
+        article: '20'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 7
+        year: 2013
+      position:
+        article: '22'
+        paragraph: '1'
+    text: Az 1. § (11) bekezdése, a 4–12. §, a 13. § (1)–(3) bekezdése és (6) bekezdése,
+      a 14. § (1) és (3) bekezdése, a 20. § és a 22. § (1) bekezdése 2013. július
+      1-jén lép hatályba.
+  - identifier: '4'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 2
+        month: 7
+        year: 2013
+      position:
+        article: '1'
+        paragraph:
+        - '1'
+        - '10'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 2
+        month: 7
+        year: 2013
+      position:
+        article: '2'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 2
+        month: 7
+        year: 2013
+      position:
+        article: '3'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 2
+        month: 7
+        year: 2013
+      position:
+        article: '17'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 2
+        month: 7
+        year: 2013
+      position:
+        article: '18'
+    text: Az 1. § (1)–(10) bekezdése, a 2. §, a 3. §, a 17. § és a 18. § 2013. július
+      2-án lép hatályba.
+  - identifier: '5'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2014
+      position:
+        article: '13'
+        paragraph:
+        - '4'
+        - '5'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2014
+      position:
+        article: '14'
+        paragraph: '2'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2014
+      position:
+        article: '14'
+        paragraph:
+        - '4'
+        - '5'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2014
+      position:
+        article: '22'
+        paragraph: '2'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2014
+      position:
+        article: '24'
+    text: A 13. § (4) és (5) bekezdése, a 14. § (2), (4) és (5) bekezdése, a 22. §
+      (2) bekezdése és a 24. § 2014. január 1-jén lép hatályba.
+  identifier: '25'
+identifier: 2013. évi LXXVIII. törvény
+preamble: ''
+publication_date:
+  day: 13
+  month: 6
+  year: 2013
+subject: egyes büntető tárgyú törvények módosításáról

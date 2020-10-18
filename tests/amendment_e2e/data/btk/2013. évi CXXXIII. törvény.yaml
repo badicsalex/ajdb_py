@@ -1,0 +1,131 @@
+children:
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: AlphabeticSubpoint
+        identifier: d
+        text: az egyházi személy és a vallási tevékenységet végző szervezet vallásos
+          szertartást hivatásszerűen végző tagja,
+      intro: 'E törvény alkalmazásában közfeladatot ellátó személy:'
+    intro: 'A Büntető Törvénykönyvről szóló 2012. évi C. törvény 459. § (1) bekezdés
+      12. pont d) alpontja helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '459'
+        paragraph: '1'
+        point: '12'
+        subpoint: d
+    wrap_up: ''
+  identifier: '157'
+- __type__: Article
+  children:
+  - children:
+    - __type__: AlphabeticPoint
+      identifier: a
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: egyháznál
+        position:
+          act: 2012. évi C. törvény
+          article: '67'
+          paragraph: '3'
+        replacement_text: egyházi jogi személynél
+      text: 67. § (3) bekezdésében az „egyháznál” szövegrész helyébe az „egyházi jogi
+        személynél” szöveg,
+    - __type__: AlphabeticPoint
+      identifier: b
+      semantic_data:
+      - __type__: TextAmendment
+        original_text: vallási szertartás végzésére szolgáló épületet
+        position:
+          act: 2012. évi C. törvény
+          article: '371'
+          paragraph: '3'
+          point: b
+          subpoint: bb
+        replacement_text: templomot, vallásgyakorlásra rendelt más helyet
+      text: 371. § (3) bekezdés b) pont bb) alpontjában a „vallási szertartás végzésére
+        szolgáló épületet” szövegrész helyébe a „templomot, vallásgyakorlásra rendelt
+        más helyet” szöveg
+    intro: A Büntető Törvénykönyvről szóló 2012. évi C. törvény
+    wrap_up: lép.
+  identifier: '158'
+- __type__: Article
+  children:
+  - identifier: '1'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 8
+        year: 2013
+      position: null
+    text: Ez a törvény – a (2) és (3) bekezdésben meghatározott kivétellel – 2013.
+      augusztus 1-jén lép hatályba.
+  - identifier: '2'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 9
+        year: 2013
+      position:
+        article: '17'
+        paragraph: '1'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 9
+        year: 2013
+      position:
+        article: '17'
+        paragraph: '3'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 9
+        year: 2013
+      position:
+        article: '135'
+        paragraph: '2'
+    text: A 17. § (1) és (3) bekezdése és a 135. § (2) bekezdése 2013. szeptember
+      1-jén lép hatályba.
+  - identifier: '3'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '6'
+        paragraph: '2'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 15
+        month: 3
+        year: 2014
+      position:
+        article: '19'
+        paragraph: '2'
+    text: A 6. § (2) bekezdése és a 19. § (2) bekezdése 2014. március 15-én lép hatályba.
+  identifier: '162'
+identifier: 2013. évi CXXXIII. törvény
+preamble: ''
+publication_date:
+  day: 12
+  month: 7
+  year: 2013
+subject: a vallási közösségek jogállásával és működésével kapcsolatos törvényeknek
+  az Alaptörvény negyedik módosításával összefüggő módosításáról

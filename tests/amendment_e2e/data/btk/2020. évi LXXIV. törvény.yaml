@@ -1,0 +1,157 @@
+children:
+- __type__: Article
+  children:
+  - act_id_abbreviations:
+    - abbreviation: Btk.
+      act: 2012. évi C. törvény
+    children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Article
+        children:
+        - children:
+          - __type__: AlphabeticPoint
+            identifier: a
+            text: az emberölés [160. § (1)–(2) bekezdés],
+          - __type__: AlphabeticPoint
+            identifier: b
+            text: az erős felindulásban elkövetett emberölés (161. §),
+          - __type__: AlphabeticPoint
+            identifier: c
+            text: a testi sértés [164. § (8) bekezdés],
+          - __type__: AlphabeticPoint
+            identifier: d
+            text: a hivatalos személy elleni erőszak [310. § (1)–(3) bekezdés],
+          - __type__: AlphabeticPoint
+            identifier: e
+            text: a közfeladatot ellátó személy elleni erőszak [311. §, ha a 310.
+              § (1)–(3) bekezdése szerint minősül],
+          - __type__: AlphabeticPoint
+            identifier: f
+            text: a hivatalos személy vagy közfeladatot ellátó személy támogatója
+              elleni erőszak [312. §, ha a 310. § (1)–(3) bekezdése szerint minősül],
+          - __type__: AlphabeticPoint
+            identifier: g
+            text: a terrorcselekmény [314. § (1)–(2) bekezdés],
+          - __type__: AlphabeticPoint
+            identifier: h
+            text: a rablás [365. § (1)–(4) bekezdés], és
+          - __type__: AlphabeticPoint
+            identifier: i
+            text: a kifosztás [366. § (2)–(3) bekezdés]
+          intro: Nem büntethető, aki a büntetendő cselekmény elkövetésekor a tizennegyedik
+            életévét nem töltötte be, kivéve
+          wrap_up: elkövetőjét, ha a bűncselekmény elkövetésekor a tizenkettedik életévét
+            betöltötte, és az elkövetéskor rendelkezett a bűncselekmény következményeinek
+            felismeréséhez szükséges belátással.
+        identifier: '16'
+    intro: 'A Büntető Törvénykönyvről szóló 2012. évi C. törvény (a továbbiakban:
+      Btk.) 16. §-a helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '16'
+    wrap_up: ''
+  identifier: '6'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: AlphabeticSubpoint
+        identifier: p
+        text: az iskolaőr a Rendőrségről szóló törvényben meghatározott tevékenysége
+          körében.
+      intro: 'E törvény alkalmazásában közfeladatot ellátó személy:'
+    identifier: '1'
+    intro: 'A Btk. 459. § (1) bekezdés 12. pontja a következő p) alponttal egészül
+      ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '459'
+        paragraph: '1'
+        point: '12'
+        subpoint: p
+      pure_insertion: true
+    wrap_up: ''
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: AlphabeticSubpoint
+        identifier: q
+        text: a fegyveres biztonsági őr a szolgálatának teljesítése során,
+      - __type__: AlphabeticSubpoint
+        identifier: r
+        text: az országos és a helyi közutakon, az állam vagy a helyi önkormányzat
+          tulajdonában álló közforgalom elől el nem zárt magánutakon, valamint tereken,
+          parkokban és egyéb közterületeken közúti járművel történő várakozás biztosítását
+          célzó parkolási közszolgáltatást a közúti közlekedésről szóló törvény szerint
+          ellátó szervezetnél a parkolóhelyek rendeltetésszerű működtetését és a parkolóhelyek
+          rendeltetésszerű használatának ellenőrzését végző személy e tevékenysége
+          során.
+      intro: 'E törvény alkalmazásában közfeladatot ellátó személy:'
+    identifier: '2'
+    intro: 'A Btk. 459. § (1) bekezdés 12. pontja a következő q) és r) alponttal egészül
+      ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '459'
+        paragraph: '1'
+        point: '12'
+        subpoint:
+        - q
+        - r
+      pure_insertion: true
+    wrap_up: ''
+  identifier: '7'
+- __type__: Article
+  children:
+  - identifier: '1'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: DaysAfterPublication
+        days: 8
+      position: null
+    text: Ez a törvény – a (2) és (3) bekezdésben foglalt kivétellel – a kihirdetését
+      követő nyolcadik napon lép hatályba.
+  - identifier: '2'
+    text: A 4. §, a 6. §, valamint a 10. § az e törvény kihirdetését követő hatvanadik
+      napon lép hatályba.
+  - identifier: '3'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2021
+      position:
+        article: '7'
+        paragraph: '2'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2021
+      position:
+        article: '11'
+    text: A 7. § (2) bekezdése és a 11. § 2021. január 1-jén lép hatályba.
+  identifier: '12'
+identifier: 2020. évi LXXIV. törvény
+preamble: ''
+publication_date:
+  day: 8
+  month: 7
+  year: 2020
+subject: az iskolai erőszak megszüntetése és megelőzése érdekében szükséges egyes
+  törvénymódosításokról

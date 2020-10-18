@@ -1,0 +1,231 @@
+children:
+- __type__: Article
+  children:
+  - act_id_abbreviations:
+    - abbreviation: Btk.
+      act: 2012. évi C. törvény
+    children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '4'
+        text: Ha azt a szabadságvesztést, amellyel kapcsolatosan az elítéltet önhibájából
+          eredően zárták ki a feltételes szabadságra bocsátás lehetőségéből, utóbb
+          összbüntetésbe foglalják, akkor az elítélt az összbüntetésből sem bocsátható
+          feltételes szabadságra.
+    intro: 'A Büntető Törvénykönyvről szóló 2012. évi C. törvény (a továbbiakban:
+      Btk.) 95. §-a a következő (4) bekezdéssel egészül ki:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '95'
+        paragraph: '4'
+      pure_insertion: true
+    wrap_up: ''
+  identifier: '20'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: AlphabeticSubpoint
+        identifier: c
+        text: az emberi alkalmazásra kerülő gyógyszerekről és egyéb, a gyógyszerpiacot
+          szabályozó törvények módosításáról szóló 2005. évi XCV. törvény 2. számú
+          mellékletében meghatározott pszichotróp anyag;
+      intro: 'E törvény alkalmazásában 18. kábítószer:'
+    intro: 'A Btk. 459. § (1) bekezdés 18. pontjának c) alpontja helyébe a következő
+      rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2012. évi C. törvény
+        article: '459'
+        paragraph: '1'
+        point: '18'
+        subpoint: c
+    wrap_up: ''
+  identifier: '21'
+- __type__: Article
+  children:
+  - identifier: '1'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: DaysAfterPublication
+        days: 8
+      position: null
+    text: Ez a törvény – a (2) és a (3) bekezdésben meghatározott kivétellel – a kihirdetését
+      követő nyolcadik napon lép hatályba.
+  - identifier: '2'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2017
+      position:
+        article:
+        - '1'
+        - '4'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2017
+      position:
+        article:
+        - '7'
+        - '8'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2017
+      position:
+        article: '14'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2017
+      position:
+        article: '15'
+        paragraph: '1'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2017
+      position:
+        article:
+        - '16'
+        - '20'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2017
+      position:
+        article:
+        - '22'
+        - '26'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2017
+      position:
+        article:
+        - '28'
+        - '29'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2017
+      position:
+        article: '30'
+        paragraph: '1'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2017
+      position:
+        article:
+        - '31'
+        - '38'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2017
+      position:
+        article:
+        - '40'
+        - '44'
+    text: Az 1–4. §, a 7–8. §, a 14. §, a 15. § (1) bekezdése, a 16–20. §, a 22–26.
+      §, a 28–29. §, a 30. § (1) bekezdése, a 31–38. § és a 40–44. § 2017. január
+      1-jén lép hatályba.
+  - identifier: '3'
+    semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2018
+      position:
+        article:
+        - '5'
+        - '6'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2018
+      position:
+        article:
+        - '9'
+        - '13'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2018
+      position:
+        article: '15'
+        paragraph: '2'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2018
+      position:
+        article: '27'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2018
+      position:
+        article: '30'
+        paragraph: '2'
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 1
+        year: 2018
+      position:
+        article: '39'
+    text: Az 5–6. §, a 9–13. §, a 15. § (2) bekezdése, a 27. §, a 30. § (2) bekezdése
+      és a 39. § 2018. január 1-jén lép hatályba.
+  identifier: '46'
+identifier: 2016. évi CX. törvény
+preamble: ''
+publication_date:
+  day: 4
+  month: 11
+  year: 2016
+subject: a büntetések, az intézkedések, egyes kényszerintézkedések és a szabálysértési
+  elzárás végrehajtásáról szóló 2013. évi CCXL. törvény és ehhez kapcsolódóan más
+  törvények módosításáról*

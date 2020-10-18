@@ -1,0 +1,92 @@
+children:
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        identifier: '1'
+        text: Örökbefogadó az a huszonötödik életévét betöltött, cselekvőképes személy
+          lehet, aki a gyermeknél legalább tizenhat évvel, legfeljebb negyvenöt évvel
+          idősebb, és személyisége, körülményei alapján alkalmas a gyermek örökbefogadására.
+          Három év feletti gyermek örökbefogadása iránti kérelem benyújtása esetén
+          az örökbefogadás a gyermek érdekében abban az esetben is engedélyezhető,
+          ha az örökbefogadó szülő és a gyermek között legfeljebb ötven év a korkülönbség.
+          Rokoni vagy házastársi örökbefogadás esetén a korkülönbségtől el kell tekinteni.
+    intro: 'A Polgári Törvénykönyvről szóló 2013. évi V. törvény 4:121. § (1) bekezdése
+      helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 4:121
+        paragraph: '1'
+    wrap_up: ''
+  identifier: '20'
+- __type__: Article
+  children:
+  - children:
+    - __type__: BlockAmendmentContainer
+      children:
+      - __type__: Paragraph
+        children:
+        - __type__: AlphabeticPoint
+          identifier: a
+          text: gyermekével nyolc hónapja nem tart rendszeres kapcsolatot vagy három
+            hónapon át semmilyen formában nem tart kapcsolatot, illetve életvitelén,
+            körülményein nem változtat, és emiatt a nevelésbe vétel nem szüntethető
+            meg; vagy
+        - __type__: AlphabeticPoint
+          identifier: b
+          text: lakó- és tartózkodási helyét az új lakó- és tartózkodási helyének
+            hátrahagyása nélkül megváltoztatja, és az annak felderítésére irányuló
+            intézkedések három hónapon belül nem vezetnek eredményre.
+        identifier: '1'
+        intro: A gyámhatóság a nevelésbe vett gyermeket legfeljebb négy évre örökbefogadhatónak
+          nyilvánítja, ha a szülőjének szülői felügyeleti joga nem szűnt meg és a
+          szülő önhibájából
+    intro: 'A Polgári Törvénykönyvről szóló 2013. évi V. törvény 4:124. § (1) bekezdése
+      helyébe a következő rendelkezés lép:'
+    semantic_data:
+    - __type__: BlockAmendment
+      position:
+        __type__: Reference
+        act: 2013. évi V. törvény
+        article: 4:124
+        paragraph: '1'
+    wrap_up: ''
+  identifier: '21'
+- __type__: Article
+  children:
+  - semantic_data:
+    - __type__: TextAmendment
+      original_text: a nevelésbe vételt
+      position:
+        act: 2013. évi V. törvény
+        article: 4:124
+        paragraph: '3'
+      replacement_text: az ideiglenes hatályú elhelyezést és a nevelésbe vételt
+    text: A Polgári Törvénykönyvről szóló 2013. évi V. törvény 4:124. § (3) bekezdésében
+      az „a nevelésbe vételt” szövegrész helyébe az „az ideiglenes hatályú elhelyezést
+      és a nevelésbe vételt” szöveg lép.
+  identifier: '22'
+- __type__: Article
+  children:
+  - semantic_data:
+    - __type__: EnforcementDate
+      date:
+        __type__: Date
+        day: 1
+        month: 9
+        year: 2020
+      position: null
+    text: Ez a törvény 2020. szeptember 1-jén lép hatályba.
+  identifier: '28'
+identifier: 2020. évi LXV. törvény
+preamble: ''
+publication_date:
+  day: 23
+  month: 6
+  year: 2020
+subject: egyes törvényeknek az örökbefogadások elősegítésével összefüggő módosításáról
