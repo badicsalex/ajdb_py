@@ -16,6 +16,7 @@ from hun_law.output.txt import write_txt
 
 ACTS_DESCRIPTORS = (
     ('Btk.', '2012. évi C. törvény'),
+    ('Ptk.', '2013. évi V. törvény'),
 )
 ALLOWED_ACTS = set(a[1] for a in ACTS_DESCRIPTORS)
 
