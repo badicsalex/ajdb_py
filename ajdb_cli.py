@@ -48,7 +48,7 @@ def set_up_dir_structure(destination_dir: Path) -> None:
         cwd=destination_dir,
         check=True,
     )
-    commit_result = subprocess.run(
+    subprocess.run(
         ['git', 'commit', '-m', "Initial commit"],
         cwd=destination_dir,
         check=True
