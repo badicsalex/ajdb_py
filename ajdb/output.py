@@ -1,7 +1,7 @@
 # Copyright 2020, Alex Badics, All Rights Reserved
 from pathlib import Path
 
-from ajdb.database import ActSet
+from ajdb.amender import ActSet
 from hun_law.output.html import generate_html_for_act
 
 

@@ -13,7 +13,7 @@ from hun_law.utils import Date
 from hun_law.output.txt import write_txt
 from hun_law import dict2object
 
-from ajdb.database import ActSet
+from ajdb.amender import ActSet
 
 THIS_DIR = Path(__file__).parent
 
