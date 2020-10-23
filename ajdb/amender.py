@@ -1,5 +1,5 @@
 # Copyright 2020, Alex Badics, All Rights Reserved
-from typing import Tuple, Optional, Dict, Iterable, Set, List, Type, ClassVar, Union
+from typing import Tuple, Dict,  Set, List, Type, ClassVar, Union
 from pathlib import Path
 from abc import ABC, abstractmethod
 import gzip
@@ -13,7 +13,7 @@ from hun_law.structure import \
     Act, Article, Paragraph, SubArticleElement, BlockAmendmentContainer, \
     StructuralElement, Subtitle, Book,\
     Reference, StructuralReference, SubtitleArticleComboType, \
-    EnforcementDate, DaysAfterPublication, DayInMonthAfterPublication, EnforcementDateTypes, \
+    EnforcementDate, \
     SemanticData, Repeal, TextAmendment, ArticleTitleAmendment, BlockAmendment, \
     SubArticleChildType
 
@@ -21,7 +21,11 @@ from hun_law.utils import Date, identifier_less
 from hun_law.parsers.semantic_parser import ActSemanticsParser
 from hun_law import dict2object
 
-from ajdb.utils import iterate_all_saes_of_act, first_matching_index
+from ajdb.structure import ConcreteEnforcementDate, \
+    ArticleWM, ActWM, ParagraphWM,\
+    SaeWMType, SaeMetadata, add_metadata, WM_ABLE_SAE_CLASSES, SAE_WM_CLASSES
+
+from ajdb.utils import iterate_all_saes_of_act, first_matching_index, evolve_into
 from ajdb.fixups import apply_fixups
 
 NOT_ENFORCED_TEXT = ' '
@@ -29,55 +33,10 @@ NOT_ENFORCED_TEXT = ' '
 act_converter = dict2object.get_converter(Act)
 
 
-@attr.s(slots=True, frozen=True, auto_attribs=True, kw_only=True)
-class ActualizedEnforcementDate:
-    position: Optional[Reference]
-    from_date: Date
-    to_date: Optional[Date] = None
-
-    @staticmethod
-    def _actualize_single_date(date: EnforcementDateTypes, publication_date: Date) -> Date:
-        if isinstance(date, Date):
-            return date
-        if isinstance(date, DaysAfterPublication):
-            return publication_date.add_days(date.days)
-        if isinstance(date, DayInMonthAfterPublication):
-            year = publication_date.year
-            month = publication_date.month + date.months
-            if month > 12:
-                month = month - 12
-                year = year + 1
-            return Date(year, month, date.day)
-        raise ValueError("Unsupported EnforcementDate: {}".format(date))
-
-    @classmethod
-    def from_enforcement_date(cls, enforcement_date: EnforcementDate, publication_date: Date) -> 'ActualizedEnforcementDate':
-        return cls(
-            position=enforcement_date.position,
-            from_date=cls._actualize_single_date(enforcement_date.date, publication_date),
-            to_date=enforcement_date.repeal_date
-        )
-
-    def is_in_force_at_date(self, date: Date) -> bool:
-        if date < self.from_date:
-            return False
-        if self.to_date is not None and date > self.to_date:
-            return False
-        return True
-
-    def is_applicable_to(self, reference: Reference) -> bool:
-        assert self.position is not None
-        return self.position.contains(reference)
-
-
-class ActNotInForce(Exception):
-    pass
-
-
 @attr.s(slots=True, frozen=True, auto_attribs=True)
 class EnforcementDateSet:
-    default: ActualizedEnforcementDate
-    specials: Tuple[ActualizedEnforcementDate, ...]
+    default: ConcreteEnforcementDate
+    specials: Tuple[Tuple[Reference, ConcreteEnforcementDate], ...]
 
     @classmethod
     def from_act(cls, act: Act) -> 'EnforcementDateSet':
@@ -87,68 +46,67 @@ class EnforcementDateSet:
             assert sae.semantic_data is not None
             for semantic_data_element in sae.semantic_data:
                 if isinstance(semantic_data_element, EnforcementDate):
-                    aed = ActualizedEnforcementDate.from_enforcement_date(semantic_data_element, act.publication_date)
-                    if aed.position is None:
+                    concrete_ed = ConcreteEnforcementDate.from_enforcement_date(semantic_data_element, act.publication_date)
+                    if semantic_data_element.position is None:
                         assert default is None
-                        default = aed
+                        default = concrete_ed
                     else:
-                        specials.append(aed)
+                        ref = attr.evolve(semantic_data_element.position, act=act.identifier)
+                        specials.append((ref, concrete_ed))
         assert default is not None, act.identifier
-        assert all(default.from_date <= special.from_date for special in specials)
-        assert all(special.to_date is None for special in specials)
-        return cls(
-            default,
-            tuple(specials)
-        )
+        assert all(default.from_date <= special.from_date for _, special in specials)
+        assert all(special.to_date is None for _, special in specials)
+        return EnforcementDateSet(default, tuple(specials))
 
-    def filter_act(self, act: Act, date: Date) -> Act:
-        if not self.default.is_in_force_at_date(date):
-            raise ActNotInForce(
-                "Act is not in force at {}. (from: {}, to: {})"
-                .format(date, self.default.from_date, self.default.to_date)
-            )
-        not_yet_in_force = tuple(aed for aed in self.specials if not aed.is_in_force_at_date(date))
-        if not not_yet_in_force:
-            return act
-
-        def sae_modifier(reference: Reference, sae: SubArticleElement) -> SubArticleElement:
-            reference = attr.evolve(reference, act=None)
-            for aed in not_yet_in_force:
-                if aed.is_applicable_to(reference):
-                    return sae.__class__(
-                        identifier=sae.identifier,
-                        text=NOT_ENFORCED_TEXT,
-                        semantic_data=(),
-                        outgoing_references=(),
-                        act_id_abbreviations=(),
-                    )
+    def sae_modifier(self, reference: Reference, sae: SubArticleElement) -> SubArticleElement:
+        if not isinstance(sae, WM_ABLE_SAE_CLASSES):
             return sae
+        applicable_ced = self.default
+        for ced_reference, ced in self.specials:
+            if ced_reference.contains(reference):
+                applicable_ced = ced
+        if isinstance(sae, SAE_WM_CLASSES):
+            return attr.evolve(
+                sae,
+                metadata=attr.evolve(
+                    sae.metadata,
+                    enforcement_date=applicable_ced
+                )
+            )
 
-        def article_modifier(_reference: Reference, article: Article) -> Article:
-            for aed in not_yet_in_force:
-                if aed.is_applicable_to(Reference(None, article.identifier)):
-                    return Article(
-                        identifier=article.identifier,
-                        children=(
-                            Paragraph(
-                                identifier=None,
-                                text=NOT_ENFORCED_TEXT,
-                                semantic_data=(),
-                                outgoing_references=(),
-                                act_id_abbreviations=(),
-                            ),
-                        )
-                    )
+        return add_metadata(sae, metadata=SaeMetadata(enforcement_date=applicable_ced))
+
+    def article_modifier(self, reference: Reference, article: Article) -> ArticleWM:
+        article = article.map_recursive(reference, self.sae_modifier, children_first=True)
+        if isinstance(article, ArticleWM):
             return article
+        article_wm: ArticleWM = evolve_into(article, ArticleWM)
+        return article_wm
 
-        act = act.map_articles(article_modifier)
-        return act.map_saes(sae_modifier)
+    def interesting_dates(self) -> Tuple[Date, ...]:
+        result = set()
+        result.add(self.default.from_date)
+        if self.default.to_date is not None:
+            result.add(self.default.to_date)
+
+        result.update(special.from_date for _, special in self.specials)
+        return tuple(result)
+
+    @classmethod
+    def convert_act(cls, act: Act) -> ActWM:
+        enforcement_set = cls.from_act(act)
+        act = act.map_articles(enforcement_set.article_modifier)
+        if isinstance(act, ActWM):
+            return act
+        act_wm: ActWM = evolve_into(act, ActWM, interesting_dates=enforcement_set.interesting_dates())
+        return act_wm
 
 
 @attr.s(slots=True, auto_attribs=True)
 class ModificationApplier(ABC):
     modification: SemanticData = attr.ib()
-    source_sae: SubArticleElement = attr.ib()
+    source_sae: SaeWMType = attr.ib()
+    current_date: Date = attr.ib()
     applied: bool = attr.ib(init=False, default=False)
 
     @classmethod
@@ -157,7 +115,7 @@ class ModificationApplier(ABC):
         pass
 
     @abstractmethod
-    def apply(self, act: Act) -> Act:
+    def apply(self, act: ActWM) -> ActWM:
         pass
 
     @property
@@ -201,7 +159,7 @@ class TextReplacementApplier(ModificationApplier):
     def can_apply(cls, modification: SemanticData) -> bool:
         return isinstance(modification, TextAmendment) or (isinstance(modification, Repeal) and modification.text is not None)
 
-    def text_replacer(self, _reference: Reference, sae: SubArticleElement) -> SubArticleElement:
+    def text_replacer(self, _reference: Reference, sae: SaeWMType) -> SaeWMType:
         new_text = sae.text.replace(self.original_text, self.replacement_text) if sae.text is not None else None
         new_intro = sae.intro.replace(self.original_text, self.replacement_text) if sae.intro is not None else None
         new_wrap_up = sae.wrap_up.replace(self.original_text, self.replacement_text) if sae.wrap_up is not None else None
@@ -218,8 +176,8 @@ class TextReplacementApplier(ModificationApplier):
             act_id_abbreviations=None,
         )
 
-    def apply(self, act: Act) -> Act:
-        return act.map_saes(self.text_replacer, self.position)
+    def apply(self, act: ActWM) -> ActWM:
+        return act.map_saes_wm(self.text_replacer, self.position)
 
     @property
     def priority(self) -> int:
@@ -239,7 +197,7 @@ class ArticleTitleAmendmentApplier(ModificationApplier):
     def can_apply(cls, modification: SemanticData) -> bool:
         return isinstance(modification, ArticleTitleAmendment)
 
-    def modifier(self, _reference: Reference, article: Article) -> Article:
+    def modifier(self, _reference: Reference, article: ArticleWM) -> ArticleWM:
         assert isinstance(self.modification, ArticleTitleAmendment)
         assert article.title is not None
         self.applied = self.modification.original_text in article.title
@@ -249,11 +207,11 @@ class ArticleTitleAmendmentApplier(ModificationApplier):
             title=new_title,
         )
 
-    def apply(self, act: Act) -> Act:
+    def apply(self, act: ActWM) -> ActWM:
         assert isinstance(self.modification, ArticleTitleAmendment)
         _, reference_type = self.modification.position.last_component_with_type()
         assert reference_type is Article
-        return act.map_articles(self.modifier, self.modification.position)
+        return act.map_articles_wm(self.modifier, self.modification.position)
 
 
 def get_cut_points_for_structural_reference(position: StructuralReference, children: Tuple[SubArticleChildType, ...]) -> Tuple[int, int]:
@@ -293,7 +251,15 @@ class RepealApplier(ModificationApplier):
     def can_apply(cls, modification: SemanticData) -> bool:
         return isinstance(modification, Repeal) and modification.text is None
 
-    def sae_repealer(self, _reference: Reference, sae: SubArticleElement) -> SubArticleElement:
+    def create_new_metadata(self, sae: SaeWMType) -> SaeMetadata:
+        return SaeMetadata(
+            enforcement_date=ConcreteEnforcementDate(
+                from_date=sae.metadata.enforcement_date.from_date,
+                to_date=self.current_date,
+            )
+        )
+
+    def sae_repealer(self, _reference: Reference, sae: SaeWMType) -> SaeWMType:
         self.applied = True
         return sae.__class__(
             identifier=sae.identifier,
@@ -301,23 +267,27 @@ class RepealApplier(ModificationApplier):
             semantic_data=(),
             outgoing_references=(),
             act_id_abbreviations=(),
+            metadata=self.create_new_metadata(sae),
         )
 
-    def article_repealer(self, _reference: Reference, article: Article) -> Article:
+    def article_repealer(self, _reference: Reference, article: ArticleWM) -> ArticleWM:
+        first_paragraph = article.children[0]
+        assert isinstance(first_paragraph, ParagraphWM)
         self.applied = True
-        return Article(
+        return ArticleWM(
             identifier=article.identifier,
             children=(
-                Paragraph(
+                ParagraphWM(
                     text=NOT_ENFORCED_TEXT,
                     semantic_data=(),
                     outgoing_references=(),
                     act_id_abbreviations=(),
+                    metadata=self.create_new_metadata(first_paragraph),
                 ),
             ),
         )
 
-    def apply_to_act(self, act: Act) -> Act:
+    def apply_to_act(self, act: ActWM) -> ActWM:
         assert isinstance(self.modification, Repeal)
         assert isinstance(self.modification.position, StructuralReference)
         position: StructuralReference = self.modification.position
@@ -338,13 +308,13 @@ class RepealApplier(ModificationApplier):
         # TODO: Repeal articles instead of deleting them.
         return attr.evolve(act, children=act.children[:start_cut] + act.children[end_cut:])
 
-    def apply(self, act: Act) -> Act:
+    def apply(self, act: ActWM) -> ActWM:
         assert isinstance(self.modification, Repeal)
         if isinstance(self.modification.position, Reference):
             _, reference_type = self.modification.position.last_component_with_type()
             if reference_type is Article:
-                return act.map_articles(self.article_repealer, self.modification.position)
-            return act.map_saes(self.sae_repealer, self.modification.position)
+                return act.map_articles_wm(self.article_repealer, self.modification.position)
+            return act.map_saes_wm(self.sae_repealer, self.modification.position)
         return self.apply_to_act(act)
 
 
@@ -354,6 +324,15 @@ class BlockAmendmentApplier(ModificationApplier):
     position: Union[Reference, StructuralReference] = attr.ib(init=False)
     pure_insertion: bool = attr.ib(init=False)
 
+    def sae_metadata_adder(self, _reference: Reference, sae: SubArticleElement) -> SubArticleElement:
+        if not isinstance(sae, WM_ABLE_SAE_CLASSES):
+            return sae
+        assert not isinstance(sae, SAE_WM_CLASSES)
+        children_metadata = SaeMetadata(
+            enforcement_date=ConcreteEnforcementDate(from_date=self.current_date)
+        )
+        return add_metadata(sae, metadata=children_metadata)
+
     @new_children.default
     def _new_children_default(self) -> Tuple[SubArticleChildType, ...]:
         assert self.source_sae.children is not None
@@ -361,7 +340,15 @@ class BlockAmendmentApplier(ModificationApplier):
         block_amendment_container = self.source_sae.children[0]
         assert isinstance(block_amendment_container, BlockAmendmentContainer)
         assert block_amendment_container.children is not None
-        return block_amendment_container.children
+        result = []
+        for child in block_amendment_container.children:
+            if isinstance(child, WM_ABLE_SAE_CLASSES):
+                child = child.map_recursive(Reference(), self.sae_metadata_adder, children_first=True)
+            if isinstance(child, Article):
+                child = child.map_recursive(Reference(), self.sae_metadata_adder, children_first=True)
+                child = evolve_into(child, ArticleWM)
+            result.append(child)
+        return tuple(result)
 
     @position.default
     def _position_default(self) -> Union[Reference, StructuralReference]:
@@ -463,28 +450,28 @@ class BlockAmendmentApplier(ModificationApplier):
         self.applied = True
         return children[:start_cut_point] + self.new_children + children[end_cut_point:]
 
-    def apply_to_sae(self, reference: Reference, sae: SubArticleElement) -> SubArticleElement:
+    def apply_to_sae(self, reference: Reference, sae: SaeWMType) -> SaeWMType:
         assert isinstance(self.position, Reference)
         if reference != self.position.parent():
             return sae
         assert sae.children is not None
         return attr.evolve(sae, children=self.compute_new_children(reference, sae.children))
 
-    def apply_to_article(self, reference: Reference, article: Article) -> Article:
+    def apply_to_article(self, reference: Reference, article: ArticleWM) -> ArticleWM:
         new_children = []
         for child in self.compute_new_children(reference, article.children):
-            assert isinstance(child, Paragraph)
+            assert isinstance(child, ParagraphWM)
             new_children.append(child)
         return attr.evolve(article, children=tuple(new_children))
 
-    def apply_to_act(self, act: Act) -> Act:
+    def apply_to_act(self, act: ActWM) -> ActWM:
         new_children = []
         for child in self.compute_new_children(Reference(act.identifier), act.children):
-            assert isinstance(child, (Article, StructuralElement))
+            assert isinstance(child, (ArticleWM, StructuralElement))
             new_children.append(child)
         return attr.evolve(act, children=tuple(new_children))
 
-    def apply(self, act: Act) -> Act:
+    def apply(self, act: ActWM) -> ActWM:
         if isinstance(self.position, Reference):
             expected_type = self.position.last_component_with_type()[1]
             assert expected_type is not None
@@ -492,14 +479,14 @@ class BlockAmendmentApplier(ModificationApplier):
                 return self.apply_to_act(act)
             if expected_type is Paragraph:
                 article_ref = Reference(act.identifier, self.position.article)
-                return act.map_articles(self.apply_to_article, article_ref)
+                return act.map_articles_wm(self.apply_to_article, article_ref)
             if issubclass(expected_type, SubArticleElement):
-                return act.map_saes(self.apply_to_sae, self.position.parent())
+                return act.map_saes_wm(self.apply_to_sae, self.position.parent())
             raise ValueError("Unknown reference type", self.position)
         return self.apply_to_act(act)
 
 
-@ attr.s(slots=True, frozen=True, auto_attribs=True)
+@attr.s(slots=True, frozen=True, auto_attribs=True)
 class ModificationSet:
     APPLIER_CLASSES: ClassVar[Tuple[Type[ModificationApplier], ...]] = (
         TextReplacementApplier,
@@ -508,12 +495,12 @@ class ModificationSet:
         BlockAmendmentApplier,
     )
 
-    modifications: Tuple[Tuple[SubArticleElement, SemanticData], ...]
+    modifications: Tuple[Tuple[SaeWMType, SemanticData], ...]
 
-    def apply_all(self, act: Act) -> Act:
+    def apply_all(self, act: ActWM, current_date: Date) -> ActWM:
         appliers: List[ModificationApplier] = []
         for applier_class in self.APPLIER_CLASSES:
-            appliers.extend(applier_class(m, sae) for sae, m in self.modifications if applier_class.can_apply(m))
+            appliers.extend(applier_class(m, sae, current_date) for sae, m in self.modifications if applier_class.can_apply(m))
 
         appliers.sort(key=lambda x: x.priority, reverse=True)
 
@@ -524,30 +511,40 @@ class ModificationSet:
         return act
 
 
-@ attr.s(slots=True, frozen=True, auto_attribs=True)
-class ActWithCachedData:
-    act: Act
-    enforcement_dates: EnforcementDateSet = attr.ib(init=False)
+@attr.s(slots=True, auto_attribs=True)
+class AmendmentAndRepealExtractor:
+    at_date: Date
+    act_identifier: str
+    modifications_per_act: Dict[str, List[Tuple[SaeWMType, SemanticData]]] = \
+        attr.ib(init=False, factory=lambda: defaultdict(list))
 
-    @ enforcement_dates.default
-    def _enforcement_dates_default(self) -> EnforcementDateSet:
-        return EnforcementDateSet.from_act(self.act)
+    def sae_walker(self, reference: Reference, sae: SaeWMType) -> SaeWMType:
+        if sae.semantic_data is None:
+            return sae
+        if not sae.metadata.enforcement_date.is_in_force_at_date(self.at_date):
+            return sae
+        for semantic_data_element in sae.semantic_data:
+            if isinstance(semantic_data_element, EnforcementDate):
+                continue
+            # Type is ignored here, since all subclasses except for EnforcementDate
+            # have a position field. Maybe this should be solved by introducing a class
+            # in the middle with a position, but it isn't worth it TBH.
+            # This will fail very fast and very loudly if there is a problem.
+            modified_ref = semantic_data_element.position  # type: ignore
+            assert modified_ref.act is not None
+            self.modifications_per_act[modified_ref.act].append((sae, semantic_data_element))
+            self.modifications_per_act[self.act_identifier].append((sae, Repeal(position=reference)))
+        return sae
 
-    def interesting_dates(self) -> Tuple[Date, ...]:
-        result = set()
-        result.add(self.enforcement_dates.default.from_date)
-        if self.enforcement_dates.default.to_date is not None:
-            result.add(self.enforcement_dates.default.to_date)
-
-        result.update(aed.from_date for aed in self.enforcement_dates.specials)
-        return tuple(result)
-
-    def state_at_date(self, date: Date) -> Act:
-        return self.enforcement_dates.filter_act(self.act, date)
+    @classmethod
+    def get_amendments_and_repeals(cls, act: ActWM, at_date: Date) -> Dict[str, List[Tuple[SaeWMType, SemanticData]]]:
+        instance = cls(at_date, act.identifier)
+        act.map_saes_wm(instance.sae_walker)
+        return instance.modifications_per_act
 
 
 class ActSet:
-    acts: Dict[str, ActWithCachedData]
+    acts: Dict[str, ActWM]
 
     def __init__(self) -> None:
         self.acts = {}
@@ -566,59 +563,32 @@ class ActSet:
 
     def add_act(self, act: Act) -> None:
         act = apply_fixups(act)
-        self.acts[act.identifier] = ActWithCachedData(act)
+        self.acts[act.identifier] = EnforcementDateSet.convert_act(act)
 
     def interesting_dates(self) -> Tuple[Date, ...]:
         result: Set[Date] = set()
         for act in self.acts.values():
-            result.update(act.interesting_dates())
+            result.update(act.interesting_dates)
         return tuple(sorted(result))
 
     def is_interesting_date_for(self, act_id: str, date: Date) -> bool:
-        return date in self.acts[act_id].interesting_dates()
+        return date in self.acts[act_id].interesting_dates
 
-    def acts_at_date(self, date: Date) -> Iterable[Act]:
-        for act in self.acts.values():
-            try:
-                yield act.state_at_date(date)
-            except ActNotInForce:
-                pass
-
-    @ staticmethod
-    def _get_amendments_and_repeals(act: Act) -> Dict[str, List[Tuple[SubArticleElement, SemanticData]]]:
-        modifications_per_act: Dict[str, List[Tuple[SubArticleElement, SemanticData]]] = defaultdict(list)
-
-        def sae_walker(reference: Reference, sae: SubArticleElement) -> SubArticleElement:
-            if sae.semantic_data is None:
-                return sae
-            for semantic_data_element in sae.semantic_data:
-                if isinstance(semantic_data_element, EnforcementDate):
-                    continue
-                # Type is ignored here, since all subclasses except for EnforcementDate
-                # have a position field. Maybe this should be solved by introducing a class
-                # in the middle with a position, but it isn't worth it TBH.
-                # This will fail very fast and very loudly if there is a problem.
-                modified_ref = semantic_data_element.position  # type: ignore
-                assert modified_ref.act is not None
-                modifications_per_act[modified_ref.act].append((sae, semantic_data_element))
-                modifications_per_act[act.identifier].append((sae, Repeal(position=reference)))
-            return sae
-        act.map_saes(sae_walker)
-        return modifications_per_act
-
-    def apply_all_modifications(self, amending_act: Act) -> Tuple[str, ...]:
+    def apply_all_modifications(self, amending_act: ActWM, at_date: Date) -> Tuple[str, ...]:
         modified_acts = []
-        for act_id, modifications in self._get_amendments_and_repeals(amending_act).items():
+        extracted_modifications = AmendmentAndRepealExtractor.get_amendments_and_repeals(amending_act, at_date)
+        for act_id, modifications in extracted_modifications.items():
             if act_id not in self.acts:
                 continue
-            act: Act = self.acts[act_id].act
+            act: ActWM = self.acts[act_id]
             if act.identifier != amending_act.identifier:
                 print("AMENDING ", act.identifier, "WITH", amending_act.identifier)
 
             modification_set = ModificationSet(tuple(modifications))
-            act = modification_set.apply_all(act)
+            act = modification_set.apply_all(act, at_date)
 
-            act = ActSemanticsParser.add_semantics_to_act(act)
-            self.acts[act_id] = ActWithCachedData(act)
+            reparsed_act = ActSemanticsParser.add_semantics_to_act(act)
+            assert isinstance(reparsed_act, ActWM)
+            self.acts[act_id] = reparsed_act
             modified_acts.append(act_id)
         return tuple(modified_acts)

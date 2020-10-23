@@ -8,7 +8,7 @@ import textwrap
 import os
 
 from ajdb.amender import ActSet
-from hun_law.structure import Act
+from ajdb.structure import ActWM
 from hun_law.utils import Date
 from hun_law.output.html import generate_html_for_act
 from hun_law.output.json import serialize_to_json_file
@@ -56,11 +56,12 @@ def set_up_dir_structure(destination_dir: Path) -> None:
     )
 
 
-def save_in_all_formats(acts: Sequence[Act], destination_dir: Path) -> None:
+def save_in_all_formats(acts: Sequence[ActWM], destination_dir: Path) -> None:
     # TODO: check for changes
-    for act in acts:
-        if not act.identifier in ALLOWED_ACTS:
+    for act_wm in acts:
+        if not act_wm.identifier in ALLOWED_ACTS:
             continue
+        act = act_wm.to_simple_act()
         with (destination_dir / 'html' / (act.identifier + '.html')).open('w') as f:
             generate_html_for_act(act, f)
         with (destination_dir / 'json' / (act.identifier + '.json')).open('w') as f:
@@ -80,7 +81,7 @@ def create_named_act_symlinks(destination_dir: Path) -> None:
                 symlink_destination.symlink_to(act_file_name)
 
 
-def git_commit(amending_act: Act, date: Date, destination_dir: Path) -> None:
+def git_commit(amending_act: ActWM, date: Date, destination_dir: Path) -> None:
     commit_message = "{}\n\n{}".format(
         amending_act.identifier,
         textwrap.fill(amending_act.subject, width=80)
@@ -113,10 +114,10 @@ def generate_repository(act_set: ActSet, destination_dir: Path) -> None:
     for date in act_set.interesting_dates():
         print("Processing date", date)
 
-        for act in act_set.acts_at_date(date):
-            modified_act_ids = set(act_set.apply_all_modifications(act))
+        for act in act_set.acts.values():
+            modified_act_ids = set(act_set.apply_all_modifications(act, date))
             modified_acts = tuple(
-                a for a in act_set.acts_at_date(date) if
+                a for a in act_set.acts.values() if
                 a.identifier in modified_act_ids and
                 a.identifier in ALLOWED_ACTS
             )

@@ -1,5 +1,6 @@
 # Copyright 2020, Alex Badics, All Rights Reserved
-from typing import Iterable, Sequence, Any, Callable, Optional
+from typing import Iterable, Sequence, Any, Callable, Optional, Type
+import attr
 
 from hun_law.structure import Act, SubArticleElement, BlockAmendmentContainer
 
@@ -32,3 +33,16 @@ def last_matching_index(data: Sequence[Any], filter_fn: Callable[[Any], bool], s
         if filter_fn(data[index]):
             return index
     return -1
+
+
+def evolve_into(inst: Any, cls: Type, **changes: Any) -> Any:
+    attrs = attr.fields(cls)
+    for a in attrs:
+        if not a.init:
+            continue
+        attr_name = a.name  # To deal with private attributes.
+        init_name = attr_name if attr_name[0] != "_" else attr_name[1:]
+        if init_name not in changes:
+            changes[init_name] = getattr(inst, attr_name)
+
+    return cls(**changes)

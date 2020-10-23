@@ -6,13 +6,14 @@ import argparse
 import attr
 import yaml
 
-from hun_law.structure import Act, SubArticleElement, Article, \
+from hun_law.structure import SubArticleElement, Article, \
     EnforcementDate, TextAmendment, ArticleTitleAmendment, BlockAmendment, Repeal,\
     Reference
 from hun_law.utils import Date
 from hun_law.output.txt import write_txt
 from hun_law import dict2object
 
+from ajdb.structure import ActWM, SaeWMType
 from ajdb.amender import ActSet
 
 
@@ -58,11 +59,11 @@ def do_amendments(act_set: ActSet, target_date: Date) -> None:
         if date > target_date:
             break
         print("Processing date", date)
-        for act in act_set.acts_at_date(date):
-            act_set.apply_all_modifications(act)
+        for act in act_set.acts.values():
+            act_set.apply_all_modifications(act, date)
 
 
-def filter_interesting_articles(act: Act, target_act_id: str) -> Optional[Act]:
+def filter_interesting_articles(act: ActWM, target_act_id: str) -> Optional[ActWM]:
     has_interesting: bool
     has_amendment = False
 
@@ -93,7 +94,7 @@ def filter_interesting_articles(act: Act, target_act_id: str) -> Optional[Act]:
     return attr.evolve(act, children=tuple(new_children))
 
 
-def sae_trimmer(_reference: Reference, sae: SubArticleElement) -> SubArticleElement:
+def sae_trimmer(_reference: Reference, sae: SaeWMType) -> SaeWMType:
     return attr.evolve(
         sae,
         semantic_data=sae.semantic_data or None,
@@ -102,10 +103,10 @@ def sae_trimmer(_reference: Reference, sae: SubArticleElement) -> SubArticleElem
     )
 
 
-def save_act(act: Act, path: Path) -> None:
-    act = act.map_saes(sae_trimmer)
+def save_act(act: ActWM, path: Path) -> None:
+    act = act.map_saes_wm(sae_trimmer)
     with path.open('w') as f:
-        serialize_to_yaml(act, f)
+        serialize_to_yaml(act.to_simple_act(), f)
 
 
 def main() -> None:
@@ -114,17 +115,17 @@ def main() -> None:
     dest_dir: Path = args.destination_dir
     dest_dir.mkdir(exist_ok=True)
     print("Saving original")
-    original = act_set.acts[args.target_act].act
+    original = act_set.acts[args.target_act]
     save_act(original, dest_dir / 'original.yaml')
     print("Saving amendments")
     for act in act_set.acts.values():
-        if act.act.identifier != args.target_act:
-            filtered_act = filter_interesting_articles(act.act, args.target_act)
+        if act.identifier != args.target_act:
+            filtered_act = filter_interesting_articles(act, args.target_act)
             if filtered_act is not None:
-                save_act(filtered_act, dest_dir / (act.act.identifier + '.yaml'))
+                save_act(filtered_act, dest_dir / (act.identifier + '.yaml'))
     do_amendments(act_set, args.target_date)
     print("Saving expected")
-    expected = act_set.acts[args.target_act].act
+    expected = act_set.acts[args.target_act]
     save_act(expected, dest_dir / 'expected.yaml')
     with (dest_dir / 'target_date.yaml').open('w') as f:
         serialize_to_yaml(args.target_date, f)
