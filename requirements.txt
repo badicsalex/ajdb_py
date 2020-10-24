@@ -12,4 +12,4 @@ jedi
 pylint
 pytest
 pytest-parallel
-mypy
+mypy;implementation_name=="cpython"
