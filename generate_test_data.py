@@ -1,31 +1,25 @@
 #!/usr/bin/env python3
 # Copyright 2020, Alex Badics, All Rights Reserved
-from typing import Iterable, Optional, Any, TextIO
+from typing import Optional, Any, TextIO, Sequence
 from pathlib import Path
+from collections import defaultdict
 import argparse
 import attr
 import yaml
 
 from hun_law.structure import SubArticleElement, Article, \
     EnforcementDate, TextAmendment, ArticleTitleAmendment, BlockAmendment, Repeal,\
-    Reference
+    Reference, \
+    Act
 from hun_law.utils import Date
 from hun_law.output.txt import write_txt
 from hun_law import dict2object
 
-from ajdb.structure import ActWM, SaeWMType
-from ajdb.amender import ActSet
+from ajdb.amender import ActSet, ActConverter, ActSetAmendmentApplier
 
 
 def serialize_to_yaml(obj: Any, f: TextIO) -> None:
     yaml.dump(dict2object.to_dict(obj, type(obj)), f, allow_unicode=True)
-
-
-def load_acts(acts: Iterable[Path]) -> ActSet:
-    act_set = ActSet()
-    for file_path in acts:
-        act_set.load_from_file(file_path)
-    return act_set
 
 
 def parse_args() -> argparse.Namespace:
@@ -54,16 +48,23 @@ def parse_args() -> argparse.Namespace:
     return argparser.parse_args()
 
 
-def do_amendments(act_set: ActSet, target_date: Date) -> None:
-    for date in act_set.interesting_dates():
-        if date > target_date:
-            break
-        print("Processing date", date)
-        for act in act_set.acts.values():
-            act_set.apply_all_modifications(act, date)
+def do_amendments(raw_acts: Sequence[Act], target_date: Date) -> ActSet:
+    converted_acts = defaultdict(list)
+    for act_raw in raw_acts:
+        act = ActConverter.convert_hun_law_act(act_raw)
+        converted_acts[act.publication_date].append(act)
+
+    act_set = ActSet(acts=())
+    date = min(converted_acts.keys())
+    while date <= target_date:
+        if date in converted_acts:
+            act_set = ActSet(acts=act_set.acts + tuple(converted_acts[date]))
+        act_set = ActSetAmendmentApplier.apply_all_amendments(act_set, date)
+        date = date.add_days(1)
+    return act_set
 
 
-def filter_interesting_articles(act: ActWM, target_act_id: str) -> Optional[ActWM]:
+def filter_interesting_articles(act: Act, target_act_id: str) -> Optional[Act]:
     has_interesting: bool
     has_amendment = False
 
@@ -94,7 +95,7 @@ def filter_interesting_articles(act: ActWM, target_act_id: str) -> Optional[ActW
     return attr.evolve(act, children=tuple(new_children))
 
 
-def sae_trimmer(_reference: Reference, sae: SaeWMType) -> SaeWMType:
+def sae_trimmer(_reference: Reference, sae: SubArticleElement) -> SubArticleElement:
     return attr.evolve(
         sae,
         semantic_data=sae.semantic_data or None,
@@ -103,29 +104,37 @@ def sae_trimmer(_reference: Reference, sae: SaeWMType) -> SaeWMType:
     )
 
 
-def save_act(act: ActWM, path: Path) -> None:
-    act = act.map_saes_wm(sae_trimmer)
+def save_act(act: Act, path: Path) -> None:
+    act = act.map_saes(sae_trimmer)
     with path.open('w') as f:
-        serialize_to_yaml(act.to_simple_act(), f)
+        serialize_to_yaml(act, f)
 
 
 def main() -> None:
     args = parse_args()
-    act_set = load_acts(args.source_acts)
+
+    raw_acts = tuple(ActConverter.load_hun_law_act(p) for p in args.source_acts)
+
     dest_dir: Path = args.destination_dir
     dest_dir.mkdir(exist_ok=True)
     print("Saving original")
-    original = act_set.acts[args.target_act]
-    save_act(original, dest_dir / 'original.yaml')
+    for act in raw_acts:
+        if act.identifier == args.target_act:
+            save_act(act, dest_dir / 'original.yaml')
+            break
+    else:
+        raise KeyError("Act {} not found in loaded files".format(args.target_act))
+
     print("Saving amendments")
-    for act in act_set.acts.values():
+    for act in raw_acts:
         if act.identifier != args.target_act:
             filtered_act = filter_interesting_articles(act, args.target_act)
             if filtered_act is not None:
                 save_act(filtered_act, dest_dir / (act.identifier + '.yaml'))
-    do_amendments(act_set, args.target_date)
+
+    act_set = do_amendments(raw_acts, args.target_date)
     print("Saving expected")
-    expected = act_set.acts[args.target_act]
+    expected = act_set.act(args.target_act).to_simple_act()
     save_act(expected, dest_dir / 'expected.yaml')
     with (dest_dir / 'target_date.yaml').open('w') as f:
         serialize_to_yaml(args.target_date, f)

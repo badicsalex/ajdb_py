@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
 from pathlib import Path
-from typing import Sequence
+from typing import Sequence, Dict, List, Optional
+from collections import defaultdict
 import argparse
 import shutil
 import subprocess
 import textwrap
 import os
 
-from ajdb.amender import ActSet
-from ajdb.structure import ActWM
+from ajdb.amender import ActConverter, ActSetAmendmentApplier
+from ajdb.structure import ActWM, ActSet
 from hun_law.utils import Date
 from hun_law.output.html import generate_html_for_act
 from hun_law.output.json import serialize_to_json_file
@@ -23,13 +24,16 @@ ALLOWED_ACTS = set(a[1] for a in ACTS_DESCRIPTORS)
 THIS_DIR = Path(__file__).parent
 
 
-def load_parsed_acts(acts_dir: Path) -> ActSet:
-    act_set = ActSet()
+def load_parsed_acts(acts_dir: Path) -> Dict[Date, List[ActWM]]:
+    result = defaultdict(list)
+    print("Loading acts")
     for file_path in acts_dir.iterdir():
         if not file_path.is_file():
             continue
-        act_set.load_from_file(file_path)
-    return act_set
+        act_raw = ActConverter.load_hun_law_act(file_path)
+        act = ActConverter.convert_hun_law_act(act_raw)
+        result[act.publication_date].append(act)
+    return result
 
 
 def set_up_dir_structure(destination_dir: Path) -> None:
@@ -108,26 +112,36 @@ def git_commit(amending_act: ActWM, date: Date, destination_dir: Path) -> None:
         print("WARN: Commit not successful. Probably empty.")
 
 
-def generate_repository(act_set: ActSet, destination_dir: Path) -> None:
+def generate_repository(acts_to_use: Dict[Date, List[ActWM]], destination_dir: Path) -> None:
     set_up_dir_structure(destination_dir)
+    previous_act_state: Dict[str, Optional[ActWM]] = {act_id: None for act_id in ALLOWED_ACTS}
 
-    for date in act_set.interesting_dates():
-        print("Processing date", date)
+    act_set = ActSet(acts=())
+    target_date = Date.today()
+    date = min(acts_to_use.keys())
+    print("Will process from", date, "to", target_date)
+    while date <= target_date:
+        interesting_acts = tuple(act_set.interesting_acts_at_date(date))
+        if interesting_acts:
+            print("Processing date", date)
 
-        for act in act_set.acts.values():
-            modified_act_ids = set(act_set.apply_all_modifications(act, date))
-            modified_acts = tuple(
-                a for a in act_set.acts.values() if
-                a.identifier in modified_act_ids and
-                a.identifier in ALLOWED_ACTS
-            )
-            if act.identifier in ALLOWED_ACTS and act_set.is_interesting_date_for(act.identifier, date):
-                modified_acts = (act, ) + modified_acts
-            if not modified_acts:
-                continue
-            save_in_all_formats(modified_acts, destination_dir)
-            create_named_act_symlinks(destination_dir)
-            git_commit(act, date, destination_dir)
+        for act in interesting_acts:
+            act_set = ActSetAmendmentApplier.apply_single_act(act_set, act, date)
+            modified_acts = []
+            for act_id, act_prev in previous_act_state.items():
+                if act_set.has_act(act_id):
+                    new_act_state = act_set.act(act_id)
+                    if act_prev is None or new_act_state != act_prev:
+                        modified_acts.append(new_act_state)
+                        previous_act_state[act_id] = new_act_state
+
+            if modified_acts:
+                save_in_all_formats(modified_acts, destination_dir)
+                create_named_act_symlinks(destination_dir)
+                git_commit(act, date, destination_dir)
+        if date in acts_to_use:
+            act_set = ActSet(acts=act_set.acts + tuple(acts_to_use[date]))
+        date = date.add_days(1)
 
 
 def parse_args() -> argparse.Namespace:

@@ -1,6 +1,7 @@
 # Copyright 2020, Alex Badics, All Rights Reserved
-from typing import Iterable, Any, Tuple
+from typing import Iterable, Any, Tuple, Dict, List
 from pathlib import Path
+from collections import defaultdict
 import difflib
 import io
 import yaml
@@ -13,7 +14,8 @@ from hun_law.utils import Date
 from hun_law.output.txt import write_txt
 from hun_law import dict2object
 
-from ajdb.amender import ActSet
+from ajdb.structure import ActSet, ActWM
+from ajdb.amender import ActSetAmendmentApplier, ActConverter
 
 THIS_DIR = Path(__file__).parent
 
@@ -45,23 +47,21 @@ def act_set_testcase_provider() -> Iterable[Any]:
         )
 
 
-def load_test_data(acts_dir: Path) -> Tuple[ActSet, Act, Date]:
-    act_set = ActSet()
+def load_test_data(acts_dir: Path) -> Tuple[Act, Date, Dict[Date, List[ActWM]]]:
+    acts_to_apply = defaultdict(list)
     for file_path in acts_dir.iterdir():
         if not file_path.is_file():
             continue
         if file_path.name not in ('expected.yaml', 'target_date.yaml'):
-            with file_path.open('rt') as f:
-                data = yaml.load(f, Loader=yaml.Loader)
-                act: Act = dict2object.to_object(data, Act)
-                act = act.map_saes(semantic_faker)
-                act_set.add_act(act)
+            act_raw = ActConverter.load_hun_law_act(file_path)
+            act_raw = act_raw.map_saes(semantic_faker)
+            act = ActConverter.convert_hun_law_act(act_raw)
+            acts_to_apply[act.publication_date].append(act)
 
-    with (acts_dir / 'expected.yaml').open('r') as f:
-        expected_act = dict2object.to_object(yaml.load(f, Loader=yaml.Loader), Act)
+    expected_act = ActConverter.load_hun_law_act(acts_dir / 'expected.yaml')
     with (acts_dir / 'target_date.yaml').open('r') as f:
         target_date = dict2object.to_object(yaml.load(f, Loader=yaml.Loader), Date)
-    return act_set, expected_act, target_date
+    return expected_act, target_date, acts_to_apply
 
 
 def act_as_text(act: Act) -> str:
@@ -70,15 +70,18 @@ def act_as_text(act: Act) -> str:
     return iobuf.getvalue()
 
 
-@pytest.mark.parametrize("acts_dir", act_set_testcase_provider())  # type: ignore
+@pytest.mark.parametrize("acts_dir", act_set_testcase_provider())
 def test_amending_exact(acts_dir: Path) -> None:
-    act_set, expected_act, target_date = load_test_data(acts_dir)
-    for date in act_set.interesting_dates():
-        if date > target_date:
-            break
-        for act in act_set.acts.values():
-            act_set.apply_all_modifications(act, date)
-    resulting_act = act_set.acts[expected_act.identifier].to_simple_act()
+    expected_act, target_date, acts_to_apply = load_test_data(acts_dir)
+    act_set = ActSet(acts=())
+    date = min(acts_to_apply.keys())
+    while date <= target_date:
+        if date in acts_to_apply:
+            act_set = ActSet(acts=act_set.acts + tuple(acts_to_apply[date]))
+        act_set = ActSetAmendmentApplier.apply_all_amendments(act_set, date)
+        date = date.add_days(1)
+
+    resulting_act = act_set.act(expected_act.identifier).to_simple_act()
     expected_act = expected_act.map_saes(semantic_remover)
     resulting_act = resulting_act.map_saes(semantic_remover)
 

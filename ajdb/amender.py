@@ -1,5 +1,5 @@
 # Copyright 2020, Alex Badics, All Rights Reserved
-from typing import Tuple, Dict,  Set, List, Type, ClassVar, Union
+from typing import Tuple, Dict, List, Type, ClassVar, Union
 from pathlib import Path
 from abc import ABC, abstractmethod
 import gzip
@@ -18,12 +18,13 @@ from hun_law.structure import \
     SubArticleChildType
 
 from hun_law.utils import Date, identifier_less
-from hun_law.parsers.semantic_parser import ActSemanticsParser
+from hun_law.parsers.semantic_parser import ActSemanticsParser, SemanticParseState
 from hun_law import dict2object
 
 from ajdb.structure import ConcreteEnforcementDate, \
-    ArticleWM, ActWM, ParagraphWM,\
-    SaeWMType, SaeMetadata, add_metadata, WM_ABLE_SAE_CLASSES, SAE_WM_CLASSES
+    ArticleWM, ArticleWMProxy, ActWM, ParagraphWM,\
+    SaeWMType, SaeMetadata, add_metadata, WM_ABLE_SAE_CLASSES, SAE_WM_CLASSES, \
+    ActSet
 
 from ajdb.utils import iterate_all_saes_of_act, first_matching_index, evolve_into
 from ajdb.fixups import apply_fixups
@@ -58,30 +59,21 @@ class EnforcementDateSet:
         assert all(special.to_date is None for _, special in specials)
         return EnforcementDateSet(default, tuple(specials))
 
-    def sae_modifier(self, reference: Reference, sae: SubArticleElement) -> SubArticleElement:
-        if not isinstance(sae, WM_ABLE_SAE_CLASSES):
-            return sae
+    def sae_modifier(self, reference: Reference, sae: SaeWMType) -> SaeWMType:
         applicable_ced = self.default
         for ced_reference, ced in self.specials:
             if ced_reference.contains(reference):
                 applicable_ced = ced
-        if isinstance(sae, SAE_WM_CLASSES):
-            return attr.evolve(
-                sae,
-                metadata=attr.evolve(
-                    sae.metadata,
-                    enforcement_date=applicable_ced
-                )
+        return attr.evolve(
+            sae,
+            metadata=attr.evolve(
+                sae.metadata,
+                enforcement_date=applicable_ced
             )
+        )
 
-        return add_metadata(sae, metadata=SaeMetadata(enforcement_date=applicable_ced))
-
-    def article_modifier(self, reference: Reference, article: Article) -> ArticleWM:
-        article = article.map_recursive(reference, self.sae_modifier, children_first=True)
-        if isinstance(article, ArticleWM):
-            return article
-        article_wm: ArticleWM = evolve_into(article, ArticleWM)
-        return article_wm
+    def article_modifier(self, reference: Reference, article: ArticleWM) -> ArticleWM:
+        return article.map_recursive_wm(reference, self.sae_modifier, children_first=True)
 
     def interesting_dates(self) -> Tuple[Date, ...]:
         result = set()
@@ -91,15 +83,6 @@ class EnforcementDateSet:
 
         result.update(special.from_date for _, special in self.specials)
         return tuple(result)
-
-    @classmethod
-    def convert_act(cls, act: Act) -> ActWM:
-        enforcement_set = cls.from_act(act)
-        act = act.map_articles(enforcement_set.article_modifier)
-        if isinstance(act, ActWM):
-            return act
-        act_wm: ActWM = evolve_into(act, ActWM, interesting_dates=enforcement_set.interesting_dates())
-        return act_wm
 
 
 @attr.s(slots=True, auto_attribs=True)
@@ -177,7 +160,7 @@ class TextReplacementApplier(ModificationApplier):
         )
 
     def apply(self, act: ActWM) -> ActWM:
-        return act.map_saes_wm(self.text_replacer, self.position)
+        return act.map_saes(self.text_replacer, self.position)
 
     @property
     def priority(self) -> int:
@@ -211,10 +194,13 @@ class ArticleTitleAmendmentApplier(ModificationApplier):
         assert isinstance(self.modification, ArticleTitleAmendment)
         _, reference_type = self.modification.position.last_component_with_type()
         assert reference_type is Article
-        return act.map_articles_wm(self.modifier, self.modification.position)
+        return act.map_articles(self.modifier, self.modification.position)
 
 
-def get_cut_points_for_structural_reference(position: StructuralReference, children: Tuple[SubArticleChildType, ...]) -> Tuple[int, int]:
+CuttableChildrenType = Tuple[Union[SubArticleChildType, ArticleWMProxy], ...]
+
+
+def get_cut_points_for_structural_reference(position: StructuralReference, children: CuttableChildrenType) -> Tuple[int, int]:
     structural_id, structural_type_nc = position.last_component_with_type()
     assert structural_id is not None
     assert structural_type_nc is not None
@@ -252,6 +238,7 @@ class RepealApplier(ModificationApplier):
         return isinstance(modification, Repeal) and modification.text is None
 
     def create_new_metadata(self, sae: SaeWMType) -> SaeMetadata:
+        assert sae.metadata.enforcement_date is not None
         return SaeMetadata(
             enforcement_date=ConcreteEnforcementDate(
                 from_date=sae.metadata.enforcement_date.from_date,
@@ -313,14 +300,14 @@ class RepealApplier(ModificationApplier):
         if isinstance(self.modification.position, Reference):
             _, reference_type = self.modification.position.last_component_with_type()
             if reference_type is Article:
-                return act.map_articles_wm(self.article_repealer, self.modification.position)
-            return act.map_saes_wm(self.sae_repealer, self.modification.position)
+                return act.map_articles(self.article_repealer, self.modification.position)
+            return act.map_saes(self.sae_repealer, self.modification.position)
         return self.apply_to_act(act)
 
 
 @attr.s(slots=True, auto_attribs=True)
 class BlockAmendmentApplier(ModificationApplier):
-    new_children: Tuple[SubArticleChildType, ...] = attr.ib(init=False)
+    new_children: CuttableChildrenType = attr.ib(init=False)
     position: Union[Reference, StructuralReference] = attr.ib(init=False)
     pure_insertion: bool = attr.ib(init=False)
 
@@ -334,7 +321,7 @@ class BlockAmendmentApplier(ModificationApplier):
         return add_metadata(sae, metadata=children_metadata)
 
     @new_children.default
-    def _new_children_default(self) -> Tuple[SubArticleChildType, ...]:
+    def _new_children_default(self) -> CuttableChildrenType:
         assert self.source_sae.children is not None
         assert len(self.source_sae.children) == 1
         block_amendment_container = self.source_sae.children[0]
@@ -364,7 +351,7 @@ class BlockAmendmentApplier(ModificationApplier):
     def can_apply(cls, modification: SemanticData) -> bool:
         return isinstance(modification, BlockAmendment)
 
-    def get_cut_points_for_reference(self, parent_reference: Reference, children: Tuple[SubArticleChildType, ...]) -> Tuple[int, int]:
+    def get_cut_points_for_reference(self, parent_reference: Reference, children: CuttableChildrenType) -> Tuple[int, int]:
         assert isinstance(self.position, Reference)
         start_ref = self.position.first_in_range()
         end_ref = self.position.last_in_range()
@@ -388,7 +375,7 @@ class BlockAmendmentApplier(ModificationApplier):
                 end_cut -= 1
         return start_cut, end_cut
 
-    def get_cut_points_for_special_reference(self, children: Tuple[SubArticleChildType, ...]) -> Tuple[int, int]:
+    def get_cut_points_for_special_reference(self, children: CuttableChildrenType) -> Tuple[int, int]:
         assert isinstance(self.position, StructuralReference)
         assert self.position.special is not None
         article_id = self.position.special.article_id
@@ -436,7 +423,7 @@ class BlockAmendmentApplier(ModificationApplier):
             raise ValueError("Unhandled SubtitleArticleComboType", self.position.special.position)
         return start_cut, end_cut
 
-    def compute_new_children(self, parent_reference: Reference, children: Tuple[SubArticleChildType, ...]) -> Tuple[SubArticleChildType, ...]:
+    def compute_new_children(self, parent_reference: Reference, children: CuttableChildrenType) -> CuttableChildrenType:
         if isinstance(self.position, Reference):
             start_cut_point, end_cut_point = self.get_cut_points_for_reference(parent_reference, children)
         elif isinstance(self.position, StructuralReference) and self.position.special is not None:
@@ -479,9 +466,9 @@ class BlockAmendmentApplier(ModificationApplier):
                 return self.apply_to_act(act)
             if expected_type is Paragraph:
                 article_ref = Reference(act.identifier, self.position.article)
-                return act.map_articles_wm(self.apply_to_article, article_ref)
+                return act.map_articles(self.apply_to_article, article_ref)
             if issubclass(expected_type, SubArticleElement):
-                return act.map_saes_wm(self.apply_to_sae, self.position.parent())
+                return act.map_saes(self.apply_to_sae, self.position.parent())
             raise ValueError("Unknown reference type", self.position)
         return self.apply_to_act(act)
 
@@ -521,6 +508,7 @@ class AmendmentAndRepealExtractor:
     def sae_walker(self, reference: Reference, sae: SaeWMType) -> SaeWMType:
         if sae.semantic_data is None:
             return sae
+        assert sae.metadata.enforcement_date is not None
         if not sae.metadata.enforcement_date.is_in_force_at_date(self.at_date):
             return sae
         for semantic_data_element in sae.semantic_data:
@@ -539,17 +527,26 @@ class AmendmentAndRepealExtractor:
     @classmethod
     def get_amendments_and_repeals(cls, act: ActWM, at_date: Date) -> Dict[str, List[Tuple[SaeWMType, SemanticData]]]:
         instance = cls(at_date, act.identifier)
-        act.map_saes_wm(instance.sae_walker)
+        act.map_saes(instance.sae_walker)
         return instance.modifications_per_act
 
 
-class ActSet:
-    acts: Dict[str, ActWM]
+class ActConverter:
+    @classmethod
+    def sae_metadata_adder(cls, _reference: Reference, sae: SubArticleElement) -> SubArticleElement:
+        if not isinstance(sae, WM_ABLE_SAE_CLASSES):
+            return sae
+        assert not isinstance(sae, SAE_WM_CLASSES)
+        return add_metadata(sae)
 
-    def __init__(self) -> None:
-        self.acts = {}
+    @classmethod
+    def article_modifier(cls, article: Article) -> ArticleWM:
+        article = article.map_recursive(Reference(), cls.sae_metadata_adder, children_first=True)
+        article_wm: ArticleWM = evolve_into(article, ArticleWM)
+        return article_wm
 
-    def load_from_file(self, path: Path) -> None:
+    @classmethod
+    def load_hun_law_act(cls, path: Path) -> Act:
         if path.suffix == '.gz':
             with gzip.open(path, 'rt') as f:
                 the_dict = json.load(f)
@@ -559,36 +556,67 @@ class ActSet:
         else:
             with open(path, 'rt') as f:
                 the_dict = json.load(f)
-        self.add_act(act_converter.to_object(the_dict))
+        result: Act = act_converter.to_object(the_dict)
+        return result
 
-    def add_act(self, act: Act) -> None:
+    @classmethod
+    def convert_hun_law_act(cls, act: Act) -> ActWM:
         act = apply_fixups(act)
-        self.acts[act.identifier] = EnforcementDateSet.convert_act(act)
+        enforcement_set = EnforcementDateSet.from_act(act)
+        new_children: List[Union[StructuralElement, ArticleWM]] = []
+        for c in act.children:
+            if isinstance(c, Article):
+                new_children.append(cls.article_modifier(c))
+            else:
+                new_children.append(c)
+        result = ActWM(
+            identifier=act.identifier,
+            publication_date=act.publication_date,
+            subject=act.subject,
+            preamble=act.preamble,
+            children=tuple(new_children),
+            interesting_dates=enforcement_set.interesting_dates(),
+        )
+        # TODO: Use Somehting like EnforcementDateSet.update_act instead
+        #       it should set the interesting dates
+        result = result.map_articles(enforcement_set.article_modifier)
+        return result
 
-    def interesting_dates(self) -> Tuple[Date, ...]:
-        result: Set[Date] = set()
-        for act in self.acts.values():
-            result.update(act.interesting_dates)
-        return tuple(sorted(result))
 
-    def is_interesting_date_for(self, act_id: str, date: Date) -> bool:
-        return date in self.acts[act_id].interesting_dates
+class ActSetAmendmentApplier:
+    @classmethod
+    def add_semantics_to_act(cls, act: ActWM) -> ActWM:
+        # This needs to be an almost copy of ActSemanticsParser.add_semantics_to_act
+        state = SemanticParseState()
 
-    def apply_all_modifications(self, amending_act: ActWM, at_date: Date) -> Tuple[str, ...]:
-        modified_acts = []
-        extracted_modifications = AmendmentAndRepealExtractor.get_amendments_and_repeals(amending_act, at_date)
+        def article_semantics_adder(_reference: Reference, article: ArticleWM) -> ArticleWM:
+            result = ActSemanticsParser.add_semantics_to_article(article, state)
+            assert isinstance(result, ArticleWM)
+            return result
+        return act.map_articles(article_semantics_adder)
+
+    @classmethod
+    def apply_single_act(cls, act_set: ActSet, amending_act: ActWM, date: Date) -> ActSet:
+        extracted_modifications = AmendmentAndRepealExtractor.get_amendments_and_repeals(amending_act, date)
+        if not extracted_modifications:
+            return act_set
+
+        modified_acts: List[ActWM] = []
         for act_id, modifications in extracted_modifications.items():
-            if act_id not in self.acts:
+            if not act_set.has_act(act_id):
                 continue
-            act: ActWM = self.acts[act_id]
+            act = act_set.act(act_id)
             if act.identifier != amending_act.identifier:
                 print("AMENDING ", act.identifier, "WITH", amending_act.identifier)
 
             modification_set = ModificationSet(tuple(modifications))
-            act = modification_set.apply_all(act, at_date)
+            act = modification_set.apply_all(act, date)
+            act = cls.add_semantics_to_act(act)
+            modified_acts.append(act)
+        return act_set.replace_acts(modified_acts)
 
-            reparsed_act = ActSemanticsParser.add_semantics_to_act(act)
-            assert isinstance(reparsed_act, ActWM)
-            self.acts[act_id] = reparsed_act
-            modified_acts.append(act_id)
-        return tuple(modified_acts)
+    @classmethod
+    def apply_all_amendments(cls, act_set: ActSet, date: Date) -> ActSet:
+        for act in act_set.interesting_acts_at_date(date):
+            act_set = cls.apply_single_act(act_set, act, date)
+        return act_set
