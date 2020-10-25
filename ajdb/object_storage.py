@@ -7,10 +7,12 @@ import gzip
 
 import attr
 
+from ajdb.config import AJDBConfig
+
 
 @attr.s(slots=True, frozen=True, auto_attribs=True)
 class ObjectStorage:
-    base_path: Path
+    prefix: str
 
     def save(self, data: Any) -> str:
         data_as_json_bytes = json.dumps(data, ensure_ascii=False, sort_keys=True).encode('utf-8')
@@ -28,4 +30,4 @@ class ObjectStorage:
             return json.load(f)
 
     def get_object_path(self, key: str) -> Path:
-        return self.base_path / key[0] / key[1] / (key[2:] + '.json.gz')
+        return AJDBConfig.STORAGE_PATH / self.prefix / key[0] / key[1] / (key[2:] + '.json.gz')

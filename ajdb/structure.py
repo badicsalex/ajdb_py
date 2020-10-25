@@ -19,7 +19,6 @@ from hun_law.structure import Act, Article, \
 
 from ajdb.utils import evolve_into
 from ajdb.object_storage import ObjectStorage
-from ajdb.config import AJDBConfig
 
 
 @attr.s(slots=True, frozen=True, auto_attribs=True, kw_only=True)
@@ -155,7 +154,7 @@ class ArticleWMProxy:
     @classmethod
     def save_article(cls, article: ArticleWM) -> 'ArticleWMProxy':
         article_as_dict = ARTICLE_WM_CONVERTER.to_dict(article)
-        key = ObjectStorage(AJDBConfig.STORAGE_PATH / 'articles').save(article_as_dict)
+        key = ObjectStorage('articles').save(article_as_dict)
         return ArticleWMProxy(key, article.identifier)
 
     @property
@@ -165,7 +164,7 @@ class ArticleWMProxy:
     @classmethod
     @functools.lru_cache(maxsize=10000)
     def _get_article(cls, key: str) -> ArticleWM:
-        result: ArticleWM = ARTICLE_WM_CONVERTER.to_object(ObjectStorage(AJDBConfig.STORAGE_PATH / 'articles').load(key))
+        result: ArticleWM = ARTICLE_WM_CONVERTER.to_object(ObjectStorage('articles').load(key))
         return result
 
     def to_simple_article(self) -> Article:
@@ -251,7 +250,7 @@ class ActWMProxy:
     def save_act(cls, act: ActWM) -> 'ActWMProxy':
         act = act.save_all_articles()
         act_as_dict = ACT_WM_CONVERTER.to_dict(act)
-        key = ObjectStorage(AJDBConfig.STORAGE_PATH / 'acts').save(act_as_dict)
+        key = ObjectStorage('acts').save(act_as_dict)
         return ActWMProxy(key, act.identifier, act.interesting_dates)
 
     @property
@@ -261,7 +260,7 @@ class ActWMProxy:
     @classmethod
     @functools.lru_cache(maxsize=1000)
     def _get_act(cls, key: str) -> ActWM:
-        act_as_dict = ObjectStorage(AJDBConfig.STORAGE_PATH / 'acts').load(key)
+        act_as_dict = ObjectStorage('acts').load(key)
         result: ActWM = ACT_WM_CONVERTER.to_object(act_as_dict)
         return result
 
