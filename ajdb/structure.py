@@ -19,7 +19,7 @@ from hun_law.structure import Act, Article, \
 
 from ajdb.utils import evolve_into
 from ajdb.object_storage import ObjectStorage
-from ajdb.config import STORAGE_PATH
+from ajdb.config import AJDBConfig
 
 
 @attr.s(slots=True, frozen=True, auto_attribs=True, kw_only=True)
@@ -153,9 +153,9 @@ class ArticleWMProxy:
     identifier: str
 
     @classmethod
-    def from_article(cls, article: ArticleWM) -> 'ArticleWMProxy':
-        article_as_dict = ARTICLE_CONVERTER.to_dict(article)
-        key = ARTICLE_STORAGE.save(article_as_dict)
+    def save_article(cls, article: ArticleWM) -> 'ArticleWMProxy':
+        article_as_dict = ARTICLE_WM_CONVERTER.to_dict(article)
+        key = ObjectStorage(AJDBConfig.STORAGE_PATH / 'articles').save(article_as_dict)
         return ArticleWMProxy(key, article.identifier)
 
     @property
@@ -165,7 +165,7 @@ class ArticleWMProxy:
     @classmethod
     @functools.lru_cache(maxsize=10000)
     def _get_article(cls, key: str) -> ArticleWM:
-        result: ArticleWM = ARTICLE_CONVERTER.to_object(ARTICLE_STORAGE.load(key))
+        result: ArticleWM = ARTICLE_WM_CONVERTER.to_object(ObjectStorage(AJDBConfig.STORAGE_PATH / 'articles').load(key))
         return result
 
     def to_simple_article(self) -> Article:
@@ -233,6 +233,7 @@ class ActWM:
         )
 
 
+
 @attr.s(slots=True, frozen=True, auto_attribs=True)
 class ActWMProxy:
     key: str
@@ -240,9 +241,9 @@ class ActWMProxy:
     interesting_dates: Tuple[Date, ...]
 
     @classmethod
-    def from_act(cls, act: ActWM) -> 'ActWMProxy':
-        act_as_dict = ACT_CONVERTER.to_dict(act)
-        key = ACT_STORAGE.save(act_as_dict)
+    def save_act(cls, act: ActWM) -> 'ActWMProxy':
+        act_as_dict = ACT_WM_CONVERTER.to_dict(act)
+        key = ObjectStorage(AJDBConfig.STORAGE_PATH / 'acts').save(act_as_dict)
         return ActWMProxy(key, act.identifier, act.interesting_dates)
 
     @property
@@ -252,7 +253,8 @@ class ActWMProxy:
     @classmethod
     @functools.lru_cache(maxsize=1000)
     def _get_act(cls, key: str) -> ActWM:
-        result: ActWM = ACT_CONVERTER.to_object(ACT_STORAGE.load(key))
+        act_as_dict = ObjectStorage(AJDBConfig.STORAGE_PATH / 'acts').load(key)
+        result: ActWM = ACT_WM_CONVERTER.to_object(act_as_dict)
         return result
 
     def to_simple_act(self) -> Act:
@@ -316,7 +318,5 @@ def __do_post_processing() -> None:
 __do_post_processing()
 
 # Converters can only be made after post processing due to the magic subclasses thing.
-ARTICLE_STORAGE = ObjectStorage(STORAGE_PATH / 'articles')
-ARTICLE_CONVERTER = dict2object.get_converter(ArticleWM)
-ACT_STORAGE = ObjectStorage(STORAGE_PATH / 'acts')
-ACT_CONVERTER = dict2object.get_converter(ActWM)
+ARTICLE_WM_CONVERTER = dict2object.get_converter(ArticleWM)
+ACT_WM_CONVERTER = dict2object.get_converter(ActWM)

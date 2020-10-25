@@ -2,4 +2,7 @@
 from pathlib import Path
 
 _THIS_DIR = Path(__file__).parent
-STORAGE_PATH = _THIS_DIR.parent / 'cache'
+
+
+class AJDBConfig:
+    STORAGE_PATH = _THIS_DIR.parent / 'cache'
