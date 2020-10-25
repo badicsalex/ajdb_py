@@ -232,6 +232,13 @@ class ActWM:
             children=new_children
         )
 
+    def save_all_articles(self) -> "ActWM":
+        if not any(isinstance(c, (ArticleWM)) for c in self.children):
+            return self
+        new_children: Tuple[Union[StructuralElement, ArticleWMProxy], ...] = tuple(
+            ArticleWMProxy.save_article(c) if isinstance(c, (ArticleWM)) else c for c in self.children
+        )
+        return attr.evolve(self, children=new_children)
 
 
 @attr.s(slots=True, frozen=True, auto_attribs=True)
@@ -242,6 +249,7 @@ class ActWMProxy:
 
     @classmethod
     def save_act(cls, act: ActWM) -> 'ActWMProxy':
+        act = act.save_all_articles()
         act_as_dict = ACT_WM_CONVERTER.to_dict(act)
         key = ObjectStorage(AJDBConfig.STORAGE_PATH / 'acts').save(act_as_dict)
         return ActWMProxy(key, act.identifier, act.interesting_dates)
