@@ -26,6 +26,9 @@ class ObjectStorage:
         return key
 
     def load(self, key: str) -> Any:
+        object_path = self.get_object_path(key)
+        if not object_path.is_file():
+            raise KeyError("Object {}/{} does not exist".format(self.prefix, key))
         with gzip.open(self.get_object_path(key), 'r') as f:
             return json.load(f)
 
