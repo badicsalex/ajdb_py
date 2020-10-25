@@ -7,35 +7,18 @@ import io
 import yaml
 
 import pytest
-import attr
 
-from hun_law.structure import Act, Reference, SubArticleElement
+from hun_law.structure import Act
 from hun_law.utils import Date
 from hun_law.output.txt import write_txt
 from hun_law import dict2object
+
+from tests.utils import add_fake_semantic_data, remove_semantic_data
 
 from ajdb.structure import ActSet, ActWM
 from ajdb.amender import ActSetAmendmentApplier, ActConverter
 
 THIS_DIR = Path(__file__).parent
-
-
-def semantic_remover(_reference: Reference, sae: SubArticleElement) -> SubArticleElement:
-    return attr.evolve(
-        sae,
-        semantic_data=None,
-        outgoing_references=None,
-        act_id_abbreviations=None,
-    )
-
-
-def semantic_faker(_reference: Reference, sae: SubArticleElement) -> SubArticleElement:
-    return attr.evolve(
-        sae,
-        semantic_data=sae.semantic_data or (),
-        outgoing_references=sae.outgoing_references or (),
-        act_id_abbreviations=sae.act_id_abbreviations or (),
-    )
 
 
 def act_set_testcase_provider() -> Iterable[Any]:
@@ -54,7 +37,7 @@ def load_test_data(acts_dir: Path) -> Tuple[Act, Date, Dict[Date, List[ActWM]]]:
             continue
         if file_path.name not in ('expected.yaml', 'target_date.yaml'):
             act_raw = ActConverter.load_hun_law_act(file_path)
-            act_raw = act_raw.map_saes(semantic_faker)
+            act_raw = add_fake_semantic_data(act_raw)
             act = ActConverter.convert_hun_law_act(act_raw)
             acts_to_apply[act.publication_date].append(act)
 
@@ -82,8 +65,8 @@ def test_amending_exact(acts_dir: Path) -> None:
         date = date.add_days(1)
 
     resulting_act = act_set.act(expected_act.identifier).to_simple_act()
-    expected_act = expected_act.map_saes(semantic_remover)
-    resulting_act = resulting_act.map_saes(semantic_remover)
+    expected_act = remove_semantic_data(expected_act)
+    resulting_act = remove_semantic_data(resulting_act)
 
     print(
         '\n'.join(
