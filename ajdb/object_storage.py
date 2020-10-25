@@ -24,7 +24,7 @@ class ObjectStorage:
         return key
 
     def load(self, key: str) -> Any:
-        with gzip.open(self.get_object_path(key), 'wb') as f:
+        with gzip.open(self.get_object_path(key), 'r') as f:
             return json.load(f)
 
     def get_object_path(self, key: str) -> Path:
