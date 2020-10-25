@@ -1,6 +1,6 @@
 # Copyright 2020, Alex Badics, All Rights Reserved
 from pathlib import Path
-from typing import Any
+from typing import Any, Optional
 from hashlib import md5
 import json
 import gzip
@@ -14,11 +14,12 @@ from ajdb.config import AJDBConfig
 class ObjectStorage:
     prefix: str
 
-    def save(self, data: Any) -> str:
+    def save(self, data: Any, *, key: Optional[str] = None) -> str:
         data_as_json_bytes = json.dumps(data, ensure_ascii=False, sort_keys=True).encode('utf-8')
-        # MD5 is used instead of a "fast" hash, because MD5 is actually
-        # quite fast, and on pypy pure python hash functions are pretty slow.
-        key = md5(data_as_json_bytes).hexdigest()
+        if key is None:
+            # MD5 is used instead of a "fast" hash, because MD5 is actually
+            # quite fast, and on pypy pure python hash functions are pretty slow.
+            key = md5(data_as_json_bytes).hexdigest()
         object_path = self.get_object_path(key)
         object_path.parent.mkdir(parents=True, exist_ok=True)
         with gzip.open(object_path, 'wb') as f:
