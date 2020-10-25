@@ -270,7 +270,7 @@ class ActWMProxy:
 
 @attr.s(slots=True, frozen=True, auto_attribs=True, kw_only=True)
 class ActSet:
-    acts: Tuple[Union[ActWMProxy, ActWM], ...] = attr.ib()
+    acts: Tuple[Union[ActWMProxy, ActWM], ...] = attr.ib(default=())
     acts_map: Dict[str, Union[ActWMProxy, ActWM]] = attr.ib(init=False)
 
     @acts.validator

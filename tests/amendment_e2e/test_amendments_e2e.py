@@ -56,7 +56,7 @@ def act_as_text(act: Act) -> str:
 @pytest.mark.parametrize("acts_dir", act_set_testcase_provider())
 def test_amending_exact(acts_dir: Path) -> None:
     expected_act, target_date, acts_to_apply = load_test_data(acts_dir)
-    act_set = ActSet(acts=())
+    act_set = ActSet()
     date = min(acts_to_apply.keys())
     while date <= target_date:
         if date in acts_to_apply:

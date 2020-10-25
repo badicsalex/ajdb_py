@@ -116,7 +116,7 @@ def generate_repository(acts_to_use: Dict[Date, List[ActWM]], destination_dir: P
     set_up_dir_structure(destination_dir)
     previous_act_state: Dict[str, Optional[ActWM]] = {act_id: None for act_id in ALLOWED_ACTS}
 
-    act_set = ActSet(acts=())
+    act_set = ActSet()
     target_date = Date.today()
     date = min(acts_to_use.keys())
     print("Will process from", date, "to", target_date)

@@ -54,7 +54,7 @@ def do_amendments(raw_acts: Sequence[Act], target_date: Date) -> ActSet:
         act = ActConverter.convert_hun_law_act(act_raw)
         converted_acts[act.publication_date].append(act)
 
-    act_set = ActSet(acts=())
+    act_set = ActSet()
     date = min(converted_acts.keys())
     while date <= target_date:
         if date in converted_acts:
