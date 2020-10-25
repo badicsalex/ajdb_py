@@ -1,5 +1,7 @@
 # Copyright 2020, Alex Badics, All Rights Reserved
-from typing import Iterable, Sequence, Any, Callable, Optional, Type
+from typing import Iterable, Sequence, Any, Callable, Optional, Type, TypeVar, MutableMapping
+from collections import OrderedDict
+
 import attr
 
 from hun_law.structure import Act, SubArticleElement, BlockAmendmentContainer
@@ -46,3 +48,35 @@ def evolve_into(inst: Any, cls: Type, **changes: Any) -> Any:
             changes[init_name] = getattr(inst, attr_name)
 
     return cls(**changes)
+
+
+_KT = TypeVar('_KT')
+_VT = TypeVar('_VT')
+
+
+class LruDict(OrderedDict, MutableMapping[_KT, _VT]):
+    def __init__(self, max_elements: int):
+        super().__init__()
+        self.max_elements = max_elements
+
+    def __getitem__(self, key: _KT) -> _VT:
+        result: _VT = super().__getitem__(key)
+        try:
+            self.move_to_end(key)
+        except KeyError:
+            # We are in the middle of a pop: which first removes the element
+            # from the internal map, then gets it with getitem one last time
+            pass
+        return result
+
+    def __setitem__(self, key: _KT, value: _VT) -> None:
+        super().__setitem__(key, value)
+        self.move_to_end(key)
+        if len(self) > self.max_elements:
+            self.popitem(last=False)
+
+    def get(self, k: _KT, default: Any = None) -> Any:
+        try:
+            return self[k]
+        except KeyError:
+            return default
