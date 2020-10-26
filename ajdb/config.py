@@ -5,4 +5,4 @@ _THIS_DIR = Path(__file__).parent
 
 
 class AJDBConfig:
-    STORAGE_PATH = _THIS_DIR.parent / 'cache'
+    STORAGE_PATH = _THIS_DIR.parent / 'database'
