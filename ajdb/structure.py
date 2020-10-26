@@ -314,7 +314,21 @@ class ActSet:
             else:
                 new_acts.append(act)
         assert len(acts_to_replace_as_dict) == 0, "Not all acts to replace existed in the first place"
+        # TODO: Record changes ? Mainly amender and amended acts.
         return ActSet(acts=tuple(new_acts))
+
+    def add_acts(self, acts: Sequence[ActWM]) -> 'ActSet':
+        assert not any(act.identifier in self.acts_map for act in acts)
+        # TODO: Record changes
+        return ActSet(acts=self.acts + tuple(acts))
+
+    def save_all_acts(self) -> "ActSet":
+        if not any(isinstance(c, (ActWM)) for c in self.acts):
+            return self
+        new_acts: Tuple[Union[StructuralElement, ActWMProxy], ...] = tuple(
+            ActWMProxy.save_act(c) if isinstance(c, (ActWM)) else c for c in self.acts
+        )
+        return attr.evolve(self, acts=new_acts)
 
 
 def __do_post_processing() -> None:
