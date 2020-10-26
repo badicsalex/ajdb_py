@@ -170,6 +170,10 @@ class ArticleWMProxy:
     def to_simple_article(self) -> Article:
         return self.article.to_simple_article()
 
+    @property
+    def relative_reference(self) -> 'Reference':
+        return Reference(article=self.identifier)
+
 
 @attr.s(slots=True, frozen=True, auto_attribs=True, kw_only=True)
 class ActWM:

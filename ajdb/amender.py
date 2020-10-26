@@ -285,7 +285,7 @@ class RepealApplier(ModificationApplier):
             assert position.special.position == SubtitleArticleComboType.BEFORE_WITHOUT_ARTICLE, \
                 "Only BEFORE_WITHOUT_ARTICLE is supported for special subtitle repeals for now"
             article_id = position.special.article_id
-            end_cut = first_matching_index(act.children, lambda c: isinstance(c, Article) and c.identifier == article_id)
+            end_cut = first_matching_index(act.children, lambda c: isinstance(c, (Article, ArticleWMProxy)) and c.identifier == article_id)
             if end_cut >= len(act.children):
                 # Not found: probably an error. Calling code will Warn probably.
                 return act
@@ -381,7 +381,7 @@ class BlockAmendmentApplier(ModificationApplier):
         article_id = self.position.special.article_id
         start_cut = first_matching_index(
             children,
-            lambda c: isinstance(c, Article) and not identifier_less(c.identifier, article_id)
+            lambda c: isinstance(c, (Article, ArticleWMProxy)) and not identifier_less(c.identifier, article_id)
         )
         if start_cut < len(children) and children[start_cut].identifier == article_id:
             article_found = True
@@ -454,7 +454,7 @@ class BlockAmendmentApplier(ModificationApplier):
     def apply_to_act(self, act: ActWM) -> ActWM:
         new_children = []
         for child in self.compute_new_children(Reference(act.identifier), act.children):
-            assert isinstance(child, (ArticleWM, StructuralElement))
+            assert isinstance(child, (ArticleWM, ArticleWMProxy, StructuralElement))
             new_children.append(child)
         return attr.evolve(act, children=tuple(new_children))
 
