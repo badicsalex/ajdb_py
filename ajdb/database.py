@@ -5,6 +5,7 @@ from pathlib import Path
 from hun_law.utils import Date
 from hun_law import dict2object
 
+from ajdb.config import AJDBConfig
 from ajdb.structure import ActSet, ActWM
 from ajdb.utils import LruDict
 from ajdb.object_storage import ObjectStorage
@@ -26,6 +27,19 @@ class Database:
         act_raw = ActConverter.load_hun_law_act(path)
         act = ActConverter.convert_hun_law_act(act_raw)
         return act
+
+    @classmethod
+    def add_hun_law_act(cls, path: Path) -> Path:
+        act_raw = ActConverter.load_hun_law_act(path)
+        save_dir = cls.hun_law_acts_path(act_raw.publication_date)
+        save_dir.mkdir(parents=True, exist_ok=True)
+        save_path = save_dir / '{}.json.gz'.format(act_raw.identifier)
+        ActConverter.save_hun_law_act_json_gz(save_path, act_raw)
+        return save_path
+
+    @classmethod
+    def hun_law_acts_path(cls, date: Date) -> Path:
+        return AJDBConfig.STORAGE_PATH / 'hun_law_acts/{}/{:02}/{:02}'.format(date.year, date.month, date.day)
 
     @classmethod
     def recompute_at_date(cls, date: Date) -> None:

@@ -560,6 +560,11 @@ class ActConverter:
         return result
 
     @classmethod
+    def save_hun_law_act_json_gz(cls, path: Path, act: Act) -> None:
+        with gzip.open(path, 'wt') as f:
+            json.dump(act_converter.to_dict(act), f, indent='  ', sort_keys=True, ensure_ascii=False)
+
+    @classmethod
     def convert_hun_law_act(cls, act: Act) -> ActWM:
         act = apply_fixups(act)
         enforcement_set = EnforcementDateSet.from_act(act)
