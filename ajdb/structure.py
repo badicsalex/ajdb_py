@@ -248,6 +248,7 @@ class ActWM:
 class ActWMProxy:
     key: str
     identifier: str
+    subject: str
     interesting_dates: Tuple[Date, ...]
 
     @classmethod
@@ -255,7 +256,7 @@ class ActWMProxy:
         act = act.save_all_articles()
         act_as_dict = ACT_WM_CONVERTER.to_dict(act)
         key = ObjectStorage('acts').save(act_as_dict)
-        return ActWMProxy(key, act.identifier, act.interesting_dates)
+        return ActWMProxy(key, act.identifier, act.subject, act.interesting_dates)
 
     @property
     def act(self) -> ActWM:

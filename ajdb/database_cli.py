@@ -3,8 +3,10 @@ from typing import Tuple, ClassVar, Optional, Type
 from abc import ABC, abstractmethod
 from pathlib import Path
 import argparse
+import sys
 
 from hun_law.utils import Date
+from hun_law.output.txt import write_txt
 
 from ajdb.database import Database
 
@@ -83,7 +85,60 @@ class RecomputeAction(DatabaseCLIAction):
         Database.recompute_date_range(params.from_date, params.to_date)
 
 
-ALL_ACTIONS: Tuple[Type[DatabaseCLIAction], ...] = (AddActAction, RecomputeAction,)
+class ListAction(DatabaseCLIAction):
+    SUBCOMMAND_NAME = 'list'
+    SUBCOMMAND_HELP = 'List acts'
+
+    @classmethod
+    def add_parameters(cls, argument_parser: argparse.ArgumentParser) -> None:
+        argument_parser.add_argument(
+            '-d', '--date',
+            nargs='?',
+            default=Date.today(),
+            type=Date.from_simple_string,
+            help="The date"
+        )
+
+    @classmethod
+    def action(cls, params: argparse.Namespace) -> None:
+        print("Acts at", params.date)
+        act_set = Database.load_act_set(params.date)
+        for act_proxy in sorted(act_set.acts, key=lambda a: a.identifier):
+            padding = ' ' * (32 - len(act_proxy.identifier))
+            print('"{}"{} {}'.format(act_proxy.identifier, padding, act_proxy.subject))
+
+
+class OutputAction(DatabaseCLIAction):
+    SUBCOMMAND_NAME = 'output'
+    SUBCOMMAND_HELP = 'Output a specific act at a specific date'
+
+    @classmethod
+    def add_parameters(cls, argument_parser: argparse.ArgumentParser) -> None:
+        argument_parser.add_argument(
+            '-d', '--date',
+            nargs='?',
+            default=Date.today(),
+            type=Date.from_simple_string,
+            help="The date"
+        )
+        argument_parser.add_argument(
+            '-n', '--no-wrap',
+            action='store_true'
+        )
+        argument_parser.add_argument(
+            'act_id',
+            type=str,
+            help="The act"
+        )
+
+    @classmethod
+    def action(cls, params: argparse.Namespace) -> None:
+        act = Database.load_act_set(params.date).act(params.act_id)
+        text_width = 0 if params.no_wrap else 90
+        write_txt(act.to_simple_act(), sys.stdout, width=text_width)
+
+
+ALL_ACTIONS: Tuple[Type[DatabaseCLIAction], ...] = tuple(DatabaseCLIAction.__subclasses__())
 
 
 def main() -> None:
