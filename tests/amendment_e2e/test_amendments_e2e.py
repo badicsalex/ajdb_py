@@ -34,7 +34,7 @@ def act_set_testcase_provider() -> Iterable[Any]:
 
 def act_as_text(act: Act) -> str:
     iobuf = io.StringIO()
-    write_txt(iobuf, act)
+    write_txt(act, iobuf)
     return iobuf.getvalue()
 
 

@@ -139,7 +139,7 @@ def main() -> None:
     with (dest_dir / 'target_date.yaml').open('w') as f:
         serialize_to_yaml(args.target_date, f)
     with (dest_dir / 'expected.txt').open('w') as f:
-        write_txt(f, expected)
+        write_txt(expected, f)
 
 
 if __name__ == "__main__":

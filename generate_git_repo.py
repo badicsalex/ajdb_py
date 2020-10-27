@@ -71,7 +71,7 @@ def save_in_all_formats(acts: Sequence[ActWM], destination_dir: Path) -> None:
         with (destination_dir / 'json' / (act.identifier + '.json')).open('w') as f:
             serialize_to_json_file(act, f)
         with (destination_dir / 'txt' / (act.identifier + '.txt')).open('w') as f:
-            write_txt(f, act)
+            write_txt(act, f)
 
 
 def create_named_act_symlinks(destination_dir: Path) -> None:
