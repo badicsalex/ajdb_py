@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>AJDB</title>
+        <link rel="stylesheet" href="/static/style.css">
+        <link rel="icon" href="/static/favicon.png">
+    </head>
+    <body>
+        <h1>Alex Jogi Adatbázisa</h1>
+        <p>Az adatbázis {{ act_set.acts | length }} törvényt tartalmaz:</p>
+        <table>
+            {% for act in act_set.acts | sort(attribute="identifier") %}
+                <tr><td style="white-space: nowrap;">{{act.identifier}}</td><td>{{act.subject}}</td></tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
