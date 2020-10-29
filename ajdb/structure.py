@@ -184,12 +184,23 @@ class ActWM:
     children: Tuple[Union[StructuralElement, ArticleWM, ArticleWMProxy], ...] = attr.ib()
     interesting_dates: Tuple[Date, ...]
 
+    articles: Tuple[Article, ...] = attr.ib(init=False)
+    articles_map: Dict[str, Article] = attr.ib(init=False)
+
     @children.validator
     def _children_validator(self, _attribute: Any, children: Tuple[Paragraph, ...]) -> None:
         # Attrs validators as decorators are what they are, it cannot be a function.
         # pylint: disable=no-self-use
         # Delete me when attr.evolve does proper type checking with mypy
         assert all(isinstance(c, (StructuralElement, ArticleWM, ArticleWMProxy)) for c in children)
+
+    @articles.default
+    def _articles_default(self) -> Tuple[Article, ...]:
+        return tuple(c for c in self.children if isinstance(c, Article))
+
+    @articles_map.default
+    def _articles_map_default(self) -> Dict[str, Article]:
+        return {c.identifier: c for c in self.articles}
 
     def map_articles(
         self,
@@ -242,6 +253,9 @@ class ActWM:
             ArticleWMProxy.save_article(c) if isinstance(c, (ArticleWM)) else c for c in self.children
         )
         return attr.evolve(self, children=new_children)
+
+    def article(self, article_id: str) -> Article:
+        return self.articles_map[str(article_id)]
 
 
 @attr.s(slots=True, frozen=True, auto_attribs=True)
