@@ -1,7 +1,7 @@
 # Copyright 2020, Alex Badics, All Rights Reserved
 from typing import Callable, Any, Iterable
 
-from flask import Blueprint, abort, render_template
+from flask import Blueprint, abort, render_template, url_for
 
 from hun_law.structure import \
     SubArticleElement, QuotedBlock, BlockAmendmentContainer, \
@@ -45,7 +45,7 @@ def write_html_structural_element(writer: HtmlWriter, element: StructuralElement
 def get_href_for_ref(ref: Reference) -> str:
     result = ''
     if ref.act is not None:
-        result = ref.act + ".html"
+        result = url_for('act.single_act', identifier=ref.act)
     result = result + "#" + ref.relative_id_string
     return result
 
@@ -175,7 +175,7 @@ def write_html_act(writer: HtmlWriter, act: Act) -> None:
     if act.preamble:
         with writer.tag('div', _class='preamble'):
             writer.write(act.preamble)
-    current_ref = Reference(act.identifier)
+    current_ref = Reference()
     for child in act.children:
         write_html_any(writer, child, current_ref)
 
