@@ -2,6 +2,7 @@
 import os
 from flask import Flask
 from .index import INDEX_BLUEPRINT
+from .act_writer import ACT_BLUEPRINT
 
 
 class Config:
@@ -22,4 +23,5 @@ def create_app(config: Config) -> Flask:
     app = Flask(__name__)
     app.config.from_object(config)
     app.register_blueprint(INDEX_BLUEPRINT)
+    app.register_blueprint(ACT_BLUEPRINT)
     return app
