@@ -43,6 +43,10 @@ class HtmlWriter:
     def tag(self, name: str, **attributes: str) -> HtmlTag:
         return HtmlTag(self, name, attributes)
 
+    def div(self, _class: str, **attributes: str) -> HtmlTag:
+        attributes['_class'] = _class
+        return HtmlTag(self, 'div', attributes)
+
     def write(self, s: str) -> None:
         self.output.append(s)
 

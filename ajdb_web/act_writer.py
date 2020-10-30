@@ -33,7 +33,7 @@ def write_html_any(writer: HtmlWriter, element: Any, parent_ref: Reference) -> N
 
 @act_html_writer
 def write_html_structural_element(writer: HtmlWriter, element: StructuralElement, _parent_ref: Reference) -> None:
-    with writer.tag('div', _class="se_" + element.__class__.__name__.lower()):
+    with writer.div("se_" + element.__class__.__name__.lower()):
         writer.write(element.formatted_identifier)
         if isinstance(element, Subtitle):
             writer.write(" ")
@@ -78,22 +78,22 @@ def write_html_block_amendment(writer: HtmlWriter, element: BlockAmendmentContai
     # Quick hack to signify that IDs are not needed further on
     current_ref = Reference("EXTERNAL")
     if element.intro:
-        with writer.tag('div', _class='blockamendment_text'):
+        with writer.div('blockamendment_text'):
             writer.write("(" + element.intro + ")")
 
-    with writer.tag('div', _class='blockamendment_quote'):
+    with writer.div('blockamendment_quote'):
         writer.write('„')
 
-    with writer.tag('div', _class='blockamendment_container'):
+    with writer.div('blockamendment_container'):
         assert element.children is not None
         for child in element.children:
             write_html_any(writer, child, current_ref)
 
-    with writer.tag('div', _class='blockamendment_quote'):
+    with writer.div('blockamendment_quote'):
         writer.write('”')
 
     if element.wrap_up:
-        with writer.tag('div', _class='blockamendment_text'):
+        with writer.div('blockamendment_text'):
             writer.write("(" + element.wrap_up + ")")
 
 
@@ -105,15 +105,15 @@ def write_html_sub_article_element(writer: HtmlWriter, element: SubArticleElemen
     if current_ref.act == "EXTERNAL":
         id_string = ''
     element_type_as_text = element.__class__.__name__.lower()
-    with writer.tag('div', id=id_string, _class='{}_id'.format(element_type_as_text)):
+    with writer.div('{}_id'.format(element_type_as_text), id=id_string):
         writer.write(element.header_prefix(element.identifier))
 
     if element.text:
-        with writer.tag('div', _class='{}_text'.format(element_type_as_text)):
+        with writer.div('{}_text'.format(element_type_as_text)):
             write_text_with_ref_links(writer, element.text, current_ref, element.outgoing_references or ())
     else:
         if element.intro:
-            with writer.tag('div', _class='{}_text'.format(element_type_as_text)):
+            with writer.div('{}_text'.format(element_type_as_text)):
                 write_text_with_ref_links(writer, element.intro, current_ref, element.outgoing_references or ())
 
         assert element.children is not None
@@ -121,7 +121,7 @@ def write_html_sub_article_element(writer: HtmlWriter, element: SubArticleElemen
             write_html_any(writer, child, current_ref)
 
         if element.wrap_up:
-            with writer.tag('div', _class='{}_text'.format(element_type_as_text)):
+            with writer.div('{}_text'.format(element_type_as_text)):
                 write_text_with_ref_links(writer, element.wrap_up, current_ref, element.outgoing_references or ())
 
 
@@ -135,7 +135,7 @@ def write_html_quoted_block(writer: HtmlWriter, element: QuotedBlock, parent_ref
             padding = int((l.indent-indent_offset) * 2)
             if padding < 0:
                 padding = 0
-            with writer.tag('div', style='padding-left: {}px;'.format(padding)):
+            with writer.div('quote_line', style='padding-left: {}px;'.format(padding)):
                 text = l.content
                 if index == 0:
                     text = '„' + text
@@ -153,27 +153,27 @@ def write_html_article(writer: HtmlWriter, element: Article, parent_ref: Referen
     # Quick hack so that we don't have duplicate ids within block amendments
     if current_ref.act == "EXTERNAL":
         id_string = ''
-    with writer.tag('div', id=id_string, _class='article_id'):
+    with writer.div('article_id', id=id_string):
         writer.write('{}. §'.format(element.identifier))
 
     if element.title:
-        with writer.tag('div', _class='article_title'):
+        with writer.div('article_title'):
             writer.write('[{}]'.format(element.title))
 
     for child in element.children:
         write_html_any(writer, child, current_ref)
 
-    with writer.tag('div', _class='space_after_article'):
+    with writer.div('space_after_article'):
         pass
 
 
 def write_html_act(writer: HtmlWriter, act: Act) -> None:
-    with writer.tag('div', _class='act_title'):
+    with writer.div('act_title'):
         writer.write(act.identifier)
         writer.br()
         writer.write(act.subject)
     if act.preamble:
-        with writer.tag('div', _class='preamble'):
+        with writer.div('preamble'):
             writer.write(act.preamble)
     current_ref = Reference()
     for child in act.children:
