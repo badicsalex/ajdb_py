@@ -25,7 +25,7 @@ blockquote {
 .index_container{
     max-width: 950px;
     border: 1px solid gray;
-    display: inline-grid;
+    display: inline-block;
     background: white;
     padding: 30px 80px 30px 80px;
     text-align: justify;
@@ -40,28 +40,33 @@ blockquote {
     background-color: #f0f0f0;
 }
 
-.act_container {
-    max-width: 950px;
-    border: 1px solid gray;
-    display: inline-grid;
-    background: white;
-    padding: 30px 80px 30px 80px;
-    text-align: justify;
-    box-shadow: 5px 5px 10px #888888;
-    grid-template-columns: 70px 40px 30px 30px auto [end];
-    grid-gap: 0px 0px;
-    justify-items: stretch;
+@media not print {
+    .act_container {
+        max-width: 950px;
+        border: 1px solid gray;
+        display: inline-block;
+        background: white;
+        padding: 30px 80px 30px 80px;
+        text-align: justify;
+        box-shadow: 5px 5px 10px #888888;
+    }
+}
+
+@media print {
+    .act_container {
+        text-align: justify;
+    }
 }
 
 .act_title, .preamble {
-    grid-column: 1 / end;
-    padding-bottom: 2em;
+    margin-bottom: 2em;
 }
 
 
 .se_book, .se_part, .se_chapter, .se_title, .se_subtitle {
-    grid-column: 3 / end;
-    padding-bottom: 2em;
+    margin-top: 2em;
+    margin-bottom: 1.5em;
+    margin-left: 120px;
 }
 
 .act_title {
@@ -93,62 +98,33 @@ blockquote {
     font-weight: bold;
 }
 
-
-.article_id {
-    grid-column: 1;
+.article_identifier {
     font-weight: bold;
 }
+.article_body {
+    margin: -1.5em 0px 1.5em 80px;
+}
 .article_title {
-    grid-column: 2 / end;
     font-style: italic;
     margin: 0px 0px 0px 40px;
 }
-.space_after_article {
-    grid-column: 1 / end;
-    height: 1.5em;
+.sae_identifier {
+    min-height: 1.5em;
+}
+.sae_body {
+    margin: -1.5em 0px 0px 40px;
+    min-height: 1.5em;
 }
 
-.paragraph_id {
-    grid-column: 2;
-}
-.paragraph_text {
-    grid-column: 3 / end;
-}
-
-.blockamendment_quote {
-    grid-column: 3 / end;
-}
 .blockamendment_text {
-    grid-column: 3 / end;
     font-style: italic;
 
 }
 .blockamendment_container {
-    display: inline-grid;
-    grid-column: 3 / end;
-    grid-template-columns: 70px 40px 30px 30px auto [end];
-    grid-gap: 0px 0px;
-    justify-items: stretch;
-}
-
-
-.numericpoint_id, .alphabeticpoint_id {
-    grid-column: 3;
-}
-.numericpoint_text, .alphabeticpoint_text {
-    grid-column: 4 / end;
-}
-
-.alphabeticsubpoint_id, .numericsubpoint_id {
-    grid-column: 4;
-}
-
-.alphabeticsubpoint_text, .numericsubpoint_text {
-    grid-column: 5 / end;
+    display: inline-block;
 }
 
 .quote_in_paragraph, .quote_in_article {
-    grid-column: 3 / end;
     font-size: 10pt;
 }
 

@@ -1,6 +1,6 @@
 # Copyright 2020, Alex Badics, All Rights Reserved
-from typing import Callable, Any, Iterable
-
+from typing import Callable, Any, Iterable, Iterator
+from contextlib import contextmanager
 from flask import Blueprint, abort, render_template, url_for
 
 from hun_law.structure import \
@@ -20,6 +20,15 @@ def act_html_writer(fn: HtmlWriterFn) -> HtmlWriterFn:
     global all_act_html_writers
     all_act_html_writers.append((fn.__annotations__['element'], fn))
     return fn
+
+
+@contextmanager
+def element_and_body_helper(writer: HtmlWriter, anchor: str, header: str, class_prefix: str) -> Iterator:
+    with writer.div(class_prefix + '_container', id=anchor):
+        with writer.div(class_prefix + '_identifier'):
+            writer.write(header)
+        with writer.div(class_prefix + '_body'):
+            yield
 
 
 def write_html_any(writer: HtmlWriter, element: Any, parent_ref: Reference) -> None:
@@ -104,25 +113,23 @@ def write_html_sub_article_element(writer: HtmlWriter, element: SubArticleElemen
     # Quick hack so that we don't have duplicate ids within block amendments
     if current_ref.act == "EXTERNAL":
         id_string = ''
-    element_type_as_text = element.__class__.__name__.lower()
-    with writer.div('{}_id'.format(element_type_as_text), id=id_string):
-        writer.write(element.header_prefix(element.identifier))
+    header = element.header_prefix(element.identifier)
+    with element_and_body_helper(writer, id_string, header, 'sae'):
+        if element.text:
+            with writer.div('sae_text'):
+                write_text_with_ref_links(writer, element.text, current_ref, element.outgoing_references or ())
+        else:
+            if element.intro:
+                with writer.div('sae_text'):
+                    write_text_with_ref_links(writer, element.intro, current_ref, element.outgoing_references or ())
 
-    if element.text:
-        with writer.div('{}_text'.format(element_type_as_text)):
-            write_text_with_ref_links(writer, element.text, current_ref, element.outgoing_references or ())
-    else:
-        if element.intro:
-            with writer.div('{}_text'.format(element_type_as_text)):
-                write_text_with_ref_links(writer, element.intro, current_ref, element.outgoing_references or ())
+            assert element.children is not None
+            for child in element.children:
+                write_html_any(writer, child, current_ref)
 
-        assert element.children is not None
-        for child in element.children:
-            write_html_any(writer, child, current_ref)
-
-        if element.wrap_up:
-            with writer.div('{}_text'.format(element_type_as_text)):
-                write_text_with_ref_links(writer, element.wrap_up, current_ref, element.outgoing_references or ())
+            if element.wrap_up:
+                with writer.div('sae_text'):
+                    write_text_with_ref_links(writer, element.wrap_up, current_ref, element.outgoing_references or ())
 
 
 @act_html_writer
@@ -153,18 +160,15 @@ def write_html_article(writer: HtmlWriter, element: Article, parent_ref: Referen
     # Quick hack so that we don't have duplicate ids within block amendments
     if current_ref.act == "EXTERNAL":
         id_string = ''
-    with writer.div('article_id', id=id_string):
-        writer.write('{}. §'.format(element.identifier))
 
-    if element.title:
-        with writer.div('article_title'):
-            writer.write('[{}]'.format(element.title))
+    header = '{}. §'.format(element.identifier)
+    with element_and_body_helper(writer, id_string, header, 'article'):
+        if element.title:
+            with writer.div('article_title'):
+                writer.write('[{}]'.format(element.title))
 
-    for child in element.children:
-        write_html_any(writer, child, current_ref)
-
-    with writer.div('space_after_article'):
-        pass
+        for child in element.children:
+            write_html_any(writer, child, current_ref)
 
 
 def write_html_act(writer: HtmlWriter, act: Act) -> None:
