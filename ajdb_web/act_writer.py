@@ -129,7 +129,8 @@ def write_html_sub_article_element(writer: HtmlWriter, element: SubArticleElemen
 
             if element.wrap_up:
                 with writer.div('sae_text'):
-                    write_text_with_ref_links(writer, element.wrap_up, current_ref, element.outgoing_references or ())
+                    # TODO: write links too
+                    writer.write(element.wrap_up)
 
 
 @act_html_writer
