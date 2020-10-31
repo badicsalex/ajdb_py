@@ -4,6 +4,7 @@ import sys
 import inspect
 import gc
 from typing import Tuple, Union, Optional, Callable, Dict, Iterable, Any, Sequence, List, ClassVar
+from collections import defaultdict
 
 import attr
 
@@ -313,10 +314,43 @@ class ActWMProxy:
         return self.act.to_simple_act()
 
 
+@attr.s(slots=True, frozen=True, auto_attribs=True)
+class ReferencePair:
+    from_ref: Reference
+    to_ref: Reference
+
+
+@attr.s(slots=True, frozen=True, auto_attribs=True)
+class ReferencePairList:
+    references: Tuple[ReferencePair, ...]
+
+
+# Needed for attr.s(slots=True), and __subclasses__ to work correctly.
+gc.collect()
+
+
+@attr.s(slots=True, frozen=True, auto_attribs=True)
+class ReferencePairListProxy:
+    OBJECT_STORAGE: ClassVar[CachedTypedObjectStorage[ReferencePairList]] = \
+        CachedTypedObjectStorage(ReferencePairList, 'ref_lists', 1000)
+    key: str
+
+    @classmethod
+    def save_reference_list(cls, data: ReferencePairList) -> 'ReferencePairListProxy':
+        key = cls.OBJECT_STORAGE.save(data)
+        return ReferencePairListProxy(key)
+
+    @property
+    def reference_list(self) -> ReferencePairList:
+        return self.OBJECT_STORAGE.load(self.key)
+
+
 @attr.s(slots=True, frozen=True, auto_attribs=True, kw_only=True)
 class ActSet:
     acts: Tuple[Union[ActWMProxy, ActWM], ...] = attr.ib(default=())
+    reference_index: Tuple[Tuple[str, ReferencePairListProxy], ...] = attr.ib(default=())
     acts_map: Dict[str, Union[ActWMProxy, ActWM]] = attr.ib(init=False)
+    reference_index_map: Dict[str, ReferencePairListProxy] = attr.ib(init=False)
 
     @acts.validator
     def _acts_validator(self, _attribute: Any, acts: Tuple[Union[ActWMProxy, ActWM], ...]) -> None:
@@ -328,6 +362,10 @@ class ActSet:
     @acts_map.default
     def _acts_map_default(self) -> Dict[str, Union[ActWMProxy, ActWM]]:
         return {act.identifier: act for act in self.acts}
+
+    @reference_index_map.default
+    def _reference_index_map_default(self) -> Dict[str, ReferencePairListProxy]:
+        return dict(self.reference_index)
 
     def interesting_acts_at_date(self, date: Date) -> Iterable[ActWM]:
         for act in self.acts:
@@ -370,6 +408,16 @@ class ActSet:
             ActWMProxy.save_act(c) if isinstance(c, (ActWM)) else c for c in self.acts
         )
         return attr.evolve(self, acts=new_acts)
+
+    def has_unsaved(self) -> bool:
+        return any(isinstance(act, ActWM) for act in self.acts)
+
+    def get_incoming_references(self, act_id: str) -> Dict[Reference, Tuple[Reference, ...]]:
+        ref_list = self.reference_index_map[act_id].reference_list
+        result = defaultdict(list)
+        for ref in ref_list.references:
+            result[ref.to_ref].append(ref.from_ref)
+        return {k: tuple(v) for k, v in result.items()}
 
 
 def __do_post_processing() -> None:

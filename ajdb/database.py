@@ -11,6 +11,7 @@ from ajdb.config import AJDBConfig
 from ajdb.structure import ActSet
 from ajdb.utils import LruDict
 from ajdb.amender import ActConverter, ActSetAmendmentApplier
+from ajdb.indexer import ReferenceReindexer
 
 # TODO: Incremental upgrade:
 #       - Find out which acts need to be updated: if any inputs changed, update acts
@@ -65,7 +66,8 @@ class Database:
 
         act_set = cls.add_relevant_hun_law_acts(act_set, date)
         act_set = ActSetAmendmentApplier.apply_all_amendments(act_set, date)
-
+        if act_set.has_unsaved():
+            act_set = ReferenceReindexer.reindex_act_set(act_set)
         act_set = act_set.save_all_acts()
         cls.save_act_set(act_set, date)
 
