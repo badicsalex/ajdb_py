@@ -211,14 +211,21 @@ def single_act(identifier: str) -> str:
 @_blueprint.route('/snippet/<identifier>/<ref_str>')
 def snippet(identifier: str, ref_str: str) -> str:
     act_set = Database.load_act_set(Date.today())
-    if not act_set.has_act(identifier):
-        abort(404)
-    act = act_set.act(identifier)
     try:
+        act = act_set.act(identifier)
+
         ref = Reference.from_relative_id_string(ref_str).relative_to(Reference(identifier))
+        if ref.article is None:
+            raise ValueError()
+
+        elements = act.at_reference(ref)
+        if not elements:
+            raise KeyError()
     except ValueError:
         abort(400)
-    elements = act.at_reference(ref)
+    except KeyError:
+        abort(404)
+
     writer = HtmlWriter()
     for element in elements:
         write_html_any(writer, element, ref)
