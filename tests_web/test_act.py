@@ -31,6 +31,10 @@ def test_snippet_valid(client: FlaskClient, fake_db: ActSet) -> None:
     assert act.article("3").paragraph("1").text in response_str
     assert act.article("3").paragraph("2").text in response_str
 
+    response = client.get('/snippet/2020. évi XD. törvény/2slashA___')
+    response_str = response.data.decode('utf-8')
+    assert act.article("2/A").paragraph().text in response_str
+
 
 INVALID_CASES = (
     ('/act/2020. évi XX. törvény', 404),

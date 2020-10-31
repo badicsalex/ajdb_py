@@ -32,6 +32,15 @@ TEST_ACT1 = ActWM(
             )
         ),
         ArticleWM(
+            identifier="2/A",
+            children=(
+                ParagraphWM(
+                    text="A teszt törvényben vannak '/'-es idk.",
+                    metadata=SaeMetadata(),
+                ),
+            )
+        ),
+        ArticleWM(
             identifier="3",
             children=(
                 ParagraphWM(
