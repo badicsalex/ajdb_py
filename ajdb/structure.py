@@ -413,6 +413,8 @@ class ActSet:
         return any(isinstance(act, ActWM) for act in self.acts)
 
     def get_incoming_references(self, act_id: str) -> Dict[Reference, Tuple[Reference, ...]]:
+        if act_id not in self.reference_index_map:
+            return {}
         ref_list = self.reference_index_map[act_id].reference_list
         result = defaultdict(list)
         for ref in ref_list.references:
