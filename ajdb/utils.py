@@ -4,7 +4,7 @@ from collections import OrderedDict
 
 import attr
 
-from hun_law.structure import Act, SubArticleElement, BlockAmendmentContainer
+from hun_law.structure import Act, SubArticleElement, BlockAmendmentContainer, Reference
 
 
 def iterate_all_saes_of_sae(sae: SubArticleElement) -> Iterable[SubArticleElement]:
@@ -80,3 +80,43 @@ class LruDict(OrderedDict, MutableMapping[_KT, _VT]):
             return self[k]
         except KeyError:
             return default
+
+
+def reference_as_hungarian_string(reference: Reference) -> str:
+    #pylint: disable=too-many-branches
+    parts = []
+    if reference.act:
+        parts.append(reference.act)
+    if reference.article:
+        if isinstance(reference.article, str):
+            parts.append("{}. §".format(reference.article))
+        else:
+            parts.append("{}–{}. §".format(reference.article[0], reference.article[1]))
+    if reference.paragraph:
+        if isinstance(reference.paragraph, str):
+            parts.append("({}) bekezdés".format(reference.paragraph))
+        else:
+            parts.append("({})–({}) bekezdés".format(reference.paragraph[0], reference.paragraph[1]))
+    if reference.point:
+        if isinstance(reference.point, str):
+            if reference.point[0].isdigit:
+                parts.append("{}. pont".format(reference.point))
+            else:
+                parts.append("{}) pont".format(reference.point))
+        else:
+            if reference.point[0][0].isdigit:
+                parts.append("{}–{}. pont".format(reference.point[0], reference.point[1]))
+            else:
+                parts.append("{})–{}) pont".format(reference.point[0], reference.point[1]))
+    if reference.subpoint:
+        if isinstance(reference.subpoint, str):
+            if reference.subpoint[0].isdigit:
+                parts.append("{}. alpont".format(reference.subpoint))
+            else:
+                parts.append("{}) alpont".format(reference.subpoint))
+        else:
+            if reference.subpoint[0][0].isdigit:
+                parts.append("{}–{}. alpont".format(reference.subpoint[0], reference.subpoint[1]))
+            else:
+                parts.append("{})–{}) alpont".format(reference.subpoint[0], reference.subpoint[1]))
+    return " ".join(parts)
