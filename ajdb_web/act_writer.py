@@ -209,12 +209,13 @@ def snippet(identifier: str, ref_str: str) -> str:
         abort(404)
     act = act_set.act(identifier).to_simple_act()
     try:
-        requested_ref = Reference.from_relative_id_string(ref_str)
+        ref = Reference.from_relative_id_string(ref_str).relative_to(Reference(identifier))
     except ValueError:
         abort(400)
-    element = act.at_reference(Reference.from_relative_id_string(ref_str))
+    elements = act.at_reference(ref)
     writer = HtmlWriter()
-    write_html_any(writer, element, requested_ref)
+    for element in elements:
+        write_html_any(writer, element, ref)
     return writer.get_str()
 
 

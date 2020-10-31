@@ -9,7 +9,7 @@ import functools
 import attr
 
 from hun_law import dict2object
-from hun_law.utils import Date
+from hun_law.utils import Date, cut_by_identifier
 from hun_law.structure import Act, Article, \
     SubArticleElement, Paragraph, NumericPoint, AlphabeticPoint, NumericSubpoint, AlphabeticSubpoint, \
     QuotedBlock, BlockAmendmentContainer, \
@@ -145,6 +145,13 @@ class ArticleWM(Article):
         assert isinstance(result, ArticleWM)
         return result
 
+    def at_reference(self, reference: Reference) -> Tuple[SaeWMType, ...]:
+        result: List[SaeWMType] = []
+        for element in super().at_reference(reference):
+            assert isinstance(element, SAE_WM_CLASSES)
+            result.append(element)
+        return tuple(result)
+
 
 @attr.s(slots=True, frozen=True, auto_attribs=True)
 class ArticleWMProxy:
@@ -160,6 +167,10 @@ class ArticleWMProxy:
     @property
     def article(self) -> ArticleWM:
         return self._get_article(self.key)
+
+    @property
+    def children(self) -> Tuple[Paragraph, ...]:
+        return self.article.children
 
     @classmethod
     @functools.lru_cache(maxsize=10000)
@@ -184,8 +195,8 @@ class ActWM:
     children: Tuple[Union[StructuralElement, ArticleWM, ArticleWMProxy], ...] = attr.ib()
     interesting_dates: Tuple[Date, ...]
 
-    articles: Tuple[Article, ...] = attr.ib(init=False)
-    articles_map: Dict[str, Article] = attr.ib(init=False)
+    articles: Tuple[Union[ArticleWM, ArticleWMProxy], ...] = attr.ib(init=False)
+    articles_map: Dict[str, Union[ArticleWM, ArticleWMProxy]] = attr.ib(init=False)
 
     @children.validator
     def _children_validator(self, _attribute: Any, children: Tuple[Paragraph, ...]) -> None:
@@ -195,11 +206,11 @@ class ActWM:
         assert all(isinstance(c, (StructuralElement, ArticleWM, ArticleWMProxy)) for c in children)
 
     @articles.default
-    def _articles_default(self) -> Tuple[Article, ...]:
-        return tuple(c for c in self.children if isinstance(c, Article))
+    def _articles_default(self) -> Tuple[Union[ArticleWM, ArticleWMProxy], ...]:
+        return tuple(c for c in self.children if isinstance(c, (ArticleWM, ArticleWMProxy)))
 
     @articles_map.default
-    def _articles_map_default(self) -> Dict[str, Article]:
+    def _articles_map_default(self) -> Dict[str, Union[ArticleWM, ArticleWMProxy]]:
         return {c.identifier: c for c in self.articles}
 
     def map_articles(
@@ -254,8 +265,24 @@ class ActWM:
         )
         return attr.evolve(self, children=new_children)
 
-    def article(self, article_id: str) -> Article:
-        return self.articles_map[str(article_id)]
+    def article(self, article_id: str) -> ArticleWM:
+        result = self.articles_map[str(article_id)]
+        if isinstance(result, ArticleWMProxy):
+            return result.article
+        return result
+
+    def at_reference(self, reference: Reference) -> Tuple[Union[ArticleWM, SaeWMType], ...]:
+        assert reference.act is None or reference.act == self.identifier
+        assert reference.article is not None
+        if reference.paragraph is None and reference.point is None and reference.subpoint is None:
+            if isinstance(reference.article, str):
+                return (self.article(reference.article),)
+            return tuple(
+                element.article if isinstance(element, ArticleWMProxy) else element
+                for element in cut_by_identifier(self.articles, reference.article[0], reference.article[1])
+            )
+        assert isinstance(reference.article, str)
+        return self.article(reference.article).at_reference(reference)
 
 
 @attr.s(slots=True, frozen=True, auto_attribs=True)
