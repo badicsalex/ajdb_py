@@ -6,9 +6,10 @@ from flask import Blueprint, abort, render_template, url_for
 from hun_law.structure import \
     SubArticleElement, QuotedBlock, BlockAmendmentContainer, \
     StructuralElement, Subtitle, \
-    Article, Reference, OutgoingReference, Act
+    Article, Reference, OutgoingReference
 from hun_law.utils import EMPTY_LINE, Date
 
+from ajdb.structure import ActWM, ArticleWMProxy
 from ajdb.database import Database
 from .html_utils import HtmlWriter
 
@@ -174,7 +175,12 @@ def write_html_article(writer: HtmlWriter, element: Article, parent_ref: Referen
             write_html_any(writer, child, current_ref)
 
 
-def write_html_act(writer: HtmlWriter, act: Act) -> None:
+@act_html_writer
+def write_html_article_proxy(writer: HtmlWriter, element: ArticleWMProxy, parent_ref: Reference) -> None:
+    write_html_any(writer, element.article, parent_ref)
+
+
+def write_html_act(writer: HtmlWriter, act: ActWM) -> None:
     with writer.div('act_title'):
         writer.write(act.identifier)
         writer.br()
@@ -195,7 +201,7 @@ def single_act(identifier: str) -> str:
     act_set = Database.load_act_set(Date.today())
     if not act_set.has_act(identifier):
         abort(404)
-    act = act_set.act(identifier).to_simple_act()
+    act = act_set.act(identifier)
     writer = HtmlWriter()
     write_html_act(writer, act)
     act_str = writer.get_str()
@@ -207,7 +213,7 @@ def snippet(identifier: str, ref_str: str) -> str:
     act_set = Database.load_act_set(Date.today())
     if not act_set.has_act(identifier):
         abort(404)
-    act = act_set.act(identifier).to_simple_act()
+    act = act_set.act(identifier)
     try:
         ref = Reference.from_relative_id_string(ref_str).relative_to(Reference(identifier))
     except ValueError:
