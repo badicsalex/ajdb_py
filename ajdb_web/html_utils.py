@@ -16,6 +16,7 @@ class HtmlTag:
                 continue
             if k[0] == '_':
                 k = k[1:]
+            k = k.replace('_', '-')
             attributes_list.append('{}="{}"'.format(k, v))
         attributes_str = " ".join(attributes_list)
         if attributes_str:

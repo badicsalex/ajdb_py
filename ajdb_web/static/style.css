@@ -128,6 +128,16 @@ blockquote {
     font-size: 10pt;
 }
 
+.snippet_container {
+    position: absolute;
+    width: 500px;
+    border: 1px solid gray;
+    background: white;
+    padding: 10px;
+    text-align: justify;
+    box-shadow: 5px 5px 10px #888888;
+}
+
 :target {
    background-color: #ffffc0;
 }

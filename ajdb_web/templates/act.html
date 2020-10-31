@@ -4,4 +4,10 @@
     <div class="act_container">
         {{ act_str | safe }}
     </div>
+    <div id="snippet_container" class="snippet_container">&nbsp;</div>
+    <script type="text/javascript">
+        'use strict';
+        const SNIPPET_BASE_URL={{ url_for('index.index')|tojson|safe }};
+        $(add_act_snippet_handlers);
+    </script>
 {% endblock %}

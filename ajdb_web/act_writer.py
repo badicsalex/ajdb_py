@@ -55,7 +55,7 @@ def get_href_for_ref(ref: Reference) -> str:
     result = ''
     if ref.act is not None:
         result = url_for('act.single_act', identifier=ref.act)
-    result = result + "#" + ref.relative_id_string
+    result = result + "#" + "ref_" + ref.first_in_range().relative_id_string
     return result
 
 
@@ -68,15 +68,17 @@ def write_text_with_ref_links(
     links_to_create = []
     for outgoing_ref in outgoing_references:
         absolute_ref = outgoing_ref.reference.relative_to(current_ref)
-        links_to_create.append((outgoing_ref.start_pos, outgoing_ref.end_pos, get_href_for_ref(absolute_ref)))
+        links_to_create.append((outgoing_ref.start_pos, outgoing_ref.end_pos, absolute_ref))
 
     links_to_create.sort()
     prev_end = 0
-    for start, end, href in links_to_create:
+    for start, end, ref in links_to_create:
         assert start >= prev_end
         assert end > start
         writer.write(text[prev_end:start])
-        with writer.tag('a', href=href):
+        href = get_href_for_ref(ref)
+        snippet_href = url_for('act.snippet', identifier=ref.act, ref_str=ref.relative_id_string)
+        with writer.tag('a', href=href, data_snippet=snippet_href):
             writer.write(text[start:end])
         prev_end = end
     writer.write(text[prev_end:])
@@ -109,7 +111,7 @@ def write_html_block_amendment(writer: HtmlWriter, element: BlockAmendmentContai
 @act_html_writer
 def write_html_sub_article_element(writer: HtmlWriter, element: SubArticleElement, parent_ref: Reference) -> None:
     current_ref = element.relative_reference.relative_to(parent_ref)
-    id_string = current_ref.relative_id_string
+    id_string = "ref_" + current_ref.relative_id_string
     # Quick hack so that we don't have duplicate ids within block amendments
     if current_ref.act == "EXTERNAL":
         id_string = ''
@@ -157,7 +159,7 @@ def write_html_quoted_block(writer: HtmlWriter, element: QuotedBlock, parent_ref
 @act_html_writer
 def write_html_article(writer: HtmlWriter, element: Article, parent_ref: Reference) -> None:
     current_ref = element.relative_reference.relative_to(parent_ref)
-    id_string = current_ref.relative_id_string
+    id_string = "ref_" + current_ref.relative_id_string
     # Quick hack so that we don't have duplicate ids within block amendments
     if current_ref.act == "EXTERNAL":
         id_string = ''
@@ -180,7 +182,7 @@ def write_html_act(writer: HtmlWriter, act: Act) -> None:
     if act.preamble:
         with writer.div('preamble'):
             writer.write(act.preamble)
-    current_ref = Reference()
+    current_ref = Reference(act.identifier)
     for child in act.children:
         write_html_any(writer, child, current_ref)
 
@@ -198,6 +200,22 @@ def single_act(identifier: str) -> str:
     write_html_act(writer, act)
     act_str = writer.get_str()
     return render_template('act.html', act=act, act_str=act_str)
+
+
+@_blueprint.route('/snippet/<identifier>/<ref_str>')
+def snippet(identifier: str, ref_str: str) -> str:
+    act_set = Database.load_act_set(Date.today())
+    if not act_set.has_act(identifier):
+        abort(404)
+    act = act_set.act(identifier).to_simple_act()
+    try:
+        requested_ref = Reference.from_relative_id_string(ref_str)
+    except ValueError:
+        abort(400)
+    element = act.at_reference(Reference.from_relative_id_string(ref_str))
+    writer = HtmlWriter()
+    write_html_any(writer, element, requested_ref)
+    return writer.get_str()
 
 
 ACT_BLUEPRINT = _blueprint

@@ -3,6 +3,8 @@
         <title>{% block title %}AJDB{% endblock %}</title>
         <link rel="stylesheet" href="{{ url_for('static', filename='style.css' ) }}">
         <link rel="icon" href="{{ url_for('static', filename='favicon.png') }}">
+        <script type=text/javascript src="{{ url_for('static', filename='js/jquery-3.5.1.js') }}"></script>
+        <script type=text/javascript src="{{ url_for('static', filename='js/scripts.js') }}"></script>
     </head>
     <body>
         {% block body %}{% endblock %}
