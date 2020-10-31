@@ -1,7 +1,7 @@
 # Copyright 2020, Alex Badics, All Rights Reserved
-from typing import Callable, Any, Iterable, Iterator
-from contextlib import contextmanager
+from typing import Callable, Any, Iterable, Dict, Tuple, Union
 from flask import Blueprint, abort, render_template, url_for
+import attr
 
 from hun_law.structure import \
     SubArticleElement, QuotedBlock, BlockAmendmentContainer, \
@@ -11,9 +11,37 @@ from hun_law.utils import EMPTY_LINE, Date
 
 from ajdb.structure import ActWM, ArticleWMProxy
 from ajdb.database import Database
+from ajdb.utils import reference_as_hungarian_string
 from .html_utils import HtmlWriter
 
-HtmlWriterFn = Callable[[HtmlWriter, Any, Reference], None]
+
+@attr.s(slots=True, frozen=True, auto_attribs=True)
+class HtmlWriterContext:
+    current_ref: Reference
+    _all_incoming_refs: Dict[Reference, Tuple[Reference, ...]] = {}
+    inside_ba: bool = False
+
+    @property
+    def incoming_refs(self) -> Tuple[Reference, ...]:
+        return self._all_incoming_refs.get(self.current_ref, ())
+
+    def update_ref(self, element: Union[Article, SubArticleElement]) -> 'HtmlWriterContext':
+        if self.inside_ba:
+            return self
+        new_ref = element.relative_reference.relative_to(self.current_ref)
+        return attr.evolve(self, current_ref=new_ref)
+
+    def went_inside_block_amendment(self) -> 'HtmlWriterContext':
+        return attr.evolve(self, inside_ba=True)
+
+    @property
+    def id_string(self) -> str:
+        if self.inside_ba:
+            return ''
+        return "ref_" + self.current_ref.relative_id_string
+
+
+HtmlWriterFn = Callable[[HtmlWriter, Any, HtmlWriterContext], None]
 all_act_html_writers = []
 
 
@@ -23,26 +51,17 @@ def act_html_writer(fn: HtmlWriterFn) -> HtmlWriterFn:
     return fn
 
 
-@contextmanager
-def element_and_body_helper(writer: HtmlWriter, anchor: str, header: str, class_prefix: str) -> Iterator:
-    with writer.div(class_prefix + '_container', id=anchor):
-        with writer.div(class_prefix + '_identifier'):
-            writer.write(header)
-        with writer.div(class_prefix + '_body'):
-            yield
-
-
-def write_html_any(writer: HtmlWriter, element: Any, parent_ref: Reference) -> None:
+def write_html_any(writer: HtmlWriter, element: Any, ctx: HtmlWriterContext) -> None:
     for written_type, writer_fn in all_act_html_writers:
         if isinstance(element, written_type):
-            writer_fn(writer, element, parent_ref)
+            writer_fn(writer, element, ctx)
             break
     else:
         raise TypeError("Unknown type to write HTML for: {}".format(type(element)))
 
 
 @act_html_writer
-def write_html_structural_element(writer: HtmlWriter, element: StructuralElement, _parent_ref: Reference) -> None:
+def write_html_structural_element(writer: HtmlWriter, element: StructuralElement, _ctx: HtmlWriterContext) -> None:
     with writer.div("se_" + element.__class__.__name__.lower()):
         writer.write(element.formatted_identifier)
         if isinstance(element, Subtitle):
@@ -86,9 +105,8 @@ def write_text_with_ref_links(
 
 
 @act_html_writer
-def write_html_block_amendment(writer: HtmlWriter, element: BlockAmendmentContainer, _parent_ref: Reference) -> None:
-    # Quick hack to signify that IDs are not needed further on
-    current_ref = Reference("EXTERNAL")
+def write_html_block_amendment(writer: HtmlWriter, element: BlockAmendmentContainer, ctx: HtmlWriterContext) -> None:
+    ctx = ctx.went_inside_block_amendment()
     if element.intro:
         with writer.div('blockamendment_text'):
             writer.write("(" + element.intro + ")")
@@ -99,7 +117,7 @@ def write_html_block_amendment(writer: HtmlWriter, element: BlockAmendmentContai
     with writer.div('blockamendment_container'):
         assert element.children is not None
         for child in element.children:
-            write_html_any(writer, child, current_ref)
+            write_html_any(writer, child, ctx)
 
     with writer.div('blockamendment_quote'):
         writer.write('”')
@@ -109,38 +127,47 @@ def write_html_block_amendment(writer: HtmlWriter, element: BlockAmendmentContai
             writer.write("(" + element.wrap_up + ")")
 
 
+def write_html_sub_article_element_children(writer: HtmlWriter, element: SubArticleElement, ctx: HtmlWriterContext) -> None:
+    if element.intro:
+        with writer.div('sae_text'):
+            write_text_with_ref_links(writer, element.intro, ctx.current_ref, element.outgoing_references or ())
+
+    assert element.children is not None
+    for child in element.children:
+        write_html_any(writer, child, ctx)
+
+    if element.wrap_up:
+        with writer.div('sae_text'):
+            # TODO: write links too
+            writer.write(element.wrap_up)
+
+
 @act_html_writer
-def write_html_sub_article_element(writer: HtmlWriter, element: SubArticleElement, parent_ref: Reference) -> None:
-    current_ref = element.relative_reference.relative_to(parent_ref)
-    id_string = "ref_" + current_ref.relative_id_string
-    # Quick hack so that we don't have duplicate ids within block amendments
-    if current_ref.act == "EXTERNAL":
-        id_string = ''
+def write_html_sub_article_element(writer: HtmlWriter, element: SubArticleElement, ctx: HtmlWriterContext) -> None:
+    ctx = ctx.update_ref(element)
     header = element.header_prefix(element.identifier)
-    with element_and_body_helper(writer, id_string, header, 'sae'):
-        if element.text:
-            with writer.div('sae_text'):
-                write_text_with_ref_links(writer, element.text, current_ref, element.outgoing_references or ())
-        else:
-            if element.intro:
+    with writer.div('sae_container', id=ctx.id_string):
+        with writer.div('sae_identifier'):
+            writer.write(header)
+        if ctx.incoming_refs:
+            snippet_href = url_for(
+                'act.incoming_refs',
+                identifier=ctx.current_ref.act,
+                ref_str=ctx.current_ref.relative_id_string
+            )
+            with writer.div('sae_incoming', data_snippet=snippet_href):
+                writer.write('⇇ {}'.format(len(ctx.incoming_refs)))
+        with writer.div('sae_body'):
+            if element.text:
                 with writer.div('sae_text'):
-                    write_text_with_ref_links(writer, element.intro, current_ref, element.outgoing_references or ())
-
-            assert element.children is not None
-            for child in element.children:
-                write_html_any(writer, child, current_ref)
-
-            if element.wrap_up:
-                with writer.div('sae_text'):
-                    # TODO: write links too
-                    writer.write(element.wrap_up)
+                    write_text_with_ref_links(writer, element.text, ctx.current_ref, element.outgoing_references or ())
+            else:
+                write_html_sub_article_element_children(writer, element, ctx)
 
 
 @act_html_writer
-def write_html_quoted_block(writer: HtmlWriter, element: QuotedBlock, parent_ref: Reference) -> None:
-    parent_type = parent_ref.last_component_with_type()[1]
-    assert parent_type is not None
-    with writer.tag('blockquote', _class='quote_in_{}'.format(parent_type.__name__.lower())):
+def write_html_quoted_block(writer: HtmlWriter, element: QuotedBlock, _ctx: HtmlWriterContext) -> None:
+    with writer.tag('blockquote'):
         indent_offset = min(l.indent for l in element.lines if l != EMPTY_LINE)
         for index, l in enumerate(element.lines):
             padding = int((l.indent-indent_offset) * 2)
@@ -158,29 +185,28 @@ def write_html_quoted_block(writer: HtmlWriter, element: QuotedBlock, parent_ref
 
 
 @act_html_writer
-def write_html_article(writer: HtmlWriter, element: Article, parent_ref: Reference) -> None:
-    current_ref = element.relative_reference.relative_to(parent_ref)
-    id_string = "ref_" + current_ref.relative_id_string
-    # Quick hack so that we don't have duplicate ids within block amendments
-    if current_ref.act == "EXTERNAL":
-        id_string = ''
+def write_html_article(writer: HtmlWriter, element: Article, ctx: HtmlWriterContext) -> None:
+    ctx = ctx.update_ref(element)
 
     header = '{}. §'.format(element.identifier)
-    with element_and_body_helper(writer, id_string, header, 'article'):
-        if element.title:
-            with writer.div('article_title'):
-                writer.write('[{}]'.format(element.title))
+    with writer.div('article_container', id=ctx.id_string):
+        with writer.div('article_identifier'):
+            writer.write(header)
+        with writer.div('article_body'):
+            if element.title:
+                with writer.div('article_title'):
+                    writer.write('[{}]'.format(element.title))
 
-        for child in element.children:
-            write_html_any(writer, child, current_ref)
+            for child in element.children:
+                write_html_any(writer, child, ctx)
 
 
 @act_html_writer
-def write_html_article_proxy(writer: HtmlWriter, element: ArticleWMProxy, parent_ref: Reference) -> None:
-    write_html_any(writer, element.article, parent_ref)
+def write_html_article_proxy(writer: HtmlWriter, element: ArticleWMProxy, ctx: HtmlWriterContext) -> None:
+    write_html_any(writer, element.article, ctx)
 
 
-def write_html_act(writer: HtmlWriter, act: ActWM) -> None:
+def write_html_act(writer: HtmlWriter, act: ActWM, ctx: HtmlWriterContext) -> None:
     with writer.div('act_title'):
         writer.write(act.identifier)
         writer.br()
@@ -188,9 +214,8 @@ def write_html_act(writer: HtmlWriter, act: ActWM) -> None:
     if act.preamble:
         with writer.div('preamble'):
             writer.write(act.preamble)
-    current_ref = Reference(act.identifier)
     for child in act.children:
-        write_html_any(writer, child, current_ref)
+        write_html_any(writer, child, ctx)
 
 
 _blueprint = Blueprint('act', __name__)
@@ -202,8 +227,10 @@ def single_act(identifier: str) -> str:
     if not act_set.has_act(identifier):
         abort(404)
     act = act_set.act(identifier)
+    incoming_references = act_set.get_incoming_references(act.identifier)
     writer = HtmlWriter()
-    write_html_act(writer, act)
+    context = HtmlWriterContext(Reference(act.identifier), incoming_references)
+    write_html_act(writer, act, context)
     act_str = writer.get_str()
     return render_template('act.html', act=act, act_str=act_str)
 
@@ -227,8 +254,29 @@ def snippet(identifier: str, ref_str: str) -> str:
         abort(404)
 
     writer = HtmlWriter()
+    context = HtmlWriterContext(ref)
     for element in elements:
-        write_html_any(writer, element, ref)
+        write_html_any(writer, element, context)
+    return writer.get_str()
+
+
+@_blueprint.route('/incoming_refs/<identifier>/<ref_str>')
+def incoming_refs(identifier: str, ref_str: str) -> str:
+    act_set = Database.load_act_set(Date.today())
+    try:
+        to_ref = Reference.from_relative_id_string(ref_str).relative_to(Reference(identifier))
+        references = act_set.get_incoming_references(identifier)[to_ref]
+    except ValueError:
+        abort(400)
+    except KeyError:
+        abort(404)
+    writer = HtmlWriter()
+    writer.write("{} bejövő hivatkozás:".format(len(references)))
+    for from_ref in references:
+        writer.br()
+        snippet_href = url_for('act.snippet', identifier=from_ref.act, ref_str=from_ref.relative_id_string)
+        with writer.tag('a', data_snippet=snippet_href):
+            writer.write(reference_as_hungarian_string(from_ref))
     return writer.get_str()
 
 

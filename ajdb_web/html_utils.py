@@ -2,6 +2,8 @@
 from typing import Dict, List, Optional, Type
 from types import TracebackType
 
+import attr
+
 
 class HtmlTag:
     def __init__(self, writer: 'HtmlWriter', name: str, attributes: Dict[str, str]) -> None:
@@ -34,9 +36,9 @@ class HtmlTag:
         self.writer.write("</{}>".format(self.name))
 
 
+@attr.s(slots=True, auto_attribs=True)
 class HtmlWriter:
-    def __init__(self) -> None:
-        self.output: List[str] = []
+    output: List[str] = attr.ib(factory=list)
 
     def br(self) -> None:
         self.write('<br>')

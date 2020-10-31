@@ -20,6 +20,7 @@ div {
 blockquote {
     margin: 0px 0px 0px 00px;
     padding: 0px;
+    font-size: 10pt;
 }
 
 .index_container{
@@ -108,12 +109,23 @@ blockquote {
     font-style: italic;
     margin: 0px 0px 0px 40px;
 }
+.article_container, .sae_container {
+    width: 100%
+}
 .sae_identifier {
     min-height: 1.5em;
 }
 .sae_body {
     margin: -1.5em 0px 0px 40px;
     min-height: 1.5em;
+}
+.sae_incoming {
+    margin: -1.5em -150px 0px 0px;
+    padding: 0px 5px 0px 5px;
+    float: right;
+    background: #E0E0FF;
+    border-radius: 3px;
+    border: 1px solid #A0A0FF
 }
 
 .blockamendment_text {
@@ -124,13 +136,9 @@ blockquote {
     display: inline-block;
 }
 
-.quote_in_paragraph, .quote_in_article {
-    font-size: 10pt;
-}
-
 .snippet_container {
     position: absolute;
-    width: 700px;
+    max-width: 700px;
     border: 1px solid gray;
     background: white;
     padding: 10px;
