@@ -3,12 +3,10 @@
 import sys
 import inspect
 import gc
-from typing import Tuple, Union, Optional, Callable, Dict, Iterable, Any, Sequence, List
-import functools
+from typing import Tuple, Union, Optional, Callable, Dict, Iterable, Any, Sequence, List, ClassVar
 
 import attr
 
-from hun_law import dict2object
 from hun_law.utils import Date, cut_by_identifier
 from hun_law.structure import Act, Article, \
     SubArticleElement, Paragraph, NumericPoint, AlphabeticPoint, NumericSubpoint, AlphabeticSubpoint, \
@@ -18,7 +16,7 @@ from hun_law.structure import Act, Article, \
     EnforcementDate, EnforcementDateTypes, DaysAfterPublication, DayInMonthAfterPublication
 
 from ajdb.utils import evolve_into
-from ajdb.object_storage import ObjectStorage
+from ajdb.object_storage import CachedTypedObjectStorage
 
 
 @attr.s(slots=True, frozen=True, auto_attribs=True, kw_only=True)
@@ -153,30 +151,31 @@ class ArticleWM(Article):
         return tuple(result)
 
 
+# Needed for attr.s(slots=True), and __subclasses__ to work correctly.
+# it is used in the converter of CachedTypedObjectStorage(ArticleWM)
+gc.collect()
+
+
 @attr.s(slots=True, frozen=True, auto_attribs=True)
 class ArticleWMProxy:
+    OBJECT_STORAGE: ClassVar[CachedTypedObjectStorage[ArticleWM]] = \
+        CachedTypedObjectStorage(ArticleWM, 'articles', 10000)
+
     key: str
     identifier: str
 
     @classmethod
     def save_article(cls, article: ArticleWM) -> 'ArticleWMProxy':
-        article_as_dict = ARTICLE_WM_CONVERTER.to_dict(article)
-        key = ObjectStorage('articles').save(article_as_dict)
+        key = cls.OBJECT_STORAGE.save(article)
         return ArticleWMProxy(key, article.identifier)
 
     @property
     def article(self) -> ArticleWM:
-        return self._get_article(self.key)
+        return self.OBJECT_STORAGE.load(self.key)
 
     @property
     def children(self) -> Tuple[Paragraph, ...]:
         return self.article.children
-
-    @classmethod
-    @functools.lru_cache(maxsize=10000)
-    def _get_article(cls, key: str) -> ArticleWM:
-        result: ArticleWM = ARTICLE_WM_CONVERTER.to_object(ObjectStorage('articles').load(key))
-        return result
 
     def to_simple_article(self) -> Article:
         return self.article.to_simple_article()
@@ -285,8 +284,16 @@ class ActWM:
         return self.article(reference.article).at_reference(reference)
 
 
+# Needed for attr.s(slots=True), and __subclasses__ to work correctly.
+# it is used in the converter of CachedTypedObjectStorage(ActWM)
+gc.collect()
+
+
 @attr.s(slots=True, frozen=True, auto_attribs=True)
 class ActWMProxy:
+    OBJECT_STORAGE: ClassVar[CachedTypedObjectStorage[ActWM]] = \
+        CachedTypedObjectStorage(ActWM, 'acts', 1000)
+
     key: str
     identifier: str
     subject: str
@@ -295,20 +302,12 @@ class ActWMProxy:
     @classmethod
     def save_act(cls, act: ActWM) -> 'ActWMProxy':
         act = act.save_all_articles()
-        act_as_dict = ACT_WM_CONVERTER.to_dict(act)
-        key = ObjectStorage('acts').save(act_as_dict)
+        key = cls.OBJECT_STORAGE.save(act)
         return ActWMProxy(key, act.identifier, act.subject, act.interesting_dates)
 
     @property
     def act(self) -> ActWM:
-        return self._get_act(self.key)
-
-    @classmethod
-    @functools.lru_cache(maxsize=1000)
-    def _get_act(cls, key: str) -> ActWM:
-        act_as_dict = ObjectStorage('acts').load(key)
-        result: ActWM = ACT_WM_CONVERTER.to_object(act_as_dict)
-        return result
+        return self.OBJECT_STORAGE.load(self.key)
 
     def to_simple_act(self) -> Act:
         return self.act.to_simple_act()
@@ -383,7 +382,3 @@ def __do_post_processing() -> None:
 
 
 __do_post_processing()
-
-# Converters can only be made after post processing due to the magic subclasses thing.
-ARTICLE_WM_CONVERTER = dict2object.get_converter(ArticleWM)
-ACT_WM_CONVERTER = dict2object.get_converter(ActWM)
