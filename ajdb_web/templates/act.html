@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block title %}{{ act.identifier }}{% endblock %}
 {% block body %}
-    <div class="act_container">
+    <div id="act_container" class="act_container">
         {{ act_str | safe }}
     </div>
     <div id="snippet_container" class="snippet_container">&nbsp;</div>

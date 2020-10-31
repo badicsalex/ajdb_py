@@ -1,11 +1,18 @@
 'use strict';
 function act_snippet_hover_start(){
     var url = $(this).data('snippet');
+    var $snippet_container = $('#snippet_container');
 
     var offset = $(this).offset();
+    offset.left -= 50;
     offset.top += $(this).height();
+    var right_border = $('#act_container').offset().left + $('#act_container').outerWidth();
+    if (offset.left + $snippet_container.outerWidth() > right_border){
+        console.log($('#act_container').offset().left)
+        console.log(right_border)
+        offset.left = right_border - $snippet_container.outerWidth()
+    }
 
-    var $snippet_container = $('#snippet_container');
     $snippet_container.html("Előnézet betöltése...")
     $snippet_container.load(url, function( response, status, xhr ) {
         if ( status == "error" ) {
