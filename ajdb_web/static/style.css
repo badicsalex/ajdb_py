@@ -50,7 +50,8 @@ blockquote {
 .left_pane {
     width: 400px;
     height: 100%;
-    overflow: scroll;
+    overflow-x: auto;
+    overflow-y: scroll;
     box-shadow: 5px 5px 10px #888888;
     border-right: 1px solid black;
     background: white;
@@ -59,7 +60,7 @@ blockquote {
 .right_pane {
     flex-grow: 1;
     height: 100%;
-    overflow: scroll;
+    overflow: auto;
     text-align: center;
 }
 
@@ -70,7 +71,7 @@ blockquote {
 }
 
 .toc_container {
-    margin: 20px
+    margin: 20px;
 }
 .toc_title {
     font-size: 14pt;
