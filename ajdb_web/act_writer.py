@@ -245,12 +245,12 @@ def write_toc_entries(
 
 
 def write_table_of_contents(writer: HtmlWriter, act: ActWM, structural_element_anchors: Dict[StructuralElement, str]) -> None:
-    with writer.tag('ul', _class='toc_elem_container'):
-        write_toc_entries(
-            writer,
-            tuple(c for c in act.children if isinstance(c, StructuralElement)),
-            structural_element_anchors
-        )
+    ses = tuple(c for c in act.children if isinstance(c, StructuralElement))
+    if ses:
+        with writer.tag('ul', _class='toc_elem_container'):
+            write_toc_entries(writer, ses, structural_element_anchors)
+    else:
+        writer.write('Nem található szerkezeti elem')
 
 
 def generate_structural_element_anchors(act: ActWM) -> Dict[StructuralElement, str]:
