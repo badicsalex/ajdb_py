@@ -102,7 +102,10 @@ def write_text_with_ref_links(
         assert end > start
         writer.write(text[prev_end:start])
         href = get_href_for_ref(ref)
-        snippet_href = url_for('act.snippet', identifier=ref.act, ref_str=ref.relative_id_string)
+        if ref.article is not None:
+            snippet_href = url_for('act.snippet', identifier=ref.act, ref_str=ref.relative_id_string)
+        else:
+            snippet_href = ''
         with writer.tag('a', href=href, data_snippet=snippet_href):
             writer.write(text[start:end])
         prev_end = end
