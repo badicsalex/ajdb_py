@@ -19,14 +19,15 @@ from .html_utils import HtmlWriter
 class HtmlWriterContext:
     current_ref: Reference
     _all_incoming_refs: Dict[Reference, Tuple[Reference, ...]] = {}
-    inside_ba: bool = False
+    _structural_element_anchors: Dict[StructuralElement, str] = {}
+    _inside_ba: bool = False
 
     @property
     def incoming_refs(self) -> Tuple[Reference, ...]:
         return self._all_incoming_refs.get(self.current_ref, ())
 
     def update_ref(self, element: Union[Article, SubArticleElement]) -> 'HtmlWriterContext':
-        if self.inside_ba:
+        if self._inside_ba:
             return self
         new_ref = element.relative_reference.relative_to(self.current_ref)
         return attr.evolve(self, current_ref=new_ref)
@@ -36,9 +37,12 @@ class HtmlWriterContext:
 
     @property
     def id_string(self) -> str:
-        if self.inside_ba:
+        if self._inside_ba:
             return ''
         return "ref_" + self.current_ref.relative_id_string
+
+    def get_anchor_for_structural_element(self, se: StructuralElement) -> str:
+        return self._structural_element_anchors.get(se, '')
 
 
 HtmlWriterFn = Callable[[HtmlWriter, Any, HtmlWriterContext], None]
@@ -61,8 +65,9 @@ def write_html_any(writer: HtmlWriter, element: Any, ctx: HtmlWriterContext) -> 
 
 
 @act_html_writer
-def write_html_structural_element(writer: HtmlWriter, element: StructuralElement, _ctx: HtmlWriterContext) -> None:
-    with writer.div("se_" + element.__class__.__name__.lower()):
+def write_html_structural_element(writer: HtmlWriter, element: StructuralElement, ctx: HtmlWriterContext) -> None:
+    anchor = ctx.get_anchor_for_structural_element(element)
+    with writer.div("se_" + element.__class__.__name__.lower(), id=anchor):
         writer.write(element.formatted_identifier)
         if isinstance(element, Subtitle):
             writer.write(" ")
@@ -206,7 +211,7 @@ def write_html_article_proxy(writer: HtmlWriter, element: ArticleWMProxy, ctx: H
     write_html_any(writer, element.article, ctx)
 
 
-def write_html_act(writer: HtmlWriter, act: ActWM, ctx: HtmlWriterContext) -> None:
+def write_html_act_body(writer: HtmlWriter, act: ActWM, ctx: HtmlWriterContext) -> None:
     with writer.div('act_title'):
         writer.write(act.identifier)
         writer.br()
@@ -216,6 +221,42 @@ def write_html_act(writer: HtmlWriter, act: ActWM, ctx: HtmlWriterContext) -> No
             writer.write(act.preamble)
     for child in act.children:
         write_html_any(writer, child, ctx)
+
+
+def write_toc_entries(
+    writer: HtmlWriter,
+    ses: Tuple[StructuralElement, ...],
+    structural_element_anchors: Dict[StructuralElement, str]
+) -> Tuple[StructuralElement, ...]:
+    """ Returns the rest of the ses """
+    current_type = type(ses[0])
+    while ses and not isinstance(ses[0], current_type.PARENT_TYPES):
+        with writer.tag('li', _class='toc_elem'):
+            with writer.tag('a', href="#" + structural_element_anchors.get(ses[0], '')):
+                if ses[0].title:
+                    writer.write(ses[0].title)
+                else:
+                    writer.write(ses[0].formatted_identifier)
+            ses = ses[1:]
+            if ses and not isinstance(ses[0], current_type.PARENT_TYPES + (current_type,)):
+                with writer.tag('ul', _class='toc_elem_container'):
+                    ses = write_toc_entries(writer, ses, structural_element_anchors)
+    return ses
+
+
+def write_table_of_contents(writer: HtmlWriter, act: ActWM, structural_element_anchors: Dict[StructuralElement, str]) -> None:
+    with writer.tag('ul', _class='toc_elem_container'):
+        write_toc_entries(
+            writer,
+            tuple(c for c in act.children if isinstance(c, StructuralElement)),
+            structural_element_anchors
+        )
+
+
+def generate_structural_element_anchors(act: ActWM) -> Dict[StructuralElement, str]:
+    return {
+        c: 'seref_{}'.format(i) for i, c in enumerate(act.children) if isinstance(c, StructuralElement)
+    }
 
 
 _blueprint = Blueprint('act', __name__)
@@ -228,11 +269,20 @@ def single_act(identifier: str) -> str:
         abort(404)
     act = act_set.act(identifier)
     incoming_references = act_set.get_incoming_references(act.identifier)
+    structural_element_anchors = generate_structural_element_anchors(act)
     writer = HtmlWriter()
-    context = HtmlWriterContext(Reference(act.identifier), incoming_references)
-    write_html_act(writer, act, context)
+    context = HtmlWriterContext(
+        current_ref=Reference(act.identifier),
+        all_incoming_refs=incoming_references,
+        structural_element_anchors=structural_element_anchors
+    )
+    write_html_act_body(writer, act, context)
     act_str = writer.get_str()
-    return render_template('act.html', act=act, act_str=act_str)
+
+    writer = HtmlWriter()
+    write_table_of_contents(writer, act, structural_element_anchors)
+    toc_str = writer.get_str()
+    return render_template('act.html', act=act, act_str=act_str, toc_str=toc_str)
 
 
 @_blueprint.route('/snippet/<identifier>/<ref_str>')

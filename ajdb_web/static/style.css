@@ -1,7 +1,6 @@
 body {
     font-family: sans;
     font-size: 12pt;
-    text-align: center;
     line-height: 1.5;
     background: #ddd;
     padding: 0px;
@@ -41,22 +40,57 @@ blockquote {
     background-color: #f0f0f0;
 }
 
-@media not print {
-    .act_container {
-        max-width: 950px;
-        border: 1px solid gray;
-        display: inline-block;
-        background: white;
-        padding: 30px 80px 30px 80px;
-        text-align: justify;
-        box-shadow: 5px 5px 10px #888888;
-    }
+.panes {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
 }
 
-@media print {
-    .act_container {
-        text-align: justify;
-    }
+.left_pane {
+    width: 400px;
+    height: 100%;
+    overflow: scroll;
+    box-shadow: 5px 5px 10px #888888;
+    border-right: 1px solid black;
+    background: white;
+}
+
+.right_pane {
+    flex-grow: 1;
+    height: 100%;
+    overflow: scroll;
+    text-align: center;
+}
+
+.right_pane_wrapper {
+    height: auto;
+    width: auto;
+    position: relative;
+}
+
+.toc_container {
+    margin: 20px
+}
+.toc_title {
+    font-size: 14pt;
+    font-weight: bold;
+    margin: 1em 0px 1em 0px;
+}
+
+.toc_elem_container {
+    padding-bottom: 1em;
+    padding-left: 20px;
+}
+
+.act_body {
+    max-width: 950px;
+    border: 1px solid gray;
+    display: inline-block;
+    background: white;
+    padding: 30px 80px 30px 80px;
+    text-align: justify;
+    box-shadow: 5px 5px 10px #888888;
 }
 
 .act_title, .preamble {

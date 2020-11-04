@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block body %}
+    <center>
     <div class="index_container">
         <h1>Alex Jogi Adatbázisa</h1>
         <p>Az adatbázis {{ act_set.acts | length }} törvényt tartalmaz:</p>
@@ -16,4 +17,5 @@
             {% endfor %}
         </table>
     </div>
+    </center>
 {% endblock %}

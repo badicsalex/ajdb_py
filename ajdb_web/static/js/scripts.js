@@ -4,12 +4,12 @@ function act_snippet_hover_new(){
     var $snippet_container = $('<div class="snippet_container">Előnézet betöltése...</div>');
 
     var offset = $(this).offset();
+    var pane_offset = $('.right_pane_wrapper').offset()
+    offset.left -= pane_offset.left;
+    offset.top -= pane_offset.top;
     offset.left -= 50;
     offset.top += $(this).height();
-    var right_border = Math.max(
-        $('#act_container').offset().left + $('#act_container').outerWidth(),
-        $(this).offset().left + $(this).outerWidth(),
-    )
+    var right_border = $('.right_pane_wrapper').width() - 20;
 
     $snippet_container.html("Előnézet betöltése...")
     $snippet_container.load(url, function( response, status, xhr ) {
@@ -18,7 +18,7 @@ function act_snippet_hover_new(){
         } else {
             add_act_snippet_handlers($snippet_container);
         }
-        var offset = $snippet_container.offset();
+        $snippet_container.css({'left': 0});
         if (offset.left + $snippet_container.outerWidth() > right_border){
             offset.left = right_border - $snippet_container.outerWidth()
         }
@@ -33,7 +33,7 @@ function act_snippet_hover_new(){
         act_snippet_hover_start,
         act_snippet_hover_end,
     );
-    $snippet_container.appendTo('#act_container');
+    $snippet_container.appendTo('.right_pane_wrapper');
 }
 
 function act_snippet_hover_start(){
@@ -49,9 +49,7 @@ function act_snippet_hover_end(){
 }
 
 function add_act_snippet_handlers($root) {
-    console.log("Why tho", $root);
     $root.find("[data-snippet]").each(function() {
-        console.log("Added listener to", this);
         $( this ).hover(
             act_snippet_hover_new,
             act_snippet_hover_end

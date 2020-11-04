@@ -1,11 +1,23 @@
 {% extends "base.html" %}
 {% block title %}{{ act.identifier }}{% endblock %}
 {% block body %}
-    <div id="act_container" class="act_container">
-        {{ act_str | safe }}
+    <div class="panes">
+        <div class="left_pane">
+            <div class="toc_container">
+                <div class="toc_title">Tartalomjegyzék</div>
+                {{ toc_str | safe }}
+            </div>
+        </div>
+        <div class="right_pane">
+            <div class="right_pane_wrapper">
+                <div id="act_body" class="act_body">
+                    {{ act_str | safe }}
+                </div>
+            </div>
+        </div>
     </div>
     <script type="text/javascript">
         'use strict';
-        $(add_act_snippet_handlers($('#act_container')));
+        $(add_act_snippet_handlers($('#act_body')));
     </script>
 {% endblock %}
