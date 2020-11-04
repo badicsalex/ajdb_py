@@ -158,9 +158,11 @@ blockquote {
     margin: -1.5em -80px 0px 0px;
     padding: 0px 5px 0px 5px;
     float: right;
-    background: #E0E0FF;
+    background: #F0F0FF;
     border-radius: 3px;
-    border: 1px solid #A0A0FF
+    border: 1px solid #00F;
+    cursor: pointer;
+    color: #008;
 }
 
 .blockamendment_text {
