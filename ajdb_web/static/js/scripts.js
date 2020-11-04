@@ -50,9 +50,16 @@ function act_snippet_hover_end(){
 
 function add_act_snippet_handlers($root) {
     $root.find("[data-snippet]").each(function() {
-        $( this ).hover(
-            act_snippet_hover_new,
-            act_snippet_hover_end
-        )
+        var timeout_obj;
+        $(this).hover(
+            function(){
+                act_snippet_hover_start();
+                timeout_obj=setTimeout(act_snippet_hover_new.bind(this), 500);
+            },
+            function(){
+                clearTimeout(timeout_obj);
+                act_snippet_hover_end()
+            }
+        );
     })
 }
