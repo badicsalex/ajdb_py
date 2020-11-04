@@ -18,6 +18,8 @@
     </div>
     <script type="text/javascript">
         'use strict';
-        $(add_act_snippet_handlers($('#act_body')));
+        add_act_snippet_handlers($('#act_body'));
+        set_up_hash_change_scrolling();
+        $(scroll_to_hash);
     </script>
 {% endblock %}

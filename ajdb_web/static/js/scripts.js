@@ -63,3 +63,18 @@ function add_act_snippet_handlers($root) {
         );
     })
 }
+function scroll_to_hash(){
+    var element_id = window.location.hash.slice(1);
+    if (!element_id){
+        return;
+    }
+    var element = document.getElementById(element_id);
+    if (!element){
+        return;
+    }
+    element.scrollIntoView({block: "center"})
+}
+
+function set_up_hash_change_scrolling() {
+    $( window ).on('hashchange', scroll_to_hash)
+}
