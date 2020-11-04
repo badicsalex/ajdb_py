@@ -327,8 +327,9 @@ def incoming_refs(identifier: str, ref_str: str) -> str:
     writer.write("{} bejövő hivatkozás:".format(len(references)))
     for from_ref in references:
         writer.br()
+        href = get_href_for_ref(from_ref)
         snippet_href = url_for('act.snippet', identifier=from_ref.act, ref_str=from_ref.relative_id_string)
-        with writer.tag('a', data_snippet=snippet_href):
+        with writer.tag('a', href=href, data_snippet=snippet_href):
             writer.write(reference_as_hungarian_string(from_ref))
     return writer.get_str()
 
