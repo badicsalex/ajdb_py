@@ -1,14 +1,14 @@
 'use strict';
-function act_snippet_hover_new(){
-    var url = $(this).data('snippet');
+function snippet_hover_new($snippeted_link, $parent){
+    var url = $snippeted_link.data('snippet');
     var $snippet_container = $('<div class="snippet_container">Előnézet betöltése...</div>');
 
-    var offset = $(this).offset();
+    var offset = $snippeted_link.offset();
     var pane_offset = $('.right_pane_wrapper').offset()
     offset.left -= pane_offset.left;
     offset.top -= pane_offset.top;
     offset.left -= 50;
-    offset.top += $(this).height();
+    offset.top += $snippeted_link.height();
     var right_border = $('.right_pane_wrapper').width() - 20;
 
     $snippet_container.html("Előnézet betöltése...")
@@ -16,7 +16,7 @@ function act_snippet_hover_new(){
         if ( status == "error" ) {
             $snippet_container.html("Előnézet betöltése sikertelen: " + url)
         } else {
-            add_act_snippet_handlers($snippet_container);
+            add_snippet_handlers($snippet_container);
         }
         $snippet_container.css({'left': 0});
         if (offset.left + $snippet_container.outerWidth() > right_border){
@@ -25,44 +25,74 @@ function act_snippet_hover_new(){
         $snippet_container.css(offset);
     });
     $snippet_container.css(offset);
-    $snippet_container.stop();
-    $snippet_container.fadeIn(200);
+    $snippet_container.data('tooltip-parent', $parent);
+    snippet_hover_start($snippet_container);
     /* Cancel fadeOut if mouse enters the snippet_container itself */
     /* XXX: This is a hack, basically we use the animation as a way to store state for some time */
     $snippet_container.hover(
-        act_snippet_hover_start,
-        act_snippet_hover_end,
+        function(){snippet_hover_start($snippet_container)},
+        function(){snippet_hover_end(null)},
     );
     $snippet_container.appendTo('.right_pane_wrapper');
 }
 
-function act_snippet_hover_start(){
-    /* stops hiding all snippet containers */
-    $('.snippet_container').stop();
-    $('.snippet_container').fadeIn(200);
+function snippet_hover_start($element){
+    /* stops hiding this and its parents */
+    if ($element) {
+        $element.stop();
+        $element.fadeIn(200);
+    }
+    var $parent = $element.data('tooltip-parent');
+    if ($parent){
+        snippet_hover_start($parent);
+    }
 }
 
-function act_snippet_hover_end(){
+function clear_tooltip_timeout($element){
+    var tooltipTimeout = $element.data('tooltip-timeout');
+    if (tooltipTimeout) {
+        clearTimeout(tooltipTimeout);
+        $element.data('tooltip-timeout', null);
+    }
+}
+
+function snippet_hover_end($dont_hide_element){
     /* hides all snippet containers */
     $('.snippet_container').stop();
-    $('.snippet_container').fadeOut(200, function() { $(this).remove(); });
+    $('.snippet_container').fadeOut(
+        200,
+        function(){
+            $(this).remove();
+            /* The hover stop handler is not called: the timeout might still be active */
+            clear_tooltip_timeout($(this));
+        }
+    );
+    if ($dont_hide_element){
+        /* XXX: This is an even bigger hack: cancel parents fadeout, since this is a link. */
+        snippet_hover_start($dont_hide_element);
+    }
 }
 
-function add_act_snippet_handlers($root) {
-    $root.find("[data-snippet]").each(function() {
-        var timeout_obj;
-        $(this).hover(
+
+function add_snippet_handlers($parent) {
+    $parent.find("[data-snippet]").each(function() {
+        var $snippeted_link = $(this)
+        $snippeted_link.hover(
             function(){
-                act_snippet_hover_start();
-                timeout_obj=setTimeout(act_snippet_hover_new.bind(this), 500);
+                var tooltipTimeout=setTimeout(function(){
+                    $parent.data('tooltip-timeout', null);
+                    snippet_hover_new($snippeted_link, $parent);
+                }, 500);
+                $parent.data('tooltip-timeout', tooltipTimeout);
             },
             function(){
-                clearTimeout(timeout_obj);
-                act_snippet_hover_end()
+                snippet_hover_end($parent);
+                clear_tooltip_timeout($parent);
             }
         );
     })
 }
+
 function scroll_to_hash(){
     var element_id = window.location.hash.slice(1);
     if (!element_id){
