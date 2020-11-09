@@ -33,14 +33,23 @@ def test_snippet_valid(client: FlaskClient, fake_db: ActSet) -> None:
 
     response = client.get('/snippet/2020. évi XD. törvény/2slashA___')
     response_str = response.data.decode('utf-8')
+    assert "2/A. §" in response_str
     assert act.article("2/A").paragraph().text in response_str
+
+    response = client.get('/snippet/2020. évi XD. törvény/4__a_')
+    response_str = response.data.decode('utf-8')
+    assert "4. §" in response_str
+    assert act.article("4").paragraph().intro in response_str
+    assert act.article("4").paragraph().point("a").text in response_str
+    assert act.article("4").paragraph().point("b").text not in response_str
+    assert act.article("4").paragraph().wrap_up in response_str
 
 
 INVALID_CASES = (
     ('/act/2020. évi XX. törvény', 404),
     ('/act/Fully invalid', 404),  # TODO: Maybe 400?
-    ('/snippet/2020. évi XD. törvény/4___', 404),
-    ('/snippet/2020. évi XD. törvény/4-5___', 404),
+    ('/snippet/2020. évi XD. törvény/5___', 404),
+    ('/snippet/2020. évi XD. törvény/5-6___', 404),
     ('/snippet/2018. évi XD. törvény/3___', 404),
     ('/snippet/2020. évi XD. törvény/3_4-5__', 404),
     ('/snippet/2020. évi XD. törvény/___', 400),

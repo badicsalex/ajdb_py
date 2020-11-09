@@ -2,7 +2,7 @@ import attr
 
 from hun_law.structure import Part
 from hun_law.utils import Date
-from ajdb.structure import ActWM, ArticleWM, ParagraphWM, SaeMetadata
+from ajdb.structure import ActWM, ArticleWM, ParagraphWM, AlphabeticPointWM, SaeMetadata
 
 TEST_ACT1 = ActWM(
     identifier="2020. évi XD. törvény",
@@ -51,6 +51,28 @@ TEST_ACT1 = ActWM(
                 ParagraphWM(
                     identifier="2",
                     text="A teszt törvénynek különleges bekezdései.",
+                    metadata=SaeMetadata(),
+                ),
+            )
+        ),
+        ArticleWM(
+            identifier="4",
+            children=(
+                ParagraphWM(
+                    intro="Fontosak az",
+                    children=(
+                        AlphabeticPointWM(
+                            identifier="a",
+                            text="pontok, és az",
+                            metadata=SaeMetadata(),
+                        ),
+                        AlphabeticPointWM(
+                            identifier="b",
+                            text="alpontok",
+                            metadata=SaeMetadata(),
+                        ),
+                    ),
+                    wrap_up="helyes megjelenítése.",
                     metadata=SaeMetadata(),
                 ),
             )

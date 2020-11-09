@@ -1,5 +1,5 @@
 # Copyright 2020, Alex Badics, All Rights Reserved
-from typing import Callable, Any, Iterable, Dict, Tuple, Union
+from typing import Callable, Any, Iterable, Dict, Tuple, Union, Optional
 from flask import Blueprint, abort, render_template, url_for
 import attr
 
@@ -21,6 +21,7 @@ class HtmlWriterContext:
     _all_incoming_refs: Dict[Reference, Tuple[Reference, ...]] = {}
     _structural_element_anchors: Dict[StructuralElement, str] = {}
     _inside_ba: bool = False
+    _filter_ref: Optional[Reference] = None
 
     @property
     def incoming_refs(self) -> Tuple[Reference, ...]:
@@ -43,6 +44,11 @@ class HtmlWriterContext:
 
     def get_anchor_for_structural_element(self, se: StructuralElement) -> str:
         return self._structural_element_anchors.get(se, '')
+
+    def is_current_allowed_by_filter(self) -> bool:
+        if self._filter_ref is None:
+            return True
+        return self.current_ref.contains(self._filter_ref) or self._filter_ref.contains(self.current_ref)
 
 
 HtmlWriterFn = Callable[[HtmlWriter, Any, HtmlWriterContext], None]
@@ -153,6 +159,9 @@ def write_html_sub_article_element_children(writer: HtmlWriter, element: SubArti
 @act_html_writer
 def write_html_sub_article_element(writer: HtmlWriter, element: SubArticleElement, ctx: HtmlWriterContext) -> None:
     ctx = ctx.update_ref(element)
+    if not ctx.is_current_allowed_by_filter():
+        return
+
     header = element.header_prefix(element.identifier)
     with writer.div('sae_container', id=ctx.id_string):
         with writer.div('sae_identifier'):
@@ -195,6 +204,8 @@ def write_html_quoted_block(writer: HtmlWriter, element: QuotedBlock, _ctx: Html
 @act_html_writer
 def write_html_article(writer: HtmlWriter, element: Article, ctx: HtmlWriterContext) -> None:
     ctx = ctx.update_ref(element)
+    if not ctx.is_current_allowed_by_filter():
+        return
 
     header = '{}. §'.format(element.identifier)
     with writer.div('article_container', id=ctx.id_string):
@@ -298,17 +309,17 @@ def snippet(identifier: str, ref_str: str) -> str:
         if ref.article is None:
             raise ValueError()
 
-        elements = act.at_reference(ref)
-        if not elements:
+        if not act.at_reference(ref):
             raise KeyError()
     except ValueError:
         abort(400)
     except KeyError:
         abort(404)
 
+    paragraphs_ref = Reference(ref.act, ref.article)
     writer = HtmlWriter()
-    context = HtmlWriterContext(ref)
-    for element in elements:
+    context = HtmlWriterContext(paragraphs_ref.first_in_range(), filter_ref=ref)
+    for element in act.at_reference(paragraphs_ref):
         write_html_any(writer, element, context)
     return writer.get_str()
 
