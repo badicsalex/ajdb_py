@@ -2,16 +2,21 @@
 {% block title %}{{ act.identifier }}{% endblock %}
 {% block body %}
     <div class="panes">
-        <div class="left_pane">
-            <div class="toc_container">
-                <div class="toc_title">Tartalomjegyzék</div>
-                {{ toc_str | safe }}
-            </div>
+        <div class="top_pane">
+            {{ act.identifier }}
         </div>
-        <div class="right_pane">
-            <div class="right_pane_wrapper">
-                <div id="act_body" class="act_body">
-                    {{ act_str | safe }}
+        <div class="lr_pane">
+            <div class="left_pane">
+                <div class="toc_container">
+                    <div class="toc_title">Tartalomjegyzék</div>
+                    {{ toc_str | safe }}
+                </div>
+            </div>
+            <div class="right_pane">
+                <div class="right_pane_wrapper">
+                    <div id="act_body" class="act_body">
+                        {{ act_str | safe }}
+                    </div>
                 </div>
             </div>
         </div>
