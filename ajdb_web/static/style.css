@@ -56,6 +56,26 @@ blockquote {
     color: white;
 }
 
+.ajdb_logo {
+    font: 18pt serif;
+    margin: 5px;
+    padding: 0px 10px 0px 10px;
+    height: 40px;
+    line-height: 40px;
+    background: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: inline-block;
+    color: black;
+}
+
+.top_pane_title {
+    font: 18pt serif;
+    line-height: 50px;
+    display: inline-block;
+    margin-left: 20px;
+}
+
 .lr_pane {
     width: 100%;
     display: flex;
