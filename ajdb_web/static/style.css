@@ -51,7 +51,7 @@ blockquote {
     width: 100%;
     height: 50px;
     box-shadow: 5px 5px 10px #888888;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #444;
     background: #006DB0;
     color: white;
 }
@@ -98,7 +98,7 @@ blockquote {
     overflow-x: auto;
     overflow-y: scroll;
     box-shadow: 5px 5px 10px #888888;
-    border-right: 1px solid black;
+    border-right: 1px solid gray;
     background: white;
 }
 
