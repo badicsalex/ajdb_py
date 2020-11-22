@@ -120,8 +120,7 @@ blockquote {
     margin: 20px;
 }
 .toc_title {
-    font-size: 14pt;
-    font-weight: bold;
+    font: bold 14pt serif;
     margin: 1em 0px 1em 0px;
 }
 
@@ -151,8 +150,7 @@ blockquote {
 }
 
 .act_title {
-    font-size: 18pt;
-    font-weight: bold;
+    font: 18pt serif;
     margin: 20px 20px 30px 0px;
     text-align: left;
 }
