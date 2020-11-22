@@ -116,7 +116,6 @@ blockquote {
     margin-bottom: 2em;
 }
 
-
 .se_book, .se_part, .se_chapter, .se_title, .se_subtitle {
     margin-top: 2em;
     margin-bottom: 1.5em;
@@ -127,6 +126,7 @@ blockquote {
     font-size: 18pt;
     font-weight: bold;
     margin: 20px 20px 30px 0px;
+    text-align: left;
 }
 
 .preamble {
@@ -137,15 +137,18 @@ blockquote {
 .se_book {
     font-size: 16pt;
     font-weight: bold;
+    text-align: left;
 }
 
 .se_part {
     font-size: 16pt;
+    text-align: left;
 }
 
 .se_chapter, .se_title {
     font-size: 14pt;
     font-style: italic;
+    text-align: left;
 }
 
 .se_subtitle {
