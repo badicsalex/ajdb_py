@@ -1,21 +1,21 @@
 {% extends "base.html" %}
+{% block top_pane_title %}Alex Jogi Adatbázisa{% endblock %}
 {% block body %}
-    <center>
-    <div class="index_container">
-        <h1>Alex Jogi Adatbázisa</h1>
-        <p>Az adatbázis {{ act_set.acts | length }} törvényt tartalmaz:</p>
-        <table>
-            {% for act in act_set.acts | sort(attribute="identifier") %}
-                <tr>
-                    <td style="white-space: nowrap;">
-                        <a href="{{ url_for('act.single_act', identifier=act.identifier) }}">{{act.identifier}}</a>
-                    </td>
-                    <td>
-                        {{act.subject}}
-                    </td>
-                </tr>
-            {% endfor %}
-        </table>
+    <div class="bottom_pane">
+        <div class="index_container">
+            <p>Az adatbázis {{ act_set.acts | length }} törvényt tartalmaz:</p>
+            <table>
+                {% for act in act_set.acts | sort(attribute="identifier") %}
+                    <tr>
+                        <td style="white-space: nowrap;">
+                            <a href="{{ url_for('act.single_act', identifier=act.identifier) }}">{{act.identifier}}</a>
+                        </td>
+                        <td>
+                            {{act.subject}}
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
     </div>
-    </center>
 {% endblock %}

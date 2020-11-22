@@ -1,31 +1,30 @@
 {% extends "base.html" %}
 {% block title %}{{ act.identifier }}{% endblock %}
+{% block top_pane_title %}{{ act.identifier }}{% endblock %}
 {% block body %}
-    <div class="panes">
-        <div class="top_pane">
-            <a href="{{ url_for('index.index') }}"><div class="ajdb_logo">AJDB</div></a>
-            <div class="top_pane_title">{{ act.identifier }}</div>
-        </div>
-        <div class="lr_pane">
-            <div class="left_pane">
-                <div class="toc_container">
-                    <div class="toc_title">Tartalomjegyzék</div>
-                    {{ toc_str | safe }}
-                </div>
+    <div class="lr_pane">
+        <div class="left_pane">
+            <div class="toc_container">
+                <div class="toc_title">Tartalomjegyzék</div>
+                {{ toc_str | safe }}
             </div>
-            <div class="right_pane">
-                <div class="right_pane_wrapper">
-                    <div id="act_body" class="act_body">
-                        {{ act_str | safe }}
-                    </div>
+        </div>
+        <div class="right_pane">
+            <div class="right_pane_wrapper">
+                <div id="act_body" class="act_body">
+                    {{ act_str | safe }}
                 </div>
             </div>
         </div>
     </div>
+{% endblock %}
+{% block scripts %}
     <script type="text/javascript">
         'use strict';
-        add_snippet_handlers($('#act_body'));
-        set_up_hash_change_scrolling();
-        $(scroll_to_hash);
+        $(function(){
+            add_snippet_handlers($('#act_body'));
+            set_up_hash_change_scrolling();
+            scroll_to_hash();
+        });
     </script>
 {% endblock %}

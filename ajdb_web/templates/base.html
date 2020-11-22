@@ -5,8 +5,15 @@
         <link rel="icon" href="{{ url_for('static', filename='favicon.png') }}">
         <script type=text/javascript src="{{ url_for('static', filename='js/jquery-3.5.1.js') }}"></script>
         <script type=text/javascript src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+        {% block scripts %}{% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <div class="panes">
+            <div class="top_pane">
+                <a href="{{ url_for('index.index') }}"><div class="ajdb_logo">AJDB</div></a>
+                <div class="top_pane_title">{% block top_pane_title %}{% endblock %}</div>
+            </div>
+            {% block body %}{% endblock %}
+        </div>
     </body>
 </html>
